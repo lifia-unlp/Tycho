@@ -1,0 +1,1 @@
+I run scripts for setup and deployment
