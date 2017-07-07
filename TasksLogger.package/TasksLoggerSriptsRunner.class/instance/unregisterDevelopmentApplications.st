@@ -1,4 +1,4 @@
-voyage
+seaside
 unregisterDevelopmentApplications
 	| requiredHandlersNames allHandlers |
 	requiredHandlersNames := #('tasks').

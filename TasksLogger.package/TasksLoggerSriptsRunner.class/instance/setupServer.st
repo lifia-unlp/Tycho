@@ -1,4 +1,4 @@
-voyage
+seaside
 setupServer
 	ZnZincServerAdaptor default stop.
 	ZnZincServerAdaptor default port: self deploymentPort.
