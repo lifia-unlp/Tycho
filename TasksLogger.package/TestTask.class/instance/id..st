@@ -1,3 +1,3 @@
-accessing
+private
 id: anObject
 	id := anObject

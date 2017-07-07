@@ -1,4 +1,4 @@
-api
+private
 respondOk
 	self requestContext
 		respond: [ :response | 

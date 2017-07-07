@@ -1,4 +1,4 @@
-private
+objects creation
 taskResultsFor: aTestTask fromParameters: parameters
 	^ TaskResult
 		task: aTestTask

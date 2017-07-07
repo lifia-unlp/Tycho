@@ -1,5 +1,5 @@
 private
-fetchOrSave: aTestTask
-	| storedTask |
-	storedTask := TestTask selectOne: [ :task | task id = aTestTask id ].
-	^ storedTask ifNil: [ aTestTask save ]
+fetchOrSave: anObject
+	| stored |
+	stored := anObject class selectOne: [ :persisted | persisted id = anObject id ].
+	^ stored ifNil: [ anObject save ]

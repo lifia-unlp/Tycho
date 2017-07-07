@@ -1,0 +1,1 @@
+Simple user to gather up all responses an task results
