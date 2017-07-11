@@ -1,7 +1,7 @@
 endpoints
 receiveTaskResult
 	<post>
-	<path: '/create/'>
+	<path: '/tasks/'>
 	| parameters task taskResult user sus |
 	parameters := self requestContext request fields.
 	user := self userFromParameters: parameters.

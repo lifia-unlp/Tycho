@@ -10,7 +10,7 @@
 		"timestamp",
 		"taskResults",
 		"age",
-		"browsingHoursPerWeek"
+		"browsingHoursPerDay"
 	],
 	"name" : "TestUser",
 	"type" : "normal"

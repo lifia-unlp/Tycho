@@ -2,4 +2,4 @@ initialization
 initialize
 	"self initialize"
 
-	WAAdmin register: self at: 'tasks'
+	WAAdmin register: self at: 'tracker'
