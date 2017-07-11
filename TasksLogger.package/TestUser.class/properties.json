@@ -9,7 +9,8 @@
 		"id",
 		"timestamp",
 		"taskResults",
-		"susResponse"
+		"age",
+		"browsingHoursPerWeek"
 	],
 	"name" : "TestUser",
 	"type" : "normal"

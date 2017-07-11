@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "TasksLoggerSriptsRunner",
+	"name" : "TasksLoggerScriptsRunner",
 	"type" : "normal"
 }
