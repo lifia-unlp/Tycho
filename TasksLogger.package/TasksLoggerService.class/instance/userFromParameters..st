@@ -7,4 +7,5 @@ userFromParameters: parameters
 					(TestUser
 						userId: (parameters at: #userId)
 						age: (parameters at: #age) asNumber
-						browsingHoursPerDay: (parameters at: #hoursPerDay) asNumber) ]
+						browsingHoursPerDay: (parameters at: #hoursPerDay) asNumber
+						version: (parameters at: #version)) ]
