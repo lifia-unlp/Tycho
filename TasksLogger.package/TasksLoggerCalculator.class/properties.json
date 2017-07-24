@@ -1,14 +1,14 @@
 {
-	"commentStamp" : "juliangrigera 7/24/2017 14:49",
+	"commentStamp" : "juliangrigera 7/24/2017 15:02",
 	"super" : "Object",
 	"category" : "TasksLogger",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"answers",
-		"timestamp"
+		"users",
+		"version"
 	],
-	"name" : "SUSResponse",
+	"name" : "TasksLoggerCalculator",
 	"type" : "normal"
 }
