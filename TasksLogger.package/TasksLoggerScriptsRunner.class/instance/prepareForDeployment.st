@@ -2,5 +2,5 @@ deployment
 prepareForDeployment
 	self
 		unregisterDevelopmentApplications;
-		setupServer;
+		startServer;
 		setupMongoDatabase
