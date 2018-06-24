@@ -1,23 +1,21 @@
+
+
 var join = function (sessionId) {
-  try {
-    browser.runtime.sendMessage({ methodName: 'joinSession', arguments: { id: sessionId } });
-  } catch { console.log('Background is not ready yet: ') }
+  browser.runtime.sendMessage({ methodName: 'joinSession', arguments: { id: sessionId } })
+    .then(retrieveSession).then(updateButtons).catch((error) => { console.log(error) });
 }
 
 var leave = function () {
-  try {
-    browser.runtime.sendMessage({ methodName: 'leaveSession', arguments: {} });
-  } catch (error) { console.log('Background is not ready yet: ', JSON.stringify(error)) }
+  browser.runtime.sendMessage({ methodName: 'leaveSession', arguments: {} })
+    .then(retrieveSession).then(updateButtons).catch((error) => { console.log(error) });
 }
 
-var retrieveSession = async function () {
-  try {
-    session = await browser.runtime.sendMessage({ methodName: 'getSession', arguments: {} });
-    console.log("Session: ", JSON.stringify(session));
-  } catch { console.log('Background is not ready yet: ') }
+var retrieveSession =  function () {
+  return browser.runtime.sendMessage({ methodName: 'getSession', arguments: {} });
 }
 
 var updateButtons = function (session) {
+  document.getElementById("popup-content").innerHTML = '';
   if (session == null) {
     addJoinButtons();
   } else {
@@ -30,7 +28,7 @@ var addJoinButtons = function () {
     let b = document.createElement('div');
     b.textContent = 'Join session ' + i;
     b.classList.add("button");
-    b.onclick = function () { join(i) };
+    b.onclick = () => { console.log('join'); join(i) };
     document.getElementById("popup-content").appendChild(b);
   }
 }
@@ -39,11 +37,11 @@ var addLeaveButton = function (sessionId) {
   let b = document.createElement('div');
   b.textContent = 'Leave session ' + sessionId;
   b.classList.add("button");
-  b.onclick = function () { leave() };
+  b.onclick = () => { console.log('leaving'); leave() };
   document.getElementById("popup-content").appendChild(b);
 }
 
-browser.runtime.sendMessage({ methodName: 'getSession', arguments: {} }).then(updateButtons)
+retrieveSession().then(updateButtons)
 
 
 
