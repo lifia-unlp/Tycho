@@ -35,6 +35,7 @@ class ExperimentSession {
         let params = this.getActiveComponentSpec().parameters;
         params.paused = false;
         params.startTime = new Date().getTime();
+        params.ellapsedMs = 0;
         ContentProxy.getSingleton().update();
     }
 
