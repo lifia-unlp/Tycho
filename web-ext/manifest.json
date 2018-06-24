@@ -1,0 +1,48 @@
+{
+  "description": "Web-extension client for the remote usability tests tool",
+  "manifest_version": 2,
+  "name": "Remote usability tests",
+  "version": "1.0",
+  "homepage_url": "https://github.com/juliangrigera/RemoteUsabilityTests",
+  "icons": {
+    "48": "resources/border-48.png"
+  },
+  "permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "node_modules/webextension-polyfill/dist/browser-polyfill.min.js",
+      "node_modules/axios/dist/axios.min.js",
+      "shared/Facade.js",
+      "background/BackgroundFacade.js",
+      "background/ContentProxy.js",
+      "background/ExperimentSession.js",
+      "background/ServerAPI.js",
+      "background/background.js"
+    ]
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "node_modules/webextension-polyfill/dist/browser-polyfill.min.js",
+        "node_modules/jquery/dist/jquery.min.js",
+        "content_script/UIComponent.js",
+        "content_script/WelcomeComponent.js",
+        "content_script/TaskInstructionsComponent.js",
+        "shared/Facade.js",
+        "content_script/ContentFacade.js",
+        "content_script/NullComponent.js",
+        "content_script/BackgroundProxy.js",
+        "content_script/content.js"
+      ],
+      "css": [
+        "resources/task-tracker-webext.css"
+      ]
+    }
+  ]
+}
