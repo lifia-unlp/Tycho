@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "Casco 6/23/2018 17:56",
 	"super" : "Object",
-	"category" : "TasksLogger",
+	"category" : "TasksLogger-Model",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
