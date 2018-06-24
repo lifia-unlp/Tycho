@@ -1,0 +1,22 @@
+{
+	"instance" : {
+		"handleSessionsRequest:" : "Casco 6/23/2018 23:43",
+		"stop" : "Casco 6/23/2018 22:25",
+		"taskResultsFor:fromParameters:" : "Casco 6/24/2018 00:24",
+		"handleTasksPostRequest:" : "Casco 6/24/2018 00:19",
+		"start" : "Casco 6/23/2018 22:25",
+		"fetchOrSave:" : "Casco 6/23/2018 23:52",
+		"userFromParameters:" : "Casco 6/24/2018 00:13",
+		"initialize" : "Casco 6/23/2018 22:37",
+		"configureRoutes" : "Casco 6/23/2018 22:40",
+		"susFromParameters:" : "Casco 6/24/2018 00:17",
+		"defaultPort" : "Casco 6/23/2018 22:35",
+		"handleUsersPostRequest:" : "Casco 6/23/2018 23:59",
+		"taskFromParameters:" : "Casco 6/24/2018 00:00"
+	},
+	"class" : {
+		"new" : "Casco 6/23/2018 22:23",
+		"resetSingleton" : "Casco 6/23/2018 22:38",
+		"singleton" : "Casco 6/23/2018 22:23"
+	}
+}

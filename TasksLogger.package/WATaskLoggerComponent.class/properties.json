@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "WAComponent",
+	"category" : "TasksLogger-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "WATaskLoggerComponent",
+	"type" : "normal"
+}

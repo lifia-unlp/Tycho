@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "WAComponent",
+	"category" : "TasksLogger-UI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"experimentSession"
+	],
+	"name" : "WAExperimentSessionComponent",
+	"type" : "normal"
+}
