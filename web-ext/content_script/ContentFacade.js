@@ -29,8 +29,12 @@ class ContentFacade extends Facade {
         if (this.activeComponent) {
             this.activeComponent.deactivate();
         }
-        this.activeComponent = new (this.componentClasses()[componentSpecification.componentClass])(componentSpecification.parameters);
-        this.activeComponent.activate();
+        if (componentSpecification == null) {
+            this.activeComponent = null;
+        } else {
+            this.activeComponent = new (this.componentClasses()[componentSpecification.componentClass])(componentSpecification.parameters);
+            this.activeComponent.activate();
+        }
     }
 
     //Ugly trick until I learn how to do this with reflection.

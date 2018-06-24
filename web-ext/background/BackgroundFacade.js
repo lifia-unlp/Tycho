@@ -13,7 +13,7 @@ class BackgroundFacade extends Facade {
 
     constructor() {
         super();
-        this.session = ExperimentSession.withOneNullComponent();
+        this.session = null;
         this.serverApi = new ServerAPI();
     }
 
@@ -28,7 +28,7 @@ class BackgroundFacade extends Facade {
         partialDemographics.userId = this.session.getUserId();
         partialDemographics.version = version;
         this.serverApi.submitDemographics(partialDemographics);
-     }
+    }
 
     submitTaskReport(partialReport) {
         //Complete the report with the userId
@@ -37,7 +37,25 @@ class BackgroundFacade extends Facade {
     }
 
     getActiveComponentSpec() {
-        return this.session.getActiveComponentSpec();
+        if (!this.session) {
+            return null;
+        } else {
+            return this.session.getActiveComponentSpec();
+        }
+    }
+
+    getSession() {
+        return this.session;
+    }
+
+    joinSession(args) {
+        console.log("Joining session: ", args.id);
+        this.loadSessionFromServer(args.id)
+        console.log("Joined session: ", args.id);
+    }
+
+    leaveSession() {
+        this.session = null;
     }
 
     activeComponetIsDone(args) {
@@ -54,8 +72,8 @@ class BackgroundFacade extends Facade {
         this.activeComponetIsDone({});
     }
 
-    async loadSessionFromServer() {  
-        let response = await this.serverApi.getSessionFromServer();
+    async loadSessionFromServer(id) {
+        let response = await this.serverApi.getSessionFromServer(id);
         this.session = ExperimentSession.fromJson(response.data);
     }
 

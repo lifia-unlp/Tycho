@@ -23,6 +23,17 @@
     ]
   },
 
+  "browser_action": {
+    "default_icon": "resources/beasts-32.png",
+    "theme_icons": [{
+        "light": "resources/beasts-32-light.png",
+        "dark": "resources/beasts-32.png",
+        "size": 32
+    }],
+    "default_title": "Experiment tracker",
+    "default_popup": "popup/tracker.html"
+  },
+
   "content_scripts": [
     {
       "matches": [

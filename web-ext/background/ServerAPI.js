@@ -22,9 +22,9 @@ class ServerAPI {
         this.submit(report, '/tasks/')
     }
 
-    async getSessionFromServer() {
+    async getSessionFromServer(id) {
         try {
-            let json = await axios.get(serviceURL + '/sessions/1');
+            let json = await axios.get(serviceURL + '/sessions/' + id);
             return json; 
         } catch {
             console.log('Error getting session from server');
