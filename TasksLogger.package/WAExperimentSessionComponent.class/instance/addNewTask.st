@@ -1,4 +1,4 @@
-rendering
+callbacks
 addNewTask
 	| task id tasks |
 	tasks := TestTask selectAll.

@@ -1,11 +1,17 @@
 {
 	"instance" : {
-		"renderTasksOn:" : "Casco 6/23/2018 21:40",
-		"showDetailsOfTask:" : "Casco 6/23/2018 21:06",
+		"renderWorkflowOn:" : "Casco 6/24/2018 12:19",
+		"removeTask:" : "Casco 6/24/2018 12:22",
+		"renderContentOn:" : "Casco 6/24/2018 11:41",
 		"experimentSession" : "Casco 6/23/2018 20:28",
-		"renderContentOn:" : "Casco 6/24/2018 00:28",
-		"addNewTask" : "Casco 6/23/2018 23:22",
-		"experimentSession:" : "Casco 6/23/2018 20:28"
+		"getCompletedTasksResults" : "Casco 6/24/2018 11:34",
+		"renderCompletedTasksResultsOn:" : "Casco 6/24/2018 12:11",
+		"experimentSession:" : "Casco 6/23/2018 20:28",
+		"showDetailsOfTaskResult:" : "Casco 6/24/2018 12:10",
+		"showDetailsOfTask:" : "Casco 6/23/2018 21:06",
+		"renderSessionDetailsOn:" : "Casco 6/24/2018 11:19",
+		"renderTask:on:" : "Casco 6/24/2018 12:22",
+		"addNewTask" : "Casco 6/23/2018 23:22"
 	},
 	"class" : {
 		"on:" : "Casco 6/23/2018 20:29"

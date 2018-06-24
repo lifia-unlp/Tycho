@@ -18,5 +18,5 @@ renderContentOn: html
 				callback: [ :sel | self task componentClassname: sel ].
 			html break.
 			html submitButton
-				callback: [ self answer ];
+				callback: [ self task save. ];
 				value: 'Save changes' ]
