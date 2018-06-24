@@ -1,5 +1,6 @@
 accessing
 getCompletedTasksResults
-	| testTasks |
-	testTasks := experimentSession tasks.
-	^ TaskResult selectAll select: [ :each | testTasks includes: each task ]
+	| sessionTaskIds |
+	sessionTaskIds := experimentSession tasks collect: [ :each | each id ].
+	TaskResult selectAll asSet.
+	^ TaskResult selectAll select: [ :each | sessionTaskIds includes: each task id ]
