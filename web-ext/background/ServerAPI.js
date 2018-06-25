@@ -22,15 +22,16 @@ class ServerAPI {
         this.submit(report, '/tasks/')
     }
 
-    async getSessionFromServer(id) {
-        try {
-            let json = await axios.get(serviceURL + '/sessions/' + id);
-            return json; 
-        } catch {
-            console.log('Error getting session from server');
-        };
-
-    }
+    getSessionFromServer(id) {
+        return new Promise(function(resolve, reject) { 
+            try { 
+                var response = axios.get(serviceURL + '/sessions/' + id).
+                resolve(response);
+            } catch {
+                reject('Error talking to the server');
+            };
+         } );
+     }
 
 
 }

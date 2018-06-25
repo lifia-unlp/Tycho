@@ -2,12 +2,14 @@
 
 var join = function (sessionId) {
   browser.runtime.sendMessage({ methodName: 'joinSession', arguments: { id: sessionId } })
-    .then(retrieveSession).then(updateButtons).catch((error) => { console.log(error) });
+    .then(retrieveSession).then(updateButtons).catch((error) => { 
+      window.alert("Cannot connect to server")
+    });
 }
 
 var leave = function () {
   browser.runtime.sendMessage({ methodName: 'leaveSession', arguments: {} })
-    .then(retrieveSession).then(updateButtons).catch((error) => { console.log(error) });
+    .then(retrieveSession).then(updateButtons).catch((error) => {console.log(error) });
 }
 
 var retrieveSession =  function () {
@@ -41,7 +43,7 @@ var addLeaveButton = function (sessionId) {
   document.getElementById("popup-content").appendChild(b);
 }
 
-retrieveSession().then(updateButtons)
+retrieveSession().then(updateButtons).catch("I was not able to get anything...");
 
 
 
