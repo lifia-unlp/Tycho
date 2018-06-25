@@ -58,14 +58,12 @@ class BackgroundFacade extends Facade {
         .getSessionFromServer(args.id)
         .then(response => {
           if (response) {
-            console.log("Got session from server" + JSON.stringify(response));
             this.session = ExperimentSession.fromJson(response.data);
             this.session.start();
-            resolve(session);
+            resolve(this.session);
           }
         })
         .catch(error => {
-          console.log("Also catched the error, and rejected the promise");
           reject(error);
         });
     });
