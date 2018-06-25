@@ -47,8 +47,28 @@ class BackgroundFacade extends Facade {
     return this.session;
   }
 
+  /**
+   * 
+   * @param {id: id of the session to join} args 
+   * @returns a Promise that will resolve to the joined session, or reject with the error. 
+   */
   joinSession(args) {
-    return this.loadSessionFromServer(args.id);
+    new Promise((resolve, reject) => {
+      this.serverApi
+        .getSessionFromServer(args.id)
+        .then(response => {
+          if (response) {
+            console.log("Got session from server" + JSON.stringify(response));
+            this.session = ExperimentSession.fromJson(response.data);
+            this.session.start();
+            resolve(session);
+          }
+        })
+        .catch(error => {
+          console.log("Also catched the error, and rejected the promise");
+          reject(error);
+        });
+    });
   }
 
   leaveSession() {
@@ -68,15 +88,6 @@ class BackgroundFacade extends Facade {
   //Utility method to call from the debuger console
   next() {
     this.activeComponetIsDone({});
-  }
-
-  async loadSessionFromServer(id) {
-    let response = await this.serverApi.getSessionFromServer(id);
-    if (response) {
-      this.session = ExperimentSession.fromJson(response.data);
-      this.session.start();
-    }
-    return response;
   }
 
   //Task status

@@ -4,7 +4,7 @@ class Facade {
         const me = this;
         let prom = new Promise((resolve, reject) => {
             //Reject if the rmcRequest is not well formed
-            //console.log('Received: ', JSON.stringify(rmcRequest));
+            console.log('Received: ', JSON.stringify(rmcRequest));
             if ((!rmcRequest.hasOwnProperty('methodName')) || (!rmcRequest.hasOwnProperty('arguments'))) {
                 reject("Invalid remote method call" + JSON.stringify(rmcRequest));
                 return;
@@ -15,7 +15,7 @@ class Facade {
                 return;
             }
             let result = me[rmcRequest.methodName](rmcRequest.arguments)
-            //console.log('Promised: ', JSON.stringify(result));
+            console.log('Promised: ', JSON.stringify(result));
             resolve(result);
         });
         return prom
