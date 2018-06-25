@@ -1,4 +1,8 @@
 initialize - release
 initialize
-   WAAdmin register: self asApplicationAt: 'TaskLogger'.
-   super initialize. 
+	| app |
+	super initialize.
+	app := WAAdmin register: self asApplicationAt: 'TaskLogger'.
+	app
+		addLibrary: JQDeploymentLibrary;
+		addLibrary: TBSDeploymentLibrary

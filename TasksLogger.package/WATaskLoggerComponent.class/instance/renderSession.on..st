@@ -1,10 +1,10 @@
 rendering
 renderSession: each on: html
 	^ html
-		listItem: [ html anchor
+		tbsListGroupItem: [ html text: '#' , each id , ' (' , each description , ') '.
+			html anchor
 				callback: [ self showDetailsOfSession: each ];
-				with: each id.
-			html text: ' (' , each description , ') '.
+				with: '[details]'.
 			html anchor
 				callback: [ self removeSession: each ];
 				with: '[remove]' ]

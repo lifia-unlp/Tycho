@@ -2,12 +2,12 @@
 	"instance" : {
 		"removeSession:" : "Casco 6/23/2018 21:00",
 		"showDetailsOfSession:" : "Casco 6/23/2018 20:33",
-		"renderContentOn:" : "Casco 6/23/2018 21:41",
-		"renderSession:on:" : "Casco 6/23/2018 20:59",
+		"renderContentOn:" : "Casco 6/24/2018 21:29",
+		"renderSession:on:" : "Casco 6/24/2018 21:29",
 		"addExample" : "Casco 6/23/2018 20:54",
 		"addNewSession" : "Casco 6/23/2018 23:29"
 	},
 	"class" : {
-		"initialize" : "Casco 6/23/2018 20:13"
+		"initialize" : "Casco 6/24/2018 21:18"
 	}
 }
