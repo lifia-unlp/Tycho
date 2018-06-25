@@ -2,8 +2,8 @@ scripts
 resultsTables
 	<script>
 	| original versionA versionB versionC versionD task1 task2 |
-	task1 := TestTask selectAll first.
-	task2 := TestTask selectAll second.
+	task1 := ExperimentTask selectAll first.
+	task2 := ExperimentTask selectAll second.
 	original := TasksLoggerCalculator fromDatabaseForVersion: 'XX'.
 	versionA := TasksLoggerCalculator fromDatabaseForVersion: 'A*'.
 	versionB := TasksLoggerCalculator fromDatabaseForVersion: 'B*'.

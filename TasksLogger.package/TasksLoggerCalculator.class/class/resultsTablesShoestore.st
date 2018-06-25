@@ -2,8 +2,8 @@ scripts
 resultsTablesShoestore
 	<script>
 	| original task1 task2 versionA2 versionA3 versionB2 versionB3 versionC2 versionC3 versionD2 versionD3 versionE2 versionE3 |
-	task1 := TestTask selectAll first.
-	task2 := TestTask selectAll second.
+	task1 := ExperimentTask selectAll first.
+	task2 := ExperimentTask selectAll second.
 	original := TasksLoggerCalculator fromDatabaseForShoestoreVersion: '11111'.
 	versionA2 := TasksLoggerCalculator fromDatabaseForShoestoreVersion: '2####'.
 	versionA3 := TasksLoggerCalculator fromDatabaseForShoestoreVersion: '3####'.

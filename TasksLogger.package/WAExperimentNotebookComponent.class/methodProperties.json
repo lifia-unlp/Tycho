@@ -1,0 +1,22 @@
+{
+	"instance" : {
+		"renderDesingsOn:" : "Casco 6/25/2018 19:01",
+		"isOpen" : "Casco 6/25/2018 18:14",
+		"renderContentOn:" : "Casco 6/25/2018 17:41",
+		"renderIndexPageOn:" : "Casco 6/25/2018 18:49",
+		"showDetailsOfSession:" : "Casco 6/25/2018 17:26",
+		"newExperimentWithDesign:" : "Casco 6/25/2018 19:00",
+		"removeSession:" : "Casco 6/23/2018 21:00",
+		"initialize" : "Casco 6/25/2018 18:11",
+		"addNewDesign" : "Casco 6/25/2018 18:38",
+		"renderLoginPageOn:" : "Casco 6/25/2018 18:14",
+		"password" : "Casco 6/25/2018 18:11",
+		"renderNavigationbarOn:" : "Casco 6/25/2018 18:07",
+		"password:" : "Casco 6/25/2018 18:11",
+		"addExample" : "Casco 6/25/2018 13:52",
+		"renderDesign:on:" : "Casco 6/25/2018 19:00"
+	},
+	"class" : {
+		"initialize" : "Casco 6/24/2018 21:18"
+	}
+}

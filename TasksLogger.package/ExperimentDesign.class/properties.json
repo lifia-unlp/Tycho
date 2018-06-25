@@ -1,15 +1,15 @@
 {
-	"commentStamp" : "Casco 6/23/2018 17:56",
+	"commentStamp" : "Casco 6/25/2018 13:58",
 	"super" : "Object",
-	"category" : "TasksLogger-Legacy",
+	"category" : "TasksLogger-Model",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"id",
 		"tasks",
-		"description"
+		"id",
+		"notes"
 	],
-	"name" : "ExperimentSession",
+	"name" : "ExperimentDesign",
 	"type" : "normal"
 }

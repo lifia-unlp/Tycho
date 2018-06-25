@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "juliangrigera 7/24/2017 15:02",
 	"super" : "Object",
-	"category" : "TasksLogger-Model",
+	"category" : "TasksLogger-Legacy",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

@@ -1,0 +1,19 @@
+{
+	"instance" : {
+		"addNewTask" : "Casco 6/25/2018 17:27",
+		"removeTask:" : "Casco 6/25/2018 17:27",
+		"renderContentOn:" : "Casco 6/24/2018 21:24",
+		"getCompletedTasksResults" : "Casco 6/25/2018 17:28",
+		"renderCompletedTasksResultsOn:" : "Casco 6/24/2018 12:11",
+		"showDetailsOfTaskResult:" : "Casco 6/24/2018 12:10",
+		"showDetailsOfTask:" : "Casco 6/23/2018 21:06",
+		"renderSessionDetailsOn:" : "Casco 6/25/2018 17:27",
+		"experimentDesign:" : "Casco 6/25/2018 17:27",
+		"experimentDesign" : "Casco 6/25/2018 17:27",
+		"renderTask:on:" : "Casco 6/24/2018 12:22",
+		"renderWorkflowOn:" : "Casco 6/25/2018 17:27"
+	},
+	"class" : {
+		"on:" : "Casco 6/25/2018 17:27"
+	}
+}
