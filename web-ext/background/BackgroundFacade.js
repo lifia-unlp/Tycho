@@ -49,23 +49,22 @@ class BackgroundFacade extends Facade {
     }
 
     joinSession(args) {
-        console.log("Joining session: ", args.id);
-        this.loadSessionFromServer(args.id)
-        console.log("Joined session: ", args.id);
+        this.loadSessionFromServer(args.id);
     }
 
     leaveSession() {
         this.session = null;
+        ContentProxy.getSingleton().update();
     }
 
     activeComponetIsDone(args) {
         this.session.next();
     }
 
-    // Session management
-    start() {
-        this.session.start();
-    }
+    // UnnecSession management
+    // start() {
+    //     this.session.start();
+    // }
 
     //Utility method to call from the debuger console
     next() {
@@ -74,7 +73,10 @@ class BackgroundFacade extends Facade {
 
     async loadSessionFromServer(id) {
         let response = await this.serverApi.getSessionFromServer(id);
-        this.session = ExperimentSession.fromJson(response.data);
+        if (response) {
+            this.session = ExperimentSession.fromJson(response.data);
+            this.session.start();
+        }
     }
 
     //Task status

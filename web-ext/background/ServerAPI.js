@@ -6,9 +6,9 @@ class ServerAPI {
             params.append(key, payload[key]);
         }
         axios.post(serviceURL + service, params)
-            .then(function (response) {
-                console.log('Successful post: ', response);
-            })
+            // .then(function (response) {
+            //     console.log('Successful post: ', response);
+            // })
             .catch(function (error) {
                 console.log('Error posting: ', error);
             });

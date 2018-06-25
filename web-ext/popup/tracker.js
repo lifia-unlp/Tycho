@@ -28,7 +28,7 @@ var addJoinButtons = function () {
     let b = document.createElement('div');
     b.textContent = 'Join session ' + i;
     b.classList.add("button");
-    b.onclick = () => { console.log('join'); join(i) };
+    b.onclick = () => {join(i) };
     document.getElementById("popup-content").appendChild(b);
   }
 }
@@ -37,7 +37,7 @@ var addLeaveButton = function (sessionId) {
   let b = document.createElement('div');
   b.textContent = 'Leave session ' + sessionId;
   b.classList.add("button");
-  b.onclick = () => { console.log('leaving'); leave() };
+  b.onclick = () => {leave() };
   document.getElementById("popup-content").appendChild(b);
 }
 
