@@ -41,7 +41,7 @@ class ContentFacade extends Facade {
     componentClasses() {
         return {
             NullComponent: NullComponent,
-            WelcomeComponent: WelcomeComponent,
+            BasicDemographicsComponent: BasicDemographicsComponent,
             TaskInstructionsComponent: TaskInstructionsComponent
         }
     }

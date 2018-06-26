@@ -1,4 +1,4 @@
-class WelcomeComponent extends UIComponent {
+class BasicDemographicsComponent extends UIComponent {
 
     buildComponent() {
         let me = this;
