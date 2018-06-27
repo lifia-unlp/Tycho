@@ -1,19 +1,18 @@
 {
 	"instance" : {
-		"renderDesingsOn:" : "Casco 6/26/2018 18:58",
 		"isOpen" : "Casco 6/25/2018 18:14",
 		"renderIndexPageOn:" : "Casco 6/26/2018 18:58",
 		"showDetailsOfDesign:" : "Casco 6/25/2018 21:46",
 		"newExperimentWithDesign:" : "Casco 6/25/2018 19:00",
 		"removeSession:" : "Casco 6/23/2018 21:00",
 		"initialize" : "Casco 6/25/2018 18:11",
-		"addNewDesign" : "Casco 6/25/2018 18:38",
+		"addNewDesign" : "Casco 6/26/2018 22:27",
 		"renderMainContentOn:" : "Casco 6/25/2018 21:54",
 		"renderLoginPageOn:" : "Casco 6/25/2018 18:14",
 		"password" : "Casco 6/25/2018 18:11",
 		"password:" : "Casco 6/25/2018 18:11",
-		"addExample" : "Casco 6/26/2018 19:43",
-		"renderDesign:on:" : "Casco 6/25/2018 21:46"
+		"renderDesign:on:" : "Casco 6/25/2018 21:46",
+		"renderDesingsOn:" : "Casco 6/26/2018 18:58"
 	},
 	"class" : {
 		"initialize" : "Casco 6/24/2018 21:18"

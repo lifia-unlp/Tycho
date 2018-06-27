@@ -1,9 +1,9 @@
 {
 	"instance" : {
 		"renderWorkflowOn:" : "Casco 6/26/2018 19:02",
-		"addTaskToDesign:" : "Casco 6/26/2018 22:06",
+		"addTaskToDesign:" : "Casco 6/26/2018 22:33",
 		"removeTask:" : "Casco 6/25/2018 17:27",
-		"renderDesignDetailsOn:" : "Casco 6/25/2018 22:11",
+		"renderDesignDetailsOn:" : "Casco 6/26/2018 22:25",
 		"renderTaskPrototype:on:" : "Casco 6/26/2018 20:35",
 		"getCompletedTasksResults" : "Casco 6/25/2018 17:28",
 		"renderReturnButtonOn:" : "Casco 6/25/2018 22:09",

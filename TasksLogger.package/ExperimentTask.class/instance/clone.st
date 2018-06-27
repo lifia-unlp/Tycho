@@ -8,5 +8,4 @@ clone
 		notes: self notes
 		componentClassname: self componentClassname.
 	self properties do: [ :each | clone addProperty: each name describedBy: each description ].
-	clone save.
 	^ clone
