@@ -114,25 +114,21 @@ class TaskInstructionsComponent extends UIComponent {
   }
 
   finishSus() {
-    this.submitResults();
-    this.done();
-  }
-
-  // TO-DO: This code access the form directly with JQuery... not nice.
-  // Sucess condition will not work here. The SUS is open. Or will it?
-  submitResults() {
     this.submitResults({
       milliseconds: this.ellapsedMs,
       successful: eval(this.successCondition)
     });
+    this.done();
+  }
 
+ 
     // for (let questionNumber = 1; questionNumber <= 10; questionNumber++) {
     //   taskReport["question" + questionNumber] = $(
     //     'input:radio[name="question' + questionNumber + '"]:checked'
     //   ).val();
     // }
     //BackgroundProxy.getSingleton().submitTaskReport(taskReport);
-  }
+  
 
   addButton(tracker, id, text, func, show) {
     let button = $("<input/>", {
