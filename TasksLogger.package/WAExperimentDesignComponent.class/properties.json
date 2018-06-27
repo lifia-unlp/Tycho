@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "Casco 6/25/2018 21:46",
-	"super" : "WAAbstractComponent",
 	"category" : "TasksLogger-Seaside",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "Casco 6/25/2018 21:46",
 	"instvars" : [
-		"experimentDesign"
-	],
+		"experimentDesign" ],
 	"name" : "WAExperimentDesignComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WAAbstractComponent",
+	"type" : "normal" }

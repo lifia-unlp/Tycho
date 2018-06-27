@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "Casco 6/25/2018 18:02",
-	"super" : "WAFileLibrary",
 	"category" : "TasksLogger-Seaside",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "Casco 6/25/2018 18:02",
+	"instvars" : [
+		 ],
 	"name" : "WAExperimentFileLibrary",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WAFileLibrary",
+	"type" : "normal" }

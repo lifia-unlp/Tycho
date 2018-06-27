@@ -1,14 +1,11 @@
 {
+	"class" : {
+		"isVoyageRoot" : "casco 6/24/2018 09:45:03",
+		"voyageCollectionName" : "casco 6/24/2018 09:45:03",
+		"with:" : "casco 6/24/2018 09:45:03" },
 	"instance" : {
+		"answers" : "casco 6/24/2018 09:45:03",
 		"answers:" : "casco 6/24/2018 09:45:03",
 		"initialize" : "casco 6/24/2018 09:45:03",
-		"timestamp" : "casco 6/24/2018 09:45:03",
 		"score" : "casco 6/24/2018 09:45:03",
-		"answers" : "casco 6/24/2018 09:45:03"
-	},
-	"class" : {
-		"voyageCollectionName" : "casco 6/24/2018 09:45:03",
-		"with:" : "casco 6/24/2018 09:45:03",
-		"isVoyageRoot" : "casco 6/24/2018 09:45:03"
-	}
-}
+		"timestamp" : "casco 6/24/2018 09:45:03" } }

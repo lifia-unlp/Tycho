@@ -1,16 +1,17 @@
 {
-	"commentStamp" : "Casco 6/25/2018 17:21",
-	"super" : "Object",
 	"category" : "TasksLogger-Obsolete",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "Casco 6/25/2018 17:21",
 	"instvars" : [
 		"id",
 		"description",
 		"componentClassname",
-		"successCondition"
-	],
+		"successCondition" ],
 	"name" : "ObsoleteExperimentTask",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,13 +1,10 @@
 {
+	"class" : {
+		"name:description:" : "Casco 6/26/2018 20:49" },
 	"instance" : {
-		"value" : "Casco 6/26/2018 20:49",
 		"description" : "Casco 6/26/2018 20:49",
 		"description:" : "Casco 6/26/2018 20:49",
-		"value:" : "Casco 6/26/2018 20:49",
 		"name" : "Casco 6/26/2018 20:49",
-		"name:" : "Casco 6/26/2018 20:49"
-	},
-	"class" : {
-		"name:description:" : "Casco 6/26/2018 20:49"
-	}
-}
+		"name:" : "Casco 6/26/2018 20:49",
+		"value" : "Casco 6/26/2018 20:49",
+		"value:" : "Casco 6/26/2018 20:49" } }

@@ -1,18 +1,19 @@
 {
-	"commentStamp" : "juliangrigera 7/7/2017 14:06",
-	"super" : "Object",
 	"category" : "TasksLogger-Obsolete",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "juliangrigera 7/7/2017 14:06",
 	"instvars" : [
 		"id",
 		"timestamp",
 		"version",
 		"taskResults",
 		"age",
-		"browsingHoursPerDay"
-	],
+		"browsingHoursPerDay" ],
 	"name" : "TestUser",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

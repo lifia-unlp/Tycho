@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "WAComponent",
 	"category" : "TasksLogger-Seaside",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"taskResult"
-	],
+		"taskResult" ],
 	"name" : "WASUSComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WAComponent",
+	"type" : "normal" }

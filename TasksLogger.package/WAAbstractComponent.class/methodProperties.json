@@ -1,9 +1,8 @@
 {
+	"class" : {
+		 },
 	"instance" : {
+		"renderContentOn:" : "Casco 6/25/2018 21:55",
 		"renderMainContentOn:" : "Casco 6/25/2018 21:56",
 		"renderNavigationbarOn:" : "Casco 6/25/2018 21:52",
-		"renderReturnButtonOn:" : "Casco 6/25/2018 21:55",
-		"renderContentOn:" : "Casco 6/25/2018 21:55"
-	},
-	"class" : { }
-}
+		"renderReturnButtonOn:" : "Casco 6/25/2018 21:55" } }

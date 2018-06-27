@@ -1,3 +1,3 @@
 accessing
 addTask: aTask
-	^ self tasks add: tasks
+	^ self tasks add: aTask

@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "juliangrigera 7/24/2017 14:49",
-	"super" : "Object",
 	"category" : "TasksLogger-Obsolete",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "juliangrigera 7/24/2017 14:49",
 	"instvars" : [
 		"answers",
-		"timestamp"
-	],
+		"timestamp" ],
 	"name" : "SUSResponse",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

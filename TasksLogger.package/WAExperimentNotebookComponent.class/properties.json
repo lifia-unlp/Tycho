@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "Casco 6/25/2018 17:54",
-	"super" : "WAAbstractComponent",
 	"category" : "TasksLogger-Seaside",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "Casco 6/25/2018 17:54",
 	"instvars" : [
-		"password"
-	],
+		"password" ],
 	"name" : "WAExperimentNotebookComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WAAbstractComponent",
+	"type" : "normal" }

@@ -1,10 +1,7 @@
 {
-	"instance" : {
-		"taskResult" : "Casco 6/24/2018 12:09",
-		"taskResult:" : "Casco 6/24/2018 12:09",
-		"renderContentOn:" : "Casco 6/24/2018 11:56"
-	},
 	"class" : {
-		"on:" : "Casco 6/24/2018 12:10"
-	}
-}
+		"on:" : "Casco 6/24/2018 12:10" },
+	"instance" : {
+		"renderContentOn:" : "Casco 6/24/2018 11:56",
+		"taskResult" : "Casco 6/24/2018 12:09",
+		"taskResult:" : "Casco 6/24/2018 12:09" } }

@@ -1,24 +1,21 @@
 {
-	"instance" : {
-		"version:" : "casco 6/24/2018 09:45:03",
-		"addTaskResult:" : "casco 6/24/2018 09:45:03",
-		"userId" : "casco 6/24/2018 09:45:03",
-		"age" : "casco 6/24/2018 09:45:03",
-		"age:" : "casco 6/24/2018 09:45:03",
-		"version" : "casco 6/24/2018 09:45:03",
-		"id" : "casco 6/24/2018 09:45:03",
-		"taskResultForTask:" : "casco 6/24/2018 09:45:03",
-		"timestamp" : "casco 6/24/2018 09:45:03",
-		"initialize" : "casco 6/24/2018 09:45:03",
-		"browsingHoursPerDay:" : "casco 6/24/2018 09:45:03",
-		"id:" : "casco 6/24/2018 09:45:03",
-		"taskResults" : "casco 6/24/2018 09:45:03",
-		"browsingHoursPerDay" : "casco 6/24/2018 09:45:03"
-	},
 	"class" : {
+		"isVoyageRoot" : "casco 6/24/2018 09:45:03",
 		"userId:" : "Casco 6/24/2018 12:49",
 		"userId:age:browsingHoursPerDay:version:" : "casco 6/24/2018 09:45:03",
-		"voyageCollectionName" : "casco 6/24/2018 09:45:03",
-		"isVoyageRoot" : "casco 6/24/2018 09:45:03"
-	}
-}
+		"voyageCollectionName" : "casco 6/24/2018 09:45:03" },
+	"instance" : {
+		"addTaskResult:" : "casco 6/24/2018 09:45:03",
+		"age" : "casco 6/24/2018 09:45:03",
+		"age:" : "casco 6/24/2018 09:45:03",
+		"browsingHoursPerDay" : "casco 6/24/2018 09:45:03",
+		"browsingHoursPerDay:" : "casco 6/24/2018 09:45:03",
+		"id" : "casco 6/24/2018 09:45:03",
+		"id:" : "casco 6/24/2018 09:45:03",
+		"initialize" : "casco 6/24/2018 09:45:03",
+		"taskResultForTask:" : "casco 6/24/2018 09:45:03",
+		"taskResults" : "casco 6/24/2018 09:45:03",
+		"timestamp" : "casco 6/24/2018 09:45:03",
+		"userId" : "casco 6/24/2018 09:45:03",
+		"version" : "casco 6/24/2018 09:45:03",
+		"version:" : "casco 6/24/2018 09:45:03" } }

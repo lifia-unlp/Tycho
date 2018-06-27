@@ -2,7 +2,7 @@ rendering-workflow
 renderTask: each on: html
 	html
 		tableRow: [ html
-				tableData: each id;
+				tableData: each name;
 				tableData: each notes;
 				tableData: [ html anchor
 						callback: [ self showDetailsOfTask: each ];

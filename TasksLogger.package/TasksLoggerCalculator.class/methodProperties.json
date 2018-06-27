@@ -1,30 +1,27 @@
 {
-	"instance" : {
-		"version:" : "casco 6/24/2018 09:45:03",
-		"users" : "casco 6/24/2018 09:45:03",
-		"timeAverageFor:" : "casco 6/24/2018 09:45:03",
-		"userAges" : "casco 6/24/2018 09:45:03",
-		"version" : "casco 6/24/2018 09:45:03",
-		"timesFor:" : "casco 6/24/2018 09:45:03",
-		"userAgeStandardDeviation" : "casco 6/24/2018 09:45:03",
-		"susAverageFor:" : "casco 6/24/2018 09:45:03",
-		"userBrowsingTimes" : "casco 6/24/2018 09:45:03",
-		"susesFor:" : "casco 6/24/2018 09:45:03",
-		"userBrowsingTimeMean" : "casco 6/24/2018 09:45:03",
-		"successesFor:" : "casco 6/24/2018 09:45:03",
-		"successAverageFor:" : "casco 6/24/2018 09:45:03",
-		"userBrowsingTimeStandardDeviation" : "casco 6/24/2018 09:45:03",
-		"users:" : "casco 6/24/2018 09:45:03",
-		"userAgeMean" : "casco 6/24/2018 09:45:03"
-	},
 	"class" : {
+		"fromDatabaseForShoestoreVersion:" : "casco 6/24/2018 09:45:03",
+		"fromDatabaseForVersion:" : "casco 6/24/2018 09:45:03",
+		"printTableHeaderFor:on:" : "casco 6/24/2018 09:45:03",
 		"printTask:version:on:" : "casco 6/24/2018 09:45:03",
 		"resultsTableFor:withVersions:" : "casco 6/24/2018 09:45:03",
-		"users:version:" : "casco 6/24/2018 09:45:03",
-		"printTableHeaderFor:on:" : "casco 6/24/2018 09:45:03",
 		"resultsTables" : "Casco 6/26/2018 19:43",
-		"fromDatabaseForShoestoreVersion:" : "casco 6/24/2018 09:45:03",
 		"resultsTablesShoestore" : "Casco 6/26/2018 19:43",
-		"fromDatabaseForVersion:" : "casco 6/24/2018 09:45:03"
-	}
-}
+		"users:version:" : "casco 6/24/2018 09:45:03" },
+	"instance" : {
+		"successAverageFor:" : "casco 6/24/2018 09:45:03",
+		"successesFor:" : "casco 6/24/2018 09:45:03",
+		"susAverageFor:" : "casco 6/24/2018 09:45:03",
+		"susesFor:" : "casco 6/24/2018 09:45:03",
+		"timeAverageFor:" : "casco 6/24/2018 09:45:03",
+		"timesFor:" : "casco 6/24/2018 09:45:03",
+		"userAgeMean" : "casco 6/24/2018 09:45:03",
+		"userAgeStandardDeviation" : "casco 6/24/2018 09:45:03",
+		"userAges" : "casco 6/24/2018 09:45:03",
+		"userBrowsingTimeMean" : "casco 6/24/2018 09:45:03",
+		"userBrowsingTimeStandardDeviation" : "casco 6/24/2018 09:45:03",
+		"userBrowsingTimes" : "casco 6/24/2018 09:45:03",
+		"users" : "casco 6/24/2018 09:45:03",
+		"users:" : "casco 6/24/2018 09:45:03",
+		"version" : "casco 6/24/2018 09:45:03",
+		"version:" : "casco 6/24/2018 09:45:03" } }
