@@ -1,4 +1,3 @@
 accessing
 componentClassname
-
-   ^componentClassname
+	^ componentClassname

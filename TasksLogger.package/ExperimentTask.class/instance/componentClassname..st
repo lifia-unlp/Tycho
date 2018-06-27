@@ -1,4 +1,3 @@
 accessing
-componentClassname: aComponentClassName
-
-   componentClassname := aComponentClassName 
+componentClassname: anObject
+	componentClassname := anObject

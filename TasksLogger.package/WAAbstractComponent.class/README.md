@@ -1,0 +1,1 @@
+Abstract class to reuse common behaviour

@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "Casco 6/25/2018 17:54",
-	"super" : "WAComponent",
+	"super" : "WAAbstractComponent",
 	"category" : "TasksLogger-Seaside",
 	"classinstvars" : [ ],
 	"pools" : [ ],

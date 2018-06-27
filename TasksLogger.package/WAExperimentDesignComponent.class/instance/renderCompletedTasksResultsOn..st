@@ -1,4 +1,4 @@
-rendering
+obsolete
 renderCompletedTasksResultsOn: html
 	html heading
 		level: 2;

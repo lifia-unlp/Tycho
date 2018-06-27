@@ -1,5 +1,5 @@
 instance creation
-on: aSession
+on: anExperimentDesign
 	^ self new
-		experimentDesign: aSession;
+		experimentDesign: anExperimentDesign;
 		yourself

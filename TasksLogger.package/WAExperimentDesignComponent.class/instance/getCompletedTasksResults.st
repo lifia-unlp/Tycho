@@ -1,4 +1,4 @@
-accessing
+obsolete
 getCompletedTasksResults
 	| sessionTaskIds |
 	sessionTaskIds := experimentDesign tasks collect: [ :each | each id ].

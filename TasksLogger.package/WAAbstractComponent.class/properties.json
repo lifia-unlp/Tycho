@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "Casco 6/25/2018 21:48",
+	"super" : "WAComponent",
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "WAAbstractComponent",
+	"type" : "normal"
+}

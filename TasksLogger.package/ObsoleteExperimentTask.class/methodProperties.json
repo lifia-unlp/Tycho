@@ -1,0 +1,21 @@
+{
+	"instance" : {
+		"successCondition" : "Casco 6/23/2018 19:54",
+		"description" : "Casco 6/23/2018 19:54",
+		"id" : "casco 6/24/2018 09:45:03",
+		"initialize" : "Casco 6/23/2018 19:54",
+		"printOn:" : "casco 6/24/2018 09:45:03",
+		"successCondition:" : "Casco 6/23/2018 19:48",
+		"id:" : "casco 6/24/2018 09:45:03",
+		"asJson" : "Casco 6/23/2018 23:37",
+		"asDictionaryOfProperties" : "Casco 6/23/2018 23:36",
+		"componentClassname:" : "Casco 6/23/2018 20:50",
+		"componentClassname" : "Casco 6/23/2018 20:50",
+		"description:" : "casco 6/24/2018 09:45:03"
+	},
+	"class" : {
+		"id:description:" : "casco 6/24/2018 09:45:03",
+		"id:description:componentClassname:" : "Casco 6/23/2018 20:50",
+		"voyageCollectionName" : "Casco 6/26/2018 19:43"
+	}
+}

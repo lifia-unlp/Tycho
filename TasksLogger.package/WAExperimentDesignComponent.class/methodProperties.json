@@ -1,19 +1,23 @@
 {
 	"instance" : {
-		"addNewTask" : "Casco 6/25/2018 17:27",
+		"renderWorkflowOn:" : "Casco 6/26/2018 19:02",
+		"addTaskToDesign:" : "Casco 6/26/2018 22:06",
 		"removeTask:" : "Casco 6/25/2018 17:27",
-		"renderContentOn:" : "Casco 6/24/2018 21:24",
+		"renderDesignDetailsOn:" : "Casco 6/25/2018 22:11",
+		"renderTaskPrototype:on:" : "Casco 6/26/2018 20:35",
 		"getCompletedTasksResults" : "Casco 6/25/2018 17:28",
+		"renderReturnButtonOn:" : "Casco 6/25/2018 22:09",
 		"renderCompletedTasksResultsOn:" : "Casco 6/24/2018 12:11",
+		"renderMainContentOn:" : "Casco 6/26/2018 20:09",
 		"showDetailsOfTaskResult:" : "Casco 6/24/2018 12:10",
 		"showDetailsOfTask:" : "Casco 6/23/2018 21:06",
-		"renderSessionDetailsOn:" : "Casco 6/25/2018 17:27",
 		"experimentDesign:" : "Casco 6/25/2018 17:27",
 		"experimentDesign" : "Casco 6/25/2018 17:27",
-		"renderTask:on:" : "Casco 6/24/2018 12:22",
-		"renderWorkflowOn:" : "Casco 6/25/2018 17:27"
+		"renderAvailableTaskPrototypesOn:" : "Casco 6/26/2018 20:10",
+		"renderTask:on:" : "Casco 6/26/2018 19:01",
+		"addNewTask" : "Casco 6/26/2018 19:43"
 	},
 	"class" : {
-		"on:" : "Casco 6/25/2018 17:27"
+		"on:" : "Casco 6/25/2018 21:47"
 	}
 }

@@ -1,4 +1,5 @@
+initialize - release
 initialize
-initialize
-   successCondition := 'true'.
-   description := ''
+	properties := OrderedCollection new.
+	isPrototype := false
+	

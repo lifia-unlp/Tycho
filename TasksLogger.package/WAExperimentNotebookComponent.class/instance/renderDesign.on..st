@@ -5,7 +5,7 @@ renderDesign: each on: html
 				tableData: each id;
 				tableData: each notes;
 				tableData: [ html anchor
-						callback: [ self showDetailsOfSession: each ];
+						callback: [ self showDetailsOfDesign: each ];
 						tbsPullRight;
 						with: 'Details' ];
 				tableData: [ html anchor
