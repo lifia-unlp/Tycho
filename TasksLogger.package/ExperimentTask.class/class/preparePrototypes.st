@@ -32,4 +32,12 @@ preparePrototypes
 			describedBy: 'Some javascript code that will execute to check wether the task was completed.'.
 	newTask save.
 	prototypes add: newTask.
+		newTask := ExperimentTask new
+		id: '4';
+		name: 'SUS questionaire';
+		notes: 'A SUS questionaire.';
+		componentClassname: 'SUSComponent';
+		becomePrototype.
+	newTask save.
+	prototypes add: newTask.
 	^ prototypes

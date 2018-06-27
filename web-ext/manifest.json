@@ -48,6 +48,7 @@
         "shared/Facade.js",
         "content_script/ContentFacade.js",
         "content_script/NullComponent.js",
+        "content_script/SUSComponent.js",
         "content_script/BackgroundProxy.js",
         "content_script/content.js"
       ],

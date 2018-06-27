@@ -41,20 +41,6 @@ class UIComponent {
         BackgroundProxy.getSingleton().activeComponetIsDone();
     }
 
-    startTask() {
-        BackgroundProxy.getSingleton().startTask();
-    }
-
-    pauseTask() {
-        BackgroundProxy.getSingleton().pauseTask();
-    }
-
-    resumeTask() {
-        BackgroundProxy.getSingleton().resumeTask();
-    }
-
-    finishTask() {
-        BackgroundProxy.getSingleton().finishTask();
-    }
+ 
 
 }
