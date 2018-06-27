@@ -32,7 +32,7 @@ class ServerAPI {
       axios
         .get(serviceURL + "/designs/" + id)
         .then(response => {
-          console.log("Session is: " + JSON.stringify(response));
+          //console.log("Session is: " + JSON.stringify(response));
           resolve(response);
         })
         .catch(error => {

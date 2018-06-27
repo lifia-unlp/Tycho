@@ -51,7 +51,7 @@ var addJoinButtons = function() {
 
 var addLeaveButton = function(sessionId) {
   let b = document.createElement("div");
-  b.textContent = "Leave session " + sessionId;
+  b.textContent = "Leave session ";
   b.classList.add("button");
   b.onclick = () => {
     leave();

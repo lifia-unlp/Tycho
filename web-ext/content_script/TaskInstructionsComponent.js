@@ -97,5 +97,4 @@ class TaskInstructionsComponent extends UIComponent {
     tracker.append(" ");
     tracker.on("click", "#" + id, func);
   }
-
 }
