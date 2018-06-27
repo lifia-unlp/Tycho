@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "Casco 6/27/2018 10:15",
 	"instvars" : [
 		"task" ],
-	"name" : "WAExperimentTaskComponent",
+	"name" : "WATaskConfigurationComponent",
 	"pools" : [
 		 ],
-	"super" : "WAComponent",
+	"super" : "WAAbstractComponent",
 	"type" : "normal" }

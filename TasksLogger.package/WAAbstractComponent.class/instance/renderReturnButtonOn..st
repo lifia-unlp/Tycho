@@ -1,3 +1,7 @@
 rendering
 renderReturnButtonOn: html
-	^self 
+	^ html
+		form: [ html tbsNavbarButton
+				tbsPullRight;
+				callback: [ self answer ];
+				with: 'Back' ]

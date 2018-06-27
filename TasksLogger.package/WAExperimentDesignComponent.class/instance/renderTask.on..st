@@ -8,10 +8,10 @@ renderTask: each on: html
 						callback: [ self showDetailsOfTask: each ];
 						with: 'Details' ];
 				tableData: [ html anchor
-						callback: [ self moveUpTask: each ];
+						callback: [ self moveTaskBackward: each ];
 						with: 'Up' ];
 				tableData: [ html anchor
-						callback: [ self moveDownTask: each ];
+						callback: [ self moveTaskForward: each ];
 						with: 'Down' ];
 				tableData: [ html anchor
 						callback: [ self removeTask: each ];

@@ -1,3 +1,3 @@
 rendering
 renderIndexPageOn: html
-	html tbsContainer: [ self renderDesingsOn: html ]
+	self renderDesingsOn: html

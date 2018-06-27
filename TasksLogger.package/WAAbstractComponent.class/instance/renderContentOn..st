@@ -1,4 +1,4 @@
 rendering
 renderContentOn: html
 	self renderNavigationbarOn: html.
-	self renderMainContentOn: html
+	html tbsContainer: [ self renderMainContentOn: html ]

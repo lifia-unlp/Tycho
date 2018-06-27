@@ -1,3 +1,3 @@
 callbacks
 showDetailsOfTask: aTestTask
-	self call: (WAExperimentTaskComponent on: aTestTask)
+	self call: (WATaskConfigurationComponent on: aTestTask)
