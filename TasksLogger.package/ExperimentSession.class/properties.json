@@ -1,16 +1,15 @@
 {
-	"category" : "TasksLogger-Obsolete",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "Casco 6/23/2018 17:56",
+	"super" : "Object",
+	"category" : "TasksLogger-Obsolete",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"id",
 		"tasks",
-		"description" ],
+		"description"
+	],
 	"name" : "ExperimentSession",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

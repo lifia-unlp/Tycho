@@ -1,14 +1,13 @@
 {
-	"category" : "TasksLogger-Seaside",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "Casco 6/27/2018 10:15",
-	"instvars" : [
-		"task" ],
-	"name" : "WATaskConfigurationComponent",
-	"pools" : [
-		 ],
 	"super" : "WAAbstractComponent",
-	"type" : "normal" }
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"task"
+	],
+	"name" : "WATaskConfigurationComponent",
+	"type" : "normal"
+}

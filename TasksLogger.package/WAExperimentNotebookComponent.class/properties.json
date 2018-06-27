@@ -1,14 +1,13 @@
 {
-	"category" : "TasksLogger-Seaside",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "Casco 6/25/2018 17:54",
-	"instvars" : [
-		"password" ],
-	"name" : "WAExperimentNotebookComponent",
-	"pools" : [
-		 ],
 	"super" : "WAAbstractComponent",
-	"type" : "normal" }
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"password"
+	],
+	"name" : "WAExperimentNotebookComponent",
+	"type" : "normal"
+}

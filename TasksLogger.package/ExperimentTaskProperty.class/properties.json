@@ -1,16 +1,15 @@
 {
-	"category" : "TasksLogger-Model",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "Casco 6/26/2018 20:50",
+	"super" : "Object",
+	"category" : "TasksLogger-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"name",
 		"description",
-		"value" ],
+		"value"
+	],
 	"name" : "ExperimentTaskProperty",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

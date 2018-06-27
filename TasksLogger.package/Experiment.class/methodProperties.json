@@ -1,11 +1,14 @@
 {
-	"class" : {
-		"isVoyageRoot" : "Casco 6/25/2018 17:22",
-		"voyageCollectionName" : "Casco 6/25/2018 17:23" },
 	"instance" : {
-		"design" : "Casco 6/25/2018 13:56",
-		"design:" : "Casco 6/25/2018 13:56",
-		"id" : "Casco 6/25/2018 13:56",
+		"notes:" : "Casco 6/25/2018 13:56",
 		"id:" : "Casco 6/25/2018 13:56",
 		"notes" : "Casco 6/25/2018 13:56",
-		"notes:" : "Casco 6/25/2018 13:56" } }
+		"design:" : "Casco 6/25/2018 13:56",
+		"design" : "Casco 6/25/2018 13:56",
+		"id" : "Casco 6/25/2018 13:56"
+	},
+	"class" : {
+		"voyageCollectionName" : "Casco 6/25/2018 17:23",
+		"isVoyageRoot" : "Casco 6/25/2018 17:22"
+	}
+}

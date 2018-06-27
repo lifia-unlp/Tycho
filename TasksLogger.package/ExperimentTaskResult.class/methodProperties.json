@@ -1,17 +1,20 @@
 {
-	"class" : {
-		"isVoyageRoot" : "casco 6/24/2018 09:45:03",
-		"task:milliseconds:" : "casco 6/24/2018 09:45:03",
-		"task:milliseconds:successful:" : "casco 6/24/2018 09:45:03",
-		"voyageCollectionName" : "casco 6/24/2018 09:45:03" },
 	"instance" : {
-		"initialize" : "casco 6/24/2018 09:45:03",
-		"milliseconds" : "casco 6/24/2018 09:45:03",
-		"milliseconds:" : "casco 6/24/2018 09:45:03",
-		"successful" : "casco 6/24/2018 09:45:03",
-		"successful:" : "casco 6/24/2018 09:45:03",
-		"susResponse" : "casco 6/24/2018 09:45:03",
 		"susResponse:" : "casco 6/24/2018 09:45:03",
-		"task" : "casco 6/24/2018 09:45:03",
+		"milliseconds" : "casco 6/24/2018 09:45:03",
 		"task:" : "casco 6/24/2018 09:45:03",
-		"timestamp" : "casco 6/24/2018 09:45:03" } }
+		"timestamp" : "casco 6/24/2018 09:45:03",
+		"initialize" : "casco 6/24/2018 09:45:03",
+		"successful:" : "casco 6/24/2018 09:45:03",
+		"task" : "casco 6/24/2018 09:45:03",
+		"successful" : "casco 6/24/2018 09:45:03",
+		"susResponse" : "casco 6/24/2018 09:45:03",
+		"milliseconds:" : "casco 6/24/2018 09:45:03"
+	},
+	"class" : {
+		"task:milliseconds:successful:" : "casco 6/24/2018 09:45:03",
+		"voyageCollectionName" : "casco 6/24/2018 09:45:03",
+		"task:milliseconds:" : "casco 6/24/2018 09:45:03",
+		"isVoyageRoot" : "casco 6/24/2018 09:45:03"
+	}
+}

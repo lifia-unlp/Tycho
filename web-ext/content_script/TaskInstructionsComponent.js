@@ -2,7 +2,7 @@ class TaskInstructionsComponent extends UIComponent {
   constructor(taskSpecParams) {
     super();
     this.id = taskSpecParams.id;
-    this.description = taskSpecParams.description;
+    this.instructions = taskSpecParams.instructions;
     this.ellapsedMs = taskSpecParams.ellapsedMs;
     this.paused = taskSpecParams.paused;
     this.startTime = taskSpecParams.startTime;
@@ -29,8 +29,8 @@ class TaskInstructionsComponent extends UIComponent {
   buildTracker() {
     const me = this;
     let tracker = $(
-      '<div id="tracker"><span id="trackerDescription">' +
-        this.description +
+      '<div id="tracker"><span id="trackerInstructions">' +
+        this.instructions +
         "</span> </div>"
     );
     this.addButton(
@@ -123,7 +123,7 @@ class TaskInstructionsComponent extends UIComponent {
   submitResults() {
     var taskReport = {
       taskId: this.id,
-      taskDescription: this.description,
+      taskInstructions: this.instructions,
       milliseconds: this.ellapsedMs,
       successful: eval(this.successCondition)
     };

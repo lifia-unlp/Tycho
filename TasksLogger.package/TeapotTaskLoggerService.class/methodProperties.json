@@ -1,19 +1,23 @@
 {
+	"instance" : {
+		"handleSessionsRequest:" : "Casco 6/23/2018 23:43",
+		"stop" : "Casco 6/23/2018 22:25",
+		"taskResultsFor:fromParameters:" : "Casco 6/25/2018 17:28",
+		"handleTasksPostRequest:" : "Casco 6/24/2018 12:56",
+		"start" : "Casco 6/23/2018 22:25",
+		"fetchOrSave:" : "Casco 6/23/2018 23:52",
+		"userFromParameters:" : "Casco 6/24/2018 12:49",
+		"initialize" : "Casco 6/23/2018 22:37",
+		"configureRoutes" : "Casco 6/27/2018 13:45",
+		"handleDesignRequest:" : "Casco 6/27/2018 13:58",
+		"defaultPort" : "Casco 6/23/2018 22:35",
+		"susFromParameters:" : "Casco 6/24/2018 00:17",
+		"handleUsersPostRequest:" : "Casco 6/23/2018 23:59",
+		"taskFromParameters:" : "Casco 6/26/2018 19:43"
+	},
 	"class" : {
 		"new" : "Casco 6/23/2018 22:23",
 		"resetSingleton" : "Casco 6/23/2018 22:38",
-		"singleton" : "Casco 6/23/2018 22:23" },
-	"instance" : {
-		"configureRoutes" : "Casco 6/23/2018 22:40",
-		"defaultPort" : "Casco 6/23/2018 22:35",
-		"fetchOrSave:" : "Casco 6/23/2018 23:52",
-		"handleSessionsRequest:" : "Casco 6/23/2018 23:43",
-		"handleTasksPostRequest:" : "Casco 6/24/2018 12:56",
-		"handleUsersPostRequest:" : "Casco 6/23/2018 23:59",
-		"initialize" : "Casco 6/23/2018 22:37",
-		"start" : "Casco 6/23/2018 22:25",
-		"stop" : "Casco 6/23/2018 22:25",
-		"susFromParameters:" : "Casco 6/24/2018 00:17",
-		"taskFromParameters:" : "Casco 6/26/2018 19:43",
-		"taskResultsFor:fromParameters:" : "Casco 6/25/2018 17:28",
-		"userFromParameters:" : "Casco 6/24/2018 12:49" } }
+		"singleton" : "Casco 6/23/2018 22:23"
+	}
+}

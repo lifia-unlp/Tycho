@@ -1,6 +1,6 @@
 a reimplementation based on Teapot
 
-TeapotTaskLoggerService resetSingleton 
+TeapotTaskLoggerService resetSingleton .
 
 TeapotTaskLoggerService singleton 
    configureRoutes ;

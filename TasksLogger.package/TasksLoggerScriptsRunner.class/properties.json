@@ -1,14 +1,11 @@
 {
-	"category" : "TasksLogger-Deployment",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "juliangrigera 7/6/2017 11:56",
-	"instvars" : [
-		 ],
-	"name" : "TasksLoggerScriptsRunner",
-	"pools" : [
-		 ],
 	"super" : "Object",
-	"type" : "normal" }
+	"category" : "TasksLogger-Deployment",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TasksLoggerScriptsRunner",
+	"type" : "normal"
+}

@@ -1,14 +1,13 @@
 {
-	"category" : "TasksLogger-Obsolete",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"taskResult" ],
-	"name" : "WASUSComponent",
-	"pools" : [
-		 ],
 	"super" : "WAComponent",
-	"type" : "normal" }
+	"category" : "TasksLogger-Obsolete",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"taskResult"
+	],
+	"name" : "WASUSComponent",
+	"type" : "normal"
+}

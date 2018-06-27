@@ -26,8 +26,8 @@ preparePrototypes
 		componentClassname: 'TaskInstructionsComponent';
 		becomePrototype.
 	newTask
-		addProperty: 'description'
-			describedBy: 'The description of the task to do. Can be html or plain text';
+		addProperty: 'instructions'
+			describedBy: 'Instructions for the participant. Can be html or plain text.';
 		addProperty: 'successCondition'
 			describedBy: 'Some javascript code that will execute to check wether the task was completed.'.
 	newTask save.

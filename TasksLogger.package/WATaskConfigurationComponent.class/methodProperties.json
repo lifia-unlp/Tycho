@@ -1,7 +1,13 @@
 {
-	"class" : {
-		"on:" : "Casco 6/23/2018 21:02" },
 	"instance" : {
-		"renderMainContentOn:" : "Casco 6/27/2018 10:42",
 		"task" : "Casco 6/23/2018 21:02",
-		"task:" : "Casco 6/23/2018 21:02" } }
+		"renderCommonInfoOn:" : "Casco 6/27/2018 13:34",
+		"renderConfigurationPropertiesOn:" : "Casco 6/27/2018 13:33",
+		"uncamel:" : "Casco 6/27/2018 13:32",
+		"task:" : "Casco 6/23/2018 21:02",
+		"renderMainContentOn:" : "Casco 6/27/2018 13:42"
+	},
+	"class" : {
+		"on:" : "Casco 6/23/2018 21:02"
+	}
+}
