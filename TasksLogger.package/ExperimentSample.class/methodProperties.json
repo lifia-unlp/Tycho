@@ -1,0 +1,16 @@
+{
+	"instance" : {
+		"id:" : "Casco 6/27/2018 14:25",
+		"initialize" : "Casco 6/27/2018 14:27",
+		"experimentDesign:" : "Casco 6/27/2018 14:54",
+		"addTaskResult:" : "Casco 6/27/2018 17:39",
+		"id" : "Casco 6/27/2018 14:25",
+		"experimentDesign" : "Casco 6/27/2018 14:54",
+		"taskResults" : "Casco 6/27/2018 14:27"
+	},
+	"class" : {
+		"id:design:" : "Casco 6/27/2018 17:25",
+		"voyageCollectionName" : "Casco 6/27/2018 14:27",
+		"isVoyageRoot" : "Casco 6/27/2018 14:28"
+	}
+}

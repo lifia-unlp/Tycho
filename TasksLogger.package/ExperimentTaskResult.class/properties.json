@@ -7,10 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"task",
-		"milliseconds",
-		"successful",
-		"susResponse",
-		"timestamp"
+		"timestamp",
+		"properties"
 	],
 	"name" : "ExperimentTaskResult",
 	"type" : "normal"

@@ -3,7 +3,7 @@ preparePrototypes
 	| newTask prototypes |
 	prototypes := OrderedCollection new.
 	newTask := ExperimentTask new
-		id: 1;
+		id: '1';
 		name: 'Nothing';
 		notes: 'A dummy task that will not be perceived by the user. Useful to finish experiments.';
 		componentClassname: 'NullComponent';
@@ -11,7 +11,7 @@ preparePrototypes
 	newTask save.
 	prototypes add: newTask.
 	newTask := ExperimentTask new
-		id: 2;
+		id: '2';
 		name: 'Simple demographics';
 		notes: 'A simple demographics capturing tool (age and internet hours).';
 		componentClassname: 'BasicDemographicsComponent';
@@ -19,7 +19,7 @@ preparePrototypes
 	newTask save.
 	prototypes add: newTask.
 	newTask := ExperimentTask new
-		id: 3;
+		id: '3';
 		name: 'Basic task intructions';
 		notes:
 			'Provides instructions for a task. Records time. Can pause and resume. Has a basic success condition.';

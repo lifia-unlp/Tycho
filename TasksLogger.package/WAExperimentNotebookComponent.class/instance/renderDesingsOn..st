@@ -5,7 +5,6 @@ renderDesingsOn: html
 	headerBlock := [ html tableHeading: '#'.
 	html tableHeading: 'Notes'.
 	html tableHeading: ''.
-	html tableHeading: ''.
 	html tableHeading: '' ].
 	tableBlock := [ html tableHead: headerBlock.
 	html

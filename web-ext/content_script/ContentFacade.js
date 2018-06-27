@@ -32,7 +32,7 @@ class ContentFacade extends Facade {
         if (componentSpecification == null) {
             this.activeComponent = null;
         } else {
-            this.activeComponent = new (this.componentClasses()[componentSpecification.componentClass])(componentSpecification.parameters);
+            this.activeComponent = new (this.componentClasses()[componentSpecification.componentClassname])(componentSpecification);
             this.activeComponent.activate();
         }
     }

@@ -2,7 +2,7 @@
 //TO-DO if server is not available, the catch clause is nt triggered... fix it.
 var join = function(sessionId) {
   browser.runtime
-    .sendMessage({ methodName: "joinSession", arguments: { id: sessionId } })
+    .sendMessage({ methodName: "joinExperiment", arguments: { id: sessionId } })
     .then(retrieveSession)
     .then(updateButtons)
     .catch(error => {
@@ -13,7 +13,7 @@ var join = function(sessionId) {
 
 var leave = function() {
   browser.runtime
-    .sendMessage({ methodName: "leaveSession", arguments: {} })
+    .sendMessage({ methodName: "leaveExperiment", arguments: {} })
     .then(retrieveSession)
     .then(updateButtons)
     .catch(error => {
@@ -23,7 +23,7 @@ var leave = function() {
 
 var retrieveSession = function() {
   return browser.runtime.sendMessage({
-    methodName: "getSession",
+    methodName: "getExperiment",
     arguments: {}
   });
 };

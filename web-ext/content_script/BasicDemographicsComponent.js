@@ -1,4 +1,8 @@
 class BasicDemographicsComponent extends UIComponent {
+   
+    constructor(taskSpec) {
+        super(taskSpec);
+    }
 
     buildComponent() {
         let me = this;
@@ -29,7 +33,7 @@ class BasicDemographicsComponent extends UIComponent {
     }
 
     submitAndFinish() {
-        BackgroundProxy.getSingleton().submitDemographics(this.data);
+        this.submitResults(this.data);
         this.done();
     }
 

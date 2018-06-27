@@ -1,5 +1,9 @@
 class UIComponent {
 
+    constructor(taskSpec) {
+        this.id = taskSpec.id;
+    }
+
     activate() {
         if (! this.component) {
             this.component = this.buildComponent();
@@ -10,6 +14,14 @@ class UIComponent {
         $("body").append(this.overlay);
         $("body").append(this.notification);
     }
+
+    submitResults(results) {
+        var taskReport = {
+          taskId: this.id,
+          results: results
+        };
+        BackgroundProxy.getSingleton().submitTaskReport(taskReport);
+      }
 
     showOverlay() {
         $("#overlay").show();

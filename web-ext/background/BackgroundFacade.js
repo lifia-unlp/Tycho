@@ -12,8 +12,12 @@ let backgroundFacadeSingleton = null;
 class BackgroundFacade extends Facade {
   constructor() {
     super();
-    this.session = null;
+    this.experiment = null;
     this.serverApi = new ServerAPI();
+  }
+
+  getExperiment() {
+    return this.experiment;
   }
 
   static getSingleton() {
@@ -23,28 +27,20 @@ class BackgroundFacade extends Facade {
     return backgroundFacadeSingleton;
   }
 
-  submitDemographics(partialDemographics) {
-    partialDemographics.userId = this.session.getUserId();
-    partialDemographics.version = version;
-    this.serverApi.submitDemographics(partialDemographics);
-  }
-
   submitTaskReport(partialReport) {
-    //Complete the report with the userId
-    partialReport.userId = this.session.getUserId();
+    //Complete the report with the sampleId
+    partialReport.sampleId = this.experiment.getId();
+    partialReport.experimentDesignId = this.experiment.getexperimentDesignId();
     this.serverApi.submitTaskReport(partialReport);
+    console.log("Submitted: ", partialReport)
   }
 
   getActiveComponentSpec() {
-    if (!this.session) {
+    if (!this.experiment) {
       return null;
     } else {
-      return this.session.getActiveComponentSpec();
+      return this.experiment.getActiveComponentSpec();
     }
-  }
-
-  getSession() {
-    return this.session;
   }
 
   /**
@@ -52,15 +48,15 @@ class BackgroundFacade extends Facade {
    * @param {id: id of the session to join} args 
    * @returns a Promise that will resolve to the joined session, or reject with the error. 
    */
-  joinSession(args) {
+  joinExperiment(args) {
     new Promise((resolve, reject) => {
       this.serverApi
-        .getSessionFromServer(args.id)
+        .getExperimentDesignFromServer(args.id)
         .then(response => {
           if (response) {
-            this.session = ExperimentSession.fromJson(response.data);
-            this.session.start();
-            resolve(this.session);
+            this.experiment = ExperimentSample.fromExperimentDesignJson(response.data);
+            this.experiment.start();
+            resolve(this.experiment);
           }
         })
         .catch(error => {
@@ -69,13 +65,13 @@ class BackgroundFacade extends Facade {
     });
   }
 
-  leaveSession() {
-    this.session = null;
+  leaveExperiment() {
+    this.experiment = null;
     ContentProxy.getSingleton().update();
   }
 
   activeComponetIsDone(args) {
-    this.session.next();
+    this.experiment.next();
   }
 
   // UnnecSession management
@@ -90,18 +86,18 @@ class BackgroundFacade extends Facade {
 
   //Task status
   startTask() {
-    this.session.startActiveTask();
+    this.experiment.startActiveTask();
   }
 
   pauseTask() {
-    this.session.pauseActiveTask();
+    this.experiment.pauseActiveTask();
   }
 
   resumeTask() {
-    this.session.resumeActiveTask();
+    this.experiment.resumeActiveTask();
   }
 
   finishTask() {
-    this.session.finishActiveTask();
+    this.experiment.finishActiveTask();
   }
 }

@@ -1,13 +1,13 @@
 class TaskInstructionsComponent extends UIComponent {
-  constructor(taskSpecParams) {
-    super();
-    this.id = taskSpecParams.id;
-    this.instructions = taskSpecParams.instructions;
-    this.ellapsedMs = taskSpecParams.ellapsedMs;
-    this.paused = taskSpecParams.paused;
-    this.startTime = taskSpecParams.startTime;
-    this.successCondition = taskSpecParams.successCondition;
-    this.finished = taskSpecParams.finished;
+
+  constructor(taskSpec) {
+    super(taskSpec);
+    this.instructions = taskSpec.parameters.instructions;
+    this.ellapsedMs = taskSpec.parameters.ellapsedMs;
+    this.paused = taskSpec.parameters.paused;
+    this.startTime = taskSpec.parameters.startTime;
+    this.successCondition = taskSpec.parameters.successCondition;
+    this.finished = taskSpec.parameters.finished;
   }
 
   buildComponent() {
@@ -121,18 +121,17 @@ class TaskInstructionsComponent extends UIComponent {
   // TO-DO: This code access the form directly with JQuery... not nice.
   // Sucess condition will not work here. The SUS is open. Or will it?
   submitResults() {
-    var taskReport = {
-      taskId: this.id,
-      taskInstructions: this.instructions,
+    this.submitResults({
       milliseconds: this.ellapsedMs,
       successful: eval(this.successCondition)
-    };
-    for (let questionNumber = 1; questionNumber <= 10; questionNumber++) {
-      taskReport["question" + questionNumber] = $(
-        'input:radio[name="question' + questionNumber + '"]:checked'
-      ).val();
-    }
-    BackgroundProxy.getSingleton().submitTaskReport(taskReport);
+    });
+
+    // for (let questionNumber = 1; questionNumber <= 10; questionNumber++) {
+    //   taskReport["question" + questionNumber] = $(
+    //     'input:radio[name="question' + questionNumber + '"]:checked'
+    //   ).val();
+    // }
+    //BackgroundProxy.getSingleton().submitTaskReport(taskReport);
   }
 
   addButton(tracker, id, text, func, show) {
