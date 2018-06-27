@@ -45,6 +45,7 @@
         "content_script/UIComponent.js",
         "content_script/BasicDemographicsComponent.js",
         "content_script/TaskInstructionsComponent.js",
+        "content_script/MessageComponent.js",
         "shared/Facade.js",
         "content_script/ContentFacade.js",
         "content_script/NullComponent.js",

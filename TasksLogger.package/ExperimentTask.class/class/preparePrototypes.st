@@ -21,22 +21,30 @@ preparePrototypes
 	newTask := ExperimentTask new
 		id: '3';
 		name: 'Basic task intructions';
-		notes:
-			'Provides instructions for a task. Records time. Can pause and resume. Has a basic success condition.';
+		notes: 'Provides instructions for a task. Records time. Can pause and resume. Has a basic success condition.';
 		componentClassname: 'TaskInstructionsComponent';
-		becomePrototype.
-	newTask
-		addProperty: 'instructions'
-			describedBy: 'Instructions for the participant. Can be html or plain text.';
+		becomePrototype;
+		addProperty: 'instructions' describedBy: 'Instructions for the participant. Can be html or plain text.';
 		addProperty: 'successCondition'
 			describedBy: 'Some javascript code that will execute to check wether the task was completed.'.
 	newTask save.
 	prototypes add: newTask.
-		newTask := ExperimentTask new
+	newTask := ExperimentTask new
 		id: '4';
 		name: 'SUS questionaire';
 		notes: 'A SUS questionaire.';
 		componentClassname: 'SUSComponent';
+		becomePrototype.
+	newTask save.
+	prototypes add: newTask.
+	prototypes add: newTask.
+	newTask := ExperimentTask new
+		id: '5';
+		name: 'Message screen';
+		notes: 'Blocks the entire screen to give the participant a message.';
+		componentClassname: 'MessageComponent';
+		addProperty: 'title' describedBy: 'A title for this message.';
+		addProperty: 'message' describedBy: 'An importante message for the participant. Can be basic html or plain text.';
 		becomePrototype.
 	newTask save.
 	prototypes add: newTask.

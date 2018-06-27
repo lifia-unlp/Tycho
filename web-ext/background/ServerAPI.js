@@ -27,7 +27,7 @@ class ServerAPI {
    * @returns a Promise that resolves to the server response
    */
   getExperimentDesignFromServer(id) {
-    console.log("requested session from serveer");
+    //console.log("requested session from serveer");
     return new Promise((resolve, reject) => {
       axios
         .get(serviceURL + "/designs/" + id)
