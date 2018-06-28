@@ -9,6 +9,6 @@ renderDesign: each on: html
 						tbsPullRight;
 						with: 'Details' ];
 				tableData: [ html anchor
-						callback: [ self removeSession: each ];
+						callback: [ self showResultsOfDesign: each ];
 						tbsPullRight;
-						with: 'Remove' ] ]
+						with: 'Results' ] ]

@@ -1,14 +1,16 @@
 {
 	"instance" : {
 		"moveTaskForward:" : "Casco 6/27/2018 09:47",
+		"deleteDesign" : "Casco 6/27/2018 21:20",
 		"addTaskToDesign:" : "Casco 6/27/2018 09:30",
 		"removeTask:" : "Casco 6/25/2018 17:27",
 		"renderDesignDetailsOn:" : "Casco 6/26/2018 22:25",
 		"renderTaskPrototype:on:" : "Casco 6/26/2018 20:35",
 		"renderReturnButtonOn:" : "Casco 6/25/2018 22:09",
-		"renderMainContentOn:" : "Casco 6/27/2018 10:23",
+		"renderMainContentOn:" : "Casco 6/27/2018 21:15",
 		"moveTaskBackward:" : "Casco 6/27/2018 09:49",
 		"experimentDesign:" : "Casco 6/25/2018 17:27",
+		"renderDeleteButtonOn:" : "Casco 6/27/2018 21:20",
 		"showDetailsOfTask:" : "Casco 6/27/2018 10:14",
 		"experimentDesign" : "Casco 6/25/2018 17:27",
 		"renderAvailableTaskPrototypesOn:" : "Casco 6/26/2018 20:10",
