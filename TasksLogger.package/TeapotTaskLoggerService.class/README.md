@@ -5,4 +5,6 @@ TeapotTaskLoggerService resetSingleton .
 TeapotTaskLoggerService singleton 
    configureRoutes ;
    start.
+
+
 TeapotTaskLoggerService singleton stop.

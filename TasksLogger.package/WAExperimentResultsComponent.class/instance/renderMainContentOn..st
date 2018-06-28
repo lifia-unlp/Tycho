@@ -1,4 +1,4 @@
 rendering
 renderMainContentOn: html
-	self renderDesignSummaryOn: html.
+	self renderSummaryOn: html.
 	self renderTaskResultsOn: html
