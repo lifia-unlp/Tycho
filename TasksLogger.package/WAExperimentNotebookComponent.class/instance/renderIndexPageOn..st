@@ -1,3 +1,3 @@
 rendering
 renderIndexPageOn: html
-	self renderDesingsOn: html
+	self renderExperimentsOn: html

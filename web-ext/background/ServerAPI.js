@@ -30,7 +30,7 @@ class ServerAPI {
     //console.log("requested session from serveer");
     return new Promise((resolve, reject) => {
       axios
-        .get(serviceURL + "/designs/" + id)
+        .get(serviceURL + "/experiments/" + id)
         .then(response => {
           //console.log("Session is: " + JSON.stringify(response));
           resolve(response);

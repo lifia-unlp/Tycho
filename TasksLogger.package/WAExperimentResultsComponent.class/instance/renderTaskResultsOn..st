@@ -4,7 +4,7 @@ renderTaskResultsOn: html
 	html heading
 		level: 2;
 		with: 'Results of taks'.
-	samples := ExperimentSample selectAll select: [ :each | each experimentDesign id = experimentDesign id ].
+	samples := ExperimentSample selectAll select: [ :each | each experiment id = experimentDesign id ].
 	headerBlock := [ 
 	html tableHeading: 'Sample'.
 	html tableHeading: 'Task'.
