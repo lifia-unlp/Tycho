@@ -27,12 +27,12 @@ class BackgroundFacade extends Facade {
     return backgroundFacadeSingleton;
   }
 
-  submitTaskReport(partialReport) {
+  submitTaskReport(args) {
     //Complete the report with the sampleId
-    partialReport.sampleId = this.experiment.getId();
-    partialReport.experimentDesignId = this.experiment.getexperimentDesignId();
-    this.serverApi.submitTaskReport(partialReport);
-    console.log("Submitted: ", partialReport)
+    args.report.sampleId = this.experiment.getId();
+    args.report.experimentDesignId = this.experiment.getexperimentDesignId();
+    this.serverApi.submitTaskReport(args.report);
+    console.log("Submitted: ", args.report)
   }
 
   getActiveComponentSpec() {

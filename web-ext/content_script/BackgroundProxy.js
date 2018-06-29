@@ -16,17 +16,10 @@ class BackgroundProxy {
     }
 
     /**
-     * submitDemographic info so the background submits it to the server
-     */
-    async submitDemographics(demographics) {
-        return await this.send({ methodName: 'submitDemographics', arguments: demographics });
-    }
-
-    /**
      * Submit report from a task to the server. UserId will be added by the background
      */
     async submitTaskReport(partialReport) {
-        return await this.send({ methodName: 'submitTaskReport', arguments: partialReport });
+        return await this.send({ methodName: 'submitTaskReport', arguments: {report: partialReport} });
     }
 
     async activeComponetIsDone(demographics) {
