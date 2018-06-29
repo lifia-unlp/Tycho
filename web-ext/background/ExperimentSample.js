@@ -90,47 +90,4 @@ class ExperimentSample {
     let session = new ExperimentSample(designJson.id, designJson.notes, designJson.tasks);
     return session;
   }
-
-  static withOneNullComponent() {
-    return new ExperimentSample([
-      {
-        componentClass: "NullComponent",
-        parameters: {
-          notice: "A null component to mark the start of the sample"
-        }
-      }
-    ]);
-  }
-
-  static withDemoSequence() {
-    return new ExperimentSample([
-      {
-        componentClass: "WelcomeComponent",
-        parameters: {}
-      },
-      {
-        componentClass: "TaskInstructionsComponent",
-        parameters: {
-          id: 1,
-          description:
-            '<b>Tarea 1</b> a)Busque botas (en ingles, <b>"BOOT"</b>) con el buscador del sitio. b)Seleccione entre los resultados <b>"Women\'s Bootie Baqueira - Seaweed"</b>. c)Seleccione el talle 37 (medida europea). Pulse <b>Iniciar</b> cuando esté listo, y luego <b>Finalizar</b> cuando lo haya encontrado.',
-          successCondition:
-            '($(".details-right-head:contains(\'Baqueira\')").length && $("select").first().val()==6.5)?1:0'
-        }
-      },
-      {
-        componentClass: "TaskInstructionsComponent",
-        parameters: {
-          id: 2,
-          description:
-            "<b>Tarea 2</b> a)Agregue 2 pares botas al carrito. b)Complete el proceso de compra (Checkout). Pulse <b>Iniciar</b> cuando esté listo, <b>Finalizar</b> cuando haya finalizado el proceso.",
-          successCondition: "$('#success').length"
-        }
-      },
-      {
-        componentClass: "NullComponent",
-        parameters: { notice: "A null component to mark the end of the sample" }
-      }
-    ]);
-  }
 }
