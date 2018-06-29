@@ -1,7 +1,7 @@
 class ExperimentSample {
-  constructor(experimentDesignId, notes, sequence) {
-    this.componentSpecSequence = sequence;
-    this.experimentDesignId = experimentDesignId;
+  constructor(experimentId, notes, sequence) {
+    this.taskSequence = sequence;
+    this.experimentId = experimentId;
     this.notes = notes;
     this.current = -1;
     this.id = this.uuidv4();
@@ -11,8 +11,8 @@ class ExperimentSample {
     return this.id;
   }
 
-  getexperimentDesignId() {
-      return this.experimentDesignId;
+  getexperimentId() {
+      return this.experimentId;
   }
 
   start() {
@@ -21,15 +21,15 @@ class ExperimentSample {
   }
 
   next() {
-    if (this.current + 1 < this.componentSpecSequence.length) {
+    if (this.current + 1 < this.taskSequence.length) {
       this.current = this.current + 1;
     }
     ContentProxy.getSingleton().update();
   }
 
   getActiveComponentSpec() {
-    if (0 <= this.current && this.current < this.componentSpecSequence.length) {
-      return this.componentSpecSequence[this.current];
+    if (0 <= this.current && this.current < this.taskSequence.length) {
+      return this.taskSequence[this.current];
     } else {
       return {
         componentClass: "NullComponent",

@@ -30,7 +30,7 @@ class BackgroundFacade extends Facade {
   submitTaskReport(args) {
     //Complete the report with the sampleId
     args.report.sampleId = this.experiment.getId();
-    args.report.experimentDesignId = this.experiment.getexperimentDesignId();
+    args.report.experimentId = this.experiment.getexperimentId();
     this.serverApi.submitTaskReport(args.report);
     console.log("Submitted: ", args.report)
   }
