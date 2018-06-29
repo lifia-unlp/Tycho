@@ -12,7 +12,7 @@ class TaskInstructionsComponent extends UIComponent {
   //This is not the right hook to do this. Need a new one
   activate() {
     super.activate();
-    if (!this.startTime || this.finished || this.paused) {
+    if (!this.startTime || this.paused) {
       this.showOverlay();
     }
   }
