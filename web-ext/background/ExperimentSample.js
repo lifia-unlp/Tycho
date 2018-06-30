@@ -76,7 +76,7 @@ class ExperimentSample {
    * Build a session from the Json description of an experiment design.
    * @param {*} json
    */
-  static fromExperimentDesignJson(designJson) {
+  static fromExperimentJson(designJson) {
     let session = new ExperimentSample(
       designJson.id,
       designJson.notes,

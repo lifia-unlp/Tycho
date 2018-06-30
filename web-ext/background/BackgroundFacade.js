@@ -60,7 +60,7 @@ class BackgroundFacade extends Facade {
         .getExperimentDesignFromServer(args.id)
         .then(response => {
           if (response) {
-            this.experiment = ExperimentSample.fromExperimentDesignJson(
+            this.experiment = ExperimentSample.fromExperimentJson(
               response.data
             );
             this.experiment.start();
