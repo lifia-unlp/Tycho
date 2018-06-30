@@ -1,3 +1,3 @@
 callbacks
 deleteExperiment
-    experiment remove. 
+    self store deleteExperiment: experiment. 

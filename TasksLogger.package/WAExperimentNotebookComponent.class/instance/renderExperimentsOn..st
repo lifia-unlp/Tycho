@@ -1,9 +1,10 @@
-rendering designs
+rendering experiments
 renderExperimentsOn: html
 	| headerBlock tableBlock |
 	html heading: 'Your experiments'.
 	headerBlock := [ html tableHeading: '#'.
 	html tableHeading: 'Notes'.
+	html tableHeading: ''.
 	html tableHeading: ''.
 	html tableHeading: '' ].
 	tableBlock := [ html tableHead: headerBlock.
@@ -17,4 +18,8 @@ renderExperimentsOn: html
 			html space.
 			html tbsButton
 				callback: [ self addExample ];
-				with: 'Add example' ]
+				with: 'Add example'.
+			html space.
+			html tbsButton
+				callback: [ self ];
+				with: 'Import' ]

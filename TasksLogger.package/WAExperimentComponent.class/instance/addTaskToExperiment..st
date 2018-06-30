@@ -2,6 +2,7 @@ callbacks
 addTaskToExperiment: aTask
 	| taskClone |
 	taskClone := aTask clone.
-	taskClone save.
+	self store rememberToSave: taskClone.
 	experiment addTask: taskClone.
-	experiment save
+	self store rememberToSave: experiment.
+	self store savePending

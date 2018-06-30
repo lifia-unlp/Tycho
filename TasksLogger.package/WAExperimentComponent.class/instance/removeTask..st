@@ -1,4 +1,4 @@
 callbacks
 removeTask: each
 	experiment removeTask: each.
-	experiment save
+	self store save: experiment.

@@ -1,3 +1,3 @@
 accessing
 experiment: anObject
-	experimentDesign := anObject
+	experiment := anObject

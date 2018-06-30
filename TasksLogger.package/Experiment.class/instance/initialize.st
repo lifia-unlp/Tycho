@@ -1,3 +1,4 @@
 initialization-release
 initialize
-   tasks := OrderedCollection new. 
+	tasks := OrderedCollection new.
+	samples := OrderedCollection new

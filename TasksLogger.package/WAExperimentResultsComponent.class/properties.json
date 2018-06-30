@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"experimentDesign"
+		"experiment"
 	],
 	"name" : "WAExperimentResultsComponent",
 	"type" : "normal"

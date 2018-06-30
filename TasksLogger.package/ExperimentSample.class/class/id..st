@@ -1,6 +1,5 @@
 instance creation
-id: anId design: aDesign
+id: anId
 	^ self new
 		id: anId;
-		experiment: aDesign;
 		yourself

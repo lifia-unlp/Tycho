@@ -1,12 +1,15 @@
 route handlers
 handleTaskResultPostRequest: parameters
-	| task taskResult sample design payload |
+	| task taskResult sample experiment payload |
 	payload := NeoJSONReader fromString: parameters entity string.
-	design := self experimentFromParameters: payload.
-	sample := self sampleForExperiment: design fromParameters: payload.
+	experiment := self experimentFromParameters: payload.
+	sample := self sampleFromParameters: payload.
+	(experiment samples includes: sample)
+		ifFalse: [ experiment addSample: sample.
+			self store rememberToSave: experiment ].
 	task := self taskFromParameters: payload.
 	taskResult := self newTaskResultsFor: task withParameters: payload.
-	taskResult save.
 	sample addTaskResult: taskResult.
-	sample save.
+	self store rememberToSave: sample.
+	self store savePending.
 	^ 'ok'

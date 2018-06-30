@@ -1,7 +1,7 @@
 route handlers
 handleExperimentRequest: req
-	| designId resp json |
-	designId := req at: #id.
-	resp := Experiment selectAll detect: [ :each | each id = designId ] ifNone: [ ^ nil ].
+	| id resp json |
+	id := req at: #id.
+	resp := self store experimentId: id.
 	json := resp asJson.
 	^ json

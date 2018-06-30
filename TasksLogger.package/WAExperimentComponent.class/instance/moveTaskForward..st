@@ -1,4 +1,4 @@
 callbacks
 moveTaskForward: each
 	experiment moveTaskForward: each.
-	experiment save.
+	self store save: experiment.

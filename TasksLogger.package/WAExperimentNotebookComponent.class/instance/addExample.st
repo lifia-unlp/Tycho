@@ -1,12 +1,11 @@
 callbacks
 addExample
-	| exp |
+	| exp clone |
 	exp := Experiment id: 99 notes: 'a sample experiment'.
-	exp save.
 	ExperimentTask prototypes
 		do: [ :each | 
-			exp
-				addTask:
-					(each clone
-						save;
-						yourself) ].
+			clone := each clone.
+			exp addTask: clone.
+			self store rememberToSave: clone ].
+	self store rememberToSave: exp.
+	self store savePending .

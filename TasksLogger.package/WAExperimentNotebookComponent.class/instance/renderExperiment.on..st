@@ -1,4 +1,4 @@
-rendering designs
+rendering experiments
 renderExperiment: each on: html
 	html
 		tableRow: [ html
@@ -11,4 +11,8 @@ renderExperiment: each on: html
 				tableData: [ html anchor
 						callback: [ self showResultsOfExperiment: each ];
 						tbsPullRight;
-						with: 'Results' ] ]
+						with: 'Results' ];
+				tableData: [ html anchor
+						callback: [ self exportAsJson: each ];
+						tbsPullRight;
+						with: 'Export' ] ]
