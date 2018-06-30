@@ -4,6 +4,12 @@ class BasicDemographicsComponent extends UIComponent {
         super(model);
     }
 
+    render() {
+        this.model.startTime = new Date().getTime();
+        super.render();
+        this.showOverlay();
+      }
+
     buildComponent() {
         let me = this;
         let welcome = $("<div id=\"welcome\" class=\"topNotification\"></div>");
@@ -29,7 +35,8 @@ class BasicDemographicsComponent extends UIComponent {
     }
 
     async submitAndFinish() {
-        await this.submitResults();
+        this.model.ellapsedMs = new Date().getTime() - this.model.startTime;
+        this.submitResults();
         this.done();
     }
 

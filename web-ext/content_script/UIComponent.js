@@ -25,6 +25,7 @@ class UIComponent {
     }
 
     submitResults() {
+        this.model.startTime = new Date(this.model.startTime);
         BackgroundProxy.getSingleton().submitResultsOfTask(this.model);
     }
 

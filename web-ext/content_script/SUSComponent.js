@@ -5,6 +5,7 @@ class SUSComponent extends UIComponent {
 
   //This is not the right hook to do this. Need a new one
   render() {
+    this.model.startTime = new Date().getTime();
     super.render();
     this.showOverlay();
   }
@@ -61,6 +62,7 @@ class SUSComponent extends UIComponent {
       }
     }
     this.model.answers = answers;
+    this.model.ellapsedMs = new Date().getTime() - this.model.startTime;
     this.submitResults();
     this.done();
   }
