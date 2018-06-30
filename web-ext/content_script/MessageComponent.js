@@ -11,13 +11,18 @@ class MessageComponent extends UIComponent {
     messageDiv.append(
       '<p><input id="close-button" type="submit" class="tracker-btn" value="Entendido"/></p>'
     );
-    messageDiv.on("click", "#close-button", e => {
-      me.done();
-    });
+    messageDiv.on("click", "#close-button", e => { me.submit()});
     return messageDiv;
   }
 
+  submit() {
+    this.model.ellapsedMs = new Date().getTime() - this.model.startTime;
+    this.submitResults();
+    this.done();
+  }
+
   render() {
+    this.model.startTime = new Date().getTime();
     super.render();
     this.showOverlay();
   }
