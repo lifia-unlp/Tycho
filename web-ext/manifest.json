@@ -8,7 +8,8 @@
     "48": "resources/border-48.png"
   },
   "permissions": [
-    "<all_urls>"
+    "<all_urls>",
+    "tabs"
   ],
   "background": {
     "scripts": [

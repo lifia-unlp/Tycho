@@ -14,10 +14,6 @@ class ServerAPI {
       });
   }
 
-  submitDemographics(demographics) {
-    this.submit(demographics, "/users/");
-  }
-
   submitTaskReport(report) {
     this.submit(report, "/task-results/");
   }

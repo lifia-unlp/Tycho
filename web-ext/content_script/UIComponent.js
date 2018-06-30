@@ -1,52 +1,68 @@
 class UIComponent {
+  constructor(model) {
+    this.model = model;
+  }
 
-    constructor(model) {
-        this.model = model;
+  getId() {
+    return this.model.id;
+  }
+
+  render() {
+    if (!this.component) {
+      this.component = this.buildComponent();
+      this.notification = $(
+        '<div id="notification" style="display: none;"></div>'
+      );
+      this.overlay = $('<div id="overlay" style="display: none;"></div>');
+      this.logUrl();
     }
+    $("body").append(this.component);
+    $("body").append(this.overlay);
+    $("body").append(this.notification);
+  }
 
-    getId() {
-        return this.model.id;
-    }
+  setModel(model) {
+    this.model = model;
+    BackgroundProxy.getSingleton().setModelOfTask(this.model);
+  }
 
-    render() {
-        if (! this.component) {
-            this.component = this.buildComponent();
-            this.notification = $("<div id=\"notification\" style=\"display: none;\"></div>"); 
-            this.overlay = $("<div id=\"overlay\" style=\"display: none;\"></div>"); 
-        }
-        $("body").append(this.component);
-        $("body").append(this.overlay);
-        $("body").append(this.notification);
-    }
+  submitResults() {
+    this.model.startTime = new Date(this.model.startTime);
+    BackgroundProxy.getSingleton().submitResultsOfTask(this.model);
+  }
 
-    setModel(model) {
-        this.model = model;
-        BackgroundProxy.getSingleton().setModelOfTask(this.model);
-    }
+  showOverlay() {
+    $("#overlay").show();
+  }
 
-    submitResults() {
-        this.model.startTime = new Date(this.model.startTime);
-        BackgroundProxy.getSingleton().submitResultsOfTask(this.model);
-    }
+  hideOverlay() {
+    $("#overlay").hide();
+  }
 
-    showOverlay() {
-        $("#overlay").show();
-    }
+  deactivate() {
+    this.component.remove();
+    this.notification.remove();
+    this.overlay.remove();
+  }
 
-    hideOverlay() {
-        $("#overlay").hide();
-    }
+  logUrl() {
+    BackgroundProxy.getSingleton().logUrlForTask(
+      this.model.id,
+      window.location.href,
+      "NA"
+    );
+    // const me = this;
+    // browser.tabs.getCurrent().then(tab => {
+    //   console.log(tab.url);
+    //   BackgroundProxy.getSingleton().logUrlForTask(
+    //     me.model.id,
+    //     tab.url,
+    //     tab.id
+    //   );
+    // });
+  }
 
-    deactivate() {
-        this.component.remove();
-        this.notification.remove();
-        this.overlay.remove();
-    }
-
-    done() {
-        BackgroundProxy.getSingleton().activeComponetIsDone();
-    }
-
- 
-
+  done() {
+    BackgroundProxy.getSingleton().activeComponetIsDone();
+  }
 }

@@ -16,10 +16,6 @@ class BackgroundFacade extends Facade {
     this.serverApi = new ServerAPI();
   }
 
-  getExperiment() {
-    return this.experiment;
-  }
-
   static getSingleton() {
     if (backgroundFacadeSingleton == null) {
       backgroundFacadeSingleton = new BackgroundFacade();
@@ -27,9 +23,15 @@ class BackgroundFacade extends Facade {
     return backgroundFacadeSingleton;
   }
 
+  getExperiment() {
+    return this.experiment;
+  }
+
   /**
-   * Submit the model in args.model to the server
-   * TODO: the new model is not updated locally.. shall I do that?
+   * Submit a report to the server. The report includes the 
+   * model and the koboldModel of the task.
+   * This method also uptades the model of the local version of the task
+   * with the one received. 
    * @param {args.model is the updated model from the UIComponent} args 
    */
   submitResultsOfTask(args) {
@@ -37,7 +39,10 @@ class BackgroundFacade extends Facade {
       sampleId: this.experiment.getId(),
       experimentId: this.experiment.getexperimentId()
     };
+    let updatedTask = this.experiment.getTask(args.model.id);
+    updatedTask.model = args.model; 
     report.model = args.model;
+    report.koboldModel = updatedTask.koboldModel;
     this.serverApi.submitTaskReport(report);
   }
 
@@ -87,6 +92,10 @@ class BackgroundFacade extends Facade {
   activeComponetIsDone(args) {
     this.experiment.next();
     ContentProxy.getSingleton().render();
+  }
+
+  logUrlForTask(args) {
+    this.experiment.getTask(args.taskId).logUrl(args.url, args.tabId);
   }
 
 }
