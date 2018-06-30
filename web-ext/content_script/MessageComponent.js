@@ -19,8 +19,8 @@ class MessageComponent extends UIComponent {
     return messageDiv;
   }
 
-  activate() {
-    super.activate();
+  render() {
+    super.render();
     this.showOverlay();
   }
 

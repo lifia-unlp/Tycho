@@ -4,7 +4,7 @@ class NullComponent {
         this.notice = parameters.notice;
     }
 
-    activate() {
+    render() {
         console.log("Activating a NullComponent :)", this.notice);
     }
 

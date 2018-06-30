@@ -16,8 +16,8 @@ class ContentProxy {
     }
 
     //notify the contentFacade that an update is needed
-    async update() {
-        return await this.send({ methodName: 'update', arguments: {} });
+    async render() {
+        return await this.send({ methodName: 'render', arguments: {} });
     }
 
     /**

@@ -9,6 +9,6 @@
 
 var facade = ContentFacade.getSingleton();
 browser.runtime.onMessage.addListener(rmcRequest => {return facade.handle(rmcRequest)} );
-facade.update();
+facade.render();
 
 

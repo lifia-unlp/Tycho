@@ -67,7 +67,7 @@ class BackgroundFacade extends Facade {
 
   leaveExperiment() {
     this.experiment = null;
-    ContentProxy.getSingleton().update();
+    ContentProxy.getSingleton().render();
   }
 
   activeComponetIsDone(args) {

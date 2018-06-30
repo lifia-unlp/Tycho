@@ -4,7 +4,7 @@ class UIComponent {
         this.id = taskSpec.id;
     }
 
-    activate() {
+    render() {
         if (! this.component) {
             this.component = this.buildComponent();
             this.notification = $("<div id=\"notification\" style=\"display: none;\"></div>"); 

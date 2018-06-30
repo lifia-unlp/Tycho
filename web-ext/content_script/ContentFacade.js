@@ -17,15 +17,15 @@ class ContentFacade extends Facade {
     }
 
     //The session changed in the background / update
-    async update() {
+    async render() {
         let spec = await BackgroundProxy.getSingleton().getActiveComponentSpec();
-        this.activateComponentSpec(spec);
+        this.renderComponentSpec(spec);
     }
 
 
     // Private methods from here down
 
-    activateComponentSpec(componentSpecification) {
+    renderComponentSpec(componentSpecification) {
         if (this.activeComponent) {
             this.activeComponent.deactivate();
         }
@@ -33,7 +33,7 @@ class ContentFacade extends Facade {
             this.activeComponent = null;
         } else {
             this.activeComponent = new (this.componentClasses()[componentSpecification.componentClassname])(componentSpecification);
-            this.activeComponent.activate();
+            this.activeComponent.render();
         }
     }
 

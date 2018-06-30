@@ -1,17 +1,17 @@
 class TaskInstructionsComponent extends UIComponent {
-  constructor(taskSpec) {
-    super(taskSpec);
-    this.instructions = taskSpec.parameters.instructions;
-    this.ellapsedMs = taskSpec.parameters.ellapsedMs;
-    this.paused = taskSpec.parameters.paused;
-    this.startTime = taskSpec.parameters.startTime;
-    this.successCondition = taskSpec.parameters.successCondition;
-    this.finished = taskSpec.parameters.finished;
+  constructor(componentSpec) {
+    super(componentSpec);
+    this.instructions = componentSpec.parameters.instructions;
+    this.ellapsedMs = componentSpec.parameters.ellapsedMs;
+    this.paused = componentSpec.parameters.paused;
+    this.startTime = componentSpec.parameters.startTime;
+    this.successCondition = componentSpec.parameters.successCondition;
+    this.finished = componentSpec.parameters.finished;
   }
 
   //This is not the right hook to do this. Need a new one
-  activate() {
-    super.activate();
+  render() {
+    super.render();
     if (!this.startTime || this.paused) {
       this.showOverlay();
     }

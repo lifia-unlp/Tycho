@@ -17,14 +17,14 @@ class ExperimentSample {
 
   start() {
     this.current = 0;
-    ContentProxy.getSingleton().update();
+    ContentProxy.getSingleton().render();
   }
 
   next() {
     if (this.current + 1 < this.taskSequence.length) {
       this.current = this.current + 1;
     }
-    ContentProxy.getSingleton().update();
+    ContentProxy.getSingleton().render();
   }
 
   getActiveComponentSpec() {
@@ -43,21 +43,21 @@ class ExperimentSample {
     params.paused = false;
     params.startTime = new Date().getTime();
     params.ellapsedMs = 0;
-    ContentProxy.getSingleton().update();
+    ContentProxy.getSingleton().render();
   }
 
   pauseActiveTask() {
     let params = this.getActiveComponentSpec().parameters;
     params.paused = true;
     params.ellapsedMs += new Date().getTime() - params.startTime;
-    ContentProxy.getSingleton().update();
+    ContentProxy.getSingleton().render();
   }
 
   resumeActiveTask() {
     let params = this.getActiveComponentSpec().parameters;
     params.paused = false;
     params.startTime = new Date().getTime();
-    ContentProxy.getSingleton().update();
+    ContentProxy.getSingleton().render();
   }
 
   finishActiveTask() {
@@ -65,12 +65,12 @@ class ExperimentSample {
     params.paused = false;
     params.ellapsedMs += new Date().getTime() - params.startTime;
     params.finished = true;
-    ContentProxy.getSingleton().update();
+    ContentProxy.getSingleton().render();
   }
 
   finish() {
     this.current = -1;
-    ContentProxy.getSingleton().update();
+    ContentProxy.getSingleton().render();
   }
 
   uuidv4() {
