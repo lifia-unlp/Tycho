@@ -30,7 +30,7 @@ class ContentProxy {
             for (let i = 0; i < tabs.length; ++i) {
                 try {
                     browser.tabs.sendMessage(tabs[i].id, rmc);
-                } catch {
+                } catch (error) {
                     console.log('Content scripts are not ready yet in that tab: ', error);
                 }
             }

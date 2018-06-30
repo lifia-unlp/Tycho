@@ -50,7 +50,7 @@ class BackgroundProxy {
   async send(rmc) {
     try {
       return browser.runtime.sendMessage(rmc);
-    } catch {
+    } catch (error) {
       console.log("Background are not ready yet: ");
     }
   }
