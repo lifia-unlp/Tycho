@@ -1,14 +1,14 @@
 json
 asDictionaryOfProperties
-	| paramsDict dict |
-	paramsDict := Dictionary new.
-	self properties do: [ :each | paramsDict at: each name put: each value ].
+	| modelDict dict |
+	modelDict := Dictionary new.
+	self properties do: [ :each | modelDict at: each name put: each value ].
+	modelDict at: 'id' put: self id.
 	dict := Dictionary new.
 	dict
 		at: 'componentClassname' put: self componentClassname;
-		at: 'id' put: self id;
 		at: 'name' put: self name;
 		at: 'notes' put: self notes;
 		at: 'isPrototype' put: self isPrototype;
-		at: 'parameters' put: paramsDict.
+		at: 'model' put: modelDict.
 	^ dict
