@@ -52,6 +52,7 @@ class BackgroundFacade extends Facade {
 
   setModelOfTask(args) {
     this.experiment.setModelOfTask(args.model);
+    ContentProxy.getSingleton().render();
   }
 
   /**
@@ -69,6 +70,7 @@ class BackgroundFacade extends Facade {
               response.data
             );
             this.experiment.start();
+            ContentProxy.getSingleton().render();
             resolve(this.experiment);
           }
         })
@@ -85,16 +87,7 @@ class BackgroundFacade extends Facade {
 
   activeComponetIsDone(args) {
     this.experiment.next();
-  }
-
-  // UnnecSession management
-  // start() {
-  //     this.session.start();
-  // }
-
-  //Utility method to call from the debuger console
-  next() {
-    this.activeComponetIsDone({});
+    ContentProxy.getSingleton().render();
   }
 
 }

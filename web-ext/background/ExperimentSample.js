@@ -32,19 +32,16 @@ class ExperimentSample {
   setModelOfTask(model) {
     let task = this.getTask(model.id);
     task.model = model;
-    ContentProxy.getSingleton().render();
   }
 
   start() {
     this.current = 0;
-    ContentProxy.getSingleton().render();
   }
 
   next() {
     if (this.current + 1 < this.taskSequence.length) {
       this.current = this.current + 1;
     }
-    ContentProxy.getSingleton().render();
   }
 
   getActiveComponentSpec() {
@@ -56,11 +53,6 @@ class ExperimentSample {
         model: { notice: "Session component index is out of bounds" }
       };
     }
-  }
-
-  finish() {
-    this.current = -1;
-    ContentProxy.getSingleton().render();
   }
 
   uuidv4() {
