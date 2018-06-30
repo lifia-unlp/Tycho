@@ -15,35 +15,20 @@ class BackgroundProxy {
         return backgroundProxySingleton
     }
 
-    /**
-     * Submit report from a task to the server. UserId will be added by the background
-     */
-    async submitTaskReport(partialReport) {
-        return await this.send({ methodName: 'submitTaskReport', arguments: {report: partialReport} });
+    async submitResultsOfTask(model) {
+        return await this.send({ methodName: 'submitResultsOfTask', arguments: {model: model} });
     }
 
-    async activeComponetIsDone(demographics) {
+    async setModelOfTask(model) {
+        return await this.send({ methodName: 'setModelOfTask', arguments: {model: model} });
+    }
+
+    async activeComponetIsDone() {
         return await this.send({ methodName: 'activeComponetIsDone', arguments: {} });
     }
 
     async getActiveComponentSpec() {
         return await this.send({ methodName: 'getActiveComponentSpec', arguments: {} });
-    }
-
-    async startTask() {
-        return await this.send({ methodName: 'startTask', arguments: {} });
-    }
-
-    async pauseTask() {
-        return await this.send({ methodName: 'pauseTask', arguments: {} });
-    }
-
-    async resumeTask() {
-        return await this.send({ methodName: 'resumeTask', arguments: {} });
-    }
-
-    async finishTask() {
-        return await this.send({ methodName: 'finishTask', arguments: {} });
     }
 
     // Private protocol down here

@@ -27,12 +27,14 @@ class BackgroundFacade extends Facade {
     return backgroundFacadeSingleton;
   }
 
-  submitTaskReport(args) {
-    //Complete the report with the sampleId
-    args.report.sampleId = this.experiment.getId();
-    args.report.experimentId = this.experiment.getexperimentId();
-    this.serverApi.submitTaskReport(args.report);
-    console.log("Submitted: ", args.report)
+  submitResultsOfTask(args) {
+    let report = {
+      sampleId: this.experiment.getId(),
+      experimentId: this.experiment.getexperimentId()
+    };
+    //this.experiment.getTask(args.model.id).model = model;
+    report.model = args.model;
+    this.serverApi.submitTaskReport(report);
   }
 
   getActiveComponentSpec() {
@@ -43,10 +45,14 @@ class BackgroundFacade extends Facade {
     }
   }
 
+  setModelOfTask(args) {
+    this.experiment.setModelOfTask(args.model);
+  }
+
   /**
-   * 
-   * @param {id: id of the session to join} args 
-   * @returns a Promise that will resolve to the joined session, or reject with the error. 
+   *
+   * @param {id: id of the session to join} args
+   * @returns a Promise that will resolve to the joined session, or reject with the error.
    */
   joinExperiment(args) {
     new Promise((resolve, reject) => {
@@ -54,7 +60,9 @@ class BackgroundFacade extends Facade {
         .getExperimentDesignFromServer(args.id)
         .then(response => {
           if (response) {
-            this.experiment = ExperimentSample.fromExperimentDesignJson(response.data);
+            this.experiment = ExperimentSample.fromExperimentDesignJson(
+              response.data
+            );
             this.experiment.start();
             resolve(this.experiment);
           }
@@ -84,20 +92,4 @@ class BackgroundFacade extends Facade {
     this.activeComponetIsDone({});
   }
 
-  //Task status
-  startTask() {
-    this.experiment.startActiveTask();
-  }
-
-  pauseTask() {
-    this.experiment.pauseActiveTask();
-  }
-
-  resumeTask() {
-    this.experiment.resumeActiveTask();
-  }
-
-  finishTask() {
-    this.experiment.finishActiveTask();
-  }
 }

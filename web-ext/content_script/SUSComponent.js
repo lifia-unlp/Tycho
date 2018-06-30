@@ -1,14 +1,12 @@
 class SUSComponent extends UIComponent {
-  constructor(taskSpec) {
-    super(taskSpec);
+  constructor(model) {
+    super(model);
   }
 
   //This is not the right hook to do this. Need a new one
   render() {
     super.render();
-    if (!this.startTime || this.finished || this.paused) {
-      this.showOverlay();
-    }
+    this.showOverlay();
   }
 
   buildComponent() {
@@ -53,16 +51,17 @@ class SUSComponent extends UIComponent {
   }
 
   finishSus() {
-    let results = {};
+    let answers = {};
     for (let questionNumber = 1; questionNumber <= 10; questionNumber++) {
-      results["question" + questionNumber] = $(
+      answers["question" + questionNumber] = $(
         'input:radio[name="question' + questionNumber + '"]:checked'
       ).val();
-      if (!results["question" + questionNumber]) {
-        results["question" + questionNumber] = 0;
+      if (!answers["question" + questionNumber]) {
+        answers["question" + questionNumber] = 0;
       }
     }
-    this.submitResults(results);
+    this.model.answers = answers;
+    this.submitResults();
     this.done();
   }
 

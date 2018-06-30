@@ -1,15 +1,13 @@
 class MessageComponent extends UIComponent {
-  constructor(taskSpec) {
-    super(taskSpec);
-    this.title = taskSpec.parameters.title;
-    this.message = taskSpec.parameters.message;
+  constructor(model) {
+    super(model);
   }
 
   buildComponent() {
     let me = this;
     let messageDiv = $('<div id="wen-message-component" class="topNotification"></div>');
-    messageDiv.append('<h1>' + this.title + '</h1><p></p>');
-    messageDiv.append(this.message);
+    messageDiv.append('<h1>' + this.model.title + '</h1><p></p>');
+    messageDiv.append(this.model.message);
     messageDiv.append(
       '<p><input id="close-button" type="submit" class="tracker-btn" value="Entendido"/></p>'
     );
@@ -24,8 +22,4 @@ class MessageComponent extends UIComponent {
     this.showOverlay();
   }
 
-  submitAndFinish() {
-    this.submitResults(this.data);
-    this.done();
-  }
 }

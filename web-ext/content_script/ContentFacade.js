@@ -19,20 +19,22 @@ class ContentFacade extends Facade {
     //The session changed in the background / update
     async render() {
         let spec = await BackgroundProxy.getSingleton().getActiveComponentSpec();
-        this.renderComponentSpec(spec);
+        this.renderComponent(spec);
     }
 
 
     // Private methods from here down
 
-    renderComponentSpec(componentSpecification) {
+    renderComponent(componentSpecification) {
         if (this.activeComponent) {
             this.activeComponent.deactivate();
         }
         if (componentSpecification == null) {
             this.activeComponent = null;
         } else {
-            this.activeComponent = new (this.componentClasses()[componentSpecification.componentClassname])(componentSpecification);
+            let className = componentSpecification.componentClassname;
+            let model = componentSpecification.model;
+            this.activeComponent = new (this.componentClasses()[className])(model);
             this.activeComponent.render();
         }
     }

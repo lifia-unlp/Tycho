@@ -1,7 +1,7 @@
 class BasicDemographicsComponent extends UIComponent {
    
-    constructor(taskSpec) {
-        super(taskSpec);
+    constructor(model) {
+        super(model);
     }
 
     buildComponent() {
@@ -23,15 +23,13 @@ class BasicDemographicsComponent extends UIComponent {
     }
 
     inputChanged() {
-        this.data = {
-            age: $("#age").val(),
-            hoursPerDay: $("#hoursPerDay").val(),
-        };
-        $('#welcome-button').prop( "disabled",(! this.data.age) ||  (! this.data.hoursPerDay));
+        this.model.age = $("#age").val();
+        this.model.hoursPerDay = $("#hoursPerDay").val();
+        $('#welcome-button').prop( "disabled",(! this.model.age) ||  (! this.model.hoursPerDay));
     }
 
-    submitAndFinish() {
-        this.submitResults(this.data);
+    async submitAndFinish() {
+        await this.submitResults();
         this.done();
     }
 

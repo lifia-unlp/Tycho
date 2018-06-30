@@ -1,7 +1,11 @@
 class UIComponent {
 
-    constructor(taskSpec) {
-        this.id = taskSpec.id;
+    constructor(model) {
+        this.model = model;
+    }
+
+    getId() {
+        return this.model.id;
     }
 
     render() {
@@ -15,13 +19,14 @@ class UIComponent {
         $("body").append(this.notification);
     }
 
-    submitResults(results) {
-        var taskReport = {
-          taskId: this.id,
-          results: results
-        };
-        BackgroundProxy.getSingleton().submitTaskReport(taskReport);
-      }
+    setModel(model) {
+        this.model = model;
+        BackgroundProxy.getSingleton().setModelOfTask(this.model);
+    }
+
+    submitResults() {
+        BackgroundProxy.getSingleton().submitResultsOfTask(this.model);
+    }
 
     showOverlay() {
         $("#overlay").show();

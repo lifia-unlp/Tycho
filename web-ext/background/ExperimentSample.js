@@ -12,7 +12,27 @@ class ExperimentSample {
   }
 
   getexperimentId() {
-      return this.experimentId;
+    return this.experimentId;
+  }
+
+  getTask(taskId) {
+    var task = null;
+    for (let i = 0; i < this.taskSequence.length; i = i + 1 ) {
+      if (this.taskSequence[i].model.id == taskId) {
+        task = this.taskSequence[i];
+      }
+    }
+    return task
+  }
+
+  getModelForTask(taskId) {
+    return this.getTask(taskId).model;
+  }
+
+  setModelOfTask(model) {
+    let task = this.getTask(model.id);
+    task.model = model;
+    ContentProxy.getSingleton().render();
   }
 
   start() {
@@ -33,39 +53,9 @@ class ExperimentSample {
     } else {
       return {
         componentClass: "NullComponent",
-        parameters: { notice: "Session component index is out of bounds" }
+        model: { notice: "Session component index is out of bounds" }
       };
     }
-  }
-
-  startActiveTask() {
-    let params = this.getActiveComponentSpec().parameters;
-    params.paused = false;
-    params.startTime = new Date().getTime();
-    params.ellapsedMs = 0;
-    ContentProxy.getSingleton().render();
-  }
-
-  pauseActiveTask() {
-    let params = this.getActiveComponentSpec().parameters;
-    params.paused = true;
-    params.ellapsedMs += new Date().getTime() - params.startTime;
-    ContentProxy.getSingleton().render();
-  }
-
-  resumeActiveTask() {
-    let params = this.getActiveComponentSpec().parameters;
-    params.paused = false;
-    params.startTime = new Date().getTime();
-    ContentProxy.getSingleton().render();
-  }
-
-  finishActiveTask() {
-    let params = this.getActiveComponentSpec().parameters;
-    params.paused = false;
-    params.ellapsedMs += new Date().getTime() - params.startTime;
-    params.finished = true;
-    ContentProxy.getSingleton().render();
   }
 
   finish() {
@@ -87,7 +77,11 @@ class ExperimentSample {
    * @param {*} json
    */
   static fromExperimentDesignJson(designJson) {
-    let session = new ExperimentSample(designJson.id, designJson.notes, designJson.tasks);
+    let session = new ExperimentSample(
+      designJson.id,
+      designJson.notes,
+      designJson.tasks
+    );
     return session;
   }
 }

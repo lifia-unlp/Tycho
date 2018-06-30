@@ -1,18 +1,13 @@
 class TaskInstructionsComponent extends UIComponent {
-  constructor(componentSpec) {
-    super(componentSpec);
-    this.instructions = componentSpec.parameters.instructions;
-    this.ellapsedMs = componentSpec.parameters.ellapsedMs;
-    this.paused = componentSpec.parameters.paused;
-    this.startTime = componentSpec.parameters.startTime;
-    this.successCondition = componentSpec.parameters.successCondition;
-    this.finished = componentSpec.parameters.finished;
+
+  constructor(model) {
+    super(model);
   }
 
   //This is not the right hook to do this. Need a new one
   render() {
     super.render();
-    if (!this.startTime || this.paused) {
+    if (!this.model.startTime || this.model.paused) {
       this.showOverlay();
     }
   }
@@ -21,7 +16,7 @@ class TaskInstructionsComponent extends UIComponent {
     const me = this;
     let tracker = $(
       '<div id="tracker"><span id="trackerInstructions">' +
-        this.instructions +
+        this.model.instructions +
         "</span> </div>"
     );
     this.addButton(
@@ -31,7 +26,7 @@ class TaskInstructionsComponent extends UIComponent {
       () => {
         me.startTask();
       },
-      !me.startTime
+      !me.model.startTime
     );
     this.addButton(
       tracker,
@@ -40,7 +35,7 @@ class TaskInstructionsComponent extends UIComponent {
       () => {
         me.pauseTask();
       },
-      me.startTime && !me.paused
+      me.model.startTime && !me.model.paused
     );
     this.addButton(
       tracker,
@@ -49,7 +44,7 @@ class TaskInstructionsComponent extends UIComponent {
       () => {
         me.resumeTask();
       },
-      me.paused
+      me.model.paused
     );
     this.addButton(
       tracker,
@@ -58,28 +53,36 @@ class TaskInstructionsComponent extends UIComponent {
       () => {
         me.finishTask();
       },
-      me.startTime && !me.paused
+      me.model.startTime && !me.model.paused
     );
     return tracker;
   }
 
   startTask() {
-    BackgroundProxy.getSingleton().startTask();
+    this.model.paused = false;
+    this.model.startTime = new Date().getTime();
+    this.model.ellapsedMs = 0;
+    this.setModel(this.model);
   }
 
   pauseTask() {
-    BackgroundProxy.getSingleton().pauseTask();
+    this.model.paused = true;
+    this.model.ellapsedMs += new Date().getTime() - this.model.startTime;
+    this.setModel(this.model);
   }
 
   resumeTask() {
-    BackgroundProxy.getSingleton().resumeTask();
+    this.model.paused = false;
+    this.model.startTime = new Date().getTime();
+    this.setModel(this.model);
   }
 
   finishTask() {
-    this.submitResults({
-      milliseconds: this.ellapsedMs,
-      successful: eval(this.successCondition)
-    });
+    this.model.paused = false;
+    this.model.ellapsedMs += new Date().getTime() - this.model.startTime;
+    this.model.finished = true;
+    this.model.successful = eval(this.model.successCondition);
+    this.submitResults();
     this.done();
   }
 
