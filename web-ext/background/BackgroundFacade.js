@@ -27,6 +27,11 @@ class BackgroundFacade extends Facade {
     return backgroundFacadeSingleton;
   }
 
+  /**
+   * Submit the model in args.model to the server
+   * TODO: the new model is not updated locally.. shall I do that?
+   * @param {args.model is the updated model from the UIComponent} args 
+   */
   submitResultsOfTask(args) {
     let report = {
       sampleId: this.experiment.getId(),
