@@ -18,8 +18,8 @@ class ContentFacade extends Facade {
 
     //The session changed in the background / update
     async render() {
-        let spec = await BackgroundProxy.getSingleton().getActiveComponentSpec();
-        this.renderComponent(spec);
+        let task = await BackgroundProxy.getSingleton().getActiveTask();
+        this.renderComponent(task);
     }
 
 

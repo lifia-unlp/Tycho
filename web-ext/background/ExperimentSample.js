@@ -1,4 +1,5 @@
 class ExperimentSample {
+
   constructor(experimentId, notes, sequence) {
     this.taskSequence = sequence;
     this.experimentId = experimentId;
@@ -15,6 +16,7 @@ class ExperimentSample {
     return this.experimentId;
   }
 
+  // reimplement with find()
   getTask(taskId) {
     var task = null;
     for (let i = 0; i < this.taskSequence.length; i = i + 1 ) {
@@ -23,15 +25,6 @@ class ExperimentSample {
       }
     }
     return task
-  }
-
-  getModelForTask(taskId) {
-    return this.getTask(taskId).model;
-  }
-
-  setModelOfTask(model) {
-    let task = this.getTask(model.id);
-    task.model = model;
   }
 
   start() {
@@ -44,7 +37,7 @@ class ExperimentSample {
     }
   }
 
-  getActiveComponentSpec() {
+  getActiveTask() {
     if (0 <= this.current && this.current < this.taskSequence.length) {
       return this.taskSequence[this.current];
     } else {
@@ -68,11 +61,15 @@ class ExperimentSample {
    * Build a session from the Json description of an experiment design.
    * @param {*} json
    */
-  static fromExperimentJson(designJson) {
+  static fromJson(experimentJson) {
+    let tasks = [];
+    experimentJson.tasks.forEach(element => {
+      tasks.push(ExperimentTask.fromJson(element))
+    });
     let session = new ExperimentSample(
-      designJson.id,
-      designJson.notes,
-      designJson.tasks
+      experimentJson.id,
+      experimentJson.notes,
+      tasks
     );
     return session;
   }

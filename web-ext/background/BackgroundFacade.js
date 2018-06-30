@@ -37,21 +37,20 @@ class BackgroundFacade extends Facade {
       sampleId: this.experiment.getId(),
       experimentId: this.experiment.getexperimentId()
     };
-    //this.experiment.getTask(args.model.id).model = model;
     report.model = args.model;
     this.serverApi.submitTaskReport(report);
   }
 
-  getActiveComponentSpec() {
+  getActiveTask() {
     if (!this.experiment) {
       return null;
     } else {
-      return this.experiment.getActiveComponentSpec();
+      return this.experiment.getActiveTask();
     }
   }
 
   setModelOfTask(args) {
-    this.experiment.setModelOfTask(args.model);
+    this.experiment.getTask(args.model.id).setModel(args.model);
     ContentProxy.getSingleton().render();
   }
 
@@ -66,7 +65,7 @@ class BackgroundFacade extends Facade {
         .getExperimentDesignFromServer(args.id)
         .then(response => {
           if (response) {
-            this.experiment = ExperimentSample.fromExperimentJson(
+            this.experiment = ExperimentSample.fromJson(
               response.data
             );
             this.experiment.start();

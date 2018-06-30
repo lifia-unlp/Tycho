@@ -17,6 +17,7 @@
       "shared/Facade.js",
       "background/BackgroundFacade.js",
       "background/ContentProxy.js",
+      "background/ExperimentTask.js",
       "background/ExperimentSample.js",
       "background/ServerAPI.js",
       "background/background.js"

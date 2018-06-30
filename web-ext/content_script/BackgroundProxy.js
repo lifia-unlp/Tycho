@@ -27,8 +27,8 @@ class BackgroundProxy {
         return await this.send({ methodName: 'activeComponetIsDone', arguments: {} });
     }
 
-    async getActiveComponentSpec() {
-        return await this.send({ methodName: 'getActiveComponentSpec', arguments: {} });
+    async getActiveTask() {
+        return await this.send({ methodName: 'getActiveTask', arguments: {} });
     }
 
     // Private protocol down here
