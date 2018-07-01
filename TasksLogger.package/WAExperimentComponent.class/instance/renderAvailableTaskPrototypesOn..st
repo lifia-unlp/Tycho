@@ -8,5 +8,5 @@ renderAvailableTaskPrototypesOn: html
 	html tableHeading: 'Notes'.
 	html tableHeading: ''].
 	tableBlock := [ html tableHead: headerBlock.
-	html tableBody: [ self store taskPrototypes do: [ :each | self renderTaskPrototype: each on: html ] ] ].
+	html tableBody: [ self store prototypes do: [ :each | self renderTaskPrototype: each on: html ] ] ].
 	html tbsTable: tableBlock
