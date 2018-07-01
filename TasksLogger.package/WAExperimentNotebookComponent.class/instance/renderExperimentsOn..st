@@ -9,7 +9,7 @@ renderExperimentsOn: html
 	html tableHeading: '' ].
 	tableBlock := [ html tableHead: headerBlock.
 	html
-		tableBody: [ Experiment selectAll do: [ :each | self renderExperiment: each on: html ] ] ].
+		tableBody: [ self store experiments do: [ :each | self renderExperiment: each on: html ] ] ].
 	html tbsTable: tableBlock.
 	html
 		form: [ html tbsButton

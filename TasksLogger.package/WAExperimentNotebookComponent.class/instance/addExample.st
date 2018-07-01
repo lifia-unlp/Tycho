@@ -1,7 +1,7 @@
 callbacks
 addExample
 	| exp clone |
-	exp := Experiment id: 99 notes: 'a sample experiment'.
+	exp := Experiment id: self store newExperimentId notes: 'a sample experiment'.
 	ExperimentTask prototypes
 		do: [ :each | 
 			clone := each clone.
