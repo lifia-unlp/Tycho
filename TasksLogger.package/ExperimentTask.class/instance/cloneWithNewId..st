@@ -1,9 +1,8 @@
 prototype-management
-clone
-	| anId clone |
-	anId := (ExperimentTask selectAll inject: 0 into: [ :sub :next | sub max: next id asNumber ]) + 1.
+cloneWithNewId: anId
+	|  clone |
 	clone := ExperimentTask
-		id: anId asString
+		id: anId
 		name: self name
 		notes: self notes
 		componentClassname: self componentClassname.

@@ -3,23 +3,23 @@ preparePrototypes
 	| newTask prototypes |
 	prototypes := OrderedCollection new.
 	newTask := ExperimentTask new
-		id: '1';
+		id: self newTaskId;
 		name: 'Nothing';
 		notes: 'A dummy task that will not be perceived by the user. Useful to finish experiments.';
 		componentClassname: 'NullComponent';
 		becomePrototype.
-	newTask save.
+	TaskLoggerStore store rememberToSave: newTask.
 	prototypes add: newTask.
 	newTask := ExperimentTask new
-		id: '2';
+		id: self newTaskId;
 		name: 'Simple demographics';
 		notes: 'A simple demographics capturing tool (age and internet hours).';
 		componentClassname: 'BasicDemographicsComponent';
 		becomePrototype.
-	newTask save.
+	TaskLoggerStore store rememberToSave: newTask.
 	prototypes add: newTask.
 	newTask := ExperimentTask new
-		id: '3';
+		id: self newTaskId;
 		name: 'Basic task intructions';
 		notes: 'Provides instructions for a task. Records time. Can pause and resume. Has a basic success condition.';
 		componentClassname: 'TaskInstructionsComponent';
@@ -27,25 +27,25 @@ preparePrototypes
 		addProperty: 'instructions' describedBy: 'Instructions for the participant. Can be html or plain text.';
 		addProperty: 'successCondition'
 			describedBy: 'Some javascript code that will execute to check wether the task was completed.'.
-	newTask save.
+	TaskLoggerStore store rememberToSave: newTask.
 	prototypes add: newTask.
 	newTask := ExperimentTask new
-		id: '4';
+		id: self newTaskId;
 		name: 'SUS questionaire';
 		notes: 'A SUS questionaire.';
 		componentClassname: 'SUSComponent';
 		becomePrototype.
-	newTask save.
+	TaskLoggerStore store rememberToSave: newTask.
 	prototypes add: newTask.
 	prototypes add: newTask.
 	newTask := ExperimentTask new
-		id: '5';
+		id: self newTaskId;
 		name: 'Message screen';
 		notes: 'Blocks the entire screen to give the participant a message.';
 		componentClassname: 'MessageComponent';
 		addProperty: 'title' describedBy: 'A title for this message.';
 		addProperty: 'message' describedBy: 'An importante message for the participant. Can be basic html or plain text.';
 		becomePrototype.
-	newTask save.
+	TaskLoggerStore store rememberToSave: newTask.
 	prototypes add: newTask.
 	^ prototypes
