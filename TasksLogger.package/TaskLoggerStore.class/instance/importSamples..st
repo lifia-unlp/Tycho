@@ -2,5 +2,5 @@ importing
 importSamples: samples
 	samples
 		do: [ :each | 
-			each id: self newSampleId.
+			each id: each id , '-' , Time millisecondClockValue asString.
 			self rememberToSave: each ]
