@@ -6,3 +6,4 @@
 
 var facade = BackgroundFacade.getSingleton();
 browser.runtime.onMessage.addListener(rmcRequest => {return facade.handle(rmcRequest)} );
+browser.browserAction.onClicked.addListener(() => {console.log('Clicked')});

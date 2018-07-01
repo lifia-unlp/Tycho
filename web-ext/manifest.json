@@ -33,8 +33,7 @@
         "dark": "resources/beasts-32.png",
         "size": 32
     }],
-    "default_title": "Experiment tracker",
-    "default_popup": "popup/tracker.html"
+    "default_title": "Experiment tracker"
   },
 
   "content_scripts": [

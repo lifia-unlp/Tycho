@@ -65,4 +65,9 @@ class UIComponent {
   done() {
     BackgroundProxy.getSingleton().activeComponetIsDone();
   }
+
+  leave() {
+    BackgroundProxy.getSingleton().leaveExperiment();
+    this.done();
+  }
 }

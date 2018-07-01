@@ -1,5 +1,4 @@
 class HelloGoodbyeComponent extends UIComponent {
-
   constructor(model) {
     super(model);
   }
@@ -9,8 +8,11 @@ class HelloGoodbyeComponent extends UIComponent {
     let messageDiv = $(
       '<div id="wen-message-component" class="topNotification"></div>'
     );
-    messageDiv.append("<h1>Web usage experiment</h1><p></p>");
-    if (! this.model.experiment) {
+
+    if (!this.model.experiment) {
+      messageDiv.append(
+        "<h1>Which experiment would you like to join?</h1><p></p>"
+      );
       messageDiv.append(
         '<input type="text" size="10" id="experiment"><p><input id="join-button" type="submit" class="tracker-btn" value="Join"/></p>'
       );
@@ -19,7 +21,11 @@ class HelloGoodbyeComponent extends UIComponent {
       });
     } else {
       messageDiv.append(
-        '<input id="join-button" type="submit" class="tracker-btn" value="Leave"/>'
+        "<h1>Thanks for taking part in this experiment</h1><p></p>"
+      );
+
+      messageDiv.append(
+        '<input id="join-button" type="submit" class="tracker-btn" value="You\'re welcome"/>'
       );
       messageDiv.on("click", "#join-button", e => {
         me.leave();
@@ -36,13 +42,8 @@ class HelloGoodbyeComponent extends UIComponent {
     this.done();
   }
 
-  leave() {
-    BackgroundProxy.getSingleton().leaveExperiment();
-    this.done();
-  }
-
   logUrl() {
-    //I do not do this. 
+    //I do not do this.
   }
 
   render() {
