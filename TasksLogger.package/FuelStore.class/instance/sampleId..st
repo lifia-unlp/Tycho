@@ -4,6 +4,6 @@ sampleId: id
 		do: [ :exp | 
 			exp samples
 				do: [ :samp | 
-					samp id == id
+					samp id = id
 						ifTrue: [ ^ samp ] ] ].
 	^ nil
