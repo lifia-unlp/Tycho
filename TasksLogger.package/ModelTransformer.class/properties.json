@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "Casco 7/1/2018 14:38",
+	"super" : "Object",
+	"category" : "TasksLogger-transform",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stream"
+	],
+	"name" : "ModelTransformer",
+	"type" : "normal"
+}

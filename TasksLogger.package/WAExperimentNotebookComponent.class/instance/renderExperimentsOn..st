@@ -21,5 +21,5 @@ renderExperimentsOn: html
 				with: 'Add example'.
 			html space.
 			html tbsButton
-				callback: [ self ];
+				callback: [ self importExperiment];
 				with: 'Import' ]

@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"experiments",
-		"lastTaskId"
+		"lastTaskId",
+		"lastSampleId"
 	],
 	"name" : "FuelStore",
 	"type" : "normal"

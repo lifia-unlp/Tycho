@@ -13,6 +13,6 @@ renderExperiment: each on: html
 						tbsPullRight;
 						with: 'Results' ];
 				tableData: [ html anchor
-						callback: [ self exportAsJson: each ];
+						callback: [ self exportAsFuel: each ];
 						tbsPullRight;
 						with: 'Export' ] ]
