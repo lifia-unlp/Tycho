@@ -1,5 +1,7 @@
 retrieving
 sampleId: id
+	"returns the sample with the given id"
+
 	self experiments
 		do: [ :exp | 
 			exp samples
