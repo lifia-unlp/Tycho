@@ -39,6 +39,10 @@ class BackgroundProxy {
     return await this.send({ methodName: "getActiveTask", arguments: {} });
   }
 
+  async getVisible() {
+    return await this.send({ methodName: "getVisible", arguments: {} });
+  }
+
   async logUrlForTask(taskId, url, tabId) {
     return await this.send({
       methodName: "logUrlForTask",

@@ -14,6 +14,7 @@ class BackgroundFacade extends Facade {
     super();
     this.experiment = null;
     this.serverApi = new ServerAPI();
+    this.visible = false;
   }
 
   static getSingleton() {
@@ -57,9 +58,18 @@ class BackgroundFacade extends Facade {
     }
   }
 
+  setVisible(visible) {
+    this.visible = visible;
+    ContentProxy.getSingleton().render(this.visible);
+  }
+
+  getVisible() {
+    return this.visible;
+  }
+
   setModelOfTask(args) {
     this.experiment.getTask(args.model.id).setModel(args.model);
-    ContentProxy.getSingleton().render();
+    ContentProxy.getSingleton().render(this.visible);
   }
 
   /**
@@ -75,7 +85,7 @@ class BackgroundFacade extends Facade {
           if (response) {
             this.experiment = ExperimentSample.fromJson(response.data);
             this.experiment.start();
-            ContentProxy.getSingleton().render();
+            ContentProxy.getSingleton().render(this.visible);
             resolve(this.experiment);
           }
         })
@@ -87,12 +97,14 @@ class BackgroundFacade extends Facade {
 
   leaveExperiment() {
     this.experiment = null;
-    ContentProxy.getSingleton().render();
+    ContentProxy.getSingleton().render(this.visible);
   }
 
   activeComponetIsDone(args) {
-    this.experiment.next();
-    ContentProxy.getSingleton().render();
+    if (this.experiment) {
+      this.experiment.next();
+    }
+    ContentProxy.getSingleton().render(this.visible);
   }
 
   logUrlForTask(args) {
