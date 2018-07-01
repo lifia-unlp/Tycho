@@ -44,6 +44,7 @@
         "content_script/TaskInstructionsComponent.js",
         "content_script/MessageComponent.js",
         "content_script/HelloGoodbyeComponent.js",
+        "content_script/YoutubeVideoComponent.js",
         "shared/Facade.js",
         "content_script/ContentFacade.js",
         "content_script/NullComponent.js",

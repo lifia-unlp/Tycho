@@ -55,7 +55,8 @@ class ContentFacade extends Facade {
       TaskInstructionsComponent: TaskInstructionsComponent,
       SUSComponent: SUSComponent,
       HelloGoodbyeComponent: HelloGoodbyeComponent,
-      MessageComponent: MessageComponent
+      MessageComponent: MessageComponent,
+      YoutubeVideoComponent: YoutubeVideoComponent
     };
   }
 }
