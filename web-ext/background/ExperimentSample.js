@@ -32,9 +32,7 @@ class ExperimentSample {
   }
 
   next() {
-    if (this.current + 1 < this.taskSequence.length) {
       this.current = this.current + 1;
-    }
   }
 
   getActiveTask() {
@@ -42,8 +40,8 @@ class ExperimentSample {
       return this.taskSequence[this.current];
     } else {
       return {
-        componentClass: "NullComponent",
-        model: { notice: "Session component index is out of bounds" }
+        componentClassname: "HelloGoodbyeComponent",
+        model: {experiment : this.experimentId }
       };
     }
   }

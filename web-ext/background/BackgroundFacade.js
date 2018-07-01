@@ -28,11 +28,11 @@ class BackgroundFacade extends Facade {
   }
 
   /**
-   * Submit a report to the server. The report includes the 
+   * Submit a report to the server. The report includes the
    * model and the koboldModel of the task.
    * This method also uptades the model of the local version of the task
-   * with the one received. 
-   * @param {args.model is the updated model from the UIComponent} args 
+   * with the one received.
+   * @param {args.model is the updated model from the UIComponent} args
    */
   submitResultsOfTask(args) {
     let report = {
@@ -40,7 +40,7 @@ class BackgroundFacade extends Facade {
       experimentId: this.experiment.getexperimentId()
     };
     let updatedTask = this.experiment.getTask(args.model.id);
-    updatedTask.model = args.model; 
+    updatedTask.model = args.model;
     report.model = args.model;
     report.koboldModel = updatedTask.koboldModel;
     this.serverApi.submitTaskReport(report);
@@ -48,7 +48,10 @@ class BackgroundFacade extends Facade {
 
   getActiveTask() {
     if (!this.experiment) {
-      return null;
+      return {
+        componentClassname: "HelloGoodbyeComponent",
+        model: { experiment: null }
+      };
     } else {
       return this.experiment.getActiveTask();
     }
@@ -70,9 +73,7 @@ class BackgroundFacade extends Facade {
         .getExperimentDesignFromServer(args.id)
         .then(response => {
           if (response) {
-            this.experiment = ExperimentSample.fromJson(
-              response.data
-            );
+            this.experiment = ExperimentSample.fromJson(response.data);
             this.experiment.start();
             ContentProxy.getSingleton().render();
             resolve(this.experiment);
@@ -97,5 +98,4 @@ class BackgroundFacade extends Facade {
   logUrlForTask(args) {
     this.experiment.getTask(args.taskId).logUrl(args.url, args.tabId);
   }
-
 }

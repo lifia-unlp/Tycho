@@ -46,6 +46,14 @@ class BackgroundProxy {
     });
   }
 
+  async joinExperiment(id) {
+    return await this.send({ methodName: "joinExperiment", arguments: {id: id} });
+  }
+
+  async leaveExperiment() {
+    return await this.send({ methodName: "leaveExperiment", arguments: {} });
+  }
+
   // Private protocol down here
   async send(rmc) {
     try {

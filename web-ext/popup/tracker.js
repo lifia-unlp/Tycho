@@ -43,6 +43,8 @@ var updateForms = function(session) {
   }
 };
 
+document.getElementById("join-button").addEventListener('click',join);
+document.getElementById("leave-button").addEventListener('click',leave);
 retrieveSession()
   .then(updateForms)
   .catch("I was not able to get anything...");

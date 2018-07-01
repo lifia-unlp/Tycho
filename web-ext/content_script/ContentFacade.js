@@ -46,6 +46,7 @@ class ContentFacade extends Facade {
             BasicDemographicsComponent: BasicDemographicsComponent,
             TaskInstructionsComponent: TaskInstructionsComponent,
             SUSComponent: SUSComponent,
+            HelloGoodbyeComponent: HelloGoodbyeComponent,
             MessageComponent: MessageComponent
         }
     }
