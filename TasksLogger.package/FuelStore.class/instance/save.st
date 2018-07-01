@@ -1,3 +1,3 @@
-saving
+private
 save
-	^ self
+	monitor critical: [ FLSerializer serialize: experiments toFileNamed: 'experiments.fuel' ]

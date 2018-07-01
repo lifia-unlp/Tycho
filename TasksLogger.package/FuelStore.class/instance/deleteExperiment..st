@@ -1,3 +1,3 @@
-retrieving
+saving
 deleteExperiment: exp
-	^ self experiments remove: exp ifAbsent: [ nil ]
+	monitor critical: [ self experiments remove: exp ifAbsent: [ nil ] ]

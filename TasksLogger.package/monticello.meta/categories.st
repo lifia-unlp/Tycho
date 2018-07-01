@@ -4,5 +4,4 @@ SystemOrganization addCategory: 'TasksLogger-Model'!
 SystemOrganization addCategory: 'TasksLogger-Persistence'!
 SystemOrganization addCategory: 'TasksLogger-Seaside'!
 SystemOrganization addCategory: 'TasksLogger-Teapot'!
-SystemOrganization addCategory: 'TasksLogger-Transform'!
 SystemOrganization addCategory: 'TasksLogger-transform'!

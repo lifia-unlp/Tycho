@@ -1,4 +1,5 @@
 saving
 rememberToSave: anObject
-	anObject class == Experiment
-		ifTrue: [ self addIfNew: anObject ]
+	monitor
+		critical: [ anObject class == Experiment
+				ifTrue: [ self addIfNew: anObject ] ]
