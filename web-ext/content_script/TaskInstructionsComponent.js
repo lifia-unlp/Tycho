@@ -1,5 +1,4 @@
 class TaskInstructionsComponent extends UIComponent {
-
   constructor(model) {
     super(model);
   }
@@ -55,6 +54,17 @@ class TaskInstructionsComponent extends UIComponent {
       },
       me.model.startTime && !me.model.paused
     );
+    if ((this.model.completionChoices = "#doneOrAbandon")) {
+      this.addButton(
+        tracker,
+        "abandonButton",
+        "Abandonar",
+        () => {
+          me.abandonTask();
+        },
+        me.model.startTime && !me.model.paused
+      );
+    }
     return tracker;
   }
 
@@ -81,6 +91,17 @@ class TaskInstructionsComponent extends UIComponent {
     this.model.paused = false;
     this.model.ellapsedMs += new Date().getTime() - this.model.startTime;
     this.model.finished = true;
+    this.model.abandoned = false;
+    this.model.successful = eval(this.model.successCondition);
+    this.submitResults();
+    this.done();
+  }
+
+  abandonTask() {
+    this.model.paused = false;
+    this.model.ellapsedMs += new Date().getTime() - this.model.startTime;
+    this.model.finished = false;
+    this.model.abandoned = true;
     this.model.successful = eval(this.model.successCondition);
     this.submitResults();
     this.done();
