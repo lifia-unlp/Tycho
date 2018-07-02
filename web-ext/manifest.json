@@ -1,10 +1,11 @@
 {
-  "description": "Web-extension client for the remote usability tests tool",
+  "name": "__MSG_extensionName__",
+  "description": "__MSG_extensionDescription__",
   "manifest_version": 2,
-  "name": "Remote usability tests",
   "version": "1.0",
   "homepage_url": "https://github.com/juliangrigera/RemoteUsabilityTests",
   "content_security_policy" : "default-src 'self' http://localhost:8888/; script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "default_locale": "en",
   "icons": {
     "48": "resources/border-48.png"
   },

@@ -21,7 +21,7 @@ class TaskInstructionsComponent extends UIComponent {
     this.addButton(
       tracker,
       "startButton",
-      "Iniciar",
+      browser.i18n.getMessage("startTaskButtonTest"),
       () => {
         me.startTask();
       },
@@ -30,7 +30,7 @@ class TaskInstructionsComponent extends UIComponent {
     this.addButton(
       tracker,
       "pauseButton",
-      "Pausar",
+      browser.i18n.getMessage("pauseTaskButtonTest"),
       () => {
         me.pauseTask();
       },
@@ -39,7 +39,7 @@ class TaskInstructionsComponent extends UIComponent {
     this.addButton(
       tracker,
       "resumeButton",
-      "Reanudar",
+      browser.i18n.getMessage("resumeTaskButtonTest"),
       () => {
         me.resumeTask();
       },
@@ -48,7 +48,7 @@ class TaskInstructionsComponent extends UIComponent {
     this.addButton(
       tracker,
       "endButton",
-      "Finalizar",
+      browser.i18n.getMessage("finishTaskButtonTest"),
       () => {
         me.finishTask();
       },
@@ -58,7 +58,7 @@ class TaskInstructionsComponent extends UIComponent {
       this.addButton(
         tracker,
         "abandonButton",
-        "Abandonar",
+        browser.i18n.getMessage("abandonTaskButtonTest"),
         () => {
           me.abandonTask();
         },

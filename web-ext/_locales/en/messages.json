@@ -1,0 +1,64 @@
+{
+  "extensionName": {
+    "message": "Web Experiments Notebook",
+    "description": "Name of the extension."
+  },
+
+  "extensionDescription": {
+    "message": "A tool to run experiments on the web browser - this is the WebExtension part.",
+    "description": "Description of the extension."
+  },
+
+  "helloGoodbyeWelcomeTitle": {
+    "message": "Which experiment would you like to join?",
+    "description": "Title of the HelloGoodbyeComponent."
+  },
+
+  "helloGoodbyeJoinButtonText": {
+    "message": "Join",
+    "description": "The text of the join button"
+  },
+
+  "helloGoodbyeThanksTitle": {
+    "message": "Thank you for taking part in this experiment",
+    "description": "Thank you text for the HelloGoodbyeComponent."
+  },
+
+  "helloGoodbyeYoureWelcomeButtonText": {
+    "message": "You're welcome",
+    "description": "The text of the you're welcome button"
+  },
+
+  "messageComponentAcceptButtonText": {
+    "message": "Understood",
+    "description": "The text of an understood button"
+  },
+
+  "submitButtonText": {
+    "message": "Submit",
+    "description": "The text of an submit button"
+  },
+
+  "startTaskButtonTest": {
+    "message": "Start",
+    "description": "The text of a start button"
+  },
+  "pauseTaskButtonTest": {
+    "message": "Pause",
+    "description": "The text of a pause button"
+  },
+  "resumeTaskButtonTest": {
+    "message": "Resume",
+    "description": "The text of a resume button"
+  },
+  "finishTaskButtonTest": {
+    "message": "Finish",
+    "description": "The text of a finish button"
+  },
+  "abandonTaskButtonTest": {
+    "message": "Abandon",
+    "description": "The text of an abandon button"
+  }
+ 
+
+}

@@ -13,13 +13,19 @@ class QuestionaireComponent extends UIComponent {
     buildComponent() {
         let me = this;
         let panel = $('<div id="welcome" class="topNotification"></div>');
-        panel.append("<p><strong>" + this.model.introduction + "</strong></p>");
+        panel.append("<h2>" + this.model.introduction + "</h2>");
         for (let i = 0; i < this.questions.length; i = i + 1) {
             panel.append("<p>" + this.questions[i] + "</p>");
-            panel.append('<input id="response' + i + '" type="text" maxlength="100" size="100">');
+            panel.append(
+                '<input id="response' +
+                    i +
+                    '" type="text" maxlength="100" size="100">'
+            );
         }
         panel.append(
-            '<p><input id="welcome-button" type="submit" class="tracker-btn" value="Enviar"/></p>'
+            '<p><input id="welcome-button" type="submit" class="tracker-btn" value="' +
+                browser.i18n.getMessage("submitButtonText") +
+                '"/></p>'
         );
         panel.on("click", "#welcome-button", e => {
             me.collectResponses();
@@ -40,7 +46,7 @@ class QuestionaireComponent extends UIComponent {
                 q: this.questions[i],
                 a: document.getElementById("response" + i).value
             });
-        };
+        }
         this.model.responses = responses;
     }
 
