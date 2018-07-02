@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "Casco 6/30/2018 20:53",
+	"super" : "Object",
+	"category" : "TasksLogger-Persistence",
+	"classinstvars" : [
+		"store"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"prototypes"
+	],
+	"name" : "TaskLoggerStore",
+	"type" : "normal"
+}

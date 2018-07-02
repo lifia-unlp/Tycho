@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "Casco 6/26/2018 20:45",
+	"super" : "Object",
+	"category" : "TasksLogger-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"id",
+		"name",
+		"notes",
+		"componentClassname",
+		"properties",
+		"isPrototype"
+	],
+	"name" : "ExperimentTask",
+	"type" : "normal"
+}

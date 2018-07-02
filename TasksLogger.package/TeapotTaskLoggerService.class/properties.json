@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "Casco 6/28/2018 15:50",
+	"super" : "Object",
+	"category" : "TasksLogger-Teapot",
+	"classinstvars" : [
+		"singleton"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"teapot",
+		"store"
+	],
+	"name" : "TeapotTaskLoggerService",
+	"type" : "normal"
+}

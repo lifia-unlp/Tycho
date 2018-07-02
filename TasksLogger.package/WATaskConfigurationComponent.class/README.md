@@ -1,0 +1,1 @@
+Configure a task (that was cloned from a prototype), specially with respect to its configuration properties.

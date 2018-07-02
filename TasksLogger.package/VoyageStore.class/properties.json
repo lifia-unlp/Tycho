@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "Casco 6/30/2018 19:27",
+	"super" : "TaskLoggerStore",
+	"category" : "TasksLogger-Persistence",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"objectsToSave"
+	],
+	"name" : "VoyageStore",
+	"type" : "normal"
+}

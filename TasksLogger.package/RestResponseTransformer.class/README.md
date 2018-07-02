@@ -1,0 +1,1 @@
+I transform objects into JSON strings that used in the REST service responses. 
