@@ -39,16 +39,16 @@
       "js": [
         "node_modules/webextension-polyfill/dist/browser-polyfill.min.js",
         "node_modules/jquery/dist/jquery.min.js",
+        "shared/Facade.js",
         "content_script/UIComponent.js",
-        "content_script/BasicDemographicsComponent.js",
         "content_script/TaskInstructionsComponent.js",
         "content_script/MessageComponent.js",
         "content_script/HelloGoodbyeComponent.js",
         "content_script/YoutubeVideoComponent.js",
-        "shared/Facade.js",
         "content_script/ContentFacade.js",
         "content_script/NullComponent.js",
         "content_script/SUSComponent.js",
+        "content_script/QuestionaireComponent.js",
         "content_script/BackgroundProxy.js",
         "content_script/content.js"
       ],

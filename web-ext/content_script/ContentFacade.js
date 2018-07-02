@@ -51,12 +51,12 @@ class ContentFacade extends Facade {
   componentClasses() {
     return {
       NullComponent: NullComponent,
-      BasicDemographicsComponent: BasicDemographicsComponent,
       TaskInstructionsComponent: TaskInstructionsComponent,
       SUSComponent: SUSComponent,
       HelloGoodbyeComponent: HelloGoodbyeComponent,
       MessageComponent: MessageComponent,
-      YoutubeVideoComponent: YoutubeVideoComponent
+      YoutubeVideoComponent: YoutubeVideoComponent,
+      QuestionaireComponent: QuestionaireComponent
     };
   }
 }
