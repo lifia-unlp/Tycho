@@ -1,10 +1,7 @@
 prototypes
 preparePrototypes
-	| newTask |
+	| newTask  |
 	prototypes := OrderedCollection new.
-	newTask := self prepareSimpleDemographicsPrototype.
-	TaskLoggerStore store rememberToSave: newTask.
-	prototypes add: newTask.
 	newTask := self prepareBasicTaskInstructionsPrototype.
 	TaskLoggerStore store rememberToSave: newTask.
 	prototypes add: newTask.
@@ -17,4 +14,8 @@ preparePrototypes
 	newTask := self prepareYoutubeVideoPrototype.
 	TaskLoggerStore store rememberToSave: newTask.
 	prototypes add: newTask.
+	newTask := self prepareQuestionairePrototype.
+	TaskLoggerStore store rememberToSave: newTask.
+	prototypes add: newTask.
+	TaskLoggerStore store savePending.
 	^ prototypes
