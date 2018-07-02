@@ -1,4 +1,4 @@
-persistence-access
+store
 newTaskResultsFor: task withParameters: parameters
 	| result |
 	result := ExperimentTaskResult new.

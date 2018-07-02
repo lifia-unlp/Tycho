@@ -1,4 +1,4 @@
 singleton
 singleton
-	singleton ifNil: [ singleton := self basicNew initialize ].
+	singleton ifNil: [ singleton := self basicNew ].
 	^ singleton

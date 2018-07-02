@@ -1,4 +1,4 @@
-persistence-access
+store
 sampleFromParameters: parameters
 	| sample id |
 	id := parameters at: #sampleId.

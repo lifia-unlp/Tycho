@@ -1,5 +1,6 @@
-deployment
+development
 prepareForDevelopment
 	self
 		startDevelopmentServer;
-		setupMongoDatabase
+		"setupMongoDatabase;"
+		startTeapotDevelopmentServer

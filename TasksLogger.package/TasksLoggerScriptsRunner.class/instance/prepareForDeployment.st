@@ -3,4 +3,5 @@ prepareForDeployment
 	self
 		unregisterDevelopmentApplications;
 		startServer;
-		setupMongoDatabase
+		"setupMongoDatabase;"
+		startTeapotServer 
