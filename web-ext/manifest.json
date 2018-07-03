@@ -13,7 +13,7 @@
     }
   },
   "icons": {
-    "48": "resources/border-48.png"
+    "48": "resources/rut.svg"
   },
   "permissions": [
     "<all_urls>",
