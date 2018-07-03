@@ -1,5 +1,5 @@
 class ExperimentSample {
-    constructor(experimentId, notes, sequence) {
+    constructor(experimentId, sampleId, notes, sequence) {
         this.helloGoodbyeTask = {
             componentClassname: "HelloGoodbyeComponent",
             model: { experiment: this.experimentId }
@@ -8,7 +8,7 @@ class ExperimentSample {
         this.experimentId = experimentId;
         this.notes = notes;
         this.current = -1;
-        this.id = this.uuidv4();
+        this.id = sampleId;
     }
 
     getId() {
@@ -52,15 +52,6 @@ class ExperimentSample {
         }
     }
 
-    uuidv4() {
-        return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
-            (
-                c ^
-                (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
-            ).toString(16)
-        );
-    }
-
     /**
      * Build a session from the Json description of an experiment design.
      * @param {*} json
@@ -72,6 +63,7 @@ class ExperimentSample {
         });
         let session = new ExperimentSample(
             experimentJson.id,
+            experimentJson.suggestedSampleId,
             experimentJson.notes,
             tasks
         );
