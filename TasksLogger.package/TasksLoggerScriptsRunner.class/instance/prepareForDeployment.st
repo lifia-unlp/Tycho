@@ -1,7 +1,10 @@
 deployment
 prepareForDeployment
 	self
+		registerNotebook;
+		removeDevelopmentToolbar;
+		turnOffDebugging;
 		unregisterDevelopmentApplications;
+		protectConfigApplication;
 		startServer;
-		"setupMongoDatabase;"
-		startTeapotServer 
+		startTeapotServer

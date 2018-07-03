@@ -1,7 +1,7 @@
 seaside
 unregisterDevelopmentApplications
 	| requiredHandlersNames allHandlers |
-	requiredHandlersNames := #('wen').
+	requiredHandlersNames := Set with: self seasideApplicationName.
 	allHandlers := WADispatcher default handlers.
 	allHandlers
 		keysAndValuesDo: [ :handlerName :handler | 
