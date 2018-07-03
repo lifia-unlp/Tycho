@@ -1,7 +1,7 @@
 seaside
 unregisterDevelopmentApplications
 	| requiredHandlersNames allHandlers |
-	requiredHandlersNames := #('tracker').
+	requiredHandlersNames := #('wen').
 	allHandlers := WADispatcher default handlers.
 	allHandlers
 		keysAndValuesDo: [ :handlerName :handler | 

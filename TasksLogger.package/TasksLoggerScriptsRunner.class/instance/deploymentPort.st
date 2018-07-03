@@ -1,3 +1,3 @@
 seaside
 deploymentPort
-	^ 8086
+	^ 8080

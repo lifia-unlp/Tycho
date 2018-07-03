@@ -1,6 +1,7 @@
 teapot
 startTeapotServer
-	TeapotRESTAPI singleton
+	TeapotRESTAPI singleton stop.
+	TeapotRESTAPI singleton 
 		initializeOnPort: self teapotDeploymentPort;
 		configureRoutes;
 		start
