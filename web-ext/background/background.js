@@ -21,6 +21,10 @@ browser.runtime.onMessage.addListener(rmcRequest => {
   return facade.handle(rmcRequest);
 });
 
+browser.runtime.onMessageExternal.addListener(rmcRequest => {
+  return facade.handle(rmcRequest);
+});
+
 browser.browserAction.onClicked.addListener(() => {
   enabled = ! enabled;
   facade.setVisible(enabled);

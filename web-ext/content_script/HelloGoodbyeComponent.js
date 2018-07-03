@@ -52,10 +52,6 @@ class HelloGoodbyeComponent extends UIComponent {
         this.done();
     }
 
-    logUrl() {
-        //I do not do this.
-    }
-
     render() {
         super.render();
         this.showOverlay();

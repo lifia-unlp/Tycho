@@ -14,7 +14,6 @@ class UIComponent {
         '<div id="notification" style="display: none;"></div>'
       );
       this.overlay = $('<div id="overlay" style="display: none;"></div>');
-      this.logUrl();
     }
     $("body").append(this.component);
     $("body").append(this.overlay);
@@ -43,23 +42,6 @@ class UIComponent {
     this.component.remove();
     this.notification.remove();
     this.overlay.remove();
-  }
-
-  logUrl() {
-    BackgroundProxy.getSingleton().logUrlForTask(
-      this.model.id,
-      window.location.href,
-      "NA"
-    );
-    // const me = this;
-    // browser.tabs.getCurrent().then(tab => {
-    //   console.log(tab.url);
-    //   BackgroundProxy.getSingleton().logUrlForTask(
-    //     me.model.id,
-    //     tab.url,
-    //     tab.id
-    //   );
-    // });
   }
 
   done() {
