@@ -1,0 +1,1 @@
+I provide details about the koboldEvents captured  during a TaskResult

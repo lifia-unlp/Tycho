@@ -5,4 +5,6 @@ renderResult: each fromSample: sample on: html
 				tableData: sample id;
 				tableData: each task name;
 				tableData: (NeoJSONWriter toStringPretty: each properties);
-				tableData: (NeoJSONWriter toStringPretty: each koboldReport) ]
+				tableData: [ html anchor
+						callback: [ self showKoboldEventsFor: each ];
+						with: each koboldReport size asString ] ]

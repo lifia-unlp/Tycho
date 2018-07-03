@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "Casco 7/2/2018 22:04",
+	"super" : "WAAbstractComponent",
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"taskResult"
+	],
+	"name" : "WAKoboldEventsComponent",
+	"type" : "normal"
+}
