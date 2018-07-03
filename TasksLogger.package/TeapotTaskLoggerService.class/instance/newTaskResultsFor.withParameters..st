@@ -4,7 +4,7 @@ newTaskResultsFor: task withParameters: parameters
 	result := ExperimentTaskResult new.
 	result task: task.
 	result properties: (parameters at: #model). 
-	result koboldReport: (parameters at: #koboldModel).
+	result koboldReport: (parameters at: #koboldEvents).
 	self store rememberToSave: result.
 	^result.
 	
