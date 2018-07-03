@@ -1,10 +1,2 @@
-a reimplementation based on Teapot
-
-TeapotTaskLoggerService resetSingleton .
-
-TeapotTaskLoggerService singleton 
-   configureRoutes ;
-   start.
-
-
-TeapotTaskLoggerService singleton stop.
+A generic implementation of the API.
+I help the concrete Teapot or Seaside entry points. 

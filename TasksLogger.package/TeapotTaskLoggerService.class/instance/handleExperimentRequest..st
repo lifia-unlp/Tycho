@@ -1,4 +1,4 @@
-route handlers
+request handlers
 handleExperimentRequest: req
 	| id resp json |
 	id := req at: #id.

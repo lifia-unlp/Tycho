@@ -1,13 +1,16 @@
 {
-	"commentStamp" : "Casco 7/3/2018 16:29",
+	"commentStamp" : "Casco 7/3/2018 16:28",
 	"super" : "Object",
 	"category" : "TasksLogger-REST api",
-	"classinstvars" : [ ],
+	"classinstvars" : [
+		"singleton"
+	],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"store"
+		"teapot",
+		"api"
 	],
-	"name" : "TeapotTaskLoggerService",
+	"name" : "TeapotRESTAPI",
 	"type" : "normal"
 }

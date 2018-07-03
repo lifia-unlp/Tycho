@@ -1,6 +1,6 @@
 teapot
 startTeapotDevelopmentServer
-	TeapotTaskLoggerService singleton
+	TeapotRESTAPI singleton
 		initializeOnPort: self teapotDevelopmentPort;
 		configureRoutes;
 		start

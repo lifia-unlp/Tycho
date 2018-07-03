@@ -1,3 +1,3 @@
-starting/stopping
+start-stop
 stop
   teapot stop

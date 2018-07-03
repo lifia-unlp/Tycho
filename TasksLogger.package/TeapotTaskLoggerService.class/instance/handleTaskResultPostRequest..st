@@ -1,4 +1,4 @@
-route handlers
+request handlers
 handleTaskResultPostRequest: parameters
 	| task taskResult sample experiment payload |
 	payload := NeoJSONReader fromString: parameters entity string.
