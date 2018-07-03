@@ -1,6 +1,6 @@
 development
 prepareForDevelopment
 	self
+		registerNotebook;
 		startDevelopmentServer;
-		"setupMongoDatabase;"
 		startTeapotDevelopmentServer

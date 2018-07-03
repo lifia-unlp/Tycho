@@ -1,4 +1,4 @@
-teapot
+deployment-old
 startTeapotServer
 	TeapotRESTAPI singleton stop.
 	TeapotRESTAPI singleton 

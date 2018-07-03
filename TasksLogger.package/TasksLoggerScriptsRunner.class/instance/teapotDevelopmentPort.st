@@ -1,3 +1,3 @@
-teapot
+development
 teapotDevelopmentPort
 	^ 8888

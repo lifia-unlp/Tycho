@@ -5,6 +5,5 @@ prepareForDeployment
 		removeDevelopmentToolbar;
 		turnOffDebugging;
 		unregisterDevelopmentApplications;
-		protectConfigApplication;
 		startServer;
 		startTeapotServer

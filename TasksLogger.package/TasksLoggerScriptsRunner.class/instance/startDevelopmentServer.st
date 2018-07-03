@@ -1,4 +1,4 @@
-seaside
+development
 startDevelopmentServer
 	ZnZincServerAdaptor default ifNotNil: [ :adapter | adapter stop ].
-	ZnZincServerAdaptor startOn: self developmentPort
+	ZnZincServerAdaptor startOn: self seasideDevelopmentPort

@@ -1,5 +1,5 @@
-seaside
-protectConfigApplication
+deployment-old
+protectSeasideConfigApplication
 	| application |
 	application := WADispatcher default handlerAt: 'config'.
 	application configuration addParent: WAAuthConfiguration instance.

@@ -1,9 +1,5 @@
-seaside
+deployment
 removeDevelopmentToolbar
-	#(self seasideApplicationName)
-		do: [ :applicationName | 
-			| configuration |
-			configuration := (WADispatcher default handlerAt: applicationName) configuration.
-			configuration
-				takeValue: {}
-				forAttribute: (configuration attributeAt: #rootDecorationClasses) ]
+	| configuration |
+	configuration := (WADispatcher default handlerAt: self applicationName) configuration.
+	configuration takeValue: {} forAttribute: (configuration attributeAt: #rootDecorationClasses)

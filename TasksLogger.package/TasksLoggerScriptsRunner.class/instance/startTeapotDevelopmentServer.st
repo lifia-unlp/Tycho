@@ -1,4 +1,4 @@
-teapot
+development
 startTeapotDevelopmentServer
 	TeapotRESTAPI singleton
 		initializeOnPort: self teapotDevelopmentPort;

@@ -1,3 +1,0 @@
-seaside
-seasideApplicationName
-	^ 'wen'
