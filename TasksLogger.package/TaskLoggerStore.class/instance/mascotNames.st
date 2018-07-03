@@ -1,0 +1,3 @@
+private
+mascotNames
+	^ #(Abby Angel Baby Bailey Bandit Baxter Bear Bella Belle Bentley Blue Bruno Buddy Buster Callie Casper Charlie Chloe Cleo Coco Cookie Cooper Daisy Dexter Duke Emma George Ginger Gizmo Gracie Harley Izzy Jack Jake Jasper Joey Kitty Leo Lexi Lilly Lily Loki Lola Lucky Lucy Lulu luna Maggie Marley Max Mia Midnight MIlo Missy Misty Mocha Molly Murphy Nala Oliver Oreo Oscar Peanut Penny Pepper Phoebe Precious Princess Pumpkin Riley Rocky Romeo Rosie Roxy Ruby Rusty Sadie Sam Sammy Sasha Sassy Scooter Shadow Simba Smokey Snickers Sophie Spike Stella Sunny Teddy Tiger tigger Toby Tucker Ziggy Zoe Zoey)

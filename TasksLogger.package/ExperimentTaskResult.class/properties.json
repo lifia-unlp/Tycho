@@ -7,7 +7,6 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"task",
-		"timestamp",
 		"properties",
 		"koboldReport"
 	],

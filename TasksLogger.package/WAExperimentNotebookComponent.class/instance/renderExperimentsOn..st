@@ -22,4 +22,4 @@ renderExperimentsOn: html
 			html space.
 			html tbsButton
 				callback: [ self importExperiment];
-				with: 'Import' ]
+				with: 'Import (fuel)' ]

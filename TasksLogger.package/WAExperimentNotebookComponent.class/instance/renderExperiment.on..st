@@ -15,4 +15,8 @@ renderExperiment: each on: html
 				tableData: [ html anchor
 						callback: [ self exportAsFuel: each ];
 						tbsPullRight;
-						with: 'Export' ] ]
+						with: 'Export (fuel)' ];
+				tableData: [ html anchor
+						callback: [ self exportAsJson: each ];
+						tbsPullRight;
+						with: 'Export (JSON)' ] ]

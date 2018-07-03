@@ -1,3 +1,4 @@
 initialization
 initialize
-   objectsToSave := OrderedCollection new. 
+	super initialize.
+	objectsToSave := OrderedCollection new
