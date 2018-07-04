@@ -4,5 +4,5 @@ neoJSON: spec
 		project: 'NeoJSON'
 		with: [ spec
 				className: 'ConfigurationOfNeoJSON';
-				versionString: #stable;
+				versionString: #default;
 				repository: 'http://mc.stfx.eu/Neo' ]
