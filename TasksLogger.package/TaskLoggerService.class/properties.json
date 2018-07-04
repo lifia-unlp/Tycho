@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "WARestfulHandler",
+	"category" : "TasksLogger-REST api",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TaskLoggerService",
+	"type" : "normal"
+}
