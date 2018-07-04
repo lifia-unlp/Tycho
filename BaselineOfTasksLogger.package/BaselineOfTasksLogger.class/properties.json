@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "JulianGrigera 7/4/2018 10:07",
+	"super" : "BaselineOf",
+	"category" : "BaselineOfTasksLogger",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BaselineOfTasksLogger",
+	"type" : "normal"
+}
