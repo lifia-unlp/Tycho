@@ -1,7 +1,7 @@
 request handlers
-handleTaskResultPostRequest: parameters
+postNewTaskResult: jsonBody
 	| task taskResult sample experiment payload |
-	payload := NeoJSONReader fromString: parameters entity string.
+	payload := NeoJSONReader fromString: jsonBody.
 	experiment := self experimentFromParameters: payload.
 	sample := self sampleFromParameters: payload.
 	(experiment samples includes: sample)

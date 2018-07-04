@@ -5,9 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"store"
-	],
-	"name" : "TeapotTaskLoggerService",
+	"instvars" : [ ],
+	"name" : "WenAPIFacade",
 	"type" : "normal"
 }
