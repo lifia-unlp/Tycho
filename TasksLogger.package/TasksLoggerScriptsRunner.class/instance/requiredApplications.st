@@ -1,5 +1,5 @@
 deployment
 requiredApplications
-	^ #('wen' 'bootstrap' 'config' 'files')
+	^ #('wen' 'wen-api' 'bootstrap' 'config' 'files')
 		copyWith: self applicationName;
 		yourself

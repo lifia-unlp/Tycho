@@ -1,4 +1,4 @@
 deployment
 turnOffDebugging
-	(WAAdmin defaultDispatcher handlerAt: self applicationName)
+	(WAAdmin defaultDispatcher handlerAt: 'wen')
 		exceptionHandler: WAHtmlErrorHandler

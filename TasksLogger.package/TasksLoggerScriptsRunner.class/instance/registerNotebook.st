@@ -1,8 +1,7 @@
 common
 registerNotebook
 	| app |
-	super initialize.
-	app := WAAdmin register: WAExperimentNotebookComponent asApplicationAt: self applicationName.
+	app := WAAdmin register: WAExperimentNotebookComponent asApplicationAt: 'wen'.
 	app
 		addLibrary: JQDeploymentLibrary;
 		addLibrary: TBSDeploymentLibrary

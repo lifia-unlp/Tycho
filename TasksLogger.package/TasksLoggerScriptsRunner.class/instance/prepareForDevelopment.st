@@ -2,5 +2,5 @@ development
 prepareForDevelopment
 	self
 		registerNotebook;
-		startDevelopmentServer;
-		startTeapotDevelopmentServer
+		registerApi;
+		startDevelopmentServer

@@ -1,11 +1,13 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "Casco 7/4/2018 14:03",
 	"super" : "WARestfulHandler",
 	"category" : "TasksLogger-REST api",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "TaskLoggerService",
+	"instvars" : [
+		"api"
+	],
+	"name" : "SeasideWenAPI",
 	"type" : "normal"
 }
