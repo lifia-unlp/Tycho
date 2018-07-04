@@ -1,32 +1,48 @@
-/**
- * Create a BackgroundFacaade and delegate everything to it.
- * The BackgroundFacade is the interface between the external, non-OO world
- * and our object oriented background subsystem.
- */
-
+//These globals are a very bad idea
+var enabled = true;
 var facade = BackgroundFacade.getSingleton();
-var enabled = facade.visible;
 
 var updateIcon = function() {
-  if (! enabled) {
-    browser.browserAction.setIcon({ path: "resources/rut-disabled.svg" });
-  } else {
-    browser.browserAction.setIcon({ path: "resources/rut.svg" });
-  };
-}
+    if (!enabled) {
+        browser.browserAction.setIcon({ path: "resources/rut-disabled.svg" });
+    } else {
+        browser.browserAction.setIcon({ path: "resources/rut.svg" });
+    }
+};
 
-updateIcon();
+var startBackground = function(config) {
+    facade = BackgroundFacade.getSingleton();
+    facade.setApiUrl(config.apiUrl);
+    enabled = facade.visible;
 
-browser.runtime.onMessage.addListener(rmcRequest => {
-  return facade.handle(rmcRequest);
-});
+    browser.runtime.onMessage.addListener(rmcRequest => {
+        return facade.handle(rmcRequest);
+    });
 
-browser.runtime.onMessageExternal.addListener(rmcRequest => {
-  return facade.handle(rmcRequest);
-});
+    browser.runtime.onMessageExternal.addListener(rmcRequest => {
+        return facade.handle(rmcRequest);
+    });
 
-browser.browserAction.onClicked.addListener(() => {
-  enabled = ! enabled;
-  facade.setVisible(enabled);
-  updateIcon();
+    browser.browserAction.onClicked.addListener(() => {
+        enabled = !enabled;
+        facade.setVisible(enabled);
+        updateIcon();
+    });
+
+    browser.storage.onChanged.addListener((change, area) => {
+        if (area == "local" && change.config) {
+            facade.setApiUrl(change.config.newValue.apiUrl);
+        }
+    });
+
+    updateIcon();
+};
+
+browser.storage.local.get("config").then(data => {
+    var config = data.config;
+    if (!config) {
+        config = { apiUrl: "http://localhost:8080/wen-api" };
+        browser.storage.local.set({ config });
+    }
+    startBackground(config);
 });

@@ -12,12 +12,17 @@
       "strict_min_version": "60.0"
     }
   },
+  "options_ui": {
+    "page": "config/options.html",
+    "browser_style": true
+  },
   "icons": {
     "48": "resources/rut.svg"
   },
   "permissions": [
     "<all_urls>",
-    "tabs"
+    "tabs",
+    "storage"
   ],
   "background": {
     "scripts": [

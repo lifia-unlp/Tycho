@@ -5,11 +5,11 @@
  * All my methods have one argument (arguments)
  */
 
-let serviceURL = "http://localhost:8080/wen-api";
 let version = "1";
 let backgroundFacadeSingleton = null;
 
 class BackgroundFacade extends Facade {
+
     constructor() {
         super();
         this.experiment = null;
@@ -22,6 +22,10 @@ class BackgroundFacade extends Facade {
             backgroundFacadeSingleton = new BackgroundFacade();
         }
         return backgroundFacadeSingleton;
+    }
+
+    setApiUrl(url) {
+        this.serverApi.setApiUrl(url);
     }
 
     getExperiment() {

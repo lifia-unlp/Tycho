@@ -1,14 +1,13 @@
 class ServerAPI {
+
+  setApiUrl(url) {
+    this.apiUrl = url;
+  }
+  
   submit(payload, service) {
-    // const params = new URLSearchParams();
-    // for (let key in payload) {
-    //   params.append(key, payload[key]);
-    // }
+
     axios
-      .post(serviceURL + service, payload) // used to be params)
-      // .then(function (response) {
-      //     console.log('Successful post: ', response);
-      // })
+      .post(this.apiUrl + service, payload) 
       .catch(function(error) {
         console.log("Error posting: ", error);
       });
@@ -23,12 +22,10 @@ class ServerAPI {
    * @returns a Promise that resolves to the server response
    */
   getExperimentDesignFromServer(id) {
-    //console.log("requested session from serveer");
     return new Promise((resolve, reject) => {
       axios
-        .get(serviceURL + "/experiments/" + id)
+        .get(this.apiUrl + "/experiments/" + id)
         .then(response => {
-          //console.log("Session is: " + JSON.stringify(response));
           resolve(response);
         })
         .catch(error => {
