@@ -5,7 +5,7 @@
  * All my methods have one argument (arguments)
  */
 
-let serviceURL = "http://localhost:8888";
+let serviceURL = "http://localhost:8080/wen-api";
 let version = "1";
 let backgroundFacadeSingleton = null;
 
