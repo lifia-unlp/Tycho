@@ -5,8 +5,8 @@ Depends on: Seaside / VoyageMongo
 
 ## Installation
 ```smalltalk
- (IceRepositoryCreator new
-  	url: 'git@github.com:juliangrigera/RemoteUsabilityTests.git';
-  	createRepository) updatePackage: #TasksLogger.
- (Smalltalk at:#TasksLoggerScriptsRunner) prepareForDevelopment
+Metacello new
+	baseline: 'TasksLogger';
+	repository: 'github://juliangrigera/RemoteUsabilityTests';
+	load.
 ```
