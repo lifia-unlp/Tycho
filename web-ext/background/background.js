@@ -4,9 +4,9 @@ var facade = BackgroundFacade.getSingleton();
 
 var updateIcon = function() {
     if (!enabled) {
-        browser.browserAction.setIcon({ path: "resources/rut-disabled.svg" });
+        browser.browserAction.setIcon({ path: "resources/wen-disabled.png" });
     } else {
-        browser.browserAction.setIcon({ path: "resources/rut.svg" });
+        browser.browserAction.setIcon({ path: "resources/wen-enabled.png" });
     }
 };
 
