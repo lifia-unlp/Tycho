@@ -1,4 +1,4 @@
 hooks
 updateRoot: anHtmlRoot
-    super updateRoot: anHtmlRoot.
-    anHtmlRoot title: 'Web Experiments Noteboook'
+	super updateRoot: anHtmlRoot.
+	anHtmlRoot title: 'Tycho - web experiments manager'
