@@ -7,6 +7,6 @@ Depends on: Seaside / VoyageMongo
 ```smalltalk
 Metacello new
 	baseline: 'TasksLogger';
-	repository: 'github://juliangrigera/RemoteUsabilityTests';
+	repository: 'github://juliangrigera/Tycho';
 	load.
 ```
