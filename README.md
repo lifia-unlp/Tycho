@@ -1,7 +1,6 @@
-# RemoteUsabilityTests
-Simple Small Tool for performing remote Usability Tests and recording results.
+# Tycho
+Simple Tool for designing remote web experiments, running them, and recording the results.
 Requires MongoDB.
-Depends on: Seaside / VoyageMongo
 
 ## Installation
 ```smalltalk
