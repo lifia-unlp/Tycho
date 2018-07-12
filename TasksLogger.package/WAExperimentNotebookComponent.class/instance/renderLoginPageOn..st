@@ -1,7 +1,7 @@
 rendering
 renderLoginPageOn: html
 	html
-		tbsJumbotron: [ html heading: 'Web experiments notebook'.
+		tbsJumbotron: [ html heading: 'Tycho'.
 			html image url: WAExperimentFileLibrary / #notebookPng.
 			html paragraph: 'Design your web experiments, run them, and record the results.'.
 			html paragraph: 'Use your secret word to open it.'.

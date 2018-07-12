@@ -8,5 +8,5 @@ renderNavigationbarOn: html
 								tbsPullLeft;
 								style: 'padding: 10px;';
 								url: WAExperimentFileLibrary / #notebooksmallPng.
-							html tbsNavbarBrand with: 'Web experiments notebook' ].
+							html tbsNavbarBrand with: 'Tycho' ].
 					self renderReturnButtonOn: html ] ]
