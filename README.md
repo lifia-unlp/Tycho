@@ -23,3 +23,8 @@ To prepare your server __for deployment__, evaluate the following expresion in a
 ```smalltalk
 TasksLoggerScriptsRunner prepareForDeveploymentOnPort: 8080 . 	
 ```
+
+## Test the server
+Tycho should be accesible at http://yourserver-ip:port/tycho
+
+To test that the REST api is also working, point your browser at http://yourserver-ip:port/tycho-api/ping
