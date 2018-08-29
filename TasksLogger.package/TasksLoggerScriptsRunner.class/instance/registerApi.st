@@ -1,3 +1,3 @@
 common
 registerApi
-	WAAdmin register: SeasideWenAPI at: 'wen-api'
+	WAAdmin register: SeasideWenAPI at: 'tycho-api'
