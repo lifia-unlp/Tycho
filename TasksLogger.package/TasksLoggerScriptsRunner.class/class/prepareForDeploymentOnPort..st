@@ -1,4 +1,6 @@
 convenience
 prepareForDeploymentOnPort: port
 	<script>
-	self new prepareForDeploymentOnPort: port
+	self new
+		port: port;
+		prepareForDeployment
