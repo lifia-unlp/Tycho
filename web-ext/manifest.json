@@ -7,7 +7,8 @@
   "content_security_policy" : "default-src 'self' http://localhost:8888/; script-src 'self' 'unsafe-eval'; object-src 'self'",
   "default_locale": "en",
   "options_ui": {
-    "page": "config/options.html"
+    "page": "config/options.html",
+    "open_in_tab": true
   },
   "icons": {
     "48": "resources/wen-enabled.png"
@@ -61,5 +62,9 @@
         "resources/task-tracker-webext.css"
       ]
     }
+  ],
+  "web_accessible_resources": [
+      "node_modules/webextension-polyfill/dist/browser-polyfill.min.js",
+      "config/options.js"
   ]
 }
