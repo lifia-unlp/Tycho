@@ -3,4 +3,4 @@ prepareForDevelopment
 	self
 		registerNotebook;
 		registerApi;
-		startDevelopmentServer
+		startServer
