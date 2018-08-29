@@ -1,3 +1,3 @@
 deployment
 requiredApplications
-	^ #('wen' 'wen-api' 'bootstrap' 'files')
+	^ #('tycho' 'tycho-api' 'files')
