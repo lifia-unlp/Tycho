@@ -1,8 +1,11 @@
 request handlers
 experiment: id
 	| resp json |
+	json := nil.
 	resp := self store experimentId: id.
-	json := RestResponseWriter new
-		experimentAsJson: resp
-		withSuggestedSampleId: self store newSuggestedSampleId.
+	resp
+		ifNotNil: [ json := RestResponseWriter new
+				experimentAsJson: resp
+				withSuggestedSampleId: self store newSuggestedSampleId.
+			json ].
 	^ json
