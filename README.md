@@ -15,11 +15,11 @@ Metacello new
 To setup and run the server in __development mode__, evaluate the following expresion in a playground.
 
 ```smalltalk
-TasksLoggerScriptsRunner prepareForDevelopment . 	
+TasksLoggerScriptsRunner prepareForDevelopmentOnPort: 8080 . 	
 ```
 
 To prepare your server __for deployment__, evaluate the following expresion in a playground.
 
 ```smalltalk
-TasksLoggerScriptsRunner prepareForDeveplyment . 	
+TasksLoggerScriptsRunner prepareForDeveplymentOnPort: 8080 . 	
 ```
