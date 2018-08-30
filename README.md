@@ -34,8 +34,8 @@ Inside the web-ext subdirectory run:
 ```javascript
 npm install
 ```
-Edit the file web-ext/manifest.json . In the content_security_policy property and replace both occurrences of "localhost:8080" by the server name and port whe you will run the Tycho server.
+Edit the file web-ext/manifest.json . In the content_security_policy property and replace both occurrences of "localhost:8080" by the server name and port where you will run the Tycho server.
 
-Edit the file web-ext/background/background.js . Replace "localhost:8080" by the server name and port whe you will run the Tycho server (this almost at the end of the file).
+Edit the file web-ext/background/background.js . Replace "localhost:8080" by the server name and port where you will run the Tycho server (this almost at the end of the file).
 
 Install the extensión on your browser. 
