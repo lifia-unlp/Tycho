@@ -41,7 +41,7 @@ var startBackground = function(config) {
 browser.storage.local.get("config").then(data => {
     var config = data.config;
     if (!config) {
-        config = { apiUrl: "http://localhost:8080/wen-api" };
+        config = { apiUrl: "http://localhost:8080/tycho-api" };
         browser.storage.local.set({ config });
     }
     startBackground(config);
