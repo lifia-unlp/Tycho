@@ -1,4 +1,10 @@
 ids
 newExperimentId
-	^ monitor
-		critical: [ ((self experiments inject: 0 into: [ :sub :each | sub max: each id asNumber ]) + 1) asString ]
+	| id attemps |
+	id := self randomExperimentId.
+	attemps := 0.
+	[ (self experiments select: [ :each | each id ]) asSet includes: id ]
+		whileTrue: [ id := self randomExperimentId.
+			attemps := attemps + 1.
+			attemps = 10
+				ifTrue: [ TimedOut signal: 'took to long to find an available id' ] ]

@@ -1,0 +1,3 @@
+ids
+newExperimentId
+  ^self subclassResponsibility 
