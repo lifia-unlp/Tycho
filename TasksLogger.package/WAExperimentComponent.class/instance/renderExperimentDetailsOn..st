@@ -1,6 +1,6 @@
 rendering
 renderExperimentDetailsOn: html
-	html heading: 'Experiment #', self experiment id asString.
+	html heading: 'Experiment ID', self experiment id.
 	html
 		tbsForm: [  
 			html

@@ -2,7 +2,7 @@ rendering experiments
 renderExperimentsOn: html
 	| headerBlock tableBlock |
 	html heading: 'Your experiments'.
-	headerBlock := [ html tableHeading: '#'.
+	headerBlock := [ html tableHeading: 'ID'.
 	html tableHeading: 'Notes'.
 	html tableHeading: ''.
 	html tableHeading: ''.
