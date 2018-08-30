@@ -21,7 +21,7 @@ TasksLoggerScriptsRunner prepareForDevelopmentOnPort: 8080 .
 To prepare your server __for deployment__, evaluate the following expresion in a playground.
 
 ```smalltalk
-TasksLoggerScriptsRunner prepareForDeveploymentOnPort: 8080 . 	
+TasksLoggerScriptsRunner prepareForDeploymentOnPort: 8080 . 	
 ```
 
 ## Test the server
