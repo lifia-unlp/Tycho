@@ -3,8 +3,8 @@ addCleanExperiment
 	| newId exp |
 	exp := nil.
 	self monitor
-		critical: [ newId := self store newExperimentId.
+		critical: [ newId := self newExperimentId.
 			exp := Experiment id: newId asString notes: ''.
-			self store rememberToSave: exp.
-			self store savePending ].
+			self rememberToSave: exp.
+			self savePending ].
 	^ exp

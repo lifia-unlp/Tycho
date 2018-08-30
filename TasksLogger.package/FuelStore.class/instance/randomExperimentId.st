@@ -1,11 +1,11 @@
 private
 randomExperimentId
-	| id |
-	id := String new writeStream.
-	id
+	| stream |
+	stream := String new writeStream.
+	stream
 		nextPutAll: self mascotNames atRandom;
 		nextPutAll: '-';
 		nextPutAll: 9 atRandom printString;
 		nextPutAll: 9 atRandom printString;
 		nextPutAll: 9 atRandom printString.
-	^ id
+	^ stream contents
