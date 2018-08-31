@@ -6,4 +6,3 @@ initialize
 	lastSampleId := nil.
 	lastTaskId := nil.
 	monitor := Monitor new.
-	monitor critical: [ experiments ifNil: [ self attemptToInitializeFromFile ] ]

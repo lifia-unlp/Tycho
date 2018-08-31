@@ -1,3 +1,3 @@
 accessing
 store
-  ^TaskLoggerStore store
+	^ FuelStore store

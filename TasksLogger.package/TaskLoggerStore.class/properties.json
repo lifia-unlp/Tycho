@@ -2,9 +2,7 @@
 	"commentStamp" : "Casco 6/30/2018 20:53",
 	"super" : "Object",
 	"category" : "TasksLogger-Persistence",
-	"classinstvars" : [
-		"store"
-	],
+	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [

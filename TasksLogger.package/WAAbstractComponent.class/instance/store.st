@@ -1,3 +1,3 @@
 store
 store
-  ^TaskLoggerStore store.
+  ^FuelStore store.
