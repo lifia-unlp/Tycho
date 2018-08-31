@@ -15,13 +15,13 @@ Metacello new
 To setup and run the server in __development mode__, evaluate the following expresion in a playground.
 
 ```smalltalk
-TasksLoggerScriptsRunner prepareForDevelopmentOnPort: 8080 . 	
+TasksLoggerScriptsRunner prepareForDevelopmentOnPort: 8888 . 	
 ```
 
 To prepare your server __for deployment__, evaluate the following expresion in a playground.
 
 ```smalltalk
-TasksLoggerScriptsRunner prepareForDeploymentOnPort: 8080 . 	
+TasksLoggerScriptsRunner prepareForDeploymentOnPort: 8888 . 	
 ```
 
 ## Test the server
@@ -34,8 +34,8 @@ Inside the web-ext subdirectory run:
 ```javascript
 npm install
 ```
-Edit the file web-ext/manifest.json . In the content_security_policy property and replace both occurrences of "localhost:8080" by the server name and port where you will run the Tycho server.
+Edit the file web-ext/manifest.json . In the content_security_policy property and replace both occurrences of "localhost:8888" by the server name and port where you will run the Tycho server.
 
-Edit the file web-ext/background/background.js . Replace "localhost:8080" by the server name and port where you will run the Tycho server (this almost at the end of the file).
+Edit the file web-ext/background/background.js . Replace "localhost:8888" by the server name and port where you will run the Tycho server (this almost at the end of the file).
 
 Install the extensión on your browser. 
