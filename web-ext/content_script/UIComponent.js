@@ -10,6 +10,7 @@ class UIComponent {
   render() {
     if (!this.component) {
       this.component = this.buildComponent();
+      this.component.addClass("wen-component");
       this.notification = $(
         '<div id="notification" style="display: none;"></div>'
       );

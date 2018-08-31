@@ -3,6 +3,7 @@
     width: 100%;
     display: block;
     background: #aaffaa;
+    color: #000;    
     bottom: 0px;
     z-index: 9999;
     padding: 10px;
@@ -10,8 +11,14 @@
     font-size: 14px;
 }
 
+#wen-component {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;    
+}
+
 #wen-message-component {
     font-family: Arial, Helvetica, sans-serif;
+    color: #000;    
     font-size: 14px;
     position: fixed;
 }
@@ -20,7 +27,6 @@
     font-size: 20px;
 }
 
-
 #notification {
     position: fixed;
     width: 25%;
@@ -28,6 +34,7 @@
     text-align: center;
     display: block;
     background: #aaffaa;
+    color: #000;  
     top: 20px;
     z-index: 9999;
     padding: 10px
@@ -44,6 +51,7 @@
     margin: 0 20%;
     display: block;
     background: #aaffaa;
+    color: #000;  
     top: 20px;
     z-index: 9999;
     padding: 10px 50px
