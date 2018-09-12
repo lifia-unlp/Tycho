@@ -1,3 +1,3 @@
 accessing
 isOpen
-   ^password = 'ydaale'
+   ^password = TychoFileBasedConfiguration load adminAccessCode.

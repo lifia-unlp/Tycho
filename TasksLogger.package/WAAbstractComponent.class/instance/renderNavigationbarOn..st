@@ -9,4 +9,7 @@ renderNavigationbarOn: html
 								style: 'padding: 10px;';
 								url: WAExperimentFileLibrary / #notebooksmallPng.
 							html tbsNavbarBrand with: 'Tycho' ].
-					self renderReturnButtonOn: html ] ]
+					html div
+						tbsPullRight;
+						with: [ self renderActionsMenuOn: html.
+							self renderReturnButtonOn: html ] ] ]
