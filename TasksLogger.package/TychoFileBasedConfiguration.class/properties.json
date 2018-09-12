@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "Casco 8/26/2018 22:06",
+	"super" : "Object",
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"adminAccessCode"
+	],
+	"name" : "TychoFileBasedConfiguration",
+	"type" : "normal"
+}

@@ -2,7 +2,10 @@
 	"commentStamp" : "juliangrigera 7/6/2017 11:56",
 	"super" : "Object",
 	"category" : "TasksLogger-Deployment",
-	"classinstvars" : [ ],
+	"classinstvars" : [
+		"releaseDate",
+		"mode"
+	],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [

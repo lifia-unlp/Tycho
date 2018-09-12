@@ -16,4 +16,5 @@ renderLoginPageOn: html
 								beSmall;
 								bePrimary;
 								callback: [  ];
-								with: 'Open!' ] ] ]
+								with: 'Open!' ] ] ].
+	html tbsContainer: [ self renderReleseInfoOn: html ]
