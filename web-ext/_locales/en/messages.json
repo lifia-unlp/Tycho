@@ -58,7 +58,9 @@
   "abandonTaskButtonTest": {
     "message": "Abandon",
     "description": "The text of an abandon button"
+  },
+  "toggleTrackerPosition": {
+    "message": "Move away",
+    "description": "Move the tracker out of the way"
   }
- 
-
 }

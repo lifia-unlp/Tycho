@@ -1,6 +1,7 @@
 class TaskInstructionsComponent extends UIComponent {
   constructor(model) {
     super(model);
+    this.lockedDown = true;
   }
 
   //This is not the right hook to do this. Need a new one
@@ -18,6 +19,17 @@ class TaskInstructionsComponent extends UIComponent {
         this.model.instructions +
         "</span> </div>"
     );
+    tracker.css("bottom","0");
+    this.addButton(
+      tracker,
+      "toggleTrackerPositionButton",
+      browser.i18n.getMessage("toggleTrackerPosition"),
+      () => {
+        me.toggleTrackerPosition();
+      },
+      true
+    );
+
     this.addButton(
       tracker,
       "startButton",
@@ -105,6 +117,18 @@ class TaskInstructionsComponent extends UIComponent {
     this.model.successful = eval(this.model.successCondition);
     this.submitResults();
     this.done();
+  }
+
+  toggleTrackerPosition() {
+    this.lockedDown = ! this.lockedDown;
+    if (this.lockedDown) {
+      this.component.css("bottom","0");
+      this.component.css("top","");
+    } else {
+      this.component.css("top","0");
+      this.component.css("bottom","");
+    };
+    
   }
 
   addButton(tracker, id, text, func, show) {
