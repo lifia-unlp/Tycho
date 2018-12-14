@@ -1,8 +1,7 @@
 baseline
 bootstrap: spec
 	spec
-		project: 'Bootstrap'
+		baseline: 'Bootstrap'
 					with: [ spec
-						className: 'ConfigurationOfBootstrap';
-						versionString: #stable;
-						repository: 'http://smalltalkhub.com/mc/TorstenBergmann/Bootstrap/main/' ]
+						loads: #('Bootstrap-Core' 'Bootstrap-Widgets');
+						repository: 'github://astares/Seaside-Bootstrap:master/src' ]
