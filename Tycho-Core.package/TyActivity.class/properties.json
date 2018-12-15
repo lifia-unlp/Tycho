@@ -1,13 +1,16 @@
 {
-	"commentStamp" : "",
-	"super" : "TyActivity",
+	"commentStamp" : "Casco 12/14/2018 19:45",
+	"super" : "Object",
 	"category" : "Tycho-Core-activities",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"instructions"
+		"id",
+		"name",
+		"notes",
+		"isMandatory"
 	],
-	"name" : "TyTask",
+	"name" : "TyActivity",
 	"type" : "normal"
 }

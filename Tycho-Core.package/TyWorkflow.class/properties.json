@@ -1,13 +1,14 @@
 {
 	"commentStamp" : "",
-	"super" : "TyActivity",
+	"super" : "Object",
 	"category" : "Tycho-Core-activities",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"instructions"
+		"activities",
+		"notes"
 	],
-	"name" : "TyTask",
+	"name" : "TyWorkflow",
 	"type" : "normal"
 }

@@ -1,0 +1,1 @@
+Mandatory activities cannot be abandoned

@@ -1,13 +1,16 @@
 {
 	"commentStamp" : "",
-	"super" : "TyActivity",
+	"super" : "TyQuestion",
 	"category" : "Tycho-Core-activities",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"instructions"
+		"minValue",
+		"maxValue",
+		"minString",
+		"maxString"
 	],
-	"name" : "TyTask",
+	"name" : "TyLinearScaleQuestion",
 	"type" : "normal"
 }

@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
 	"super" : "Object",
-	"category" : "Tycho-Core-activities",
+	"category" : "Tycho-Core-tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "ExperimentTaskConfiguration",
+	"name" : "TestSimpleTask",
 	"type" : "normal"
 }

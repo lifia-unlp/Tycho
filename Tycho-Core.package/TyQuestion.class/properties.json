@@ -1,13 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "TyActivity",
+	"super" : "Object",
 	"category" : "Tycho-Core-activities",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"instructions"
+		"isMandatory"
 	],
-	"name" : "TyTask",
+	"name" : "TyQuestion",
 	"type" : "normal"
 }

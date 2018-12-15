@@ -6,8 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"instructions"
+		"title",
+		"text"
 	],
-	"name" : "TyTask",
+	"name" : "TyMessage",
 	"type" : "normal"
 }

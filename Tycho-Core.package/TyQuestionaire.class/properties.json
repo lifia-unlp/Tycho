@@ -5,9 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"instructions"
-	],
-	"name" : "TyTask",
+	"instvars" : [ ],
+	"name" : "TyQuestionaire",
 	"type" : "normal"
 }

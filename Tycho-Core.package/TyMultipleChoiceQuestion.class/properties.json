@@ -1,13 +1,15 @@
 {
 	"commentStamp" : "",
-	"super" : "TyActivity",
+	"super" : "TyQuestion",
 	"category" : "Tycho-Core-activities",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"instructions"
+		"question",
+		"choices",
+		"isMultiple"
 	],
-	"name" : "TyTask",
+	"name" : "TyMultipleChoiceQuestion",
 	"type" : "normal"
 }
