@@ -1,7 +1,5 @@
 baseline
 bootstrap: spec
-	spec
-		baseline: 'Bootstrap'
-					with: [ spec
-						loads: #('Bootstrap-Core' 'Bootstrap-Widgets');
-						repository: 'github://astares/Seaside-Bootstrap:master/src' ]
+	spec package: 'Bootstrap-Core' with: [ spec repository: 'github://astares/Seaside-Bootstrap/src' ].
+	spec package: 'Bootstrap-Widgets' with: [ spec repository: 'github://astares/Seaside-Bootstrap/src' ].
+	spec package: 'Bootstrap-Jasny' with: [ spec repository: 'github://astares/Seaside-Bootstrap/src' ]
