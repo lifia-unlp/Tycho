@@ -6,7 +6,7 @@ renderAvailableTaskPrototypesOn: html
 		with: 'Available task prototypes'.
 	headerBlock := [ html tableHeading: 'Type'.
 	html tableHeading: 'Notes'.
-	html tableHeading: ''].
+	html tableHeading: '' ].
 	tableBlock := [ html tableHead: headerBlock.
-	html tableBody: [ self store prototypes do: [ :each | self renderTaskPrototype: each on: html ] ] ].
+	html tableBody: [ self availablePrototypes do: [ :each | self renderTaskPrototype: each on: html ] ] ].
 	html tbsTable: tableBlock

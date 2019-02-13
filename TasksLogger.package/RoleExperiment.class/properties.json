@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "JulianGrigera 2/13/2019 14:12",
+	"super" : "Experiment",
+	"category" : "TasksLogger-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RoleExperiment",
+	"type" : "normal"
+}
