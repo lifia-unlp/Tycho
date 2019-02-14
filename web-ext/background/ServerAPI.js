@@ -17,6 +17,10 @@ class ServerAPI {
     this.submit(report, "/task-results/");
   }
 
+  getStatusOfGlobalSemaphore(semaphoreId) {
+      return axios.get(this.apiUrl + "/semaphores/" + semaphoreId);
+  }
+
   /**
    * @id the id of the session to retrieve
    * @returns a Promise that resolves to the server response

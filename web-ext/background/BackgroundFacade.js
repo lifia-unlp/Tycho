@@ -9,7 +9,6 @@ let version = "1";
 let backgroundFacadeSingleton = null;
 
 class BackgroundFacade extends Facade {
-
     constructor() {
         super();
         this.experiment = null;
@@ -94,6 +93,26 @@ class BackgroundFacade extends Facade {
                         ContentProxy.getSingleton().render(this.visible);
                         resolve(this.experiment);
                     }
+                })
+                .catch(error => {
+                    reject(error);
+                });
+        });
+    }
+
+    /**
+     * Ask for the status of a global semaphore (0 should be understood as move on,
+     * negative numbers wait for signales, positive numbers indicate already signaled)
+     * @param {args.semaphoreId is the id of the global semaphore whose status we need} args
+     * @returns a Promise that will resolve to the status, or reject with the error.
+     */
+    getStatusOfGlobalSemaphore(args) {
+        return new Promise((resolve, reject) => {
+            this.serverApi
+                .getStatusOfGlobalSemaphore(args.semaphoreId)
+                .then(response => {
+                    let status = response.data;
+                    resolve(status);
                 })
                 .catch(error => {
                     reject(error);

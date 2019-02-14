@@ -51,6 +51,11 @@ class BackgroundProxy {
     return await this.send({ methodName: "leaveExperiment", arguments: {} });
   }
 
+  async getStatusOfGlobalSemaphore(semaphoreId) {
+    let status = await this.send({ methodName: "getStatusOfGlobalSemaphore", arguments: {semaphoreId: semaphoreId} });
+    return status
+  }
+
   // Private protocol down here
   async send(rmc) {
     try {
