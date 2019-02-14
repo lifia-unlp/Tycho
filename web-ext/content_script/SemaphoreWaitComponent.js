@@ -18,13 +18,18 @@ class SemaphoreWaitComponent extends UIComponent {
 
     async refreshSemaphoreStatus() {
         let me = this;
-        let semaphoreStatus = await BackgroundProxy.getSingleton().getStatusOfGlobalSemaphore("1");
+        let semaphoreStatus = await BackgroundProxy.getSingleton().getStatusOfGlobalSemaphore(
+            "1"
+        );
         $("#statusDiv").html(semaphoreStatus.status);
-        setTimeout(() => {
+        if (semaphoreStatus.status == "0") {
+            this.done();
+        } else {
+            setTimeout(() => {
                 me.refreshSemaphoreStatus();
             }, 1000);
+        }
     }
-
     render() {
         this.model.startTime = new Date().getTime();
         let me = this;
