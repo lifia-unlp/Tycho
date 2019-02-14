@@ -9,18 +9,16 @@ class SemaphoreWaitComponent extends UIComponent {
         let messageDiv = $(
             '<div id="wen-message-component" class="topNotification"></div>'
         );
-        messageDiv.append("<h1>Waiting</h1><p></p>");
+        messageDiv.append("<h1>Please wait ...</h1><p></p>");
         messageDiv.append(
-            '<p>Waiting for something to happen - <div id="statusDiv">unset</div></p>'
+            '<p>Waiting for <div id="statusDiv">many</div> other users to do something</p>'
         );
         return messageDiv;
     }
 
     async refreshSemaphoreStatus() {
         let me = this;
-        let semaphoreStatus = await BackgroundProxy.getSingleton().getStatusOfGlobalSemaphore(
-            "1"
-        );
+        let semaphoreStatus = await BackgroundProxy.getSingleton().getStatusOfGlobalSemaphore("1");
         $("#statusDiv").html(semaphoreStatus.status);
         if (semaphoreStatus.status == "0") {
             this.done();
