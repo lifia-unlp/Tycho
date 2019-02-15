@@ -11,7 +11,8 @@
 		"experiments",
 		"monitor",
 		"lastTaskId",
-		"lastSampleId"
+		"lastSampleId",
+		"semaphores"
 	],
 	"name" : "FuelStore",
 	"type" : "normal"

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "Casco 2/15/2019 07:43",
+	"super" : "Object",
+	"category" : "TasksLogger-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"id",
+		"status",
+		"sampleId"
+	],
+	"name" : "ExperimentSemaphore",
+	"type" : "normal"
+}

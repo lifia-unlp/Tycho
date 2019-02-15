@@ -1,10 +1,10 @@
 request handling
-get: id
+getExperiment: id
 	<get>
 	<path: '/experiments/{id}'>
-	| experiment |
-	experiment := api experiment: id.
-	^ experiment
+	| experimentAsJson |
+	experimentAsJson := api experiment: id.
+	^ experimentAsJson
 		ifNil: [ self requestContext
 				respond: [ :response | 
 					response
@@ -20,4 +20,4 @@ get: id
 						headerAt: 'Access-Control-Allow-Credentials' put: 'true';
 						contentType: WAMimeType applicationJson;
 						status: WAResponse statusOk;
-						nextPutAll: experiment ] ]
+						nextPutAll: experimentAsJson ] ]
