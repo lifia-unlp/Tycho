@@ -17,6 +17,15 @@ class ServerAPI {
     this.submit(report, "/task-results/");
   }
 
+  patchSemaphore(semaphore) {
+    axios
+    .patch(this.apiUrl + "/semaphores/" + semaphore.id, semaphore) 
+    .catch(function(error) {
+      console.log("Error posting: ", error);
+    });
+
+  }
+
   getStatusOfGlobalSemaphore(semaphoreId) {
       return axios.get(this.apiUrl + "/semaphores/" + semaphoreId);
   }

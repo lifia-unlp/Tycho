@@ -1,4 +1,4 @@
-class SemaphoreWaitComponent extends UIComponent {
+class SemaphoreSignalComponent extends UIComponent {
     constructor(model) {
         super(model);
     }
@@ -10,22 +10,9 @@ class SemaphoreWaitComponent extends UIComponent {
         );
         messageDiv.append("<h1>Please wait ...</h1><p></p>");
         messageDiv.append(
-            '<p>Waiting for <div id="statusDiv">many</div> other users to do something</p>'
+            '<p>Just a second so I can signal the semaphore</p>'
         );
         return messageDiv;
-    }
-
-    async refreshSemaphoreStatus() {
-        let me = this;
-        let semaphore = await BackgroundProxy.getSingleton().getStatusOfGlobalSemaphore(this.model.semaphoreId);
-        $("#statusDiv").html(semaphore.status);
-        if (semaphore.status == 0) {
-            this.done();
-        } else {
-            setTimeout(() => {
-                me.refreshSemaphoreStatus();
-            }, 1000);
-        }
     }
 
     render() {
@@ -36,5 +23,13 @@ class SemaphoreWaitComponent extends UIComponent {
         setTimeout(() => {
             me.refreshSemaphoreStatus();
         }, 1000);
+    }
+
+    async refreshSemaphoreStatus() {
+        let me = this;
+        let semaphore = await BackgroundProxy.getSingleton().getStatusOfGlobalSemaphore(this.model.semaphoreId);
+        semaphore.status = 0;
+        BackgroundProxy.getSingleton().patchSemaphore(semaphore);
+        this.done();
     }
 }

@@ -57,7 +57,8 @@ class ContentFacade extends Facade {
       MessageComponent: MessageComponent,
       YoutubeVideoComponent: YoutubeVideoComponent,
       QuestionaireComponent: QuestionaireComponent,
-      SemaphoreWaitComponent: SemaphoreWaitComponent
+      SemaphoreWaitComponent: SemaphoreWaitComponent,
+      SemaphoreSignalComponent: SemaphoreSignalComponent
     };
   }
 }

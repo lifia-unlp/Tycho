@@ -50,6 +50,10 @@ class BackgroundFacade extends Facade {
         this.serverApi.submitTaskReport(report);
     }
 
+    patchSemaphore(args) {
+        this.serverApi.patchSemaphore(args.semaphore);
+    }
+
     getActiveTask() {
         if (!this.experiment) {
             return {

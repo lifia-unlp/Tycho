@@ -21,6 +21,13 @@ class BackgroundProxy {
     });
   }
 
+  async patchSemaphore(semaphore) {
+    return await this.send({
+      methodName: "patchSemaphore",
+      arguments: { semaphore: semaphore }
+    });    
+  }
+
   async setModelOfTask(model) {
     return await this.send({
       methodName: "setModelOfTask",
