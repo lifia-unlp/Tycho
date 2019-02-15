@@ -1,9 +1,9 @@
 request handling
-semaphore: id forSample: sampleId
+getSemaphore: id
 	<get>
-	<path: 'samples/{sampleId}/semaphores/{id}'>
+	<path: '/semaphores/{id}'>
 	| semaphoreAsJson |
-	semaphoreAsJson := api semaphore: id forSample: sampleId.
+	semaphoreAsJson := api semaphore: id forSample: 'not-set'.
 	semaphoreAsJson
 		ifNil: [ self requestContext
 				respond: [ :response | 
