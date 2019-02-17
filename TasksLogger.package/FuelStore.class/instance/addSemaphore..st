@@ -1,0 +1,3 @@
+accessing
+addSemaphore: anExperimentSemaphore
+	self semaphores add: anExperimentSemaphore

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "JulianGrigera 2/17/2019 19:38",
+	"super" : "WAAbstractComponent",
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"semaphore"
+	],
+	"name" : "WASemaphoreComponent",
+	"type" : "normal"
+}
