@@ -8,7 +8,8 @@
 	"instvars" : [
 		"task",
 		"properties",
-		"koboldReport"
+		"koboldReport",
+		"timestamp"
 	],
 	"name" : "ExperimentTaskResult",
 	"type" : "normal"

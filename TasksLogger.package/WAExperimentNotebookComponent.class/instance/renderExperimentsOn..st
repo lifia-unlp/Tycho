@@ -1,8 +1,8 @@
 rendering experiments
 renderExperimentsOn: html
 	| headerBlock tableBlock |
-	html heading: 'Your experiments'.
-	headerBlock := [ html tableHeading: 'ID'.
+	html heading: 'Your protocols'.
+	headerBlock := [ html tableHeading: 'Protocol ID'.
 	html tableHeading: 'Notes'.
 	html tableHeading: ''.
 	html tableHeading: ''.

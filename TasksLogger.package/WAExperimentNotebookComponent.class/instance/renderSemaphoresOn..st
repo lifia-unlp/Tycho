@@ -1,15 +1,16 @@
 rendering-semaphores
 renderSemaphoresOn: html
 	| headerBlock tableBlock |
-	html heading: 'Semaphores'.
+	html heading
+		level3;
+		with: 'Semaphores (to synchronize protocols)'.
 	headerBlock := [ html
 		tableHeading: 'ID';
-		tableHeading: 'Sample Id';
+		tableHeading: 'Workspace';
 		tableHeading: 'Status';
 		tableHeading: '' ].
 	tableBlock := [ html tableHead: headerBlock.
-	html
-		tableBody: [ self store semaphores do: [ :semaphore | self renderSemaphore: semaphore on: html ] ] ].
+	html tableBody: [ self store semaphores do: [ :semaphore | self renderSemaphore: semaphore on: html ] ] ].
 	html tbsTable: tableBlock.
 	html
 		form: [ html tbsButton

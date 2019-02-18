@@ -2,10 +2,13 @@ rendering-form
 renderSampleIdInputOn: html
 	html
 		tbsFormGroup: [ html label
-				for: 'sampleId';
-				with: 'Sample ID'.
+				for: 'workspace';
+				with: 'Workspace'.
+			html
+				break;
+				small: 'Suggested: ' , FuelStore store newSuggestedSampleId.
 			html textInput
-				on: #sampleId of: self semaphore;
+				on: #workspace of: self semaphore;
 				tbsFormControl;
-				id: 'sampleId';
-				placeholder: 'The sample id' ]
+				id: 'workspace';
+				placeholder: 'The id of some workspace' ]

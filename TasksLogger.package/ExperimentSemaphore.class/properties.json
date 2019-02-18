@@ -8,7 +8,8 @@
 	"instvars" : [
 		"id",
 		"status",
-		"sampleId"
+		"sampleId",
+		"workspace"
 	],
 	"name" : "ExperimentSemaphore",
 	"type" : "normal"

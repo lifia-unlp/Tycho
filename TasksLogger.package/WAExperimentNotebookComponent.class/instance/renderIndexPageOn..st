@@ -2,4 +2,5 @@ rendering
 renderIndexPageOn: html
 	self
 		renderExperimentsOn: html;
-		renderSemaphoresOn: html
+		renderSemaphoresOn: html;
+		renderRecentSamplesOn: html
