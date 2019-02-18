@@ -51,7 +51,7 @@ class BackgroundFacade extends Facade {
     }
 
     patchSemaphore(args) {
-        this.serverApi.patchSemaphore(args.semaphore);
+        this.serverApi.patchSemaphore(args.semaphore, this.experiment.getId());
     }
 
     getActiveTask() {
@@ -93,6 +93,9 @@ class BackgroundFacade extends Facade {
                         this.experiment = ExperimentSample.fromJson(
                             response.data
                         );
+                        if (args.workspace) {
+                            this.experiment.id = args.workspace;
+                        } 
                         this.experiment.start();
                         ContentProxy.getSingleton().render(this.visible);
                         resolve(this.experiment);
@@ -111,9 +114,10 @@ class BackgroundFacade extends Facade {
      * @returns a Promise that will resolve to the status, or reject with the error.
      */
     getStatusOfGlobalSemaphore(args) {
+        let me = this;
         return new Promise((resolve, reject) => {
             this.serverApi
-                .getStatusOfGlobalSemaphore(args.semaphoreId)
+                .getStatusOfGlobalSemaphore(args.semaphoreId, me.experiment.getId())
                 .then(response => {
                     let status = response.data;
                     resolve(status);
