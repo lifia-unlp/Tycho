@@ -2,6 +2,6 @@ request handlers
 updateSemaphore: jsonRepresentationOfAnExistingSemaphore
 	| payload semaphore |
 	payload := NeoJSONReader fromString: jsonRepresentationOfAnExistingSemaphore.
-	semaphore := self store semaphoreId: (payload at: 'id') forSample: (payload at: 'sampleId').	
+	semaphore := self store semaphore: (payload at: 'id') forWorkspace: (payload at: 'workspace').	
 	semaphore status: (payload at: 'status') .
 	^ 'ok'
