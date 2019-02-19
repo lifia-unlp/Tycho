@@ -1,6 +1,6 @@
 rendering
 renderIndexPageOn: html
 	self
-		renderExperimentsOn: html;
-		renderSemaphoresOn: html;
+		renderProtocolsOn: html;
+		renderWorkspacesOn: html;
 		renderRecentSamplesOn: html

@@ -1,4 +1,4 @@
 private
 addIfNew: anExperiment
-	(self experiments includes: anExperiment)
-		ifFalse: [ self experiments add: anExperiment ]
+	(self protocols includes: anExperiment)
+		ifFalse: [ self protocols add: anExperiment ]

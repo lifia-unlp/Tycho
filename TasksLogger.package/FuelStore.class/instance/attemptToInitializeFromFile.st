@@ -4,5 +4,5 @@ attemptToInitializeFromFile
 		critical: [ lastSampleId := nil.
 			lastTaskId := nil.
 			'experiments.fuel' asFileReference exists
-				ifTrue: [ experiments := FLMaterializer materializeFromFileNamed: 'experiments.fuel' ]
-				ifFalse: [ experiments := OrderedCollection new ] ]
+				ifTrue: [ protocols := FLMaterializer materializeFromFileNamed: 'experiments.fuel' ]
+				ifFalse: [ protocols := OrderedCollection new ] ]

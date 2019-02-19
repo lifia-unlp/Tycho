@@ -3,7 +3,7 @@ getExperiment: id
 	<get>
 	<path: '/experiments/{id}'>
 	| experimentAsJson |
-	experimentAsJson := api experiment: id.
+	experimentAsJson := api protocol: id.
 	^ experimentAsJson
 		ifNil: [ self requestContext
 				respond: [ :response | 

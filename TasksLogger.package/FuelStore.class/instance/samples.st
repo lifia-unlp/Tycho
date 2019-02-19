@@ -1,3 +1,3 @@
 accessing
 samples
-	^self experiments flatCollect: [ :each | each samples ]
+	^self protocols flatCollect: [ :protocol | protocol samples ]

@@ -7,4 +7,4 @@ exportAsJson: anExperiment
 			response
 				contentType: WAMimeType applicationJson;
 				document: json;
-				attachmentWithFileName: 'exported-experiment-' , anExperiment id , '.json' ]
+				attachmentWithFileName: 'exported-experiment-' , anExperiment name , '.json' ]

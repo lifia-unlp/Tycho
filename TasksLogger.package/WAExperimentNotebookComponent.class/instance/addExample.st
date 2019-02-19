@@ -1,3 +1,3 @@
 callbacks
 addExample
-	self store addExampleExperiment 
+	self store addExampleProtocol 

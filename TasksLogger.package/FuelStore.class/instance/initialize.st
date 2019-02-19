@@ -1,7 +1,7 @@
 initialize
 initialize
 	super initialize.
-	experiments := nil.
+	protocols := nil.
 	prototypes := nil.
 	lastSampleId := nil.
 	lastTaskId := nil.

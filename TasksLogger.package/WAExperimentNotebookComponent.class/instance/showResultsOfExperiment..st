@@ -3,5 +3,5 @@ showResultsOfExperiment: anExperiment
 	self
 		call:
 			(WAExperimentResultsComponent new
-				experiment: anExperiment;
+				protocol: anExperiment;
 				yourself)

@@ -1,0 +1,3 @@
+accessing
+extractGlobalsFrom: anExperimentProtocol
+	self extractSemaphoresFrom: anExperimentProtocol

@@ -7,4 +7,4 @@ exportAsFuel: anExperiment
 			response
 				contentType: WAMimeType applicationOctetStream;
 				document: blob;
-				attachmentWithFileName: 'exported-experiment-' , anExperiment id , '.fuel' ]
+				attachmentWithFileName: 'exported-experiment-' , anExperiment name , '.fuel' ]

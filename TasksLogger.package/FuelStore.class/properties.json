@@ -8,11 +8,11 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"experiments",
 		"monitor",
 		"lastTaskId",
 		"lastSampleId",
-		"semaphores"
+		"workspaces",
+		"protocols"
 	],
 	"name" : "FuelStore",
 	"type" : "normal"

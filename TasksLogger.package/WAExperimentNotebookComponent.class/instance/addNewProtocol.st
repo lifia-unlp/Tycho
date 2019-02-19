@@ -1,0 +1,3 @@
+callbacks
+addNewProtocol
+	self store addCleanProtocol

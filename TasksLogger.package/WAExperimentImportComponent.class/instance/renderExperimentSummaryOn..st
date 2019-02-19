@@ -4,7 +4,7 @@ renderExperimentSummaryOn: html
 		with: [ html
 				tbsPanelHeading: [ html tbsPanelTitle
 						level: 3;
-						with: 'Experiment id #' , experiment id, ' (will be remumbered upon import)' ].
+						with: 'Experiment ' , experiment name, ' (will be renumbered upon import)' ].
 			html
 				tbsPanelBody: [ html
 						tbsFormGroup: [ html

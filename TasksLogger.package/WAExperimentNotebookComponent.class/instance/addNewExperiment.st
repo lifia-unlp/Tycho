@@ -1,3 +1,0 @@
-callbacks
-addNewExperiment
-	self store addCleanExperiment
