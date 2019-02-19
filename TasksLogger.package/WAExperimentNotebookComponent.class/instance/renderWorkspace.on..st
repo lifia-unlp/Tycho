@@ -1,15 +1,15 @@
-rendering-protocols
+rendering-workspaces
 renderWorkspace: aWorkspace on: html
 	html
 		tableRow: [ html
 				tableData: aWorkspace name;
 				tableData: aWorkspace notes;
 				tableData: [ html anchor
-						callback: [ self showDetailsOfProtocol: aWorkspace ];
+						callback: [ self showDetailsOfWorkspace: aWorkspace ];
 						tbsPullRight;
 						with: 'Details' ];
 				tableData: [ html anchor
-						callback: [ self showResultsOfExperiment: aWorkspace ];
+						callback: [ self shouldBeImplemented ];
 						tbsPullRight;
 						with: 'Results' ];
 				tableData: [ html anchor

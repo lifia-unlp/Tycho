@@ -2,7 +2,7 @@ rendering
 renderWorkspaceDetailsOn: html
 	self workspace name
 		ifNil: [ html heading: 'New Workspace' ]
-		ifNotNil: [ html heading: 'Workspace ' , self semaphore name ].
+		ifNotNil: [ html heading: 'Workspace ' , self workspace name ].
 	html
 		tbsForm: [ self
 				renderNameInputOn: html;

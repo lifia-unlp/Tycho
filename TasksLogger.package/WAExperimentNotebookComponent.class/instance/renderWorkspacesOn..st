@@ -1,4 +1,4 @@
-rendering-protocols
+rendering-workspaces
 renderWorkspacesOn: html
 	| headerBlock tableBlock |
 	html heading: 'Workspaces'.
