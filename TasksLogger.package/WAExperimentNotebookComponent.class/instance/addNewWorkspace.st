@@ -2,4 +2,6 @@ callbacks
 addNewWorkspace
 	self
 		call: (WAWorkspaceComponent on: ExperimentWorkspace new)
-		onAnswer: [ :newWorkspace | self store addWorkspace: newWorkspace ]
+		onAnswer: [ :workspaceOrNil | 
+			workspaceOrNil
+				ifNotNil: [ :workspace | self store addWorkspace: workspace ] ]

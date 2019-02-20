@@ -8,5 +8,10 @@ renderWorkspaceDetailsOn: html
 				renderNameInputOn: html;
 				renderNotesInputOn: html.
 			html tbsButton
+				callback: [ self answer: nil ];
+				value: 'Cancel'.
+			html space.
+			html tbsButton
 				callback: [ self answer: workspace ];
-				value: 'Save changes' ]
+				value: 'Save changes' ].
+	self renderProtocolsFormOn: html
