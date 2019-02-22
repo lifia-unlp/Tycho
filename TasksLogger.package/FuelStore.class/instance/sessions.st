@@ -1,3 +1,3 @@
 accessing
-workspaces
+sessions
 	^ workspaces ifNil: [ workspaces := OrderedCollection new ]

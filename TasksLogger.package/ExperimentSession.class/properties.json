@@ -11,6 +11,6 @@
 		"protocols",
 		"semaphores"
 	],
-	"name" : "ExperimentWorkspace",
+	"name" : "ExperimentSession",
 	"type" : "normal"
 }

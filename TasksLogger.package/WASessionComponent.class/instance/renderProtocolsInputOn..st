@@ -1,4 +1,4 @@
-rendering
+rendering-protocols
 renderProtocolsInputOn: html
 	html tbsFormGroup
 		class: 'form-inline';
@@ -7,5 +7,5 @@ renderProtocolsInputOn: html
 				id: #protocolSelect;
 				list: self store protocols;
 				labels: [ :prototype | prototype name ];
-				callback: [ :protocol | self workspace addProtocol: protocol ].
+				callback: [ :protocol | self addProtocol: protocol ].
 			html tbsSubmitButton with: 'Add Protocol' ]

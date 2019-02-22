@@ -1,11 +1,11 @@
-rendering-workspaces
-renderWorkspace: aWorkspace on: html
+rendering-sessions
+renderSession: aWorkspace on: html
 	html
 		tableRow: [ html
 				tableData: aWorkspace name;
 				tableData: aWorkspace notes;
 				tableData: [ html anchor
-						callback: [ self showDetailsOfWorkspace: aWorkspace ];
+						callback: [ self showDetailsOfSession: aWorkspace ];
 						tbsPullRight;
 						with: 'Details' ];
 				tableData: [ html anchor

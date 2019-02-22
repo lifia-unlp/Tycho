@@ -5,5 +5,5 @@ semaphoreAsDictionary: semaphore
 	dict
 		at: 'id' put: semaphore id;
 		at: 'status' put: semaphore status;
-		at: 'workspace' put: semaphore workspace.
+		at: 'session' put: semaphore session.
 	^ dict

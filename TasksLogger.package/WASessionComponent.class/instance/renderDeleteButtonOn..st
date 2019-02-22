@@ -5,6 +5,6 @@ renderDeleteButtonOn: html
 		tbsForm: [ html tbsButton
 				beExtraSmall;
 				beDanger;
-				callback: [ self deleteWorkspace.
+				callback: [ self deleteSession.
 					self answer ];
-				value: 'Delete this workspace'. ]
+				value: 'Delete this session' ]

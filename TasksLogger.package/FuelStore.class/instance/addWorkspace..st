@@ -1,3 +1,0 @@
-accessing
-addWorkspace: anExperimentWorkspace
-	self workspaces add: anExperimentWorkspace

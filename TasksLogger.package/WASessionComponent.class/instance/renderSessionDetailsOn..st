@@ -1,8 +1,8 @@
 rendering
-renderWorkspaceDetailsOn: html
-	self workspace name
-		ifNil: [ html heading: 'New Workspace' ]
-		ifNotNil: [ html heading: 'Workspace ' , self workspace name ].
+renderSessionDetailsOn: html
+	self session name
+		ifNil: [ html heading: 'New Session' ]
+		ifNotNil: [ html heading: 'Session ' , self session name ].
 	html
 		tbsForm: [ self
 				renderNameInputOn: html;
@@ -12,6 +12,6 @@ renderWorkspaceDetailsOn: html
 				value: 'Cancel'.
 			html space.
 			html tbsButton
-				callback: [ self answer: workspace ];
+				callback: [ self answer: session ];
 				value: 'Save changes' ].
 	self renderProtocolsFormOn: html

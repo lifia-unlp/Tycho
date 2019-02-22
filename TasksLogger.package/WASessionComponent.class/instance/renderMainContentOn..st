@@ -1,5 +1,5 @@
 rendering
 renderMainContentOn: html
 	self
-		renderWorkspaceDetailsOn: html;
+		renderSessionDetailsOn: html;
 		renderDeleteButtonOn: html

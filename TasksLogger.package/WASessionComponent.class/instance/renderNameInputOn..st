@@ -5,7 +5,7 @@ renderNameInputOn: html
 				for: 'name';
 				with: 'Name'.
 			html textInput
-				on: #name of: self workspace;
+				on: #name of: self session;
 				tbsFormControl;
 				id: 'name';
-				placeholder: 'Describe the workspace''s name.' ]
+				placeholder: 'Describe the session''s name.' ]

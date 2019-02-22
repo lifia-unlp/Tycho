@@ -1,4 +1,4 @@
-rendering
+rendering-protocols
 renderProtocolsFormOn: html
 	html
 		tbsForm: [ self

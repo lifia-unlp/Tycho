@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"workspace"
+		"session"
 	],
-	"name" : "WAWorkspaceComponent",
+	"name" : "WASessionComponent",
 	"type" : "normal"
 }

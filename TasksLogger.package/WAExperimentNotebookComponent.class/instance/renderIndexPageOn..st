@@ -2,5 +2,5 @@ rendering
 renderIndexPageOn: html
 	self
 		renderProtocolsOn: html;
-		renderWorkspacesOn: html;
+		renderSessionOn: html;
 		renderRecentSamplesOn: html
