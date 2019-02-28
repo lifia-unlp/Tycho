@@ -1,0 +1,3 @@
+accessing
+deleteProtocol: anExperimentProtocol
+	self protocols remove: anExperimentProtocol

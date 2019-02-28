@@ -1,3 +1,3 @@
 store
 experimentFromParameters: parameters
-	^ self store experimentId: (parameters at: #experimentId)
+	^ self store protocolId: (parameters at: #experimentId)

@@ -2,7 +2,7 @@ request handlers
 protocol: id
 	| resp json |
 	json := nil.
-	resp := self store experimentId: id.
+	resp := self store protocolId: id.
 	resp
 		ifNotNil: [ json := RestResponseWriter new
 				experimentAsJson: resp
