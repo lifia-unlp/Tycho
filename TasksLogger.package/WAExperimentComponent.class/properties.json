@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"experiment"
+		"experiment",
+		"notesEditor"
 	],
 	"name" : "WAExperimentComponent",
 	"type" : "normal"

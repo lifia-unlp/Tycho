@@ -1,7 +1,7 @@
 rendering experiments
 renderExperimentsOn: html
 	| headerBlock tableBlock |
-	html heading: 'Your experiments'.
+	html heading: 'Your test protocols'.
 	headerBlock := [ html tableHeading: 'ID'.
 	html tableHeading: 'Notes'.
 	html tableHeading: ''.

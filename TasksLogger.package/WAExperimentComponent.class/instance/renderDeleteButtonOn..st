@@ -7,4 +7,4 @@ renderDeleteButtonOn: html
 				beDanger;
 				callback: [ self deleteExperiment.
 					self answer ];
-				value: 'Delete this experiment'. ]
+				value: 'Delete this protocol'. ]
