@@ -1,0 +1,22 @@
+{
+	"commentStamp" : "Casco 2/26/2019 14:03",
+	"super" : "WAComponent",
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"subject",
+		"getSelector",
+		"setSelector",
+		"label",
+		"headingLevel",
+		"editing",
+		"newValue",
+		"textArea",
+		"rows",
+		"columns"
+	],
+	"name" : "InPlacePropertyEditorComponent",
+	"type" : "normal"
+}

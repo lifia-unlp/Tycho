@@ -1,0 +1,3 @@
+configuration
+beTextArea
+   textArea := true.

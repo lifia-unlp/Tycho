@@ -1,0 +1,3 @@
+callbacks
+cancel
+	editing := false.
