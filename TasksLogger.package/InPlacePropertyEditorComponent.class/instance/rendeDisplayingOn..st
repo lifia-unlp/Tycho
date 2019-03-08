@@ -7,6 +7,6 @@ rendeDisplayingOn: html
 			html anchor
 				callback: [ editing := true ];
 				with: [ html tbsGlyphIcon iconPencil ] ].
-	(textArea
-		ifFalse: [ html paragraph ]
-		ifTrue: [ html preformatted ]) with: self valueFromSubject
+	html preformatted
+		class: 'inplaceeditor';
+		with: self valueFromSubject

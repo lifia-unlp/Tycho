@@ -2,7 +2,7 @@ initialization
 initialize
 	super initialize.
 	editing := false.
-	headingLevel := 4.
+	headingLevel := 5.
 	getSelector := #value.
 	setSelector := #value:.
 	columns:= 120.

@@ -1,7 +1,6 @@
 callbacks
 addNewSession
-	self
-		call: (WASessionComponent on: ExperimentSession new)
-		onAnswer: [ :sessionOrNil | 
-			sessionOrNil
-				ifNotNil: [ :session | self store addSession: session ] ]
+	| newSession |
+	newSession := ExperimentSession name: 'Unnamed' notes: ''.
+	self store save: newSession.
+	self call: (WASessionComponent on: newSession)

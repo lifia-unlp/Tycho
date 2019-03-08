@@ -6,7 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"protocol"
+		"protocol",
+		"nameEditor",
+		"notesEditor"
 	],
 	"name" : "WAProtocolComponent",
 	"type" : "normal"

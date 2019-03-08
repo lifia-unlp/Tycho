@@ -6,7 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"session"
+		"session",
+		"nameEditor",
+		"notesEditor"
 	],
 	"name" : "WASessionComponent",
 	"type" : "normal"
