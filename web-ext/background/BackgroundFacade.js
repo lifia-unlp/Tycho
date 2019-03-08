@@ -93,9 +93,6 @@ class BackgroundFacade extends Facade {
                         this.experiment = ExperimentSample.fromJson(
                             response.data
                         );
-                        if (args.workspace) {
-                            this.experiment.id = args.workspace;
-                        } 
                         this.experiment.start();
                         ContentProxy.getSingleton().render(this.visible);
                         resolve(this.experiment);

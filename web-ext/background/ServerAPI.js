@@ -37,7 +37,7 @@ class ServerAPI {
   getExperimentDesignFromServer(id) {
     return new Promise((resolve, reject) => {
       axios
-        .get(this.apiUrl + "/experiments/" + id)
+        .get(this.apiUrl + "/protocols/" + id)
         .then(response => {
           resolve(response);
         })

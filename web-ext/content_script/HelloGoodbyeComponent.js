@@ -16,10 +16,7 @@ class HelloGoodbyeComponent extends UIComponent {
                     "</h2><p></p>"
             );
             messageDiv.append(
-                '<p><input type="text" size="20" id="experiment"></p>'
-            );
-            messageDiv.append(
-                '<h3>Provide a workspace id if you have one (leave blank otherwise)</h3><p><input type="text" size="20" id="workspace"></p>'
+                '<p><input type="text" size="10" id="experiment"></p>'
             );
             messageDiv.append(
                 '<p><input id="join-button" type="submit" class="tracker-btn" value="' +
@@ -52,9 +49,8 @@ class HelloGoodbyeComponent extends UIComponent {
 
     join() {
         let experiment = document.getElementById("experiment").value;
-        let workspace = document.getElementById("workspace").value;
         if (experiment) {
-            BackgroundProxy.getSingleton().joinExperiment(experiment, workspace);
+            BackgroundProxy.getSingleton().joinExperiment(experiment);
         }
         this.done();
     }

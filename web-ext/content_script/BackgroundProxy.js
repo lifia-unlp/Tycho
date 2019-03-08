@@ -50,8 +50,8 @@ class BackgroundProxy {
     return await this.send({ methodName: "getVisible", arguments: {} });
   }
 
-  async joinExperiment(id, workspace) {
-    return await this.send({ methodName: "joinExperiment", arguments: {id: id, workspace: workspace} });
+  async joinExperiment(id) {
+    return await this.send({ methodName: "joinExperiment", arguments: {id: id} });
   }
 
   async leaveExperiment() {
