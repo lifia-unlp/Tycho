@@ -1,7 +1,7 @@
 rendering-sessions
 renderSessionOn: html
 	| headerBlock tableBlock |
-	html heading: 'Sessions'.
+	html heading: 'Your sessions'.
 	headerBlock := [ html
 		tableHeading: 'Name';
 		tableHeading: 'Notes';

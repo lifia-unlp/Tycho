@@ -1,7 +1,7 @@
 rendering-protocols
 renderProtocolsOn: html
 	| headerBlock tableBlock |
-	html heading: 'Your protocols'.
+	html heading: 'Your template protocols'.
 	headerBlock := [ html tableHeading: 'Name'.
 	html tableHeading: 'Notes'.
 	html tableHeading: ''.
@@ -9,7 +9,7 @@ renderProtocolsOn: html
 	html tableHeading: '' ].
 	tableBlock := [ html tableHead: headerBlock.
 	html
-		tableBody: [ self store protocols do: [ :each | self renderProtocol: each on: html ] ] ].
+		tableBody: [ self store templateProtocols do: [ :each | self renderProtocol: each on: html ] ] ].
 	html tbsTable: tableBlock.
 	html
 		form: [ html tbsButton

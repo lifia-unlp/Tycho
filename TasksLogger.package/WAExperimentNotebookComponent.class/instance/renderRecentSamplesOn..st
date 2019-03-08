@@ -7,5 +7,7 @@ renderRecentSamplesOn: html
 	html tableHeading: 'Tasks completed'.
 	html tableHeading: 'Last activity' ].
 	tableBlock := [ html tableHead: headerBlock.
-	html tableBody: [ self store protocols do: [ :experiment | experiment samples do: [ :sample | self renderSample: sample inExperiment: experiment on: html ] ] ] ].
+	html
+		tableBody: [ self store templateProtocols
+				do: [ :experiment | experiment samples do: [ :sample | self renderSample: sample inExperiment: experiment on: html ] ] ] ].
 	html tbsTable: tableBlock

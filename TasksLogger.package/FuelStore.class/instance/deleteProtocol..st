@@ -1,3 +1,3 @@
 saving
 deleteProtocol: exp
-	monitor critical: [ self protocols remove: exp ifAbsent: [ nil ] ]
+	monitor critical: [ self templateProtocols remove: exp ifAbsent: [ nil ] ]

@@ -3,7 +3,7 @@ newExperimentId
 	| id attemps |
 	id := self randomExperimentId.
 	attemps := 0.
-	[ (self protocols collect: [ :each | each name ]) asSet includes: id ]
+	[ (self sessionProtocols collect: [ :each | each name ]) asSet includes: id ]
 		whileTrue: [ id := self randomExperimentId.
 			attemps := attemps + 1.
 			attemps = 10

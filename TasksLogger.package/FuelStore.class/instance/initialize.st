@@ -1,7 +1,7 @@
 initialize
 initialize
 	super initialize.
-	protocols := nil.
+	templateProtocols := nil.
 	prototypes := nil.
 	lastSampleId := nil.
 	lastTaskId := nil.

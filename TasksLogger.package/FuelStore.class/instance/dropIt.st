@@ -2,6 +2,6 @@ private
 dropIt
 	"just in case ... for dev purpose"
 
-	'experiments.fuel' asFileReference exists
-		ifTrue: [ 'experiments.fuel' asFileReference delete ].
+	'tycho.fuel' asFileReference exists
+		ifTrue: [ 'tycho.fuel' asFileReference delete ].
 	self initialize

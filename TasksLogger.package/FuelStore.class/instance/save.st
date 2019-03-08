@@ -1,3 +1,8 @@
 private
 save
-	monitor critical: [ FLSerializer serialize: protocols toFileNamed: 'experiments.fuel' ]
+	monitor
+		critical: [ FLSerializer
+				serialize:
+					{templateProtocols.
+					sessions}
+				toFileNamed: 'tycho.fuel' ]

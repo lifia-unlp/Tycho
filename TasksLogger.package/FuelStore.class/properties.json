@@ -11,8 +11,8 @@
 		"monitor",
 		"lastTaskId",
 		"lastSampleId",
-		"protocols",
-		"sessions"
+		"sessions",
+		"templateProtocols"
 	],
 	"name" : "FuelStore",
 	"type" : "normal"
