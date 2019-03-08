@@ -9,4 +9,4 @@ rendeDisplayingOn: html
 				with: [ html tbsGlyphIcon iconPencil ] ].
 	(textArea
 		ifFalse: [ html paragraph ]
-		ifTrue: [ html preformatted ]) with: (subject perform: getSelector)
+		ifTrue: [ html preformatted ]) with: self valueFromSubject
