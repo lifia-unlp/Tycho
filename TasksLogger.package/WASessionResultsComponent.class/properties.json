@@ -1,13 +1,13 @@
 {
-	"commentStamp" : "Casco 6/25/2018 17:54",
+	"commentStamp" : "Casco 6/27/2018 21:40",
 	"super" : "WAAbstractComponent",
 	"category" : "TasksLogger-Seaside",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"password"
+		"session"
 	],
-	"name" : "WAExperimentNotebookComponent",
+	"name" : "WASessionResultsComponent",
 	"type" : "normal"
 }

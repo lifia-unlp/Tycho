@@ -1,22 +1,22 @@
 rendering-sessions
-renderSession: aWorkspace on: html
+renderSession: aSession on: html
 	html
 		tableRow: [ html
-				tableData: aWorkspace name;
-				tableData: aWorkspace notes;
+				tableData: aSession name;
+				tableData: aSession notes;
 				tableData: [ html anchor
-						callback: [ self showDetailsOfSession: aWorkspace ];
+						callback: [ self showDetailsOfSession: aSession ];
 						tbsPullRight;
 						with: 'Details' ];
 				tableData: [ html anchor
-						callback: [ self shouldBeImplemented ];
+						callback: [ self showSessionResults: aSession ];
 						tbsPullRight;
 						with: 'Results' ];
 				tableData: [ html anchor
-						callback: [ self exportAsFuel: aWorkspace ];
+						callback: [ self exportAsFuel: aSession ];
 						tbsPullRight;
 						with: 'Export (fuel)' ];
 				tableData: [ html anchor
-						callback: [ self exportAsJson: aWorkspace ];
+						callback: [ self exportAsJson: aSession ];
 						tbsPullRight;
 						with: 'Export (JSON)' ] ]

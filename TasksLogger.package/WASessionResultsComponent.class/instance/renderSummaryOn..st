@@ -1,7 +1,7 @@
 rendering
 renderSummaryOn: html
-	html
-		heading: 'Experiment design ' , self protocol name.
+	self halt.
+	html heading: 'Experiment design ' , self protocol name.
 	html
 		tbsForm: [ html
 				tbsFormGroup: [ html label

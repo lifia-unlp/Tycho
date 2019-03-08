@@ -3,7 +3,6 @@ getProtocol: id
 	<get>
 	<path: '/protocols/{id}'>
 	| experimentAsJson |
-	self halt. 
 	experimentAsJson := api protocol: id.
 	^ experimentAsJson
 		ifNil: [ self requestContext

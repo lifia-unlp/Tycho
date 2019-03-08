@@ -2,7 +2,7 @@ retrieving
 sampleId: id
 	"returns the sample with the given id"
 
-	self protocols
+	self sessionProtocols 
 		do: [ :exp | 
 			exp samples
 				do: [ :samp | 

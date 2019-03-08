@@ -2,6 +2,6 @@ callbacks
 showResultsOfExperiment: anExperiment
 	self
 		call:
-			(WAExperimentResultsComponent new
+			(WASessionResultsComponent new
 				protocol: anExperiment;
 				yourself)
