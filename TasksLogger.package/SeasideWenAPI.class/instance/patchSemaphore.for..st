@@ -1,6 +1,6 @@
 request handling
-patchSemaphore: id for: workspace
+patchSemaphore: id for: protocolId
 	<patch>
-	<path: '/semaphores/{id}?workspace={workspace}'>
-	api updateSemaphore: self requestContext request rawBody.
+	<path: '/semaphores/{id}?protocol={protocolId}'>
+	api updateSemaphore: self requestContext request rawBody for: protocolId.
 	^ 'Ok'

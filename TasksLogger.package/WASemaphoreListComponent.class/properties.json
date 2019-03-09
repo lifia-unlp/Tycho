@@ -1,16 +1,15 @@
 {
 	"commentStamp" : "",
-	"super" : "WAAbstractComponent",
+	"super" : "WAComponent",
 	"category" : "TasksLogger-Seaside",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"session",
-		"nameEditor",
-		"notesEditor",
-		"semaphoreComponent"
+		"semaphores",
+		"newStatus",
+		"editedSemaphore"
 	],
-	"name" : "WASessionComponent",
+	"name" : "WASemaphoreListComponent",
 	"type" : "normal"
 }

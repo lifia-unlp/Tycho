@@ -1,0 +1,3 @@
+protocols
+templateProtocols
+	^ self subclassResponsibility

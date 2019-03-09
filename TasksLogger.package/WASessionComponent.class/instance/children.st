@@ -1,4 +1,5 @@
 accessing
 children
 	^ {notesEditor.
-	nameEditor}
+	nameEditor.
+	semaphoreComponent}

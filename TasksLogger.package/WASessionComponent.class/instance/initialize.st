@@ -6,4 +6,5 @@ initialize
 	notesEditor := InPlacePropertyEditorComponent new.
 	notesEditor
 		beTextArea;
-		headingLevel: 3
+		headingLevel: 3.
+	semaphoreComponent := WASemaphoreListComponent new

@@ -1,9 +1,9 @@
 request handling
-getSemaphore: id for: workspace
+getSemaphore: id for: protocolId
 	<get>
-	<path: '/semaphores/{id}?workspace={workspace}'>
+	<path: '/semaphores/{id}?protocol={protocolId}'>
 	| semaphoreAsJson |
-	semaphoreAsJson := api semaphore: id forWorkspace: workspace.
+	semaphoreAsJson := api semaphore: id for: protocolId.
 	semaphoreAsJson
 		ifNil: [ self requestContext
 				respond: [ :response | 

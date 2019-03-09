@@ -1,7 +1,11 @@
-rendering
+rendering-semaphores
 renderSemaphoresOn: html
 	html
-		tbsFormGroup: [ html label: 'Semaphores'.
+		tbsFormGroup: [ html heading
+				level: 3;
+				with: 'Semaphores'.
 			self session semaphores
-				ifNotEmpty: [ :semaphores | semaphores do: [ :semaphore | html paragraph: semaphore id ] ]
+				ifNotEmpty: [ :semaphores | 
+					semaphoreComponent semaphores: semaphores.
+					html render: semaphoreComponent ]
 				ifEmpty: [ html paragraph: 'No semaphores are being used in this Workspace' ] ]
