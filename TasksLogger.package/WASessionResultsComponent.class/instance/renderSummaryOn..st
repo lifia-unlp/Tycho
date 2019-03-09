@@ -1,10 +1,10 @@
 rendering
 renderSummaryOn: html
-	self halt.
-	html heading: 'Experiment design ' , self protocol name.
-	html
-		tbsForm: [ html
-				tbsFormGroup: [ html label
-						for: 'notes';
-						with: 'Notes'.
-					html paragraph: self protocol notes ] ]
+	html heading
+		level: 2;
+		with: 'Session results'.
+	html heading
+		level: 3;
+		with: 'Session name'.
+	html paragraph: session name.
+	html render: self notesEditor

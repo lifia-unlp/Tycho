@@ -1,4 +1,4 @@
-rendering
+legacy
 renderTaskResultsOn: html
 	| samples headerBlock tableBlock |
 	html heading

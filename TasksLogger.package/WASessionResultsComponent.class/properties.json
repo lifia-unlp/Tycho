@@ -6,7 +6,10 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"session"
+		"session",
+		"selectedProtocol",
+		"selectedSample",
+		"notesEditor"
 	],
 	"name" : "WASessionResultsComponent",
 	"type" : "normal"

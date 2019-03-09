@@ -7,11 +7,7 @@ renderProtocol: aProtocol on: html
 				tableData: [ html anchor
 						callback: [ self showDetailsOfProtocol: aProtocol ];
 						tbsPullRight;
-						with: 'Details' ];
-				tableData: [ html anchor
-						callback: [ self showResultsOfExperiment: aProtocol ];
-						tbsPullRight;
-						with: 'Results' ];
+						with: 'Edit' ];
 				tableData: [ html anchor
 						callback: [ self exportAsFuel: aProtocol ];
 						tbsPullRight;

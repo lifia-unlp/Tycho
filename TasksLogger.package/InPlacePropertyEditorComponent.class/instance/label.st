@@ -1,3 +1,3 @@
 accessing
 label
-	^ label
+	^ label ifNil: [ getSelector asString asCamelCase ]

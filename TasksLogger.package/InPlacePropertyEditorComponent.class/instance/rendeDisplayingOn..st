@@ -2,7 +2,7 @@ rendering
 rendeDisplayingOn: html
 	html heading
 		level: headingLevel;
-		with: [ html text: label.
+		with: [ html text: self label.
 			html space.
 			html anchor
 				callback: [ editing := true ];

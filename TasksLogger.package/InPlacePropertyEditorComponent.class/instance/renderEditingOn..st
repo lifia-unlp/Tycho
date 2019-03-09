@@ -2,7 +2,7 @@ rendering
 renderEditingOn: html
 	html heading
 		level: headingLevel;
-		with: label.
+		with: self label.
 	html
 		form: [ (textArea
 				ifFalse: [ html textInput

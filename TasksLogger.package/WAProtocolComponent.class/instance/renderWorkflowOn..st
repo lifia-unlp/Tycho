@@ -2,7 +2,7 @@ rendering-workflow
 renderWorkflowOn: html
 	| headerBlock tableBlock |
 	html heading
-		level: 2;
+		level: 3;
 		with: 'Sequence of tasks'.
 	headerBlock := [ html tableHeading: 'Type'.
 	html tableHeading: 'Notes'.

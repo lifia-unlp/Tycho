@@ -1,5 +1,5 @@
 rendering
 renderProtocolDetailsOn: html
-	html heading: 'Experiment ' , self protocol name.
+	html heading level3 with: 'Protocol details'.
 	html render: self nameEditor.
-	html render: self notesEditor.
+	html render: self notesEditor
