@@ -50,10 +50,6 @@ class BackgroundFacade extends Facade {
         this.serverApi.submitTaskReport(report);
     }
 
-    patchSemaphore(args) {
-        this.serverApi.patchSemaphore(args.semaphore, this.experiment.getId());
-    }
-
     getActiveTask() {
         if (!this.experiment) {
             return {
@@ -114,7 +110,7 @@ class BackgroundFacade extends Facade {
         let me = this;
         return new Promise((resolve, reject) => {
             this.serverApi
-                .getStatusOfGlobalSemaphore(args.semaphoreId, me.experiment.getId())
+                .getStatusOfGlobalSemaphore(args.semaphoreId, me.experiment.getexperimentId())
                 .then(response => {
                     let status = response.data;
                     resolve(status);
@@ -123,6 +119,11 @@ class BackgroundFacade extends Facade {
                     reject(error);
                 });
         });
+    }
+
+
+    patchSemaphore(args) {
+        this.serverApi.patchSemaphore(args.semaphore, this.experiment.getexperimentId());
     }
 
     leaveExperiment() {

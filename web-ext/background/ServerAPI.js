@@ -17,17 +17,17 @@ class ServerAPI {
     this.submit(report, "/task-results/");
   }
 
-  patchSemaphore(semaphore, workspace) {
+  patchSemaphore(semaphore, protocolId) {
     axios
-    .patch(this.apiUrl + "/semaphores/" + semaphore.id + "?workspace=" + workspace, semaphore) 
+    .patch(this.apiUrl + "/semaphores/" + semaphore.id + "?protocol=" + protocolId, semaphore) 
     .catch(function(error) {
       console.log("Error posting: ", error);
     });
 
   }
 
-  getStatusOfGlobalSemaphore(semaphoreId, workspace) {
-      return axios.get(this.apiUrl + "/semaphores/" + semaphoreId + "?workspace=" + workspace);
+  getStatusOfGlobalSemaphore(semaphoreId, protocolId) {
+      return axios.get(this.apiUrl + "/semaphores/" + semaphoreId + "?protocol=" + protocolId);
   }
 
   /**
