@@ -1,3 +1,3 @@
 accessing
-atProperty: aString setValue: aString2
-	(properties at: aString) value: aString2.
+atProperty: propertyName setValue: newValue
+	(properties detect: [ :each | each name = propertyName ]) value: newValue

@@ -1,0 +1,5 @@
+factory
+addSemaphoreExampleProtocols
+	self
+		addWaitForSemaphoreExample;
+		addSignalSemaphoreExample
