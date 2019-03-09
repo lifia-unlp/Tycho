@@ -10,7 +10,7 @@
   },
 
   "helloGoodbyeWelcomeTitle": {
-    "message": "Which experiment would you like to join?",
+    "message": "Provide an access code",
     "description": "Title of the HelloGoodbyeComponent."
   },
 
