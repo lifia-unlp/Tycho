@@ -62,5 +62,57 @@
   "toggleTrackerPosition": {
     "message": "Move away",
     "description": "Move the tracker out of the way"
+  },
+  "susLegend": {
+    "message": "Please, complete this questionaire",
+    "description": "Please, complete this questionaire"
+  },
+  "susQ1": {
+    "message": "I think that I would like to use this system frequently",
+    "description": "Question 1 of the SUS"
+  },
+  "susQ2": {
+    "message": "I found the system unnecessarily complex",
+    "description": "Question 2 of the SUS"
+  },
+  "susQ3": {
+    "message": "I thought the system was easy to use",
+    "description": "Question 3 of the SUS"
+  },
+  "susQ4": {
+    "message": "I think that I would need the support of a technical person to be able to use this system",
+    "description": "Question 4 of the SUS"
+  },
+  "susQ5": {
+    "message": "I found the various functions in this system were well integrated",
+    "description": "Question 5 of the SUS"
+  },
+  "susQ6": {
+    "message": "I thought there was too much inconsistency in this system",
+    "description": "Question 6 of the SUS"
+  },
+  "susQ7": {
+    "message": "I would imagine that most people would learn to use this system very quickly",
+    "description": "Question 7 of the SUS"
+  },
+  "susQ8": {
+    "message": "I found the system very cumbersome to use",
+    "description": "Question 8 of the SUS"
+  },
+  "susQ9": {
+    "message": "I felt very confident using the system",
+    "description": "Question 9 of the SUS"
+  },
+  "susQ10": {
+    "message": "I needed to learn a lot of things before I could get going with this system",
+    "description": "Question 10 of the SUS"
+  },
+  "susStronglyAgree": {
+    "message": "Strongly agree",
+    "description": "Strongly agree"
+  },
+  "susStronglyDisagree": {
+    "message": "Strongly disagree",
+    "description": "Strongly disagree"
   }
 }
