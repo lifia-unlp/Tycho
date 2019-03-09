@@ -14,48 +14,29 @@ class SUSComponent extends UIComponent {
         const me = this;
         let susForm = $('<div id="sus" class="topNotification"></div>');
         susForm.append(
-            "<legend>" + browser.i18n.getMessage("susLegend") + "</legend>"
+            "<h2>" + browser.i18n.getMessage("susLegend") + "</h2>"
         );
+        let table = $("<table></table>");
         for (let questionNumber = 0; questionNumber < 10; questionNumber++) {
             var question = this.getSusQuestions()[questionNumber];
-            var paragraph = $("<p></p>");
-            var table = $("<table></table>");
-            var row = $("<tr></tr>");
-            table.append(row);
-            paragraph.append(
-                "<label>" +
-                    question.number +
-                    ". " +
-                    question.description +
-                    "</label>"
-            );
-            paragraph.append(table);
+            table.append($("<tr><td colspan=7><strong>" + question.description +"<strong></td></tr>"));
+            let row = $("<tr></tr>");
+            row.append('<td style="width:20%">' + browser.i18n.getMessage("susStronglyDisagree") + '</td>');
             for (let optionNumber = 1; optionNumber <= 5; optionNumber++) {
                 var radio = $(
-                    '<td><input class="susRadio" type="radio" name="question' +
+                    '<td style="width:10%"><input class="susRadio" type="radio" name="question' +
                         question.number +
                         '" value="' +
                         optionNumber +
                         '" /></td>'
                 );
-                if (optionNumber == 1)
-                    radio.append(
-                        "<p>" +
-                            browser.i18n.getMessage("susStronglyDisagree") +
-                            "</p>"
-                    );
-                if (optionNumber == 5)
-                    radio.append(
-                        "<p>" +
-                            browser.i18n.getMessage("susStronglyAgree") +
-                            "</p>"
-                    );
-                if (optionNumber > 1 && optionNumber < 5)
-                    radio.append("<p>&nbsp;<br/>&nbsp;</p>");
                 row.append(radio);
             }
-            susForm.append(paragraph);
+            row.append('<td style="width:20%">' + browser.i18n.getMessage("susStronglyAgree") + "</td>");
+            table.append(row);
+            table.append($("<tr><td colspan=7><p></td></tr>"));
         }
+        susForm.append(table);
         susForm.append(
             '<input id="susbutton" class="tracker-button" type="submit" value="' +
                 browser.i18n.getMessage("submitButtonText") +
