@@ -7,7 +7,6 @@ renderSessionOn: html
 		tableHeading: 'Notes';
 		tableHeading: '';
 		tableHeading: '';
-		tableHeading: '';
 		tableHeading: '' ].
 	tableBlock := [ html tableHead: headerBlock.
 	html

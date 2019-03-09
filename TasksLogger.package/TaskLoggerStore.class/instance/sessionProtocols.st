@@ -1,0 +1,3 @@
+protocols
+sessionProtocols
+	^ self subclassResponsibility

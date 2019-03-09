@@ -1,4 +1,4 @@
-accessing
+protocols
 templateProtocols
 	^ templateProtocols
 		ifNil: [ self attemptToInitializeFromFile.

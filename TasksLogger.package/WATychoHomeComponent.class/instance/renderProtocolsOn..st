@@ -17,7 +17,7 @@ renderProtocolsOn: html
 			html space.
 			html tbsButton
 				callback: [ self addExample ];
-				with: 'Add example'.
+				with: 'Add examples'.
 			html space.
 			html tbsButton
 				callback: [ self importExperiment];

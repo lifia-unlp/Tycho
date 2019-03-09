@@ -1,8 +1,7 @@
 rendering
-renderMainContentOn: html
-	self renderSummaryOn: html.
+renderContentOn: html
 	html heading
-		level: 3;
+		level3;
 		with: 'Results'.
 	self renderProtocolSelectorOn: html.
 	html space.

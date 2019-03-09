@@ -2,4 +2,5 @@ accessing
 children
 	^ {notesEditor.
 	nameEditor.
-	semaphoreComponent}
+	semaphoreComponent.
+	sessionResultsComponent}

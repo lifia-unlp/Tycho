@@ -1,3 +1,3 @@
 callbacks
-showDetailsOfProtocol: session
-	self call: (WAProtocolComponent on: session)
+showDetailsOfProtocol: protocol
+	self call: (WAProtocolComponent on: protocol)

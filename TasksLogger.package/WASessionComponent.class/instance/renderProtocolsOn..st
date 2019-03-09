@@ -9,8 +9,8 @@ renderProtocolsOn: html
 					html
 						tbsTable: [ html
 								tableHead: [ html
-										tableHeading: 'Name';
-										tableHeading: 'Id';
+										tableHeading: 'Protocol name';
+										tableHeading: 'Access code';
 										tableHeading: '' ].
 							html
 								tableBody: [ protocols do: [ :protocol | self renderProtocol: protocol on: html ] ] ] ]

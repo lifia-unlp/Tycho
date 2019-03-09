@@ -7,11 +7,8 @@ renderSession: aSession on: html
 				tableData: [ html anchor
 						callback: [ self showDetailsOfSession: aSession ];
 						tbsPullRight;
-						with: 'Edit' ];
-				tableData: [ html anchor
-						callback: [ self showSessionResults: aSession ];
-						tbsPullRight;
-						with: 'Results' ];
+						with: 'Details and results' ];
+
 				tableData: [ html anchor
 						callback: [ self exportAsFuel: aSession ];
 						tbsPullRight;

@@ -1,0 +1,3 @@
+ids
+newTaskId
+  ^self subclassResponsibility 

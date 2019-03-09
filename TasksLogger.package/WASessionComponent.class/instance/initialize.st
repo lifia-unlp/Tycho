@@ -10,4 +10,5 @@ initialize
 		beTextArea;
 		label: 'Notes';
 		headingLevel: 4.
-	semaphoreComponent := WASemaphoreListComponent new
+	semaphoreComponent := WASemaphoreListComponent new.
+	sessionResultsComponent := WASessionResultsComponent new
