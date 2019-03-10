@@ -1,3 +1,4 @@
 saving
 rememberToSave: anObject
-	self shouldBeImplemented
+	anObject class isVoyageRoot
+		ifTrue: [ dirtyObjects add: anObject ]

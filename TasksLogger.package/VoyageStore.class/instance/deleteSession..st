@@ -1,0 +1,3 @@
+deleting
+deleteSession: anExperimentSession
+	repository remove: anExperimentSession

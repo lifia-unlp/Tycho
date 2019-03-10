@@ -1,3 +1,3 @@
 store
 store
-  ^FuelStore store.
+  ^TychoStore store.

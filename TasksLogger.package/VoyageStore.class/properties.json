@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "TaskLoggerStore",
+	"commentStamp" : "Casco 3/9/2019 21:22",
+	"super" : "TychoStore",
 	"category" : "TasksLogger-Persistence",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"repository",
+		"dirtyObjects"
+	],
 	"name" : "VoyageStore",
 	"type" : "normal"
 }

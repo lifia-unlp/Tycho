@@ -1,3 +1,3 @@
 accessing
 store
-	^ FuelStore store
+	^ TychoStore store

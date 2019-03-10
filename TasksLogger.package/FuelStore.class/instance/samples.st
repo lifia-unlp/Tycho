@@ -1,3 +1,3 @@
-accessing
+collections
 samples
 	^self protocols flatCollect: [ :protocol | protocol samples ]

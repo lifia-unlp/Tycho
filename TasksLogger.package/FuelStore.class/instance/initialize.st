@@ -6,3 +6,4 @@ initialize
 	lastSampleId := nil.
 	lastTaskId := nil.
 	monitor := Monitor new.
+	self attemptToInitializeFromFile

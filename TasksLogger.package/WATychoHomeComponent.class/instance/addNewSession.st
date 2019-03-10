@@ -2,5 +2,7 @@ callbacks
 addNewSession
 	| newSession |
 	newSession := ExperimentSession name: 'Unnamed' notes: ''.
-	self store save: newSession.
+	self store
+		rememberToSave: newSession;
+		savePending.
 	self call: (WASessionComponent on: newSession)

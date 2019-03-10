@@ -1,15 +1,11 @@
 {
 	"commentStamp" : "Casco 6/30/2018 19:31",
-	"super" : "TaskLoggerStore",
+	"super" : "TychoStore",
 	"category" : "TasksLogger-Persistence",
-	"classinstvars" : [
-		"store"
-	],
+	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"monitor",
-		"lastTaskId",
 		"lastSampleId",
 		"sessions",
 		"templateProtocols"

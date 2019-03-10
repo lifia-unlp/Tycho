@@ -1,3 +1,3 @@
 ids
 newExperimentId
-	self shouldBeImplemented
+	^Time millisecondClockValue printString.

@@ -1,3 +1,3 @@
 voyage
 voyageCollectionName
-	^ 'Samples'
+	^ 'Sessions'

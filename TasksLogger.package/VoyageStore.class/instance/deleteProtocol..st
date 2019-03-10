@@ -1,0 +1,3 @@
+deleting
+deleteProtocol: anExperimentProtocol
+	repository remove: anExperimentProtocol

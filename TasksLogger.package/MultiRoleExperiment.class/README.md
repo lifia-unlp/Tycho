@@ -1,1 +1,0 @@
-A composed experiment designed to be carried out by different kinds of users.

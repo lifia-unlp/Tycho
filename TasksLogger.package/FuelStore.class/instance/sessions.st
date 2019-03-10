@@ -1,3 +1,3 @@
-accessing
+collections
 sessions
-	^ sessions ifNil: [ sessions := OrderedCollection new ]
+	^ sessions

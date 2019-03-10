@@ -8,4 +8,5 @@ attemptToInitializeFromFile
 				ifTrue: [ data := FLMaterializer materializeFromFileNamed: 'tycho.fuel'.
 					templateProtocols := data first.
 					sessions := data second ]
-				ifFalse: [ templateProtocols := OrderedCollection new ] ]
+				ifFalse: [ templateProtocols := OrderedCollection new.
+					sessions := OrderedCollection new ] ]

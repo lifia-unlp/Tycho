@@ -1,3 +1,3 @@
-protocols
+collections
 templateProtocols
-	self shouldBeImplemented
+	^ repository selectMany: ExperimentProtocol where: [ :each | each id = nil ]

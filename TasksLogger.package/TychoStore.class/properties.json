@@ -2,13 +2,18 @@
 	"commentStamp" : "Casco 6/30/2018 20:53",
 	"super" : "Object",
 	"category" : "TasksLogger-Persistence",
-	"classinstvars" : [ ],
+	"classinstvars" : [
+		"storeClass",
+		"storeInstance"
+	],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
 		"prototypes",
-		"suggestedSampleNames"
+		"suggestedSampleNames",
+		"monitor",
+		"lastTaskId"
 	],
-	"name" : "TaskLoggerStore",
+	"name" : "TychoStore",
 	"type" : "normal"
 }

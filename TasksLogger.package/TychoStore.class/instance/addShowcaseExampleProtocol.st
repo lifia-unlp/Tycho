@@ -2,7 +2,7 @@ factory
 addShowcaseExampleProtocol
 	| protocol clone |
 	protocol := nil.
-	self monitor
+	monitor
 		critical: [ protocol := ExperimentProtocol name: 'Showcase example' notes: 'A simple protocol that showcases all tools/tasks'.
 			self prototypes
 				do: [ :each | 
