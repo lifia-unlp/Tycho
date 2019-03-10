@@ -6,8 +6,9 @@ baseline: spec
 		do: [ self
 				seaside: spec;
 				bootstrap: spec;
+				voyage: spec;
 				neoJSON: spec.
 			spec
 				package: 'TasksLogger'
-				with: [ spec requires: #('Seaside3' 'Seaside-REST-Core' 'Bootstrap-Core' 'Bootstrap-Widgets' 'NeoJSON') ].
+				with: [ spec requires: #('Seaside3' 'Seaside-REST-Core' 'Bootstrap-Core' 'Bootstrap-Widgets' 'NeoJSON' 'Voyage') ].
 			spec postLoadDoIt: #postLoadActions ]
