@@ -6,10 +6,7 @@ renderWorkflowOn: html
 		with: 'Sequence of tasks'.
 	headerBlock := [ html tableHeading: 'Type'.
 	html tableHeading: 'Notes'.
-	html tableHeading: ''.
-	html tableHeading: ''.
-	html tableHeading: ''.
-	html tableHeading: '' ].
+	html tableHeading: 'Actions' ].
 	tableBlock := [ html tableHead: headerBlock.
 	html tableBody: [ protocol tasks do: [ :each | self renderTask: each on: html ] ] ].
 	html tbsTable: tableBlock

@@ -6,4 +6,4 @@ renderTaskPrototype: each on: html
 				tableData: each notes;
 				tableData: [ html anchor
 						callback: [ self addTaskToProtocol: each ];
-						with: 'Use' ] ]
+						with: [ html tbsGlyphIcon iconCheck title: 'Use in sequence' ] ] ]

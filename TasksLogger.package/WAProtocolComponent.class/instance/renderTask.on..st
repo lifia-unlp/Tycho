@@ -6,13 +6,16 @@ renderTask: each on: html
 				tableData: each notes;
 				tableData: [ html anchor
 						callback: [ self showDetailsOfTask: each ];
-						with: 'Details' ];
-				tableData: [ html anchor
+						with: [ html tbsGlyphIcon iconPencil title: 'Edit' ].
+					html space.
+					html anchor
 						callback: [ self moveTaskBackward: each ];
-						with: 'Up' ];
-				tableData: [ html anchor
+						with: [ html tbsGlyphIcon iconArrowUp title: 'Move up' ].
+					html space.
+					html anchor
 						callback: [ self moveTaskForward: each ];
-						with: 'Down' ];
-				tableData: [ html anchor
+						with: [ html tbsGlyphIcon iconArrowDown title: 'Move down' ].
+					html space.
+					html anchor
 						callback: [ self removeTask: each ];
-						with: 'Remove' ] ]
+						with: [ html tbsGlyphIcon iconTrash title: 'Remove this task from the sequence' ] ] ]
