@@ -6,4 +6,8 @@ renderProtocol: protocol on: html
 				tableData: protocol id;
 				tableData: [ html anchor
 						callback: [ self deleteProtocol: protocol ];
-						with: 'Delete' ] ]
+						with: [ html tbsGlyphIcon iconTrash title: 'Delete this protocol' ].
+					html space.
+					html anchor
+						callback: [ self editProtocol: protocol ];
+						with: [ html tbsGlyphIcon iconPencil title: 'Edit this protocol' ] ] ]

@@ -6,14 +6,12 @@ renderSession: aSession on: html
 				tableData: aSession notes;
 				tableData: [ html anchor
 						callback: [ self showDetailsOfSession: aSession ];
-						tbsPullRight;
-						with: 'Details and results' ];
-
-				tableData: [ html anchor
+						with: [ html tbsGlyphIcon iconEyeOpen title: 'Browse details and results' ].
+					html space.
+					html anchor
 						callback: [ self exportAsFuel: aSession ];
-						tbsPullRight;
-						with: 'Export (fuel)' ];
-				tableData: [ html anchor
+						with: [ html tbsGlyphIcon iconSave title: 'Save to file' ].
+					html space.
+					html anchor
 						callback: [ self exportAsJson: aSession ];
-						tbsPullRight;
-						with: 'Export (JSON)' ] ]
+						with: [ html tbsGlyphIcon iconExport title: 'Export as JSON' ] ] ]

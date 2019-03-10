@@ -4,8 +4,7 @@ renderProtocolsOn: html
 	html heading: 'Your protocols (templates)'.
 	headerBlock := [ html tableHeading: 'Name'.
 	html tableHeading: 'Notes'.
-	html tableHeading: ''.
-	html tableHeading: '' ].
+	html tableHeading: 'Actions'.].
 	tableBlock := [ html tableHead: headerBlock.
 	html
 		tableBody: [ self store templateProtocols do: [ :each | self renderProtocol: each on: html ] ] ].

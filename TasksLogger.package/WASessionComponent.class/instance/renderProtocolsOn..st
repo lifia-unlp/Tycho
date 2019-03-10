@@ -11,7 +11,7 @@ renderProtocolsOn: html
 								tableHead: [ html
 										tableHeading: 'Protocol name';
 										tableHeading: 'Access code';
-										tableHeading: '' ].
+										tableHeading: 'Actions' ].
 							html
 								tableBody: [ protocols do: [ :protocol | self renderProtocol: protocol on: html ] ] ] ]
 				ifEmpty: [ html paragraph: 'There are no protocols in this session' ] ].

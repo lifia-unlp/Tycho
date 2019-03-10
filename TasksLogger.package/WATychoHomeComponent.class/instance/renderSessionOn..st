@@ -5,9 +5,7 @@ renderSessionOn: html
 	headerBlock := [ html
 		tableHeading: 'Name';
 		tableHeading: 'Notes';
-		tableHeading: '';
-		tableHeading: '';
-		tableHeading: '' ].
+		tableHeading: 'Actions' ].
 	tableBlock := [ html tableHead: headerBlock.
 	html
 		tableBody: [ self store sessions do: [ :workspace | self renderSession: workspace on: html ] ] ].

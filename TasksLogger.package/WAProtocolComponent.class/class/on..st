@@ -1,5 +1,5 @@
 instance creation
-on: anExperimentDesign
+on: aProtocol
 	^ self new
-		protocol: anExperimentDesign;
+		protocol: aProtocol;
 		yourself

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "TaskLoggerStore",
+	"category" : "TasksLogger-Persistence",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VoyageStore",
+	"type" : "normal"
+}
