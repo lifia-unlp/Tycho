@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "WAAbstractComponent",
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"footerView",
+		"registerForm"
+	],
+	"name" : "WATychoFrontendHomeComponent",
+	"type" : "normal"
+}

@@ -1,0 +1,1 @@
+Validate with a configurable BlockClosure

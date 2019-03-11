@@ -1,0 +1,3 @@
+controlling
+succeed
+	^ self subclassResponsibility

@@ -1,0 +1,3 @@
+testing
+passes
+	^ self subclassResponsibility

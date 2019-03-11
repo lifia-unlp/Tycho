@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "WATask",
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"homeView",
+		"rootFrontendView"
+	],
+	"name" : "WATychoFrontendTask",
+	"type" : "normal"
+}

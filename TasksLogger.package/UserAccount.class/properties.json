@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "JulianGrigera 3/11/2019 10:44",
+	"super" : "Object",
+	"category" : "TasksLogger-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"email",
+		"name",
+		"salt",
+		"encryptedPassword",
+		"protocols",
+		"sessions"
+	],
+	"name" : "UserAccount",
+	"type" : "normal"
+}

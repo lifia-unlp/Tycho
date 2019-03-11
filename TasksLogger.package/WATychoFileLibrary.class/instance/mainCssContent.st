@@ -1,0 +1,100 @@
+uploaded
+mainCssContent
+^	'
+@font-face {
+  font-family: AmericanTypewriter;
+  src: url(', (WATychoFileLibrary / #americantypewriterWoff) printString ,');
+}
+
+.splash{
+  padding:4.5em 0 2.5em;
+  background-image: url("', (WATychoFileLibrary / #homeBgPng) printString ,'");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  text-align:center;
+  color:white;
+  font-size:1.4em;
+  border-bottom: 8px solid black;
+}
+.splash p, .splash h1{
+  padding:20px;
+  margin:0;
+}
+.splash p{
+  font-weight:200;
+}
+.splash h1{
+  font-family: AmericanTypewriter;
+  font-weight:100;
+  font-size:2.1em;
+  padding-top: 0;
+}
+.splash .btn-lg{
+  padding:14px 30px;
+  background:none;
+  color:white;
+  font-weight:200; 
+  border-color:white;
+  margin:20px;
+}
+.splash .btn-lg:hover, .splash .btn-lg:active{
+  color: black;
+  background:white;
+  border-color:transparent;
+}
+
+	.navbar-default{ 
+		margin: 0;
+		background: #DB3D1C;
+		color: white;
+		border: none;
+		border-radius: 0;
+		padding: 1em 0;
+	}
+	.navbar-default .navbar-brand{ 
+		font-family: AmericanTypewriter;
+		color: white;
+		padding-bottom: 0;
+		padding-top: 16%;
+		font-size: 1.4em;
+		font-weight: 100;
+	}
+	
+
+	.features{
+		padding: 3em;
+		color:#333;
+	}
+	.features img{ width: 35% }
+	.features p{
+		font-weight:200;
+		margin-bottom: 30px;
+		font-size: 1.2em;
+	}
+	.features .col-md-4{
+		text-align:center;
+		padding: 0 5%;
+	}
+	.features h2{
+		font-size: 1.8em;
+		font-weight: 200;
+		color: #DB3D1C;
+		border: none;
+		margin-bottom: 0;
+		padding-bottom: 10px;
+	}
+
+
+	.homeRegister{
+		color:white;
+		background:#DB3D1C;
+	}
+	.homeRegister .errorMessage {font-size: .9em;}
+
+
+	@media (min-width: 992px){
+		.homeRegister > :first-child{ padding:0 6em; }		
+		.features{ padding: 6em; font-size: 1.1em; }
+		.homeRegister{ padding: 7em 0; }
+	}
+'

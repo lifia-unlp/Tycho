@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "JulianGrigera 9/23/2018 11:52",
+	"super" : "WAComponent",
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"validators"
+	],
+	"name" : "WATychoFrontendForm",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "JulianGrigera 10/20/2018 16:53",
+	"super" : "RegexValidator",
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "URLValidator",
+	"type" : "normal"
+}

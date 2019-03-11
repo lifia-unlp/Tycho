@@ -1,0 +1,1 @@
+Email validator using a simple regex

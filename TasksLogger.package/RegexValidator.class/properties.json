@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "JulianGrigera 9/23/2018 17:18",
+	"super" : "FormFieldValidator",
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"regex"
+	],
+	"name" : "RegexValidator",
+	"type" : "normal"
+}

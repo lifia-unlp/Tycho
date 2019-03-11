@@ -7,7 +7,8 @@ renderNavigationbarOn: html
 						tbsNavbarHeader: [ html image
 								tbsPullLeft;
 								style: 'padding: 10px;';
-								url: WAExperimentFileLibrary / #notebooksmallPng.
+								url: WATychoFileLibrary / #brandLogoPng;
+								sourceSet: (WATychoFileLibrary / #brandLogo2xPng) printString , ' 2x'.
 							html tbsNavbarBrand with: 'Tycho' ].
 					html div
 						tbsPullRight;
