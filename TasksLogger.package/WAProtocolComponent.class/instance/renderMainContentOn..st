@@ -4,4 +4,5 @@ renderMainContentOn: html
 		renderProtocolDetailsOn: html;
 		renderWorkflowOn: html;
 		renderAvailableTaskPrototypesOn: html;
-		renderDeleteButtonOn: html
+		renderDeleteButtonOn: html;
+		renderOkButtonOn: html

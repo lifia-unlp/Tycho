@@ -6,8 +6,8 @@ renderContentOn: html
 					html tableHeading: 'Status' ].
 			html
 				tableBody: [ semaphores
-						do: [ :each | 
+						do: [ :semaphore | 
 							html
 								tableRow: [ html
-										tableData: [ html text: each id ];
-										tableData: [ self render: each on: html ] ] ] ] ]
+										tableData: [ html text: semaphore id ];
+										tableData: [ self render: semaphore on: html ] ] ] ] ]

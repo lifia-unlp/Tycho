@@ -2,7 +2,9 @@ rendering-protocols
 renderProtocol: aProtocol on: html
 	html
 		tableRow: [ html
-				tableData: aProtocol name;
+				tableData: [ html anchor
+						callback: [ self showDetailsOfProtocol: aProtocol ];
+						with: aProtocol name ];
 				tableData: aProtocol notes;
 				tableData: [ html anchor
 						callback: [ self showDetailsOfProtocol: aProtocol ];

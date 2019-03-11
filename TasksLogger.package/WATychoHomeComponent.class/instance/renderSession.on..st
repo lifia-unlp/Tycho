@@ -2,7 +2,9 @@ rendering-sessions
 renderSession: aSession on: html
 	html
 		tableRow: [ html
-				tableData: aSession name;
+				tableData: [ html anchor
+						callback: [ self showDetailsOfSession: aSession ];
+						with: aSession name ];
 				tableData: aSession notes;
 				tableData: [ html anchor
 						callback: [ self showDetailsOfSession: aSession ];

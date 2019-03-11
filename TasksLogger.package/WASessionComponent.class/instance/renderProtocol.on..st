@@ -2,12 +2,14 @@ rendering-protocols
 renderProtocol: protocol on: html
 	html
 		tableRow: [ html
-				tableData: protocol name;
+				tableData: [ html anchor
+						callback: [ self editProtocol: protocol ];
+						with: protocol name ];
 				tableData: protocol id;
 				tableData: [ html anchor
-						callback: [ self deleteProtocol: protocol ];
-						with: [ html tbsGlyphIcon iconTrash title: 'Delete this protocol' ].
+						callback: [ self editProtocol: protocol ];
+						with: [ html tbsGlyphIcon iconPencil title: 'Edit this protocol' ].
 					html space.
 					html anchor
-						callback: [ self editProtocol: protocol ];
-						with: [ html tbsGlyphIcon iconPencil title: 'Edit this protocol' ] ] ]
+						callback: [ self deleteProtocol: protocol ];
+						with: [ html tbsGlyphIcon iconTrash title: 'Delete this protocol' ] ] ]

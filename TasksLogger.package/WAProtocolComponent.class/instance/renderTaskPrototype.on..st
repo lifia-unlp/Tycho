@@ -1,9 +1,13 @@
 rendering-tasks-prototypes
-renderTaskPrototype: each on: html
+renderTaskPrototype: aPrototype on: html
 	html
 		tableRow: [ html
-				tableData: each name;
-				tableData: each notes;
+				tableData: aPrototype name;
+				tableData: aPrototype notes;
 				tableData: [ html anchor
-						callback: [ self addTaskToProtocol: each ];
-						with: [ html tbsGlyphIcon iconCheck title: 'Use in sequence' ] ] ]
+						callback: [ self addTaskToProtocol: aPrototype ];
+						with: [ html tbsGlyphIcon iconPlus.
+							html
+								space;
+								text: 'Add' ];
+						title: 'Use in sequence' ] ]

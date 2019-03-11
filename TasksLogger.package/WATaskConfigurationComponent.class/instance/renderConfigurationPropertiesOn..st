@@ -1,14 +1,14 @@
 rendering
 renderConfigurationPropertiesOn: html
 	self task properties
-		do: [ :each | 
+		do: [ :property | 
 			html
 				tbsFormGroup: [ html label
-						for: 'prop' , each name;
-						with: (self uncamel: each name).
-					html paragraph: each description.
+						for: 'prop' , property name;
+						with: (self uncamel: property name).
+					html paragraph: property description.
 					html textArea
-						on: #value of: each;
+						on: #value of: property;
 						tbsFormControl;
-						id: 'prop' , each name;
+						id: 'prop' , property name;
 						placeholder: 'Provide a value for this property' ] ]
