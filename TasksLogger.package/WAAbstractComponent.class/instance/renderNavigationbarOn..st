@@ -12,5 +12,4 @@ renderNavigationbarOn: html
 							html tbsNavbarBrand with: 'Tycho' ].
 					html div
 						tbsPullRight;
-						with: [ self renderActionsMenuOn: html.
-							self renderReturnButtonOn: html ] ] ]
+						with: [ self renderNavBarLinksOn: html ] ] ]

@@ -1,0 +1,3 @@
+accessing
+store
+	^ TychoStore store

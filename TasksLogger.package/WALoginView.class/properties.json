@@ -5,11 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"footerView",
-		"registerForm",
-		"loginView"
-	],
-	"name" : "WATychoFrontendHomeComponent",
+	"instvars" : [ ],
+	"name" : "WALoginView",
 	"type" : "normal"
 }

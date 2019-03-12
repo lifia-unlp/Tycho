@@ -1,5 +1,5 @@
 rendering
 renderMainContentOn: html
-	self isOpen
+	self session isLoggedIn 
 		ifTrue: [ self renderIndexPageOn: html ]
 		ifFalse: [ self renderLoginPageOn: html ]

@@ -1,3 +1,3 @@
 logging
 logout
-	self unregister
+	self account: nil

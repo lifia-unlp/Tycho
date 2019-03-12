@@ -1,4 +1,4 @@
-rendering
+rendering-form
 renderPasswordInputOn: html
 	| invalid |
 	invalid := self isInvalid: #password.
@@ -6,7 +6,7 @@ renderPasswordInputOn: html
 		class: #error if: invalid;
 		with: [ html label
 				for: #password;
-				with: 'Elija una Contraseña'.
+				with: 'Choose a password'.
 			html passwordInput tbsFormControl
 				id: #password;
 				on: #password of: self.
