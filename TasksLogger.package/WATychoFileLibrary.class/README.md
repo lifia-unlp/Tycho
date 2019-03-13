@@ -1,0 +1,1 @@
+All resources for Tycho frontend's styling.

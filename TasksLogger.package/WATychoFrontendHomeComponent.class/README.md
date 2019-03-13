@@ -1,0 +1,1 @@
+Parallax splash homepage with basic info for newcomers.

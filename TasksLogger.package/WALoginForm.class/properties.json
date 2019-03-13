@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "JulianGrigera 11/2/2018 19:52",
+	"super" : "WATychoFrontendForm",
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"account",
+		"email",
+		"password"
+	],
+	"name" : "WALoginForm",
+	"type" : "normal"
+}

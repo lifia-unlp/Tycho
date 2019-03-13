@@ -10,6 +10,6 @@ renderNavigationbarOn: html
 								url: WATychoFileLibrary / #brandLogoPng;
 								sourceSet: (WATychoFileLibrary / #brandLogo2xPng) printString , ' 2x'.
 							html tbsNavbarBrand with: 'Tycho' ].
-					html div
+					html tbsNavbarText
 						tbsPullRight;
 						with: [ self renderNavBarLinksOn: html ] ] ]

@@ -92,9 +92,26 @@ mainCssContent
 	.homeRegister .errorMessage {font-size: .9em;}
 
 
+	.navbar-default .navbar-text{
+		color:white;
+		margin-bottom:0;
+		margin-top: -25px;
+	}
+	.navbar-default .navbar-text a{
+		cursor:pointer;
+		color:white;
+	}
+	.navbar-default .navbar-text a:hover{
+		color:#ddd;
+	}
+	.navbar-default .navbar-text a:active:hover{
+		background:none;
+	}
+
 	@media (min-width: 992px){
 		.homeRegister > :first-child{ padding:0 6em; }		
 		.features{ padding: 6em; font-size: 1.1em; }
 		.homeRegister{ padding: 7em 0; }
+		.navbar-default .navbar-text{ margin-top: 25px; }	
 	}
 '

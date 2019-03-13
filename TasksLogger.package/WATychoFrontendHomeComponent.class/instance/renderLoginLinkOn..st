@@ -2,4 +2,7 @@ rendering
 renderLoginLinkOn: html
 	html tbsNavbarLink
 		callback: [ self login ];
-		with: 'Ingresar'
+		with: [ html tbsGlyphIcon iconLogin.
+			html
+				space;
+				text: 'Log in' ]
