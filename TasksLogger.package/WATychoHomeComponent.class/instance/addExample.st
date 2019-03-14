@@ -1,3 +1,3 @@
 callbacks
 addExample
-	self store addExampleProtocols 
+	self session account protocols addAll: self store exampleProtocols

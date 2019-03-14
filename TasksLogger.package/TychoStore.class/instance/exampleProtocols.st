@@ -1,0 +1,3 @@
+factory
+exampleProtocols
+	^ self showcaseExampleProtocol inOrderedCollection , self semaphoreExampleProtocols
