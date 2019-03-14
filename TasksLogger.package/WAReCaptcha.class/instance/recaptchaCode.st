@@ -1,3 +1,3 @@
 accessing
 recaptchaCode
-	^ '6LfDyiUUAAAAANTN_wj8_sAUvHbuNAtG4BoqKp9Y'
+	^ ('recaptcha.txt' asFileReference readStream contents splitOn: ',') first
