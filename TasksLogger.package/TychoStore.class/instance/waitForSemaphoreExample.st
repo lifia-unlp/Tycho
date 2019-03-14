@@ -1,7 +1,7 @@
 factory
 waitForSemaphoreExample
 	| protocol clone |
-	protocol := ExperimentProtocol name: 'Waiting on a sepaphore' notes: 'A simple protocol that shows how to wait for another protocol to reach a certain state.'.
+	protocol := ExperimentProtocol name: 'Waiting on a semaphore' notes: 'A simple protocol that shows how to wait for another protocol to reach a certain state.'.
 	clone := ExperimentTask messageScreenPrototype clone.
 	clone id: self newTaskId.
 	clone
