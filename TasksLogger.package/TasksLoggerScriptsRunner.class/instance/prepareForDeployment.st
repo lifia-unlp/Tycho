@@ -3,7 +3,6 @@ prepareForDeployment
 	self
 		registerNotebook;
 		registerApi;
-		dropStorage;
 		removeDevelopmentToolbar;
 		turnOffDebugging;
 		unregisterDevelopmentApplications;
