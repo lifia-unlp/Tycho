@@ -5,7 +5,7 @@ renderConfigurationPropertiesOn: html
 			html
 				tbsFormGroup: [ html label
 						for: 'prop' , property name;
-						with: (self uncamel: property name).
+						with: property name uncameled.
 					html paragraph: property description.
 					html textArea
 						on: #value of: property;

@@ -1,3 +1,3 @@
-collections
+protocols
 sessionProtocols
-	^ repository selectMany: ExperimentProtocol where: [ :each | each id ~= nil ]
+	^ (repository selectAll: ExperimentProtocol) select: [ :protocol | protocol id isNotNil ]

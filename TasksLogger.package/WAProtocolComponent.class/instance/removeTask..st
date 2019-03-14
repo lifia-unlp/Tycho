@@ -1,6 +1,4 @@
 callbacks
-removeTask: each
-	protocol removeTask: each.
-	self store
-		rememberToSave: protocol;
-		savePending
+removeTask: aTask
+	protocol removeTask: aTask.
+	self store save: protocol

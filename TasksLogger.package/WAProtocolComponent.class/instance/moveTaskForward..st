@@ -1,4 +1,4 @@
 callbacks
-moveTaskForward: each
-	protocol moveTaskForward: each.
+moveTaskForward: aTask
+	protocol moveTaskForward: aTask.
 	self store save: protocol.

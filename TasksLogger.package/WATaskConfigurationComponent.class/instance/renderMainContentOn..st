@@ -5,5 +5,5 @@ renderMainContentOn: html
 		tbsForm: [ self renderCommonInfoOn: html.
 			self renderConfigurationPropertiesOn: html.
 			html tbsButton
-				callback: [ self answer ];
+				callback: [ self save ];
 				value: 'Save changes' ]

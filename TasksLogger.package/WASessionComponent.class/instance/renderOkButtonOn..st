@@ -4,5 +4,5 @@ renderOkButtonOn: html
 	html
 		tbsForm: [ html tbsButton
 				beDefault;
-				callback: [ self answer ];
-				value: 'Accept' ]
+				callback: [ self save ];
+				value: 'Save' ]

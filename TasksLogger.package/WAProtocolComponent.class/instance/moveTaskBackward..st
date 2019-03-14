@@ -1,4 +1,4 @@
 callbacks
-moveTaskBackward: each
-	protocol moveTaskBackward: each.
+moveTaskBackward: aTask
+	protocol moveTaskBackward: aTask.
 	self store save: protocol.
