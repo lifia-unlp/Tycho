@@ -1,8 +1,8 @@
-factory
+signalling
 signalSemaphoreExample
 	| protocol clone |
 	protocol := ExperimentProtocol
-		name: 'Signaling a sepaphore'
+		name: 'Signaling a semaphore'
 		notes: 'A simple protocol that shows how signal a semaphore that other protocols are waiting for.'.
 	clone := ExperimentTask messageScreenPrototype clone.
 	clone id: self newTaskId.

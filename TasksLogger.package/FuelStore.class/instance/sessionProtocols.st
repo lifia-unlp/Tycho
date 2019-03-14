@@ -1,3 +1,4 @@
 collections
 sessionProtocols
-	^ self sessions flatCollect: [ :session | session protocols ]
+	^ self users
+		flatCollect: [ :user | user sessions flatCollect: [ :session | session protocols ] ]
