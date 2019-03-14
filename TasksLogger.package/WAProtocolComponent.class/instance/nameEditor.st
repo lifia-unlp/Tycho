@@ -1,5 +1,5 @@
 accessing
 nameEditor
 	^ nameEditor
-		on: #name of: self protocol;
+		on: #protocolName of: self ;
 		yourself
