@@ -1,5 +1,5 @@
 rendering-sessions
-renderSessionOn: html
+renderSessionsOn: html
 	| headerBlock tableBlock |
 	html heading: 'Your sessions'.
 	headerBlock := [ html
@@ -7,8 +7,7 @@ renderSessionOn: html
 		tableHeading: 'Notes';
 		tableHeading: 'Actions' ].
 	tableBlock := [ html tableHead: headerBlock.
-	html
-		tableBody: [ self store sessions do: [ :workspace | self renderSession: workspace on: html ] ] ].
+	html tableBody: [ self session account sessions do: [ :workspace | self renderSession: workspace on: html ] ] ].
 	html tbsTable: tableBlock.
 	html
 		form: [ html tbsButton

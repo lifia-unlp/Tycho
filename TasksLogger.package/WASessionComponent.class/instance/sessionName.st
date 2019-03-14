@@ -1,3 +1,3 @@
 accessing
 sessionName
-	^ self session name
+	^ self experimentSession name

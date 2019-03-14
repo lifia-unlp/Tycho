@@ -1,4 +1,4 @@
 accessing
 sessionName: aString
-	self session name: aString.
-	self store save: self session.
+	self experimentSession name: aString.
+	self store save: self experimentSession.

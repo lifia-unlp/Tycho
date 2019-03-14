@@ -1,0 +1,3 @@
+*TasksLogger
+systemIconName
+	^ #wa

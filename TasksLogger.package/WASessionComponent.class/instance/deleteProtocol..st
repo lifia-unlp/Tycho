@@ -1,6 +1,6 @@
 callbacks
 deleteProtocol: aProtocol
-	self session deleteProtocol: aProtocol.
+	self experimentSession deleteProtocol: aProtocol.
 	self store
-		rememberToSave: self session;
+		rememberToSave: self experimentSession;
 		savePending

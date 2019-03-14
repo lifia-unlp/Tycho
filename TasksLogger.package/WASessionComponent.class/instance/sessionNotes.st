@@ -1,3 +1,3 @@
 accessing
 sessionNotes
-	^ self session notes
+	^ self experimentSession notes

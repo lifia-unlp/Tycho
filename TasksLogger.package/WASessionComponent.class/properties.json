@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"session",
+		"experimentSession",
 		"nameEditor",
 		"notesEditor",
 		"semaphoreComponent",

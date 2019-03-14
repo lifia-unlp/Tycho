@@ -1,0 +1,1 @@
+Login page, just renders the LoginForm with some basic layout  around.

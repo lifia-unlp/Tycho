@@ -1,0 +1,1 @@
+Special WASession to keep logged in user.

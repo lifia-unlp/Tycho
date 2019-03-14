@@ -4,7 +4,7 @@ renderProtocolsOn: html
 		tbsFormGroup: [ html heading
 				level: 3;
 				with: 'Protocols'.
-			self session protocols
+			self experimentSession protocols
 				ifNotEmpty: [ :protocols | 
 					html
 						tbsTable: [ html

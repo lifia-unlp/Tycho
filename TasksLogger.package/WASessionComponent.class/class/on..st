@@ -1,5 +1,5 @@
 instance creation
 on: anExperimentWorkspace
 	^ self new
-		session: anExperimentWorkspace;
+		experimentSession: anExperimentWorkspace;
 		yourself

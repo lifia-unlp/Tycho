@@ -1,4 +1,4 @@
 accessing
 sessionNotes: aString
-	self session notes: aString.
-	self store save: self session.
+	self experimentSession notes: aString.
+	self store save: self experimentSession.

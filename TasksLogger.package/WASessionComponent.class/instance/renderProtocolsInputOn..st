@@ -5,7 +5,7 @@ renderProtocolsInputOn: html
 		with: [ html select tbsFormControl beOptional
 				optionalLabel: '- Select Protocol -';
 				id: #protocolSelect;
-				list: self store templateProtocols;
+				list: self session account protocols;
 				labels: [ :prototype | prototype name ];
 				callback: [ :protocol | self cloneProtocol: protocol ].
 			html space.

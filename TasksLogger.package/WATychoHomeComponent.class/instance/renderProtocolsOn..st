@@ -4,10 +4,9 @@ renderProtocolsOn: html
 	html heading: 'Your protocols (templates)'.
 	headerBlock := [ html tableHeading: 'Name'.
 	html tableHeading: 'Notes'.
-	html tableHeading: 'Actions'.].
+	html tableHeading: 'Actions' ].
 	tableBlock := [ html tableHead: headerBlock.
-	html
-		tableBody: [ self store templateProtocols do: [ :each | self renderProtocol: each on: html ] ] ].
+	html tableBody: [ self session account protocols do: [ :each | self renderProtocol: each on: html ] ] ].
 	html tbsTable: tableBlock.
 	html
 		form: [ html tbsButton
@@ -19,5 +18,5 @@ renderProtocolsOn: html
 				with: 'Add examples'.
 			html space.
 			html tbsButton
-				callback: [ self importExperiment];
+				callback: [ self importExperiment ];
 				with: 'Import (fuel)' ]

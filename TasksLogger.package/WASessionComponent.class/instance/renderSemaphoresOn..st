@@ -4,7 +4,7 @@ renderSemaphoresOn: html
 		tbsFormGroup: [ html heading
 				level: 3;
 				with: 'Semaphores'.
-			self session semaphores
+			self experimentSession semaphores
 				ifNotEmpty: [ :semaphores | 
 					semaphoreComponent semaphores: semaphores.
 					html render: semaphoreComponent ]

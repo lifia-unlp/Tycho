@@ -1,3 +1,3 @@
 callbacks
 deleteSession
-	self store deleteSession: self session
+	self store deleteSession: self experimentSession
