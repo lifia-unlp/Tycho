@@ -108,6 +108,38 @@ mainCssContent
 		background:none;
 	}
 
+	.mainContainer{
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	.footer{
+		text-align: center;
+		color: #9b9b9b;
+		padding: 30px;
+		padding-top: 50px;
+		background: #333;
+		}
+
+	.footer .col-md-6{
+		text-align: left;
+	}
+	.footer .col-md-6 span{
+		font-size:1.1em;
+		margin:0 8px;
+	}
+	.footer .col-md-6 p{
+		text-align: left;
+		margin: 10px 0;
+	}
+	.footer .col-md-6 .footerAdditionalLine{
+		display:block;
+		margin-left:30px;
+	}
+	.footer .col-md-6 p a{color: #fB5D3C}
+
+
+
 	@media (min-width: 992px){
 		.homeRegister > :first-child{ padding:0 6em; }		
 		.features{ padding: 6em; font-size: 1.1em; }
