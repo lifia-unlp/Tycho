@@ -1,0 +1,3 @@
+accessing
+protocolNotes
+  ^protocol notes

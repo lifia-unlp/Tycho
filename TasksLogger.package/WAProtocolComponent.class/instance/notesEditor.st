@@ -1,5 +1,5 @@
 accessing
 notesEditor
 	^ notesEditor
-		on: #notes of: self protocol;
+		on: #protocolNotes of: self;
 		yourself

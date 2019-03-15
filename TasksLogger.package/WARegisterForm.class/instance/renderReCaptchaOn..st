@@ -5,5 +5,5 @@ renderReCaptchaOn: html
 	html tbsFormGroup
 		class: #error if: invalid;
 		with: [ html label with: 'Prove you''re human'.
-			html render: reCaptcha.
+			reCaptcha ifNotNil: [ html render: reCaptcha ].
 			self renderErrorsFor: #isValid if: invalid on: html ]

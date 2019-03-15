@@ -1,3 +1,3 @@
 hooks
 children
-	^ OrderedCollection with: reCaptcha
+	^ reCaptcha ifNotNil: [ ^ OrderedCollection with: reCaptcha ] ifNil: [ Set new ]
