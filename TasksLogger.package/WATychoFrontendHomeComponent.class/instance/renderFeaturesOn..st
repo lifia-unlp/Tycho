@@ -19,5 +19,5 @@ renderFeaturesOn: html
 						url: WATychoFileLibrary / #homeIconCollectPng;
 						sourceSet: (WATychoFileLibrary / #homeIconCollect2xPng) printString , ' 2x'.
 					html heading level2 with: 'Collect your results'.
-					html paragraph: 'Cras mattis consectetur purus . Vivamus sagittis laoreet rutrum faucibus dolor auctor.' ]
+					html paragraph: 'Get your results, automatically collected. Effectiveness, Efficiency and Satisfaction are built in.' ]
 					mediumSize: 4 ]
