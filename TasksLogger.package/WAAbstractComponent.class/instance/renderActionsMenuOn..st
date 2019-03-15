@@ -1,2 +1,2 @@
-rendering
+rendering-navbar
 renderActionsMenuOn: html

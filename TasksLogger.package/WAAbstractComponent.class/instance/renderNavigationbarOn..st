@@ -1,4 +1,4 @@
-rendering
+rendering-navbar
 renderNavigationbarOn: html
 	html tbsNavbar
 		beDefault;

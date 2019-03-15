@@ -108,8 +108,11 @@ mainCssContent
 		background:none;
 	}
 
+	.breadcrumbContainer{
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
 	.mainContainer{
-		margin-top: 50px;
 		margin-bottom: 50px;
 	}
 

@@ -1,4 +1,4 @@
-rendering
+rendering-navbar
 renderLogoutLinkOn: html
 	html anchor
 		callback: [ self logout ];

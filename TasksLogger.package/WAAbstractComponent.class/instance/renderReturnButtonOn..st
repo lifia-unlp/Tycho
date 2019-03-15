@@ -1,4 +1,4 @@
-rendering
+rendering-navbar
 renderReturnButtonOn: html
 	html tbsNavbarButton
 		with: [ html anchor

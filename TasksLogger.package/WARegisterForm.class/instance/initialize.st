@@ -4,8 +4,6 @@ initialize
 	account := UserAccount new.
 	email := ''.
 	fullName := ''.
-	reCaptcha := 'recaptcha.txt' asFileReference exists
-		ifTrue: [ WAReCaptcha new ]
-		ifFalse: [ nil ].
+	reCaptcha := WAReCaptcha new.
 	justFailed := false.
 	self initializeValidators
