@@ -26,6 +26,10 @@ renderFooterOn: html
 								paragraph: [ html anchor
 										target: #blank;
 										url: 'https://github.com/juliangrigera/Tycho';
-										with: 'GitHub' ] ]
+										with: 'GitHub' ].
+							html
+								paragraph:
+									'Reference commit: ' , TasksLoggerScriptsRunner referenceCommit , ' ('
+										, TasksLoggerScriptsRunner releaseDate greaseString , ')' ]
 							mediumSize: 6;
 						tbsColumn: [  ] mediumSize: 6 ] ]

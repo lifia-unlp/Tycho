@@ -11,8 +11,5 @@ renderHeadingOn: html
 									html
 										heading: 'Tycho';
 										paragraph: 'Design and run remote user tests'.
-									html anchor
-										class: 'btn btn-default btn-lg';
-										url: '#homeRegister';
-										with: 'Start now' ]
+									self renderCallToActionButtonsOn: html ]
 								mediumSize: 12 ] ] ]

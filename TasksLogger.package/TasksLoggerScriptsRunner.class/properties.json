@@ -4,7 +4,9 @@
 	"category" : "TasksLogger-Deployment",
 	"classinstvars" : [
 		"releaseDate",
-		"mode"
+		"mode",
+		"firefoxAddonUrl",
+		"chromeAddonUrl"
 	],
 	"pools" : [ ],
 	"classvars" : [ ],
