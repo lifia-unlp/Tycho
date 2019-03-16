@@ -1,5 +1,5 @@
 scripts
 useFuel
 	<script>
-	self dropIt.
-	storeClass := FuelStore
+	storeClass := FuelStore.
+	storeInstance := nil
