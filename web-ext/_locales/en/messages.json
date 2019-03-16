@@ -1,11 +1,11 @@
 {
   "extensionName": {
-    "message": "Web Experiments Notebook",
+    "message": "Tycho add-on",
     "description": "Name of the extension."
   },
 
   "extensionDescription": {
-    "message": "A tool to run experiments on the web browser - this is the WebExtension part.",
+    "message": "Tycho is a tool for moderated end user tests. This is the client component that runs as a browser add-on. Visit http://tycho.lifia.info.unlp.edu.ar/ for more information.",
     "description": "Description of the extension."
   },
 
