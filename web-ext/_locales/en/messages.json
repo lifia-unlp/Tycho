@@ -5,7 +5,7 @@
   },
 
   "extensionDescription": {
-    "message": "Tycho is a tool for moderated end user tests. This is the client component that runs as a browser add-on. Visit http://tycho.lifia.info.unlp.edu.ar/ for more information.",
+    "message": "Tycho is a tool for moderated end user tests. This is the client component that runs as a browser add-on.",
     "description": "Description of the extension."
   },
 
