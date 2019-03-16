@@ -3,7 +3,7 @@
   "description": "__MSG_extensionDescription__",
   "manifest_version": 2,
   "version": "1.0",
-  "homepage_url": "http://tycho.lifia.info.unlp.edu.ar/tycho",
+  "homepage_url": "http://tycho.lifia.info.unlp.edu.ar/",
   "content_security_policy" : "connect-src  http://localhost:8080/tycho-api/protocols/ http://localhost:8080/tycho-api/task-results/ http://localhost:8080/tycho-api/semaphores/; script-src 'self' 'unsafe-eval'; object-src 'self'",
   "default_locale": "en",
   "options_ui": {
