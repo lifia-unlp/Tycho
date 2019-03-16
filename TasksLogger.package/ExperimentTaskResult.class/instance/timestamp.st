@@ -1,3 +1,3 @@
 accessing
 timestamp
-	^timestamp 
+	^serverTimestamp 

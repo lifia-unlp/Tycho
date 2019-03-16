@@ -1,3 +1,3 @@
 initialization
 initialize
-	timestamp := DateAndTime now
+	serverTimestamp := DateAndTime now

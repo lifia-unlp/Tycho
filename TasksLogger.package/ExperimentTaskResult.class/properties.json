@@ -9,7 +9,9 @@
 		"task",
 		"properties",
 		"koboldReport",
-		"timestamp"
+		"serverTimestamp",
+		"startTime",
+		"ellapsedMs"
 	],
 	"name" : "ExperimentTaskResult",
 	"type" : "normal"
