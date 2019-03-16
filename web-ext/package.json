@@ -1,7 +1,7 @@
 {
-    "name": "task-tracker-webext",
+    "name": "Tycho",
     "version": "1.0.0",
-    "description": "Web-extension client for the remote usability tests tool",
+    "description": "Web-extension client for Tycho",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
