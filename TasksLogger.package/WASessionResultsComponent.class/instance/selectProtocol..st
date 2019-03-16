@@ -1,4 +1,3 @@
 callbacks
-selectProtocol: each
-	selectedProtocol := each.
-	selectedSample := nil
+selectProtocol: aProtocolOrNil
+	selectedProtocol := aProtocolOrNil

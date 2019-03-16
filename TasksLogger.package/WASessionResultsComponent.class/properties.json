@@ -7,9 +7,10 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"session",
+		"selectedTaskName",
+		"notesEditor",
 		"selectedProtocol",
-		"selectedSample",
-		"notesEditor"
+		"selectedSample"
 	],
 	"name" : "WASessionResultsComponent",
 	"type" : "normal"

@@ -1,3 +1,3 @@
 callbacks
-selectSample: each
-	selectedSample := each
+selectSample: aSampleOrnil
+	selectedSample := aSampleOrnil
