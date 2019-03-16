@@ -1,3 +1,3 @@
-collections
+accessing
 users
-	^ users
+	^ self subclassResponsibility 

@@ -5,5 +5,6 @@ initialize
 	prototypes := nil.
 	lastSampleId := nil.
 	lastTaskId := nil.
+	users := nil. 
 	monitor := Monitor new.
 	self attemptToInitializeFromFile

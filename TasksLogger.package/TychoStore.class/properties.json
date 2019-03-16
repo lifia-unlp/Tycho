@@ -10,7 +10,6 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"prototypes",
-		"users",
 		"suggestedSampleNames",
 		"monitor",
 		"lastTaskId"

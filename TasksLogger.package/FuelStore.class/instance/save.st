@@ -4,5 +4,6 @@ save
 		critical: [ FLSerializer
 				serialize:
 					{templateProtocols.
-					sessions}
+					sessions.
+					users}
 				toFileNamed: 'tycho.fuel' ]

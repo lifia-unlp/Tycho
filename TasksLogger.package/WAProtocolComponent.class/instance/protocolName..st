@@ -1,4 +1,4 @@
 accessing
-protocolNane: name
+protocolName: name
 	protocol name: name.
 	self store save: protocol.

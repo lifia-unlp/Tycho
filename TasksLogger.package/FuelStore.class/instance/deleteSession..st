@@ -1,3 +1,3 @@
 saving
 deleteSession: aSession
-	self sessions remove: aSession
+	sessions remove: aSession

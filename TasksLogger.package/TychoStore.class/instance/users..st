@@ -1,3 +1,3 @@
-collections
+accessing
 users: someUsers
-	users := someUsers
+	self subclassResponsibility 
