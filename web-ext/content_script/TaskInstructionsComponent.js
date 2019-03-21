@@ -14,8 +14,9 @@ class TaskInstructionsComponent extends UIComponent {
 
   buildComponent() {
     const me = this;
+    const cssClass = (!this.model.startTime || this.model.paused) ? 'trackerNotStartedOrPaused' : 'trackerRunning';
     let tracker = $(
-      '<div id="tracker"><span id="trackerInstructions">' +
+      '<div id="tracker" class="'+ cssClass + '"><span id="trackerInstructions">' +
         this.model.instructions +
         "</span> </div>"
     );
@@ -27,7 +28,7 @@ class TaskInstructionsComponent extends UIComponent {
       () => {
         me.toggleTrackerPosition();
       },
-      true
+      me.model.startTime && !me.model.paused
     );
 
     this.addButton(
