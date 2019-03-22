@@ -141,7 +141,16 @@ mainCssContent
 	}
 	.footer .col-md-6 p a{color: #fB5D3C}
 
-
+	.sortHandler{
+		color: #999;
+		cursor: grab;
+		}
+	
+	tr.ui-sortable-helper{
+		background: rgba(240,240,240,0.5);
+		border: 1px solid #ddd;
+		transform: rotate(-1deg);
+	}
 
 	@media (min-width: 992px){
 		.homeRegister > :first-child{ padding:0 6em; }		
