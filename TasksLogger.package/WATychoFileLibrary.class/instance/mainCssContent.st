@@ -144,18 +144,17 @@ mainCssContent
 	#tasksList li{
 		display: inline-block;
 		vertical-align:top;
-		margin: 13px;
+		margin: 0 13px;
 		width: 250px;
-
-  padding: 10px;
-  position: relative;
-
+	  	padding: 3px;
+  		position: relative;
 		}
 
 	#tasksList li .panel{
 		height: 280px;
 		}
 	#tasksList .panel-heading{ cursor: grab }
+	#tasksList .panel-body{ overflow: hidden }
 	
 	#tasksList .ui-sortable-helper .panel{
 		background: rgba(240,240,240,0.5);
