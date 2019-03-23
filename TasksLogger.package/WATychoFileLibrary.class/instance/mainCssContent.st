@@ -144,8 +144,12 @@ mainCssContent
 	#tasksList li{
 		display: inline-block;
 		vertical-align:top;
-		margin: 20px;
+		margin: 13px;
 		width: 250px;
+
+  padding: 10px;
+  position: relative;
+
 		}
 
 	#tasksList li .panel{
@@ -158,6 +162,22 @@ mainCssContent
 		border: 1px solid #ddd;
 		transform: rotate(1deg);
 	}
+
+	#tasksList li:not(:last-child):before {
+	  content: '''';
+	  position: absolute;
+	  width: 0;
+	  height: 0;
+	  top: 40%;
+	  border-style: solid;
+	  border-width: 13px 0 13px 15px;
+	  border-color: transparent transparent transparent gray;
+	  right: -20px;
+	  transform: translateY(-10%);
+	}
+
+
+
 
 	@media (min-width: 992px){
 		.homeRegister > :first-child{ padding:0 6em; }		
