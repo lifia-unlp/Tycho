@@ -141,6 +141,41 @@ mainCssContent
 	}
 	.footer .col-md-6 p a{color: #fB5D3C}
 
+	#tasksList li{
+		display: inline-block;
+		vertical-align:top;
+		margin: 0 13px;
+		width: 250px;
+	  	padding: 3px;
+  		position: relative;
+		}
+
+	#tasksList li .panel{
+		height: 280px;
+		}
+	#tasksList .panel-heading{ cursor: grab }
+	#tasksList .panel-body{ overflow: hidden }
+	
+	#tasksList .ui-sortable-helper .panel{
+		background: rgba(240,240,240,0.5);
+		border: 1px solid #ddd;
+		transform: rotate(1deg);
+	}
+
+	#tasksList li:not(:last-child):before {
+	  content: '''';
+	  position: absolute;
+	  width: 0;
+	  height: 0;
+	  top: 40%;
+	  border-style: solid;
+	  border-width: 13px 0 13px 15px;
+	  border-color: transparent transparent transparent gray;
+	  right: -20px;
+	  transform: translateY(-10%);
+	}
+
+
 
 
 	@media (min-width: 992px){

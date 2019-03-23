@@ -12,7 +12,7 @@ renderFooterOn: html
 										with: 'LIFIA'.
 									html text: ' - Universidad Nacional de La Plata, Argentina' ].
 							html
-								paragraph: [ 'Powered by '.
+								paragraph: [ html text: 'Powered by '.
 									html anchor
 										target: #blank;
 										url: 'https://pharo.org';

@@ -1,12 +1,14 @@
-rendering-workflow
+rendering-tasks
 renderWorkflowOn: html
-	| headerBlock tableBlock |
 	html heading
 		level: 3;
 		with: 'Sequence of tasks'.
-	headerBlock := [ html tableHeading: 'Type'.
-	html tableHeading: 'Notes'.
-	html tableHeading: 'Actions' ].
-	tableBlock := [ html tableHead: headerBlock.
-	html tableBody: [ protocol tasks do: [ :each | self renderTask: each on: html ] ] ].
-	html tbsTable: tableBlock
+	html unorderedList
+		class: 'list-unstyled';
+		id: #tasksList;
+		script:
+			(html jQuery new sortable
+				onStop: (html jQuery ajax callback: [ :ordered | self saveOrder: ordered ] passengers: (html jQuery this find: 'li')));
+		with: [ protocol tasks
+				ifNotEmpty: [ :tasks | tasks do: [ :task | self renderTask: task on: html ] ]
+				ifEmpty: [ html tbsWell: 'No tasks to show. Add some from the list of task prototypes down below.' ] ]

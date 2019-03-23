@@ -1,7 +1,7 @@
 rendering-protocols
 renderProtocolsOn: html
 	| headerBlock tableBlock |
-	html heading: 'Your protocols (templates)'.
+	html heading: 'Protocol Templates'.
 	headerBlock := [ html tableHeading: 'Name'.
 	html tableHeading: 'Notes'.
 	html tableHeading: 'Actions' ].
