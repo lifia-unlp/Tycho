@@ -26,7 +26,7 @@ class ServerAPI {
 
   }
 
-  getStatusOfGlobalSemaphore(semaphoreId, protocolId) {
+  getSemaphore(semaphoreId, protocolId) {
       return axios.get(this.apiUrl + "/semaphores/" + semaphoreId + "?protocol=" + protocolId);
   }
 

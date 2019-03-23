@@ -110,7 +110,10 @@ class BackgroundFacade extends Facade {
         let me = this;
         return new Promise((resolve, reject) => {
             this.serverApi
-                .getStatusOfGlobalSemaphore(args.semaphoreId, me.experiment.getexperimentId())
+                .getStatusOfGlobalSemaphore(
+                    args.semaphoreId,
+                    me.experiment.getexperimentId()
+                )
                 .then(response => {
                     let status = response.data;
                     resolve(status);
@@ -121,9 +124,35 @@ class BackgroundFacade extends Facade {
         });
     }
 
+    /**
+     * calls activeComponetIsDone() when the semaphore has status == 0
+     * @param {*} semaphoreId
+     */
+    autoDoneOnSemaphore(semaphoreId) {
+        let experimentId = this.experiment.getexperimentId();
+        this.serverApi
+            .getSemaphore(semaphoreId, experimentId)
+            .then(response => {
+                this.handleSemaphoreStatus(response.data);
+            });
+    }
+
+    handleSemaphoreStatus(semaphore) {
+        let me = this;
+        if (semaphore.status == 0) {
+            this.activeComponetIsDone();
+        } else {
+            setTimeout(() => {
+                me.autoDoneOnSemaphore(semaphore.id);
+            }, 1000);
+        }
+    }
 
     patchSemaphore(args) {
-        this.serverApi.patchSemaphore(args.semaphore, this.experiment.getexperimentId());
+        this.serverApi.patchSemaphore(
+            args.semaphore,
+            this.experiment.getexperimentId()
+        );
     }
 
     leaveExperiment() {

@@ -2,7 +2,9 @@ class ExperimentSample {
     constructor(experimentId, sampleId, notes, sequence) {
         this.helloGoodbyeTask = {
             componentClassname: "HelloGoodbyeComponent",
-            model: { experiment: this.experimentId }
+            model: { experiment: this.experimentId },
+            done: () => {},
+            start: () => {}
         };
         this.taskSequence = sequence;
         this.experimentId = experimentId;
@@ -32,10 +34,15 @@ class ExperimentSample {
 
     start() {
         this.current = 0;
+        this.getActiveTask().start();
     }
 
     next() {
+        let activeTask = this.getActiveTask();
+        activeTask.done();
         this.current = this.current + 1;
+        activeTask = this.getActiveTask();
+        activeTask.start();
     }
 
     getActiveTask() {

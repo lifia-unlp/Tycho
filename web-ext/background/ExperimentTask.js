@@ -16,6 +16,15 @@ class ExperimentTask {
         this.koboldEvents.push(event);
     }
 
+    done() {
+    }
+
+    start() {
+        if (this.componentClassname == 'SemaphoreWaitComponent') {
+            BackgroundFacade.getSingleton().autoDoneOnSemaphore(this.model.semaphoreId);
+        }
+    }
+
     static fromJson(taskJson) {
         return new ExperimentTask(
             taskJson.name,
