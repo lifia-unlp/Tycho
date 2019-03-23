@@ -9,9 +9,8 @@ renderProtocolsInputOn: html
 				labels: [ :prototype | prototype name ];
 				callback: [ :protocol | self cloneProtocol: protocol ].
 			html space.
-			html tbsSubmitButton with: 'Clone selected'.
+			html tbsSubmitButton with: 'Add selected'.
 			html space.
 			html tbsSubmitButton
-				disabled;
 				callback: [ self addEmptyProtocol ];
 				with: 'Add empty' ]

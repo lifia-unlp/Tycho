@@ -1,7 +1,7 @@
 *TasksLogger
 uncameled
 	| stream uncameled |
-	stream := '' writeStream.
+	stream := WriteStream on: ''.
 	self
 		do: [ :char | 
 			char isUppercase

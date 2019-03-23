@@ -1,0 +1,1 @@
+Simple component to render icons for each ExperimentTask

@@ -7,7 +7,7 @@ renderWorkflowOn: html
 	headerBlock := [ html
 		tableHeading: 'Sort';
 		tableHeading: 'Type';
-		tableHeading: 'Notes';
+		tableHeading: 'Name';
 		tableHeading: 'Actions' ].
 	tableBlock := [ html tableHead: headerBlock.
 	html tableBody

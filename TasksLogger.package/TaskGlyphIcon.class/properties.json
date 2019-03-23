@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "JulianGrigera 3/23/2019 18:23",
+	"super" : "Object",
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"task",
+		"iconsTable"
+	],
+	"name" : "TaskGlyphIcon",
+	"type" : "normal"
+}
