@@ -9,4 +9,6 @@ renderWorkflowOn: html
 		script:
 			(html jQuery new sortable
 				onStop: (html jQuery ajax callback: [ :ordered | self saveOrder: ordered ] passengers: (html jQuery this find: 'li')));
-		with: [ protocol tasks do: [ :each | self renderTask: each on: html ] ]
+		with: [ protocol tasks
+				ifNotEmpty: [ :tasks | tasks do: [ :task | self renderTask: task on: html ] ]
+				ifEmpty: [ html tbsWell: 'No tasks to show. Add some from the list of task prototypes down below.' ] ]

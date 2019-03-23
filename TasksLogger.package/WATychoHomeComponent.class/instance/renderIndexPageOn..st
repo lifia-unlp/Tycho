@@ -1,5 +1,5 @@
 rendering
 renderIndexPageOn: html
 	self
-		renderProtocolsOn: html;
-		renderSessionsOn: html
+		renderSessionsOn: html;
+		renderProtocolsOn: html
