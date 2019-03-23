@@ -1,19 +1,12 @@
-rendering-workflow
+rendering-tasks
 renderWorkflowOn: html
-	| headerBlock tableBlock |
 	html heading
 		level: 3;
 		with: 'Sequence of tasks'.
-	headerBlock := [ html
-		tableHeading: 'Sort';
-		tableHeading: 'Type';
-		tableHeading: 'Name';
-		tableHeading: 'Actions' ].
-	tableBlock := [ html tableHead: headerBlock.
-	html tableBody
+	html unorderedList
+		class: 'list-unstyled';
 		id: #tasksList;
 		script:
 			(html jQuery new sortable
-				onStop: (html jQuery ajax callback: [ :ordered | self saveOrder: ordered ] passengers: (html jQuery this find: 'tr')));
-		with: [ protocol tasks do: [ :each | self renderTask: each on: html ] ] ].
-	html tbsTable: tableBlock
+				onStop: (html jQuery ajax callback: [ :ordered | self saveOrder: ordered ] passengers: (html jQuery this find: 'li')));
+		with: [ protocol tasks do: [ :each | self renderTask: each on: html ] ]

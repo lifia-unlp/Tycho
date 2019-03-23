@@ -141,15 +141,22 @@ mainCssContent
 	}
 	.footer .col-md-6 p a{color: #fB5D3C}
 
-	.sortHandler{
-		color: #999;
-		cursor: grab;
+	#tasksList li{
+		display: inline-block;
+		vertical-align:top;
+		margin: 20px;
+		width: 250px;
 		}
+
+	#tasksList li .panel{
+		height: 280px;
+		}
+	#tasksList .panel-heading{ cursor: grab }
 	
-	tr.ui-sortable-helper{
+	#tasksList .ui-sortable-helper .panel{
 		background: rgba(240,240,240,0.5);
 		border: 1px solid #ddd;
-		transform: rotate(-1deg);
+		transform: rotate(1deg);
 	}
 
 	@media (min-width: 992px){

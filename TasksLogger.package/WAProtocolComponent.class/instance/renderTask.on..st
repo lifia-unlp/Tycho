@@ -1,15 +1,12 @@
-rendering-workflow
+rendering-tasks
 renderTask: aTask on: html
-	html tableRow
+	html listItem
 		passenger: aTask;
-		with: [ html
-				tableData: [ html span
-						class: #sortHandler;
-						with: [ html tbsGlyphIcon iconAlignJustify ] ];
-				tableData: [ html render: (TaskGlyphIcon on: aTask) ];
-				tableData: [ html anchor
-						callback: [ self showDetailsOfTask: aTask ];
-						with: aTask name ];
-				tableData: [ html anchor
-						callback: [ self removeTask: aTask ];
-						with: [ html tbsGlyphIcon iconTrash title: 'Remove this task from the sequence' ] ] ]
+		with: [ html tbsPanel beDefault
+				with: [ html
+						tbsPanelHeading: [ html render: (TaskGlyphIcon on: aTask).
+							html space.
+							html text: aTask name ].
+					html
+						tbsPanelBody: [ self renderTask: aTask propertiesOn: html.
+							self renderTask: aTask actionsOn: html ] ] ]
