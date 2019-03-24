@@ -1,7 +1,10 @@
 callbacks
 addNewProtocol
-	| protocol |
-	protocol := ExperimentProtocol name: 'Unnamed protocol' notes: ''.
-	self session account addProtocol: protocol.
-	self store save: self session account.
-	self showDetailsOfProtocol: protocol
+	| newProtocol |
+	newProtocol := ExperimentProtocol name: 'Unnamed protocol' notes: ''.
+	self
+		call: (WAProtocolComponent on: newProtocol)
+		onAnswer: [ :answer | 
+			answer
+				ifNotNil: [ self session account addProtocol: newProtocol.
+					self store save: self session account ] ]
