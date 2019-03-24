@@ -1,3 +1,4 @@
 accessing
-protocol: anObject
-	protocol := anObject
+protocol: aProtocol
+	originalProtocol := aProtocol veryDeepCopy.
+	protocol := aProtocol

@@ -5,4 +5,4 @@ renderMainContentOn: html
 		renderWorkflowOn: html;
 		renderAvailableTaskPrototypesOn: html;
 		renderDeleteButtonOn: html;
-		renderOkButtonOn: html
+		renderButtonsOn: html

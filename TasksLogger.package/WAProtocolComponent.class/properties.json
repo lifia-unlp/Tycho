@@ -8,7 +8,8 @@
 	"instvars" : [
 		"protocol",
 		"nameEditor",
-		"notesEditor"
+		"notesEditor",
+		"originalProtocol"
 	],
 	"name" : "WAProtocolComponent",
 	"type" : "normal"

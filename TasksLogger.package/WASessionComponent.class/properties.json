@@ -10,7 +10,8 @@
 		"nameEditor",
 		"notesEditor",
 		"semaphoreComponent",
-		"sessionResultsComponent"
+		"sessionResultsComponent",
+		"originalSession"
 	],
 	"name" : "WASessionComponent",
 	"type" : "normal"

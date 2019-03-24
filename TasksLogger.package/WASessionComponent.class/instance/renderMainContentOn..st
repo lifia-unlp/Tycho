@@ -4,4 +4,4 @@ renderMainContentOn: html
 	html render: sessionResultsComponent.
 	self
 		renderDeleteButtonOn: html;
-		renderOkButtonOn: html
+		renderButtonsOn: html

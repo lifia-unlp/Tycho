@@ -1,8 +1,6 @@
 rendering
 renderOkButtonOn: html
-	html horizontalRule.
-	html
-		tbsForm: [ html tbsButton
-				beDefault;
-				callback: [ self save ];
-				value: 'Save' ]
+	html anchor beButton
+		class: 'btn-success';
+		callback: [ self save ];
+		with: 'Save'
