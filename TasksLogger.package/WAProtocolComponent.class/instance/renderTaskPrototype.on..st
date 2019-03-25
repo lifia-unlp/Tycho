@@ -4,10 +4,12 @@ renderTaskPrototype: aPrototype on: html
 		tableRow: [ html
 				tableData: [ html anchor
 						callback: [ self addTaskToProtocol: aPrototype ];
-						with: [ html tbsGlyphIcon iconPlus.
+						with: [ html tbsGlyphIcon iconArrowUp.
 							html
 								space;
 								text: 'Add' ];
 						title: 'Use in sequence' ];
-				tableData: aPrototype name;
+				tableData: [ html render: (TaskGlyphIcon on: aPrototype).
+					html space.
+					html text: aPrototype name ];
 				tableData: aPrototype notes ]
