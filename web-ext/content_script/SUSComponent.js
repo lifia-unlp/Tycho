@@ -19,7 +19,7 @@ class SUSComponent extends UIComponent {
         let table = $("<table></table>");
         for (let questionNumber = 0; questionNumber < 10; questionNumber++) {
             var question = this.getSusQuestions()[questionNumber];
-            table.append($("<tr><td colspan=7><strong>" + question.description +"<strong></td></tr>"));
+            table.append($("<tr><td class='susQuestionTd' colspan=7><strong>" + question.description +"</strong></td></tr>"));
             let row = $("<tr></tr>");
             row.append('<td style="width:20%">' + browser.i18n.getMessage("susStronglyDisagree") + '</td>');
             for (let optionNumber = 1; optionNumber <= 5; optionNumber++) {

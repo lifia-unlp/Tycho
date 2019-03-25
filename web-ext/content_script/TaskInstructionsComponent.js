@@ -18,7 +18,7 @@ class TaskInstructionsComponent extends UIComponent {
     let tracker = $(
       '<div id="tracker" class="'+ cssClass + '"><span id="trackerInstructions">' +
         this.model.instructions +
-        "</span> </div>"
+        "</span><p id='buttonsInstructions'> Click <strong>Start</strong> to begin with the task, and <strong>Finish</strong> when you're done.</p></div>"
     );
     tracker.css("bottom","0");
     this.addButton(
@@ -129,7 +129,7 @@ class TaskInstructionsComponent extends UIComponent {
       this.component.css("top","0");
       this.component.css("bottom","");
     };
-    
+
   }
 
   addButton(tracker, id, text, func, show) {
