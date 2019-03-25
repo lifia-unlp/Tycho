@@ -154,7 +154,10 @@ mainCssContent
 		height: 280px;
 		}
 	#tasksList .panel-heading{ cursor: grab }
-	#tasksList .panel-body{ overflow: hidden }
+	#tasksList .panel-body{ 
+		padding-top: 5px;
+		overflow: hidden;
+		}
 	
 	#tasksList .ui-sortable-helper .panel{
 		background: rgba(240,240,240,0.5);
@@ -175,7 +178,24 @@ mainCssContent
 	  transform: translateY(-10%);
 	}
 
+	#tasksList dl{ 
+		margin-bottom: 10px;
+		font-size: .9em;
+		}
 
+	#tasksList dd{
+		max-height: 80px;
+		overflow: hidden;
+		}
+
+	#tasksList dt{
+		margin: 4px 0 0 0;
+		}
+
+	#tasksList li .actions{
+		bottom: 34px;
+		position: absolute;
+		}
 
 
 	@media (min-width: 992px){
