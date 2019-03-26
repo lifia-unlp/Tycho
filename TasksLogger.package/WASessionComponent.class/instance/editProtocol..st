@@ -1,3 +1,5 @@
 callbacks
 editProtocol: aProtocol
-	self show: (WAProtocolComponent on: aProtocol)
+	self
+		call: (WAProtocolComponent on: aProtocol)
+		onAnswer: [ :answer | self experimentSession updateGlobals ]

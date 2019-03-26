@@ -1,3 +1,3 @@
-accessing
+globals
 extractGlobalsFrom: anExperimentProtocol
 	self extractSemaphoresFrom: anExperimentProtocol
