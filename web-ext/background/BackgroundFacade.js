@@ -110,7 +110,7 @@ class BackgroundFacade extends Facade {
         let me = this;
         return new Promise((resolve, reject) => {
             this.serverApi
-                .getStatusOfGlobalSemaphore(
+                .getSemaphore(
                     args.semaphoreId,
                     me.experiment.getexperimentId()
                 )
