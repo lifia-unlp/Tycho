@@ -9,9 +9,6 @@ class SemaphoreSignalComponent extends UIComponent {
             '<div id="wen-message-component" class="topNotification"></div>'
         );
         messageDiv.append("<h1>Please wait ...</h1><p></p>");
-        messageDiv.append(
-            '<p>Just a second so I can signal the semaphore</p>'
-        );
         return messageDiv;
     }
 
