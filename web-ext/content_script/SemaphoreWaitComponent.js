@@ -14,7 +14,6 @@ class SemaphoreWaitComponent extends UIComponent {
 
     render() {
         this.model.startTime = new Date().getTime();
-        let me = this;
         super.render();
         this.showOverlay();
     }
