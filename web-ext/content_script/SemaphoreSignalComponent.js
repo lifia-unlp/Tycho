@@ -27,7 +27,7 @@ class SemaphoreSignalComponent extends UIComponent {
 
     async refreshSemaphoreStatus() {
         let me = this;
-        let semaphore = await BackgroundProxy.getSingleton().getStatusOfGlobalSemaphore(this.model.semaphoreId);
+        let semaphore = await BackgroundProxy.getSingleton().getSemaphore(this.model.semaphoreId);
         semaphore.status = 0;
         BackgroundProxy.getSingleton().patchSemaphore(semaphore);
         this.done();

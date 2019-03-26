@@ -106,7 +106,7 @@ class BackgroundFacade extends Facade {
      * @param {args.semaphoreId is the id of the global semaphore whose status we need} args
      * @returns a Promise that will resolve to the status, or reject with the error.
      */
-    getStatusOfGlobalSemaphore(args) {
+    getSemaphore(args) {
         let me = this;
         return new Promise((resolve, reject) => {
             this.serverApi

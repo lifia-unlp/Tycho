@@ -58,8 +58,8 @@ class BackgroundProxy {
     return await this.send({ methodName: "leaveExperiment", arguments: {} });
   }
 
-  async getStatusOfGlobalSemaphore(semaphoreId) {
-    let status = await this.send({ methodName: "getStatusOfGlobalSemaphore", arguments: {semaphoreId: semaphoreId} });
+  async getSemaphore(semaphoreId) {
+    let status = await this.send({ methodName: "getSemaphore", arguments: {semaphoreId: semaphoreId} });
     return status
   }
 
