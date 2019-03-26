@@ -1,0 +1,3 @@
+controlling
+makeSemaphoreStop: anExperimentSemaphore
+	anExperimentSemaphore stop

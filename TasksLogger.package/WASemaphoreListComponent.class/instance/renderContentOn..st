@@ -10,4 +10,4 @@ renderContentOn: html
 							html
 								tableRow: [ html
 										tableData: [ html text: semaphore id ];
-										tableData: [ self render: semaphore on: html ] ] ] ] ]
+										tableData: [ self renderSemaphore: semaphore on: html ] ] ] ] ]
