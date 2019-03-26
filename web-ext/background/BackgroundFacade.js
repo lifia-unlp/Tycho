@@ -148,11 +148,12 @@ class BackgroundFacade extends Facade {
         }
     }
 
-    patchSemaphore(args) {
-        this.serverApi.patchSemaphore(
-            args.semaphore,
+    signalSemaphoreAndProceed(semaphoreId) {
+        this.serverApi.signalSemaphore(
+            semaphoreId,
             this.experiment.getexperimentId()
         );
+        this.activeComponetIsDone();
     }
 
     leaveExperiment() {
