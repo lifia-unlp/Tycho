@@ -125,6 +125,7 @@
 #sus {
     top: 2%;
     width: 60%;
+    position: absolute;
     padding: 0 50px 10px 0;
 }
 

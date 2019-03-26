@@ -8,6 +8,7 @@ class SUSComponent extends UIComponent {
         this.model.startTime = new Date().getTime();
         super.render();
         this.showOverlay();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
     }
 
     buildComponent() {

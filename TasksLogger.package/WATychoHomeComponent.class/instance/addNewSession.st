@@ -6,5 +6,6 @@ addNewSession
 		call: (WASessionComponent on: newSession)
 		onAnswer: [ :answer | 
 			answer
+				ifNil: [ self store removeSession: newSession ]
 				ifNotNil: [ self session account addSession: newSession.
 					self store save: self session account ] ]
