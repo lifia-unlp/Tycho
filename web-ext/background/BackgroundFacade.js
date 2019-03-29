@@ -63,7 +63,7 @@ class BackgroundFacade extends Facade {
 
     setVisible(visible) {
         // always abort (set experiment to null) when enabling/disabling the extension
-        this.experiment = null; 
+        this.experiment = null;
         this.visible = visible;
         ContentProxy.getSingleton().render(this.visible);
     }
@@ -112,10 +112,7 @@ class BackgroundFacade extends Facade {
         let me = this;
         return new Promise((resolve, reject) => {
             this.serverApi
-                .getSemaphore(
-                    args.semaphoreId,
-                    me.experiment.getexperimentId()
-                )
+                .getSemaphore(args.semaphoreId, me.experiment.getexperimentId())
                 .then(response => {
                     let status = response.data;
                     resolve(status);
@@ -140,13 +137,21 @@ class BackgroundFacade extends Facade {
     }
 
     handleSemaphoreStatus(semaphore) {
-        let me = this;
-        if (semaphore.status == 0) {
-            this.activeComponetIsDone();
-        } else {
-            setTimeout(() => {
-                me.autoDoneOnSemaphore(semaphore.id);
-            }, 1000);
+        if (
+            //Check that the WaitComponent is still the active one. 
+            //The skip functionality may have changed the active task during the delay.
+            this.getActiveTask().componentClassname ==
+                "SemaphoreWaitComponent" &&
+            this.getActiveTask().model.semaphoreId == semaphore.id
+        ) {
+            let me = this;
+            if (semaphore.status == 0) {
+                this.activeComponetIsDone();
+            } else {
+                setTimeout(() => {
+                    me.autoDoneOnSemaphore(semaphore.id);
+                }, 1000);
+            }
         }
     }
 
@@ -178,10 +183,10 @@ class BackgroundFacade extends Facade {
 
     skipForwards(args) {
         this.activeComponetIsDone();
-    } 
+    }
 
     skipBackwards(args) {
         this.experiment.previous();
         ContentProxy.getSingleton().render(this.visible);
-    } 
+    }
 }
