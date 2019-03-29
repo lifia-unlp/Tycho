@@ -2,10 +2,14 @@
 	"commentStamp" : "Casco 7/3/2018 16:29",
 	"super" : "Object",
 	"category" : "TasksLogger-REST api",
-	"classinstvars" : [ ],
+	"classinstvars" : [
+		"singleton"
+	],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"monitor"
+	],
 	"name" : "WenAPIFacade",
 	"type" : "normal"
 }
