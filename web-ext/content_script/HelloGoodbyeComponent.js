@@ -8,42 +8,22 @@ class HelloGoodbyeComponent extends UIComponent {
         let messageDiv = $(
             '<div id="wen-message-component" class="topNotification"></div>'
         );
-
-        if (!this.model.experiment) {
-            messageDiv.append(
-                "<h2>" +
-                    browser.i18n.getMessage("helloGoodbyeWelcomeTitle") +
-                    "</h2><p></p>"
-            );
-            messageDiv.append(
-                '<p><input type="text" size="10" id="experiment"></p>'
-            );
-            messageDiv.append(
-                '<p><input id="join-button" type="submit" class="tracker-btn" value="' +
-                    browser.i18n.getMessage("helloGoodbyeJoinButtonText") +
-                    '"/></p>'
-            );
-            messageDiv.on("click", "#join-button", e => {
-                me.join();
-            });
-        } else {
-            messageDiv.append(
-                "<h2>" +
-                    browser.i18n.getMessage("helloGoodbyeThanksTitle") +
-                    "</h2><p></p>"
-            );
-
-            messageDiv.append(
-                '<input id="join-button" type="submit" class="tracker-btn" value="' +
-                    browser.i18n.getMessage(
-                        "helloGoodbyeYoureWelcomeButtonText"
-                    ) +
-                    '"/>'
-            );
-            messageDiv.on("click", "#join-button", e => {
-                me.leave();
-            });
-        }
+        messageDiv.append(
+            "<h2>" +
+                browser.i18n.getMessage("helloGoodbyeWelcomeTitle") +
+                "</h2><p></p>"
+        );
+        messageDiv.append(
+            '<p><input type="text" size="10" id="experiment"></p>'
+        );
+        messageDiv.append(
+            '<p><input id="join-button" type="submit" class="tracker-btn" value="' +
+                browser.i18n.getMessage("helloGoodbyeJoinButtonText") +
+                '"/></p>'
+        );
+        messageDiv.on("click", "#join-button", e => {
+            me.join();
+        });
         return messageDiv;
     }
 

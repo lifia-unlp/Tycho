@@ -38,9 +38,21 @@ class ExperimentSample {
     }
 
     next() {
+        if (this.current < this.taskSequence.length) {
+            this.activate(this.current + 1);
+        }
+    }
+
+    previous() {
+        if (this.current > 0) {
+            this.activate(this.current - 1);
+        }
+    }
+
+    activate(taskIndex) {
         let activeTask = this.getActiveTask();
         activeTask.done();
-        this.current = this.current + 1;
+        this.current = taskIndex;
         activeTask = this.getActiveTask();
         activeTask.start();
     }

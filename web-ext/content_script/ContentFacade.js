@@ -47,6 +47,36 @@ class ContentFacade extends Facade {
     }
   }
 
+  attachSkipKeysListener() {
+    document.addEventListener("keyup", e => {
+        e = e || window.event;
+        if (e.getModifierState("Control") & e.getModifierState("Shift")) {
+            if (e.keyCode == 39) {
+                this.skipForward();
+            } else {
+                if (e.keyCode == 37) {
+                    this.skipBackwards();
+                }
+            }
+        }
+    });
+}
+
+skipForward() {
+    if (window.confirm(browser.i18n.getMessage("skipForwardsWarning"))) {
+        BackgroundProxy.getSingleton().skipForwards();
+    }
+}
+
+skipBackwards() {
+  if (window.confirm(browser.i18n.getMessage("skipBackwardsWarning"))) {
+    BackgroundProxy.getSingleton().skipBackwards();
+  }
+}
+
+
+
+
   //Ugly trick until I learn how to do this with reflection.
   componentClasses() {
     return {

@@ -1,56 +1,56 @@
 class UIComponent {
-  constructor(model) {
-    this.model = model;
-  }
-
-  getId() {
-    return this.model.id;
-  }
-
-  render() {
-    if (!this.component) {
-      this.component = this.buildComponent();
-      this.component.addClass("wen-component");
-      this.notification = $(
-        '<div id="notification" style="display: none;"></div>'
-      );
-      this.overlay = $('<div id="overlay" style="display: none;"></div>');
+    constructor(model) {
+        this.model = model;
     }
-    $("body").append(this.component);
-    $("body").append(this.overlay);
-    $("body").append(this.notification);
-  }
 
-  setModel(model) {
-    this.model = model;
-    BackgroundProxy.getSingleton().setModelOfTask(this.model);
-  }
+    getId() {
+        return this.model.id;
+    }
 
-  submitResults() {
-    this.model.startTime = new Date(this.model.startTime);
-    BackgroundProxy.getSingleton().submitResultsOfTask(this.model);
-  }
+    render() {
+        if (!this.component) {
+            this.component = this.buildComponent();
+            this.component.addClass("wen-component");
+            this.notification = $(
+                '<div id="notification" style="display: none;"></div>'
+            );
+            this.overlay = $('<div id="overlay" style="display: none;"></div>');
+        }
+        $("body").append(this.component);
+        $("body").append(this.overlay);
+        $("body").append(this.notification);
+    }
 
-  showOverlay() {
-    $("#overlay").show();
-  }
+    setModel(model) {
+        this.model = model;
+        BackgroundProxy.getSingleton().setModelOfTask(this.model);
+    }
 
-  hideOverlay() {
-    $("#overlay").hide();
-  }
+    submitResults() {
+        this.model.startTime = new Date(this.model.startTime);
+        BackgroundProxy.getSingleton().submitResultsOfTask(this.model);
+    }
 
-  deactivate() {
-    this.component.remove();
-    this.notification.remove();
-    this.overlay.remove();
-  }
+    showOverlay() {
+        $("#overlay").show();
+    }
 
-  done() {
-    BackgroundProxy.getSingleton().activeComponetIsDone();
-  }
+    hideOverlay() {
+        $("#overlay").hide();
+    }
 
-  leave() {
-    BackgroundProxy.getSingleton().leaveExperiment();
-    this.done();
-  }
+    deactivate() {
+        this.component.remove();
+        this.notification.remove();
+        this.overlay.remove();
+    }
+
+    done() {
+        BackgroundProxy.getSingleton().activeComponetIsDone();
+    }
+
+    leave() {
+        BackgroundProxy.getSingleton().leaveExperiment();
+        this.done();
+    }
 }

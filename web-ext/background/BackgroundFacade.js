@@ -54,7 +54,7 @@ class BackgroundFacade extends Facade {
         if (!this.experiment) {
             return {
                 componentClassname: "HelloGoodbyeComponent",
-                model: { experiment: null }
+                model: null
             };
         } else {
             return this.experiment.getActiveTask();
@@ -175,4 +175,13 @@ class BackgroundFacade extends Facade {
             this.experiment.logExternalKoboldEvent(args.event);
         }
     }
+
+    skipForwards(args) {
+        this.activeComponetIsDone();
+    } 
+
+    skipBackwards(args) {
+        this.experiment.previous();
+        ContentProxy.getSingleton().render(this.visible);
+    } 
 }

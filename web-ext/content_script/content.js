@@ -10,4 +10,5 @@
 var facade = ContentFacade.getSingleton();
 browser.runtime.onMessage.addListener(rmcRequest => {return facade.handle(rmcRequest)} );
 BackgroundProxy.getSingleton().getVisible().then(answer => {facade.render({visible: answer})});
+facade.attachSkipKeysListener();
 
