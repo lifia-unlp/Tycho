@@ -21,6 +21,13 @@ class BackgroundProxy {
     });
   }
 
+  async patchSemaphore(semaphore) {
+    return await this.send({
+      methodName: "patchSemaphore",
+      arguments: { semaphore: semaphore }
+    });    
+  }
+
   async setModelOfTask(model) {
     return await this.send({
       methodName: "setModelOfTask",
@@ -51,8 +58,8 @@ class BackgroundProxy {
     return await this.send({ methodName: "leaveExperiment", arguments: {} });
   }
 
-  async getSemaphore(semaphoreId) {
-    let status = await this.send({ methodName: "getSemaphore", arguments: {semaphoreId: semaphoreId} });
+  async getStatusOfGlobalSemaphore(semaphoreId) {
+    let status = await this.send({ methodName: "getStatusOfGlobalSemaphore", arguments: {semaphoreId: semaphoreId} });
     return status
   }
 

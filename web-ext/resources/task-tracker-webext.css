@@ -15,16 +15,6 @@
     box-shadow: 10px 10px 21px -4px rgba(0,0,0,0.39);
 }
 
-#buttonsInstructions {
-  display: block;
-  font-size: 14px;
-  margin: 18px 0;
-}
-
-#tracker.trackerRunning #buttonsInstructions{
-  display: none;
-}
-
 #wen-component {
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
@@ -36,13 +26,10 @@
 }
 
 #wen-message-component,
-#tracker.trackerNotStartedOrPaused,
-#sus,
-#welcome {
+#tracker.trackerNotStartedOrPaused {
     top: 20%;
     font-family: Arial, Helvetica, sans-serif;
     background: #f26f54;
-    color: white;
     font-size: 14px;
     position: fixed;
     z-index: 9999;
@@ -58,38 +45,8 @@
     bottom: auto !important;
 }
 
-#wen-message-component h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 22px;
-}
-
 #wen-message-component h1 {
     font-size: 20px;
-}
-#wen-message-component input, #tracker input, #susbutton, #welcome-button, #welcome input  {
-    color: black;
-    padding: 4px 12px;
-    border-radius: 4px;
-    border: 1px solid #aaa;
-}
-
-#wen-message-component input#experiment {
-    font-size: 18px;
-    margin: 10px 0;
-    padding: 5px;
-    border-radius: 4px;
-    text-align: center;
-  }
-
-#wen-message-component > * {
-  margin: 20px 0;
-  }
-
-#buttonsInstructions strong {
-    border: 1px solid;
-    border-radius: 4px;
-    padding: 4px;
-    font-weight: normal;
 }
 
 #notification {
@@ -123,10 +80,8 @@
 }
 
 #sus {
-    top: 2%;
-    width: 60%;
-    position: absolute;
-    padding: 0 50px 10px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
 }
 
 #sus table {
@@ -134,25 +89,14 @@
     margin: 0 10%
 }
 
-#sus tr td{
-    width: 8% ! important;
-}
-
-#sus tr td:first-child {
-    width: 30% ! important;
-}
-#sus tr td:last-child {
-    width: 30% ! important;
-}
-
-#sus .susQuestionTd{
-    padding-top: 15px;
+#sus td {
+    width: 20%;
+    font-size: 13px;
+    text-align: center
 }
 
 .susRadio {
-    cursor: pointer;
-    height: 22px;
-    width: 22px;
+    cursor: pointer
 }
 
 .tracker-btn {

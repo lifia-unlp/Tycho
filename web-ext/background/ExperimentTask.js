@@ -23,9 +23,6 @@ class ExperimentTask {
         if (this.componentClassname == 'SemaphoreWaitComponent') {
             BackgroundFacade.getSingleton().autoDoneOnSemaphore(this.model.semaphoreId);
         }
-        if (this.componentClassname == 'SemaphoreSignalComponent') {
-            BackgroundFacade.getSingleton().signalSemaphoreAndProceed(this.model.semaphoreId);
-        }
     }
 
     static fromJson(taskJson) {

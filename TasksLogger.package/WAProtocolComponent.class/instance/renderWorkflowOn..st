@@ -8,6 +8,7 @@ renderWorkflowOn: html
 		id: #tasksList;
 		script:
 			(html jQuery new sortable
+				containment: 'parent';
 				onStop: (html jQuery ajax callback: [ :ordered | self saveOrder: ordered ] passengers: (html jQuery this find: 'li')));
 		with: [ protocol tasks
 				ifNotEmpty: [ :tasks | tasks do: [ :task | self renderTask: task on: html ] ]

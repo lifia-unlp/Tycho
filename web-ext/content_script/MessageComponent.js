@@ -8,8 +8,8 @@ class MessageComponent extends UIComponent {
         let messageDiv = $(
             '<div id="wen-message-component" class="topNotification"></div>'
         );
-        messageDiv.append("<h1>" + this.model.title + "</h1>");
-        messageDiv.append("<p>" + this.model.message + "</p>");
+        messageDiv.append("<h1>" + this.model.title + "</h1><p></p>");
+        messageDiv.append(this.model.message);
         messageDiv.append(
             '<p><input id="close-button" type="submit" class="tracker-btn" value="' +
                 browser.i18n.getMessage("messageComponentAcceptButtonText") +

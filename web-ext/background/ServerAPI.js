@@ -17,9 +17,9 @@ class ServerAPI {
     this.submit(report, "/task-results/");
   }
 
-  signalSemaphore(semaphoreId, protocolId) {
+  patchSemaphore(semaphore, protocolId) {
     axios
-    .patch(this.apiUrl + "/semaphores/" + semaphoreId + "?protocol=" + protocolId, {id: semaphoreId, status: 0}) 
+    .patch(this.apiUrl + "/semaphores/" + semaphore.id + "?protocol=" + protocolId, semaphore) 
     .catch(function(error) {
       console.log("Error posting: ", error);
     });
