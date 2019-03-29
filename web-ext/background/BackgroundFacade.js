@@ -62,6 +62,8 @@ class BackgroundFacade extends Facade {
     }
 
     setVisible(visible) {
+        // always abort (set experiment to null) when enabling/disabling the extension
+        this.experiment = null; 
         this.visible = visible;
         ContentProxy.getSingleton().render(this.visible);
     }
