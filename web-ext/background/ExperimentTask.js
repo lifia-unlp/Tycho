@@ -1,5 +1,5 @@
 class ExperimentTask {
-  
+
     constructor(name, notes, componentClassname, model) {
         this.name = name;
         this.notes = notes;
@@ -22,6 +22,9 @@ class ExperimentTask {
     start() {
         if (this.componentClassname == 'SemaphoreWaitComponent') {
             BackgroundFacade.getSingleton().autoDoneOnSemaphore(this.model.semaphoreId);
+        }
+        if (this.componentClassname == 'SemaphoreSignalComponent') {
+            BackgroundFacade.getSingleton().signalSemaphoreAndProceed(this.model.semaphoreId);
         }
     }
 

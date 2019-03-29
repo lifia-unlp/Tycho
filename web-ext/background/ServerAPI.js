@@ -3,11 +3,11 @@ class ServerAPI {
   setApiUrl(url) {
     this.apiUrl = url;
   }
-  
+
   submit(payload, service) {
 
     axios
-      .post(this.apiUrl + service, payload) 
+      .post(this.apiUrl + service, payload)
       .catch(function(error) {
         console.log("Error posting: ", error);
       });
@@ -17,9 +17,9 @@ class ServerAPI {
     this.submit(report, "/task-results/");
   }
 
-  patchSemaphore(semaphore, protocolId) {
+  signalSemaphore(semaphoreId, protocolId) {
     axios
-    .patch(this.apiUrl + "/semaphores/" + semaphore.id + "?protocol=" + protocolId, semaphore) 
+    .patch(this.apiUrl + "/semaphores/" + semaphoreId + "?protocol=" + protocolId, {id: semaphoreId, status: 0})
     .catch(function(error) {
       console.log("Error posting: ", error);
     });
