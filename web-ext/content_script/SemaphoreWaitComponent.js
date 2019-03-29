@@ -9,6 +9,7 @@ class SemaphoreWaitComponent extends UIComponent {
             '<div id="wen-message-component" class="topNotification"></div>'
         );
         messageDiv.append("<h1>Please wait ...</h1><p></p>");
+        messageDiv.append("<p>"+this.model.message+"</p>");
         return messageDiv;
     }
 
