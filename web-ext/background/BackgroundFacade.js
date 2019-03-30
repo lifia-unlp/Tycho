@@ -142,12 +142,15 @@ class BackgroundFacade extends Facade {
      * @param {*} semaphoreId
      */
     autoDoneOnSemaphore(semaphoreId) {
-        let experimentId = this.experiment.getexperimentId();
-        this.serverApi
-            .getSemaphore(semaphoreId, experimentId)
-            .then(response => {
-                this.handleSemaphoreStatus(response.data);
-            });
+        // Check that the experiment still exists to deal abort during a semaphore.
+        if (this.experiment) {
+            let experimentId = this.experiment.getexperimentId();
+            this.serverApi
+                .getSemaphore(semaphoreId, experimentId)
+                .then(response => {
+                    this.handleSemaphoreStatus(response.data);
+                });
+        }
     }
 
     handleSemaphoreStatus(semaphore) {
