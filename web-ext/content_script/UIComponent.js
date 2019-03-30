@@ -19,6 +19,7 @@ class UIComponent {
         $("body").append(this.component);
         $("body").append(this.overlay);
         $("body").append(this.notification);
+        this.updateVariables();
     }
 
     setModel(model) {
@@ -52,5 +53,31 @@ class UIComponent {
     leave() {
         BackgroundProxy.getSingleton().leaveExperiment();
         this.done();
+    }
+
+    updateVariables() {
+        let varElements = document.querySelectorAll("tyvar");
+        varElements.forEach(elem => {
+            if (elem.getAttribute("default")) {
+                elem.innerHTML = elem.getAttribute("default");
+            } else {
+                elem.innerHTML = elem.getAttribute("var") + "?";
+            }
+            this.updateVariable(elem);
+        });
+    }
+
+    updateVariable(elem) {
+        let varName = elem.getAttribute("var");
+        if (varName) {
+            BackgroundProxy.getSingleton()
+                .getVariable(varName)
+                .then(value => {
+                    elem.innerHTML = value;
+                })
+                .catch(error => {
+                    console.lor(error);
+                });
+        }
     }
 }

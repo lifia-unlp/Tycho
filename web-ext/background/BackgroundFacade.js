@@ -103,6 +103,20 @@ class BackgroundFacade extends Facade {
     }
 
     /**
+     * Ask for the value of global variables. Some globals are resolved locally. Others
+     * need to be queries to the server.
+     * @param {args.variableId is the id of the variable} args
+     * @returns a Promise that will resolve to the value of the variable, or reject with the error.
+     */
+    getVariable(args) {
+        if (args.variableId.toLowerCase() == "sampleid") {
+            return new Promise((resolve, reject) => {
+                resolve(this.experiment.id);
+            });
+        }
+    }
+
+    /**
      * Ask for the status of a global semaphore (0 should be understood as move on,
      * negative numbers wait for signales, positive numbers indicate already signaled)
      * @param {args.semaphoreId is the id of the global semaphore whose status we need} args
@@ -138,7 +152,7 @@ class BackgroundFacade extends Facade {
 
     handleSemaphoreStatus(semaphore) {
         if (
-            //Check that the WaitComponent is still the active one. 
+            //Check that the WaitComponent is still the active one.
             //The skip functionality may have changed the active task during the delay.
             this.getActiveTask().componentClassname ==
                 "SemaphoreWaitComponent" &&

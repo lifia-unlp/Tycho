@@ -57,6 +57,14 @@ class BackgroundProxy {
         });
     }
 
+    async getVariable(variableId) {
+        let value = await this.send({
+            methodName: "getVariable",
+            arguments: { variableId: variableId }
+        });
+        return value;
+    }
+
     async getSemaphore(semaphoreId) {
         let status = await this.send({
             methodName: "getSemaphore",
