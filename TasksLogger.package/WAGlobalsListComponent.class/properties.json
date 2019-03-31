@@ -1,13 +1,13 @@
 {
-	"commentStamp" : "",
-	"super" : "WAGlobalsListComponent",
+	"commentStamp" : "Casco 3/9/2019 09:51",
+	"super" : "WAComponent",
 	"category" : "TasksLogger-Seaside",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"variables"
+		"globals"
 	],
-	"name" : "WASemaphoreListComponent",
+	"name" : "WAGlobalsListComponent",
 	"type" : "normal"
 }

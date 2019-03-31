@@ -6,8 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"variables"
+		"newValue",
+		"editedVariable"
 	],
-	"name" : "WASemaphoreListComponent",
+	"name" : "WAVariableListComponent",
 	"type" : "normal"
 }

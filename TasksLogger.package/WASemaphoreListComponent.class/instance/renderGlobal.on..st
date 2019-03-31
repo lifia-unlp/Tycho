@@ -1,5 +1,5 @@
 rendering
-renderSemaphore: aSemaphore on: html
+renderGlobal: aSemaphore on: html
 	html
 		form: [ aSemaphore isStopped
 				ifTrue: [ html tbsButton

@@ -11,7 +11,8 @@
 		"notesEditor",
 		"semaphoreComponent",
 		"sessionResultsComponent",
-		"originalSession"
+		"originalSession",
+		"variableListComponent"
 	],
 	"name" : "WASessionComponent",
 	"type" : "normal"

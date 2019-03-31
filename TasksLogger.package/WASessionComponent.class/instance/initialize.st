@@ -11,4 +11,5 @@ initialize
 		label: 'Notes';
 		headingLevel: 4.
 	semaphoreComponent := WASemaphoreListComponent new.
+	variableListComponent := WAVariableListComponent new.
 	sessionResultsComponent := WASessionResultsComponent new

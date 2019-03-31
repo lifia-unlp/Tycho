@@ -1,4 +1,4 @@
-rendering-semaphores
+rendering-globals
 renderSemaphoresOn: html
 	html
 		tbsFormGroup: [ html heading
@@ -6,6 +6,6 @@ renderSemaphoresOn: html
 				with: 'Semaphores'.
 			self experimentSession semaphores
 				ifNotEmpty: [ :semaphores | 
-					semaphoreComponent semaphores: semaphores.
+					semaphoreComponent globals: semaphores.
 					html render: semaphoreComponent ]
-				ifEmpty: [ html paragraph: 'No semaphores are being used in this Workspace' ] ]
+				ifEmpty: [ html paragraph: 'No semaphores are being used in this session' ] ]

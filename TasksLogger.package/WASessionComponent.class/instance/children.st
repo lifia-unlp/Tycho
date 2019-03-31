@@ -3,4 +3,5 @@ children
 	^ {notesEditor.
 	nameEditor.
 	semaphoreComponent.
-	sessionResultsComponent}
+	sessionResultsComponent.
+	variableListComponent}
