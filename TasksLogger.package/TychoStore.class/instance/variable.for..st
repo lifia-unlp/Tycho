@@ -1,6 +1,6 @@
 globals
-semaphore: semaphoreId for: protocolId
+variable: variableId for: protocolId
 	^ self sessions
 		detect: [ :each | each protocols anySatisfy: [ :protocol | protocol id = protocolId ] ]
-		ifFound: [ :found | found semaphoreWithId: semaphoreId ]
+		ifFound: [ :found | found variableWithId: variableId ]
 		ifNone: [ nil ]
