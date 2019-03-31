@@ -5,4 +5,5 @@ updateSemaphore: jsonRepresentationOfAnExistingSemaphore for: protocolId
 		critical: [ payload := NeoJSONReader fromString: jsonRepresentationOfAnExistingSemaphore.
 			semaphore := self store semaphore: (payload at: 'id') for: protocolId.
 			semaphore status: (payload at: 'status').
+			self store save: semaphore session. 
 			^ 'ok' ]
