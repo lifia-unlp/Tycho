@@ -6,4 +6,4 @@ updateVariable: jsonRepresentationOfAnExistingVariable for: protocolId
 			variable := self store variable: (payload at: 'id') for: protocolId.
 			variable value: (payload at: 'value').
 			self store save: variable session.
-			^ 'ok' ]
+			^ jsonRepresentationOfAnExistingVariable ]
