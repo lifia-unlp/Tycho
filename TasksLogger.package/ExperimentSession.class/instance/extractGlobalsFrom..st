@@ -1,3 +1,4 @@
-globals
+private
 extractGlobalsFrom: anExperimentProtocol
-	self extractSemaphoresFrom: anExperimentProtocol
+	self extractSemaphoresFrom: anExperimentProtocol.
+	self extractVariablesFrom: anExperimentProtocol 

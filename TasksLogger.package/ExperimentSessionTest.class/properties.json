@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "TasksLogger-Model-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"messageTaskOne",
+		"messageTaskTwo",
+		"protocol",
+		"session"
+	],
+	"name" : "ExperimentSessionTest",
+	"type" : "normal"
+}

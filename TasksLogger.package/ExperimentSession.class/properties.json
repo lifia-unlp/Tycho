@@ -9,7 +9,8 @@
 		"name",
 		"notes",
 		"protocols",
-		"semaphores"
+		"semaphores",
+		"variables"
 	],
 	"name" : "ExperimentSession",
 	"type" : "normal"

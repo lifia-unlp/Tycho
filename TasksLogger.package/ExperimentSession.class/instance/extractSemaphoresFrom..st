@@ -1,4 +1,4 @@
-globals
+private
 extractSemaphoresFrom: anExperimentProtocol
 	| semaphoreIds |
 	semaphoreIds := anExperimentProtocol tasks flatCollect: [ :task | task extractSemaphoreIds ].

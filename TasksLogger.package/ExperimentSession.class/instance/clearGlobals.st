@@ -1,3 +1,4 @@
-globals
+private
 clearGlobals
-	self semaphores: OrderedCollection new
+	self semaphores: OrderedCollection new.
+	self variables: OrderedCollection new.
