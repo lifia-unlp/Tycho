@@ -41,7 +41,7 @@ class BackgroundFacade extends Facade {
     submitResultsOfTask(args) {
         let report = {
             sampleId: this.experiment.getId(),
-            experimentId: this.experiment.getexperimentId()
+            experimentId: this.experiment.getExperimentId()
         };
         let updatedTask = this.experiment.getTask(args.model.id);
         updatedTask.model = args.model;
@@ -111,7 +111,22 @@ class BackgroundFacade extends Facade {
     getVariable(args) {
         if (args.variableId.toLowerCase() == "sampleid") {
             return new Promise((resolve, reject) => {
-                resolve(this.experiment.id);
+                resolve({id: "sampleid", value: this.experiment.id});
+            });
+        } else {
+            return new Promise((resolve, reject) => {
+                this.serverApi
+                    .getVariable(
+                        args.variableId.toLowerCase(),
+                        this.experiment.getExperimentId()
+                    )
+                    .then(response => {
+                        let status = response.data;
+                        resolve(status);
+                    })
+                    .catch(error => {
+                        reject(error);
+                    });
             });
         }
     }
@@ -126,7 +141,7 @@ class BackgroundFacade extends Facade {
         let me = this;
         return new Promise((resolve, reject) => {
             this.serverApi
-                .getSemaphore(args.semaphoreId, me.experiment.getexperimentId())
+                .getSemaphore(args.semaphoreId, me.experiment.getExperimentId())
                 .then(response => {
                     let status = response.data;
                     resolve(status);
@@ -144,7 +159,7 @@ class BackgroundFacade extends Facade {
     autoDoneOnSemaphore(semaphoreId) {
         // Check that the experiment still exists to deal abort during a semaphore.
         if (this.experiment) {
-            let experimentId = this.experiment.getexperimentId();
+            let experimentId = this.experiment.getExperimentId();
             this.serverApi
                 .getSemaphore(semaphoreId, experimentId)
                 .then(response => {
@@ -175,7 +190,7 @@ class BackgroundFacade extends Facade {
     signalSemaphoreAndProceed(semaphoreId) {
         this.serverApi.signalSemaphore(
             semaphoreId,
-            this.experiment.getexperimentId()
+            this.experiment.getExperimentId()
         );
         this.activeComponetIsDone();
     }

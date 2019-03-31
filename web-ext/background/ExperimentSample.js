@@ -17,7 +17,7 @@ class ExperimentSample {
         return this.id;
     }
 
-    getexperimentId() {
+    getExperimentId() {
         return this.experimentId;
     }
 

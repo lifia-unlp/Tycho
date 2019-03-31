@@ -72,8 +72,8 @@ class UIComponent {
         if (varName) {
             BackgroundProxy.getSingleton()
                 .getVariable(varName)
-                .then(value => {
-                    elem.innerHTML = value;
+                .then(variable => {
+                    elem.innerHTML = variable.value;
                 })
                 .catch(error => {
                     console.lor(error);

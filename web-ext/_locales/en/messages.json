@@ -114,5 +114,16 @@
   "susStronglyDisagree": {
     "message": "Strongly disagree",
     "description": "Strongly disagree"
+  },
+  "skipForwardsWarning": {
+    "message": "Are you sure you want to skip forward? Nothing will be posted to the server. Any data collected for this step will be lost.",
+    "description": "The user pressed the skipForwards key combination - confirm action"
+  },
+  "skipBackwardsWarning": {
+    "message": "Are you sure you want to skip backwards? Nothing will be posted to the server. Any data collected for this step will be lost.",
+    "description": "The user pressed the skipBackwards key combination - confirm action"
   }
+
+
+  
 }
