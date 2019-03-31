@@ -1,3 +1,3 @@
 callbacks
 cancel
-	editedGlobal := nil
+	editedVariable := nil

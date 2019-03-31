@@ -1,4 +1,4 @@
 callbacks
 accept
 	editedVariable value: newValue.
-	editedVariable := nil
+	editedVariable := nil.
