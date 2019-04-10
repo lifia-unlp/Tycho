@@ -88,7 +88,9 @@ skipBackwards() {
       YoutubeVideoComponent: YoutubeVideoComponent,
       QuestionaireComponent: QuestionaireComponent,
       SemaphoreWaitComponent: SemaphoreWaitComponent,
-      SemaphoreSignalComponent: SemaphoreSignalComponent
+      SemaphoreSignalComponent: SemaphoreSignalComponent,
+      InputVariableComponent: InputVariableComponent,
+      DOMCollectorComponent: DOMCollectorComponent
     };
   }
 }
