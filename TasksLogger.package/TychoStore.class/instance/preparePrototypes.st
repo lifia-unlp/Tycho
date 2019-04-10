@@ -1,4 +1,4 @@
-prototypes
+prototypes-LEGACY
 preparePrototypes
 	| newTask |
 	prototypes := OrderedCollection new.
@@ -17,5 +17,12 @@ preparePrototypes
 	newTask := self prepareQuestionairePrototype.
 	self rememberToSave: newTask.
 	prototypes add: newTask.
+	newTask := self prepareInputVariablePrototype. 
+	self rememberToSave: newTask.
+	prototypes add: newTask.
+	newTask := self prepareCollectDomElementsTaskPrototype. 
+	self rememberToSave: newTask.
+	prototypes add: newTask.
+
 	self savePending.
 	^ prototypes

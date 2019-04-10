@@ -1,4 +1,4 @@
-prototypes
+prototypes-LEGACY
 prepareYoutubeVideoPrototype
 	| newTask |
 	newTask := ExperimentTask new

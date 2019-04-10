@@ -1,4 +1,4 @@
-prototypes
+prototypes-LEGACY
 prepareBasicTaskInstructionsPrototype
 	| newTask |
 	newTask := ExperimentTask new

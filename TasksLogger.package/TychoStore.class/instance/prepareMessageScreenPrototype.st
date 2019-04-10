@@ -1,4 +1,4 @@
-prototypes
+prototypes-LEGACY
 prepareMessageScreenPrototype
 	| newTask |
 	newTask := ExperimentTask new
