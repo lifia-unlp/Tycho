@@ -9,4 +9,6 @@ initialize
 		at: 'YoutubeVideoComponent' put: #iconFilm;
 		at: 'SemaphoreWaitComponent' put: #iconMinusSign;
 		at: 'SemaphoreSignalComponent' put: #iconPlayCircle;
+		at: 'InputVariableComponent' put: #iconComment;
+		at: 'DOMCollectorComponent' put: #iconCreditCard;
 		yourself
