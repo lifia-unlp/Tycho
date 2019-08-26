@@ -2,6 +2,7 @@ rendering
 renderProtocol: protocol sample: sample result: result on: html
 	html
 		tableRow: [ html
+				tableData: sample id;
 				tableData: result task name;
 				tableData: result startTime printString;
 				tableData: (result ellapsedMs / 1000) asFloat printString;

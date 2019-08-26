@@ -12,8 +12,4 @@ renderSession: aSession on: html
 					html space.
 					html anchor
 						callback: [ self exportAsFuel: aSession ];
-						with: [ html tbsGlyphIcon iconSave title: 'Save to file' ].
-					html space.
-					html anchor
-						callback: [ self exportAsJson: aSession ];
-						with: [ html tbsGlyphIcon iconExport title: 'Export as JSON' ] ] ]
+						with: [ html tbsGlyphIcon iconSave title: 'Save to file' ] ] ]
