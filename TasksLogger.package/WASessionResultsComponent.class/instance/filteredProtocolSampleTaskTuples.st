@@ -11,4 +11,4 @@ filteredProtocolSampleTaskTuples
 	selectedTaskName
 		ifNotNil: [ selectedProtocolSampleResultTuples := selectedProtocolSampleResultTuples
 				select: [ :tuple | tuple third task name = selectedTaskName ] ].
-	^ selectedProtocolSampleResultTuples
+	^ selectedProtocolSampleResultTuples sorted: [ :earlier :latter | earlier third startTime < latter third startTime ]

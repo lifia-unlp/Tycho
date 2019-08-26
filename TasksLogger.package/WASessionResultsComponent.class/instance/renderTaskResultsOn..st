@@ -4,7 +4,7 @@ renderTaskResultsOn: html
 	headerBlock := [ html
 		tableHeading: 'Sample ID';
 		tableHeading: 'Task name';
-		tableHeading: 'Start';
+		tableHeading: 'Start Time';
 		tableHeading: 'Duration';
 		tableHeading: 'Properties';
 		tableHeading: 'Kobold events' ].
