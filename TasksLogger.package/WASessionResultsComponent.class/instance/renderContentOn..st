@@ -3,5 +3,7 @@ renderContentOn: html
 	html heading
 		level3;
 		with: 'Results'.
-	self renderFiltersOn: html.
-	self renderTaskResultsOn: html
+	self
+		renderFiltersOn: html;
+		renderActionsOn: html;
+		renderTaskResultsOn: html

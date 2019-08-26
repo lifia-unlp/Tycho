@@ -197,6 +197,9 @@ mainCssContent
 		position: absolute;
 		}
 
+	.filters { 
+		margin: 20px 0;
+	 }
 
 	@media (min-width: 992px){
 		.homeRegister > :first-child{ padding:0 6em; }		
