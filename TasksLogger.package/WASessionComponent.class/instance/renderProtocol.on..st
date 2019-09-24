@@ -12,4 +12,8 @@ renderProtocol: protocol on: html
 					html space.
 					html anchor
 						callback: [ self deleteProtocol: protocol ];
-						with: [ html tbsGlyphIcon iconTrash title: 'Delete this protocol' ] ] ]
+						with: [ html tbsGlyphIcon iconTrash title: 'Delete this protocol' ].
+					html space.
+					html anchor
+						callback: [ self printHandoutsFor: protocol ];
+						with: [ html tbsGlyphIcon iconPrint title: 'Print handouts' ] ] ]
