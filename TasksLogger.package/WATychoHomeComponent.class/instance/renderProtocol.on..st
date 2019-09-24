@@ -16,4 +16,9 @@ renderProtocol: aProtocol on: html
 					html space.
 					html anchor
 						callback: [ self exportAsJson: aProtocol ];
-						with: [ html tbsGlyphIcon iconExport title: 'Export as JSON' ] ] ]
+						with: [ html tbsGlyphIcon iconExport title: 'Export as JSON' ].
+						html space.
+					html anchor
+						callback: [ self printHandoutsFor: aProtocol ];
+						target: '_blank';
+						with: [ html tbsGlyphIcon iconPrint title: 'Print handouts' ] ] ]
