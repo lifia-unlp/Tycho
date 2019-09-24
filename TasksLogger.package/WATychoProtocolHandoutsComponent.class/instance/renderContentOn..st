@@ -10,7 +10,7 @@ renderContentOn: html
 			html heading
 				level: 4;
 				with: 'Notes'.
-			html paragraph: protocol notes.
+			html preformatted: protocol notes.
 			html heading
 				level: 4;
 				with: 'Tasks'.
