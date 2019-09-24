@@ -7,7 +7,7 @@ renderTask: each on: html
 	html label: 'Name'.
 	html paragraph: each name.
 	html label: 'Notes'.
-	html paragraph: each notes.
+	html preformatted: each notes.
 	specificRenderingSelector := ('render' , each componentClassname , 'Configuration:on:')
 		asSymbol.
 	(self class canPerform: specificRenderingSelector)

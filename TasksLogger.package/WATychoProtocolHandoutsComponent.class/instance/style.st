@@ -20,4 +20,13 @@ style
   padding: 10px;
 }
 
+pre {
+  padding-left: unset;
+  padding-top: unset;
+  padding-bottom: unset;
+  background-color: unset;
+  border: unset;
+  font-family: unset;
+  font-size: unset;
+}
 '
