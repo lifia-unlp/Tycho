@@ -5,7 +5,9 @@ renderProtocol: aProtocol on: html
 				tableData: [ html anchor
 						callback: [ self showDetailsOfProtocol: aProtocol ];
 						with: aProtocol name ];
-				tableData: aProtocol notes;
+				tableData: (aProtocol notes size < 100
+						ifTrue: [ aProtocol notes ]
+						ifFalse: [ (aProtocol notes copyFrom: 1 to: 100) , ' ...' ]);
 				tableData: [ html anchor
 						callback: [ self showDetailsOfProtocol: aProtocol ];
 						with: [ html tbsGlyphIcon iconPencil title: 'Edit this protocol' ].
