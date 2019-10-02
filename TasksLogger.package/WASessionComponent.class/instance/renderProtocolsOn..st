@@ -14,5 +14,5 @@ renderProtocolsOn: html
 										tableHeading: 'Actions' ].
 							html
 								tableBody: [ protocols do: [ :protocol | self renderProtocol: protocol on: html ] ] ] ]
-				ifEmpty: [ html paragraph: 'There are no protocols in this session' ] ].
+				ifEmpty: [ html paragraph: 'There are no protocols in this experiment' ] ].
 	self renderProtocolsInputOn: html

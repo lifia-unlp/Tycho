@@ -8,4 +8,4 @@ renderVariablesOn: html
 				ifNotEmpty: [ :variables | 
 					variableListComponent  globals: variables.
 					html render: variableListComponent ]
-				ifEmpty: [ html paragraph: 'No variables are being used in this session' ] ]
+				ifEmpty: [ html paragraph: 'No variables are being used in this experiment' ] ]

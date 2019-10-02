@@ -7,4 +7,4 @@ renderBreadcrumbOn: html
 						with: 'Home' ].
 			html tbsBreadcrumbSection
 				beActive;
-				with: 'Sessions' ]
+				with: 'Experiments' ]

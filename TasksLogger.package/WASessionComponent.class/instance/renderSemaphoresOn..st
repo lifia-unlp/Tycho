@@ -8,4 +8,4 @@ renderSemaphoresOn: html
 				ifNotEmpty: [ :semaphores | 
 					semaphoreComponent globals: semaphores.
 					html render: semaphoreComponent ]
-				ifEmpty: [ html paragraph: 'No semaphores are being used in this session' ] ]
+				ifEmpty: [ html paragraph: 'No semaphores are being used in this experiment' ] ]

@@ -7,4 +7,4 @@ renderDeleteButtonOn: html
 				beDanger;
 				callback: [ self deleteSession.
 					self answer ];
-				value: 'Delete this session' ]
+				value: 'Delete this experiment' ]
