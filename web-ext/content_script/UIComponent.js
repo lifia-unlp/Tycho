@@ -28,7 +28,7 @@ class UIComponent {
     }
 
     submitResults() {
-        this.model.startTime = new Date(this.model.startTime).toLocaleString();
+        this.model.startTime = new Date(this.model.startTime).toLocaleString('en-US');
         BackgroundProxy.getSingleton().submitResultsOfTask(this.model);
     }
 

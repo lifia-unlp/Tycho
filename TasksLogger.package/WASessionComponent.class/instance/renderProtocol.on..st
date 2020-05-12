@@ -11,6 +11,10 @@ renderProtocol: protocol on: html
 						with: [ html tbsGlyphIcon iconPencil title: 'Edit this protocol' ].
 					html space.
 					html anchor
+						callback: [ self cloneProtocol: protocol ];
+						with: [ html tbsGlyphIcon iconPlusSign title: 'Copy this protocol' ].
+					html space.
+					html anchor
 						callback: [ self deleteProtocol: protocol ];
 						with: [ html tbsGlyphIcon iconTrash title: 'Delete this protocol' ].
 					html space.

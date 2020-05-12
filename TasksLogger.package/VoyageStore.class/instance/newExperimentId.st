@@ -1,3 +1,3 @@
-ids
+instance creation
 newExperimentId
-	^Time millisecondClockValue printString.
+	^ Time millisecondClockValue printString.

@@ -4,6 +4,7 @@ renderSessionsOn: html
 	html heading: 'Experiments'.
 	headerBlock := [ html
 		tableHeading: 'Name';
+		tableHeading: 'Experiment ID';
 		tableHeading: 'Notes';
 		tableHeading: 'Actions' ].
 	tableBlock := [ html tableHead: headerBlock.

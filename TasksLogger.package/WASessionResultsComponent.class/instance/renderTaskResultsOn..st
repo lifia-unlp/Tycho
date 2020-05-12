@@ -3,6 +3,7 @@ renderTaskResultsOn: html
 	| headerBlock tableBlock |
 	headerBlock := [ html
 		tableHeading: 'Sample ID';
+		tableHeading: 'Protocol ID';
 		tableHeading: 'Task name';
 		tableHeading: 'Start Time';
 		tableHeading: 'Duration';

@@ -1,0 +1,3 @@
+ids
+newSessionId
+  ^self subclassResponsibility

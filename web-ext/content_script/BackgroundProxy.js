@@ -50,6 +50,13 @@ class BackgroundProxy {
         });
     }
 
+     async joinSession(id) {
+        return await this.send({
+            methodName: "joinSession",
+            arguments: { id: id }
+        });
+    }
+
     async leaveExperiment() {
         return await this.send({
             methodName: "leaveExperiment",

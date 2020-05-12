@@ -1,7 +1,8 @@
-callbacks
+adding
 addNewSession
-	| newSession |
-	newSession := ExperimentSession name: 'Unnamed' notes: ''.
+	| newSession idSession |
+	idSession := self store newSessionId.
+	newSession := ExperimentSession id: idSession name: 'Unnamed' notes: ''.
 	self
 		call: (WASessionComponent on: newSession)
 		onAnswer: [ :answer | 

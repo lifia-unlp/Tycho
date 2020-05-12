@@ -45,13 +45,31 @@ class ServerAPI {
     }
 
     /**
-     * @id the id of the session to retrieve
+     * @id the id of the protocol to retrieve
      * @returns a Promise that resolves to the server response
      */
     getExperimentDesignFromServer(id) {
         return new Promise((resolve, reject) => {
             axios
                 .get(this.apiUrl + "/protocols/" + id)
+                .then(response => {
+                    resolve(response);
+                })
+                .catch(error => {
+                    console.log("catched the error");
+                    reject(error);
+                });
+        });
+    }
+
+     /**
+     * @id the id of the session to retrieve
+     * @returns a Promise that resolves to the server response
+     */
+    getExperimentDesignForSessionFromServer(id) {
+        return new Promise((resolve, reject) => {
+            axios
+                .get(this.apiUrl + "/session/" + id + "/protocols")
                 .then(response => {
                     resolve(response);
                 })

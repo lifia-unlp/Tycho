@@ -14,7 +14,10 @@ class HelloGoodbyeComponent extends UIComponent {
                 "</h2><p></p>"
         );
         messageDiv.append(
-            '<p><input type="text" size="10" id="experiment"></p>'
+            '<p><label>Protocol ID (ex-Experiemnt) </label><br><input type="text" size="10" id="protocolId"></p>'
+        );
+        messageDiv.append(
+            '<p><label>Session ID </label><br><input type="text" size="10" id="sessionId"></p>'
         );
         messageDiv.append(
             '<p><input id="join-button" type="submit" class="tracker-btn" value="' +
@@ -28,9 +31,12 @@ class HelloGoodbyeComponent extends UIComponent {
     }
 
     join() {
-        let experiment = document.getElementById("experiment").value;
-        if (experiment) {
-            BackgroundProxy.getSingleton().joinExperiment(experiment);
+        let protocolId = document.getElementById("protocolId").value;
+        let sessionId = document.getElementById("sessionId").value;
+        if (protocolId) {
+            BackgroundProxy.getSingleton().joinExperiment(protocolId);
+        } else if (sessionId){
+            BackgroundProxy.getSingleton().joinSession(sessionId);
         }
         this.done();
     }
