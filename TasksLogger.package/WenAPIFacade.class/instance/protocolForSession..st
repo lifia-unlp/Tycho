@@ -4,6 +4,7 @@ protocolForSession: id
 	monitor
 		critical: [ json := nil.
 			resp := self store protocolForSession: id.
+			self store savePending.
 			resp
 				ifNotNil: [ json := RestResponseWriter new
 						experimentAsJson: resp

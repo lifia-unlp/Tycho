@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "juliandcf 5/18/2020 08:39",
+	"super" : "Object",
+	"category" : "TasksLogger-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"weight",
+		"cantJoins"
+	],
+	"name" : "ExperimentProtocolExecution",
+	"type" : "normal"
+}

@@ -1,10 +1,11 @@
-rendering-protocols
+rendering
 renderProtocol: protocol on: html
 	html
 		tableRow: [ html
 				tableData: [ html anchor
 						callback: [ self editProtocol: protocol ];
 						with: protocol name ];
+				tableData: (protocol weight roundTo: 0.01) asString , '%';	
 				tableData: protocol id;
 				tableData: [ html anchor
 						callback: [ self editProtocol: protocol ];

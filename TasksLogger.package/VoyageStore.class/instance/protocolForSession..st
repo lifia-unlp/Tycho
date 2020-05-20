@@ -1,6 +1,8 @@
 sessions
 protocolForSession: aString
-| session |
+| session protocolSelected|
  session := repository selectOne: ExperimentSession where: [ :each | each id = aString ].
-"random protocol"
-^ session protocols atRandom
+ protocolSelected := session getProtocol.
+ self rememberToSave: protocolSelected.
+ self rememberToSave: session.
+ ^ protocolSelected.

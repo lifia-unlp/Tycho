@@ -11,7 +11,9 @@
 		"notes",
 		"protocols",
 		"semaphores",
-		"variables"
+		"variables",
+		"strategyProtocols",
+		"totalJoins"
 	],
 	"name" : "ExperimentSession",
 	"type" : "normal"

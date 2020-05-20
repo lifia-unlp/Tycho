@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "Casco 6/25/2018 13:58",
+	"commentStamp" : "juliandcf 5/18/2020 08:15",
 	"super" : "Object",
 	"category" : "TasksLogger-Model",
 	"classinstvars" : [ ],
@@ -10,7 +10,8 @@
 		"tasks",
 		"name",
 		"notes",
-		"samples"
+		"samples",
+		"dataExecution"
 	],
 	"name" : "ExperimentProtocol",
 	"type" : "normal"

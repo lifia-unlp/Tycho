@@ -10,9 +10,10 @@ renderProtocolsOn: html
 						tbsTable: [ html
 								tableHead: [ html
 										tableHeading: 'Protocol name';
+										tableHeading: 'Protocol weight';
 										tableHeading: 'Access code';
 										tableHeading: 'Actions' ].
 							html
 								tableBody: [ protocols do: [ :protocol | self renderProtocol: protocol on: html ] ] ] ]
 				ifEmpty: [ html paragraph: 'There are no protocols in this experiment' ] ].
-	self renderProtocolsInputOn: html
+	self renderProtocolsInputOn: html.

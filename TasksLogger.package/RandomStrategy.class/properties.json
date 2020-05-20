@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "juliandcf 5/16/2020 09:17",
+	"super" : "ExperimentSessionStrategy",
+	"category" : "TasksLogger-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RandomStrategy",
+	"type" : "normal"
+}

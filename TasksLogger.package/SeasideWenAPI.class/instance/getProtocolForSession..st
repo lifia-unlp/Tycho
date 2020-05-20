@@ -6,7 +6,7 @@ getProtocolForSession: id
 	experimentAsJson := api protocolForSession: id.
 	^ experimentAsJson
 		ifNil: [ self requestContext
-				respond: [ :response |
+				respond: [ :response | 
 					response
 						headerAt: 'Access-Control-Allow-Origin' put: '*';
 						headerAt: 'Access-Control-Allow-Credentials' put: 'true';
@@ -14,7 +14,7 @@ getProtocolForSession: id
 						status: WAResponse statusNotFound;
 						nextPutAll: 'There are no sessions with id: ' , id ] ]
 		ifNotNil: [ self requestContext
-				respond: [ :response |
+				respond: [ :response | 
 					response
 						headerAt: 'Access-Control-Allow-Origin' put: '*';
 						headerAt: 'Access-Control-Allow-Credentials' put: 'true';

@@ -2,7 +2,7 @@ adding
 addNewSession
 	| newSession idSession |
 	idSession := self store newSessionId.
-	newSession := ExperimentSession id: idSession name: 'Unnamed' notes: ''.
+	newSession := ExperimentSession id: idSession name: 'Unnamed' notes: ''.	
 	self
 		call: (WASessionComponent on: newSession)
 		onAnswer: [ :answer | 

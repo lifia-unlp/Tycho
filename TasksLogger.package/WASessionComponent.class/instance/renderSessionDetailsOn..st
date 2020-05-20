@@ -5,4 +5,4 @@ renderSessionDetailsOn: html
 	html render: self notesEditor.
 	html heading level4 with: 'Experiment ID '.
 	html render: self sessionId.
-	self renderProtocolsFormOn: html
+	self renderProtocolsFormOn: html.

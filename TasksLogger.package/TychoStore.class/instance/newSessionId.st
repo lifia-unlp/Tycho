@@ -1,3 +1,3 @@
 ids
 newSessionId
-  ^self subclassResponsibility
+  ^self subclassResponsibility 
