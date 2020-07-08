@@ -1,3 +1,3 @@
-callbacks
+scripts
 script
-	^ 'console.log("prueba_script")'.
+	^ self validateWeightJs.

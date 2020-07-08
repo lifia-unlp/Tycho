@@ -1,8 +1,8 @@
-sessions
-protocolForSession: aString
-| session protocolSelected|
+request handlers
+requestProtocolForSession: aString
+| session protocolSelected |
  session := repository selectOne: ExperimentSession where: [ :each | each id = aString ].
  protocolSelected := session getProtocol.
- self rememberToSave: protocolSelected.
- self rememberToSave: session.
+ self save: protocolSelected.
+ self save: session.
  ^ protocolSelected.

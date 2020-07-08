@@ -1,5 +1,6 @@
-global
+weights-methods
 canExecutedForWeight: aSession
-	(aSession totalJoins = 0) ifFalse:   [ 
-		^ ((self cantJoins / aSession totalJoins) asFloat * 100 < self weight)
- ] ifTrue: [ ^ true ]
+	aSession totalJoins = 0
+		ifFalse:
+			[ ^ (self ratioOfJoins: aSession) < self weight ]
+		ifTrue: [ ^ true ]

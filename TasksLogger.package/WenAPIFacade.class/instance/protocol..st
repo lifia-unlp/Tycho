@@ -3,7 +3,7 @@ protocol: id
 	| resp json |
 	monitor
 		critical: [ json := nil.
-			resp := self store protocolId: id.
+			resp := self store requestProtocolId: id.
 			resp
 				ifNotNil: [ json := RestResponseWriter new
 						experimentAsJson: resp

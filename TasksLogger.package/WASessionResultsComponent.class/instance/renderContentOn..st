@@ -4,6 +4,7 @@ renderContentOn: html
 		level3;
 		with: 'Results'.
 	self
+		renderSummaryJoinsOn: html;
 		renderFiltersOn: html;
 		renderActionsOn: html;
 		renderTaskResultsOn: html

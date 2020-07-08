@@ -4,8 +4,9 @@ renderSession: aSession on: html
 		tableRow: [ html
 				tableData: [ html anchor
 						callback: [ self showDetailsOfSession: aSession ];
-						with: aSession name ];
-				tableData: [ html text: aSession id];
+						with: aSession name.
+					self badgeAbTesting: aSession on: html];
+				tableData: [ html text: aSession id ];
 				tableData:
 					(aSession notes size < 100
 						ifTrue: [ aSession notes ]

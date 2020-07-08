@@ -8,12 +8,12 @@ renderProtocolsOn: html
 				ifNotEmpty: [ :protocols | 
 					html
 						tbsTable: [ html
-								tableHead: [ html
-										tableHeading: 'Protocol name';
-										tableHeading: 'Protocol weight';
+								tableHead: [ html tableHeading: 'Protocol name'.
+									self experimentSession abTesting
+										ifTrue: [ html tableHeading: 'Protocol weight' ].
+									html
 										tableHeading: 'Access code';
 										tableHeading: 'Actions' ].
-							html
-								tableBody: [ protocols do: [ :protocol | self renderProtocol: protocol on: html ] ] ] ]
+							html tableBody: [ protocols do: [ :protocol | self renderProtocol: protocol on: html ] ] ] ]
 				ifEmpty: [ html paragraph: 'There are no protocols in this experiment' ] ].
-	self renderProtocolsInputOn: html.
+	self renderProtocolsInputOn: html

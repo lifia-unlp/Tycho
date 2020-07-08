@@ -4,8 +4,10 @@ renderProtocol: protocol on: html
 		tableRow: [ html
 				tableData: [ html anchor
 						callback: [ self editProtocol: protocol ];
-						with: protocol name ];
-				tableData: (protocol weight roundTo: 0.01) asString , '%';	
+						with: protocol name ].
+			self experimentSession abTesting
+				ifTrue: [ html tableData: (self renderFloatToPercentage: protocol weight) ].
+			html
 				tableData: protocol id;
 				tableData: [ html anchor
 						callback: [ self editProtocol: protocol ];
