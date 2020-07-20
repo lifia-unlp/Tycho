@@ -1,7 +1,8 @@
 rendering
 renderMainContentOn: html
 	self renderSessionDetailsOn: html.
-	html render: sessionResultsComponent.
+	self renderSummaryJoinsOn: html.
+	"html render: sessionResultsComponent."
 	self
 		renderDeleteButtonOn: html;
 		renderButtonsOn: html

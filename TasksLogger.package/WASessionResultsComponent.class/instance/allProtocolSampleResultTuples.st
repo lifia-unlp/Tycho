@@ -9,5 +9,5 @@ allProtocolSampleResultTuples
 						collect: [ :aResult | 
 							{aProtocol.
 							aSample.
-							aResult} ] ] ].
+							aResult} ] ] ].	
 	^ selectedProtocolSampleTaskTuples

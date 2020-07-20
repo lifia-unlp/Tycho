@@ -1,7 +1,10 @@
-rendering
+rendering-summary-results
 renderSummaryJoinsOn: html
-	html heading level4 with: 'Summary of joins executions'.
-	session protocols
+	html heading level3 with: 'Summary of joins executions'.
+	html anchor
+		callback: [ self viewSessionResults: self experimentSession ];
+		with: 'See more details'.
+	self experimentSession protocols
 		ifNotEmpty: [ :protocols | 
 			html
 				tbsTable: [ html

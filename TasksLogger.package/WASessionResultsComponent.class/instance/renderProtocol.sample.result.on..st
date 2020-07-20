@@ -7,7 +7,7 @@ renderProtocol: protocol sample: sample result: result on: html
 				tableData: result task name;
 				tableData: result startTime printString;
 				tableData: (result ellapsedMs / 1000) asFloat printString;
-				tableData: (NeoJSONWriter toStringPretty: result properties);
-				tableData: [ html anchor
+				tableData: (NeoJSONWriter toStringPretty: result properties).
+				"tableData: [ html anchor
 						callback: [ self showKoboldEventsFor: result ];
-						with: result koboldReport size asString ] ]
+						with: result koboldReport size asString ]" ] 

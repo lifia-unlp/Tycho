@@ -6,6 +6,7 @@ class DOMCollectorComponent extends UIComponent {
 
   //This is not the right hook to do this. Need a new one
   render() {
+    this.reloadListeners();
     super.render();
     if (!this.model.startTime || this.model.paused) {
       this.showOverlay();
@@ -85,6 +86,10 @@ class DOMCollectorComponent extends UIComponent {
     this.model.paused = false;
     this.model.startTime = new Date().getTime();
     this.model.ellapsedMs = 0;
+    this.model.clicks = 0;
+    this.model.inactiveTime = 0;
+    this.model.distance = 0;
+    ListenersHandler.addNewListeners();
     this.setModel(this.model);
   }
 
@@ -100,7 +105,10 @@ class DOMCollectorComponent extends UIComponent {
     this.setModel(this.model);
   }
 
-  finishTask() {
+  async finishTask() {
+    this.model.clicks = await ListenersHandler.removeCountClick();
+    this.model.inactiveTime = await ListenersHandler.removeInactive();
+    this.model.distance = await ListenersHandler.removeDistance();
     this.model.paused = false;
     this.model.ellapsedMs += new Date().getTime() - this.model.startTime;
     this.model.finished = true;
@@ -110,7 +118,10 @@ class DOMCollectorComponent extends UIComponent {
     this.done();
   }
 
-  abandonTask() {
+  async abandonTask() {
+    this.model.clicks = await CountClicksListener.getSingleton().removeListener();
+    this.model.inactiveTime = await InactiveListenerHandler.getSingleton().removeListener();
+    this.model.distance = await DistanceListenerHandler.getSingleton().removeListener();
     this.model.paused = false;
     this.model.ellapsedMs += new Date().getTime() - this.model.startTime;
     this.model.finished = false;
@@ -146,4 +157,17 @@ class DOMCollectorComponent extends UIComponent {
     tracker.append(" ");
     tracker.on("click", "#" + id, func);
   }
+
+  reloadListeners(){
+    if(this.isActiveTask()){
+      ListenersHandler.continueListeners();
+    }else{
+      ListenersHandler.pauseListeners();
+    }
+  }
+
+  isActiveTask() {
+    return (this.model && !this.model.paused && !this.model.abandoned && !this.model.finished && this.model.startTime > 0);
+  }
+
 }

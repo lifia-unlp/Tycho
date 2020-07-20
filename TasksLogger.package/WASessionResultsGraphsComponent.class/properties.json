@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "WAAbstractComponent",
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"session"
+	],
+	"name" : "WASessionResultsGraphsComponent",
+	"type" : "normal"
+}

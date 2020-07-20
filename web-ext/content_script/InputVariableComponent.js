@@ -31,4 +31,5 @@ class InputVariableComponent extends UIComponent {
         super.render();
         this.showOverlay();
     }
+
 }

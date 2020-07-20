@@ -1,6 +1,6 @@
-rendering
+rendering-summary-results
 renderSummaryJoinsProtocols: protocol on: html
 	html
 		tableRow: [ html tableData: protocol name.
 			html tableData: protocol cantJoins.
-			html tableData with: ((protocol ratioOfJoins: session) asNumber asFloat truncateTo: 0.01) asString , '%' ]
+			html tableData with: (self renderFloatToPercentage: (protocol ratioOfJoins: self experimentSession)) ]

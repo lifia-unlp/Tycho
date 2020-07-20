@@ -9,7 +9,7 @@ generateInputsProtocolsWeight: html
 						value: protocol dataExecution weight;
 						callback: [ :value | self changeWeight: value toProtocol: protocol ];
 						id: 'protocolWeightValue';
-						onChange: 'validateWeight()';
+						"onChange: 'validateWeight()';"
 						size: 7;
 						attributeAt:'step' put:'0.01';
 						pattern: '[-+]?[0-9]*[.,]?[0-9]+'.

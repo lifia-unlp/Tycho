@@ -7,8 +7,8 @@ renderTaskResultsOn: html
 		tableHeading: 'Task name';
 		tableHeading: 'Start Time';
 		tableHeading: 'Duration';
-		tableHeading: 'Properties';
-		tableHeading: 'Kobold events' ].
+		tableHeading: 'Properties'
+		"tableHeading: 'Kobold events'" ].
 	tableBlock := [ html tableHead: headerBlock.
 	html
 		tableBody: [ self filteredProtocolSampleTaskTuples
