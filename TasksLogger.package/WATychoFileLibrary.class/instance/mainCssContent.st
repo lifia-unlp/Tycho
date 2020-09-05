@@ -151,7 +151,7 @@ mainCssContent
 		}
 
 	#tasksList li .panel{
-		height: 280px;
+		
 		}
 	#tasksList .panel-heading{ cursor: grab }
 	#tasksList .panel-body{ 

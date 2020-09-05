@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "juliandcf 7/27/2020 18:13",
+	"super" : "WAComponent",
+	"category" : "TasksLogger-Seaside-graphs",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name"
+	],
+	"name" : "AbstractGraphTask",
+	"type" : "normal"
+}

@@ -1,28 +1,32 @@
 let distanceListenerHandlerSingleton = null;
 
-class DistanceListenerHandler{
-	
+class DistanceListenerHandler extends Listener {
+
+	constructor() {
+		super("distance", "captureDistance");
+	}
+
 	static getSingleton() {
-	    if (distanceListenerHandlerSingleton == null) {
-	        distanceListenerHandlerSingleton = new DistanceListenerHandler();
-	    };
-	    return distanceListenerHandlerSingleton;
+		if (distanceListenerHandlerSingleton == null) {
+			distanceListenerHandlerSingleton = new DistanceListenerHandler();
+		};
+		return distanceListenerHandlerSingleton;
 	};
 
-	calculateDistance = async function(e) {
+	calculateDistance = async function (e) {
 		var yTravelled = 0;
 		var xTravelled = 0;
 		var objectStorage = await BrowserStorageLocalHandler.get("distance");
 		var prevDistance = new Distance().setDataFromStorage(objectStorage);
 		prevDistance.y && (yTravelled = Math.abs(e.pageY - prevDistance.y));
-        prevDistance.x && (xTravelled = Math.abs(e.pageX - prevDistance.x));
+		prevDistance.x && (xTravelled = Math.abs(e.pageX - prevDistance.x));
 		var totalDistance = prevDistance.totalDistance + yTravelled + xTravelled;
-        var newDistance = new Distance().setData(totalDistance, e.pageX, e.pageY);
-		BrowserStorageLocalHandler.set("distance",newDistance);
+		var newDistance = new Distance().setData(totalDistance, e.pageX, e.pageY);
+		BrowserStorageLocalHandler.set("distance", newDistance);
 	}.bind(this);
 
 	addClearListener() {
-		BrowserStorageLocalHandler.set("distance",new Distance());
+		BrowserStorageLocalHandler.set("distance", new Distance());
 		this.addListener();
 	};
 
@@ -50,14 +54,14 @@ class Distance {
 		return this;
 	}
 
-	setDataFromStorage(objectStorage){
+	setDataFromStorage(objectStorage) {
 		this.totalDistance = objectStorage.distance.totalDistance;
 		this.x = objectStorage.distance.x;
 		this.y = objectStorage.distance.y;
 		return this;
 	}
 
-	initialize(){
+	initialize() {
 		this.totalDistance = 0;
 		this.y = 0;
 		this.x = 0;

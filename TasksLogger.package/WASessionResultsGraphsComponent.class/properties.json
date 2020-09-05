@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"session"
+		"session",
+		"graphsComponents"
 	],
 	"name" : "WASessionResultsGraphsComponent",
 	"type" : "normal"

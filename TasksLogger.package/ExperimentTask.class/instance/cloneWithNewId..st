@@ -6,6 +6,7 @@ cloneWithNewId: anId
 		name: self name
 		notes: self notes
 		componentClassname: self componentClassname.
+	
 	self properties
-		do: [ :each | clone addProperty: each name describedBy: each description value: each value ].
+		do: [ :each | clone addProperty: each name describedBy: each description value: each value typeInput: each typeInput ].
 	^ clone

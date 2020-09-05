@@ -2,8 +2,8 @@
   "name": "__MSG_extensionName__",
   "description": "__MSG_extensionDescription__",
   "manifest_version": 2,
-  "version": "1.2.1",
-  "homepage_url": "http://tycho.lifia.info.unlp.edu.ar/",
+  "version": "2.0.0",
+  "homepage_url": "http://tycho.lifia.info.unlp.edu.ar/tycho",
   "content_security_policy" : "connect-src  http://tycho.lifia.info.unlp.edu.ar/tycho-api/protocols/ http://tycho.lifia.info.unlp.edu.ar/tycho-api/task-results/ http://tycho.lifia.info.unlp.edu.ar/tycho-api/semaphores/ http://tycho.lifia.info.unlp.edu.ar/tycho-api/variables/ http://tycho.lifia.info.unlp.edu.ar/tycho-api/session/; script-src 'self' 'unsafe-eval'; object-src 'self'",
   "default_locale": "en",
   "options_ui": {
@@ -48,6 +48,7 @@
         "node_modules/jquery/dist/jquery.min.js",
         "shared/Facade.js",
         "shared/BrowserStorageLocalHandler.js",
+        "content_script/listeners/Listener.js",
         "content_script/listeners/ListenersHandler.js",
         "content_script/listeners/CountClicksListener.js",
         "content_script/listeners/InactiveListenerHandler.js",

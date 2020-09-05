@@ -38,11 +38,11 @@ var startBackground = function(config) {
     updateIcon();
 };
 
-browser.storage.local.get("config").then(data => {
-    var config = data.config;
-    if (!config) {
-        config = { apiUrl: "http://tycho.lifia.info.unlp.edu.ar/tycho-api" };
-        browser.storage.local.set({ config });
-    }
-    startBackground(config);
-});
+
+let data = BrowserStorageLocalHandler.get('config');
+let config = data.config;
+if(!config){
+    config = { apiUrl: "http://tycho.lifia.info.unlp.edu.ar/tycho-api" };
+    browser.storage.local.set({ config });
+}
+startBackground(config);

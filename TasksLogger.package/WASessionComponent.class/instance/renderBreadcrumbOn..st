@@ -3,7 +3,7 @@ renderBreadcrumbOn: html
 	html
 		tbsBreadcrumb: [ html
 				tbsBreadcrumbSection: [ html anchor
-						callback: [ self answer ];
+						callback: [ self call: WATychoHomeComponent new ];
 						with: 'Home' ].
 			html tbsBreadcrumbSection
 				beActive;

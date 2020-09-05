@@ -2,10 +2,12 @@ class TaskInstructionsComponent extends UIComponent {
   constructor(model) {
     super(model);
     this.lockedDown = true;
+    this.listenersHandler = ListenersHandler.getSingleton();
   }
 
   //This is not the right hook to do this. Need a new one
   render() {
+    this.reloadListeners();
     super.render();
     if (!this.model.startTime || this.model.paused) {
       this.showOverlay();
@@ -16,11 +18,11 @@ class TaskInstructionsComponent extends UIComponent {
     const me = this;
     const cssClass = (!this.model.startTime || this.model.paused) ? 'trackerNotStartedOrPaused' : 'trackerRunning';
     let tracker = $(
-      '<div id="tracker" class="'+ cssClass + '"><span id="trackerInstructions">' +
-        this.model.instructions +
-        "</span><p id='buttonsInstructions'> Click <strong>Start</strong> to begin with the task, and <strong>Finish</strong> when you're done.</p></div>"
+      '<div id="tracker" class="' + cssClass + '">Basic Task instructions with <span id="trackerInstructions">' +
+      this.model.instructions +
+      "</span><p id='buttonsInstructions'> Click <strong>Start</strong> to begin with the task, and <strong>Finish</strong> when you're done.</p></div>"
     );
-    tracker.css("bottom","0");
+    tracker.css("bottom", "0");
     this.addButton(
       tracker,
       "toggleTrackerPositionButton",
@@ -85,6 +87,10 @@ class TaskInstructionsComponent extends UIComponent {
     this.model.paused = false;
     this.model.startTime = new Date().getTime();
     this.model.ellapsedMs = 0;
+    this.model.clicks = 0;
+    this.model.inactiveTime = 0;
+    this.model.distance = 0;
+    this.listenersHandler.addNewListeners(this.model);
     this.setModel(this.model);
   }
 
@@ -100,7 +106,8 @@ class TaskInstructionsComponent extends UIComponent {
     this.setModel(this.model);
   }
 
-  finishTask() {
+  async finishTask() {
+    this.model = await this.listenersHandler.finishCaptureEvents(this.model);
     this.model.paused = false;
     this.model.ellapsedMs += new Date().getTime() - this.model.startTime;
     this.model.finished = true;
@@ -110,7 +117,8 @@ class TaskInstructionsComponent extends UIComponent {
     this.done();
   }
 
-  abandonTask() {
+  async abandonTask() {
+    this.model = await this.listenersHandler.finishCaptureEvents(this.model);
     this.model.paused = false;
     this.model.ellapsedMs += new Date().getTime() - this.model.startTime;
     this.model.finished = false;
@@ -121,13 +129,13 @@ class TaskInstructionsComponent extends UIComponent {
   }
 
   toggleTrackerPosition() {
-    this.lockedDown = ! this.lockedDown;
+    this.lockedDown = !this.lockedDown;
     if (this.lockedDown) {
-      this.component.css("bottom","0");
-      this.component.css("top","");
+      this.component.css("bottom", "0");
+      this.component.css("top", "");
     } else {
-      this.component.css("top","0");
-      this.component.css("bottom","");
+      this.component.css("top", "0");
+      this.component.css("bottom", "");
     };
 
   }
@@ -145,5 +153,17 @@ class TaskInstructionsComponent extends UIComponent {
     }
     tracker.append(" ");
     tracker.on("click", "#" + id, func);
+  }
+
+  reloadListeners() {
+    if (this.isActiveTask()) {
+      this.listenersHandler.continueListeners(this.model);
+    } else {
+      this.listenersHandler.pauseListeners(this.model);
+    }
+  }
+
+  isActiveTask() {
+    return (this.model && !this.model.paused && !this.model.abandoned && !this.model.finished && this.model.startTime > 0);
   }
 }

@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "juliandcf 7/27/2020 18:10",
+	"super" : "AbstractGraphTask",
+	"category" : "TasksLogger-Seaside-graphs",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"susQuestions",
+		"susTypeResponses",
+		"susColorTypeResponses",
+		"susScoresRange"
+	],
+	"name" : "SUSComponentGraph",
+	"type" : "normal"
+}

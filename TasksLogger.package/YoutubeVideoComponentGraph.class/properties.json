@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "juliandcf 7/27/2020 18:11",
+	"super" : "AbstractGraphTask",
+	"category" : "TasksLogger-Seaside-graphs",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "YoutubeVideoComponentGraph",
+	"type" : "normal"
+}

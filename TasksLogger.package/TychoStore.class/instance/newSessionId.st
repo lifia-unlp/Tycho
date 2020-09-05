@@ -1,3 +1,3 @@
 ids
 newSessionId
-  ^self subclassResponsibility 
+  ^ 'E' , self newExperimentId.

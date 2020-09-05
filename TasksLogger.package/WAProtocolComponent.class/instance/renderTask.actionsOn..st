@@ -3,7 +3,7 @@ renderTask: aTask actionsOn: html
 	html div
 		class: #actions;
 		with: [ html anchor
-				callback: [ self showDetailsOfTask: aTask ];
+				callback: [ 	self showDetailsOfTask: aTask ];
 				with: [ html tbsGlyphIcon iconEdit.
 					html
 						space;

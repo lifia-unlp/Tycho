@@ -7,7 +7,7 @@ renderBreadcrumbOn: html
 						with: 'Home' ].
 			html
 				tbsBreadcrumbSection: [ html anchor
-						callback: [ self answer ];
+						callback: [ self showDetailsOfSession: session ];
 						with: 'Experiment' ].
 			html tbsBreadcrumbSection
 				beActive;

@@ -1,26 +1,28 @@
 let countClicksListener = null;
 
-class CountClicksListener {
+class CountClicksListener extends Listener {
+
+	constructor() {
+		super("clicks", "captureClicks");
+	}
 
 	static getSingleton() {
-	    if (countClicksListener == null) {
-	        countClicksListener = new CountClicksListener();
-	    };
-	    return countClicksListener;
+		if (countClicksListener == null) {
+			countClicksListener = new CountClicksListener();
+		};
+		return countClicksListener;
 	};
 
 	countClicks = async function count(event) {
 		var value = await BrowserStorageLocalHandler.get("countClicks");
 		var eventsArray = value.countClicks;
 		eventsArray.push(new ClickEvent(event));
-		BrowserStorageLocalHandler.set("countClicks",eventsArray);
-		//console.log(eventsArray);
-		//console.log("Click nº: " + eventsArray.length);
+		BrowserStorageLocalHandler.set("countClicks", eventsArray);
 	}.bind(this);
 
 
 	addClearListener() {
-		BrowserStorageLocalHandler.set("countClicks",[]);
+		BrowserStorageLocalHandler.set("countClicks", []);
 		this.addListener();
 	};
 
@@ -29,18 +31,18 @@ class CountClicksListener {
 	};
 
 	async removeListener() {
-		 document.removeEventListener('click', this.countClicks);
-		 var capturedEvents = await BrowserStorageLocalHandler.get("countClicks");
-		 return capturedEvents.countClicks;
+		document.removeEventListener('click', this.countClicks);
+		var capturedEvents = await BrowserStorageLocalHandler.get("countClicks");
+		return capturedEvents.countClicks;
 	};
-	
+
 }
 
 class ClickEvent {
-	
+
 	constructor(event) {
-		this.id = event.path[0].id;
-		this.tag = event.path[0].localName;
+		this.id = event.srcElement.id;
+		this.tag = event.srcElement.localName;
 		this.timestamp = new Date().getTime();
 		this.url = event.srcElement.baseURI;
 		this.x = event.x;

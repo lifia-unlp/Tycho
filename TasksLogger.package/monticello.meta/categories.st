@@ -6,3 +6,4 @@ SystemOrganization addCategory: 'TasksLogger-Model-Tests'!
 SystemOrganization addCategory: 'TasksLogger-Persistence'!
 SystemOrganization addCategory: 'TasksLogger-REST api'!
 SystemOrganization addCategory: 'TasksLogger-Seaside'!
+SystemOrganization addCategory: 'TasksLogger-Seaside-graphs'!

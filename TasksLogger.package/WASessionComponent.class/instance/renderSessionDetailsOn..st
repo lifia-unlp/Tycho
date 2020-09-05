@@ -5,6 +5,7 @@ renderSessionDetailsOn: html
 			self badgeAbTesting: self experimentSession on: html ].
 	html render: self nameEditor.
 	html render: self notesEditor.
-	html heading level4 with: 'Experiment ID '.
-	html render: self sessionId.
+	self experimentSession abTesting
+		ifTrue: [ html heading level4 with: 'Experiment ID '.
+			html render: self sessionId ].
 	self renderProtocolsFormOn: html

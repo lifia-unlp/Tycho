@@ -8,7 +8,8 @@
 	"instvars" : [
 		"name",
 		"description",
-		"value"
+		"value",
+		"typeInput"
 	],
 	"name" : "ExperimentTaskProperty",
 	"type" : "normal"

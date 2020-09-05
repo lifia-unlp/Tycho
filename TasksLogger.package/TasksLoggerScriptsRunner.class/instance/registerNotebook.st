@@ -8,5 +8,6 @@ registerNotebook
 		addLibrary: TBSDeploymentLibrary;
 		addLibrary: TBSJasnyDeploymentLibrary;
 		addLibrary: WATychoFileLibrary;
+		addLibrary: Highcharts8OnlineLibrary;
 		exceptionHandler: WADebugErrorHandler;
 		sessionClass: WATychoSession
