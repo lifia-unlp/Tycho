@@ -1,12 +1,12 @@
 rendering
-renderTextAreaFor: property On: html
+renderTextAreaFor: property disabled: disabled on: html
 	html
-		tbsFormGroup: [ html label
+		tbsFormGroup with: [ html label
 				for: 'prop' , property name;
 				with: property name uncameled.
 			html tbsHelpBlock: property description.
-			html textArea
+			html textArea disabled:disabled;
 				on: #value of: property;
 				tbsFormControl;
 				id: 'prop' , property name;
-				placeholder: 'Provide a value for this property' ]
+				placeholder: 'Provide a value for this property']

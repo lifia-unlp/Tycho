@@ -50,7 +50,7 @@ class BackgroundProxy {
         });
     }
 
-     async joinSession(id) {
+    async joinSession(id) {
         return await this.send({
             methodName: "joinSession",
             arguments: { id: id }

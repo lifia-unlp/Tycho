@@ -21,4 +21,8 @@ class BrowserStorageLocalHandler {
 		object[key] = value;
 		browser.storage.local.set(object);
 	}
+
+	static remove(key){
+		browser.storage.local.remove(key);
+	}
 }

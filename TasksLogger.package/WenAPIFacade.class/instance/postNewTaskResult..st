@@ -1,8 +1,10 @@
 request handlers
 postNewTaskResult: jsonBody
-	| task taskResult sample protocol payload |
+	| task taskResult sample protocol payload jsonBodyDecode|
 	monitor
-		critical: [ payload := NeoJSONReader fromString: jsonBody.
+		critical: [
+			jsonBodyDecode := (jsonBody encodeWith: #latin1) utf8Decoded.
+			payload := NeoJSONReader fromString: jsonBodyDecode.
 			protocol := self experimentFromParameters: payload.
 			sample := self sampleFromParameters: payload.
 			(protocol samples includes: sample)

@@ -13,4 +13,7 @@ generateBodyTaskFor: aTask of: aProtocol on: html
 								tbsColumn: [ html break.
 									self renderBarExecutionInactivtyFor: tasksResults on: html ] ]
 						ifFalse: [ html tbsRow: [ html tbsColumn: [ self renderSuccessfullyRateFor: tasksResults on: html ] ] ] ]
-				mediumSize: 9 ]
+				mediumSize: 9.
+				self renderTagsEventsFor: tasksResults of: aTask on: html.
+
+				 ]

@@ -17,9 +17,11 @@ renderProtocol: protocol on: html
 						callback: [ self cloneProtocol: protocol ];
 						with: [ html tbsGlyphIcon iconPlusSign title: 'Copy this protocol' ].
 					html space.
-					html anchor
+					protocol hasExecutions ifFalse: [ html anchor
 						callback: [ self deleteProtocol: protocol ];
-						with: [ html tbsGlyphIcon iconTrash title: 'Delete this protocol' ].
+						with: [ html tbsGlyphIcon iconTrash title: 'Delete this protocol' ]. ] 
+					ifTrue: [ html tbsGlyphIcon iconTrash style:'color:red'; 
+					title: 'this protocol cannot be removed because it has executions' ]. 
 					html space.
 					html anchor
 						callback: [ self printHandoutsFor: protocol ];

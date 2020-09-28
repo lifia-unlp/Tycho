@@ -1,0 +1,129 @@
+{
+  "extensionName": {
+    "message": "Tycho add-on",
+    "description": "Name of the extension."
+  },
+
+  "extensionDescription": {
+    "message": "Tycho es una herramienta para pruebas de usuarios finales moderadas. Es el componente cliente que se ejecuta como una extensión del navegador.",
+    "description": "Description of the extension."
+  },
+
+  "helloGoodbyeWelcomeTitle": {
+    "message": "Ingrese el código de acceso",
+    "description": "Título de HelloGoodbyeComponent."
+  },
+
+  "helloGoodbyeJoinButtonText": {
+    "message": "Unirse",
+    "description": "The text of the join button"
+  },
+
+  "helloGoodbyeThanksTitle": {
+    "message": "Gracias por participar en este experimento",
+    "description": "Thank you text for the HelloGoodbyeComponent."
+  },
+
+  "helloGoodbyeYoureWelcomeButtonText": {
+    "message": "De nada!",
+    "description": "The text of the you're welcome button"
+  },
+
+  "messageComponentAcceptButtonText": {
+    "message": "Entendido",
+    "description": "The text of an understood button"
+  },
+
+  "submitButtonText": {
+    "message": "Enviar",
+    "description": "The text of an submit button"
+  },
+
+  "startTaskButtonTest": {
+    "message": "Comenzar",
+    "description": "The text of a start button"
+  },
+  "pauseTaskButtonTest": {
+    "message": "Pausar",
+    "description": "The text of a pause button"
+  },
+  "resumeTaskButtonTest": {
+    "message": "Reanudar",
+    "description": "The text of a resume button"
+  },
+  "finishTaskButtonTest": {
+    "message": "Finalizar",
+    "description": "The text of a finish button"
+  },
+  "abandonTaskButtonTest": {
+    "message": "Abandonar",
+    "description": "The text of an abandon button"
+  },
+  "toggleTrackerPosition": {
+    "message": "Muévete",
+    "description": "Move the tracker out of the way"
+  },
+  "susLegend": {
+    "message": "Por favor, complete el cuestionario",
+    "description": "Please, complete this questionaire"
+  },
+  "susQ1": {
+    "message": "Creo que me gustaría utilizar este sistema con frecuencia",
+    "description": "Question 1 of the SUS"
+  },
+  "susQ2": {
+    "message": "Encontré el sistema innecesariamente complejo",
+    "description": "Question 2 of the SUS"
+  },
+  "susQ3": {
+    "message": "Creo que el sistema era fácil de usar",
+    "description": "Question 3 of the SUS"
+  },
+  "susQ4": {
+    "message": "Creo que necesitaría el apoyo de una persona técnica para poder usar este sistema",
+    "description": "Question 4 of the SUS"
+  },
+  "susQ5": {
+    "message": "Me pareció que las distintas funciones de este sistema estaban bien integradas",
+    "description": "Question 5 of the SUS"
+  },
+  "susQ6": {
+    "message": "Me pareció que había demasiada inconsistencia en este sistema",
+    "description": "Question 6 of the SUS"
+  },
+  "susQ7": {
+    "message": "Me imagino que la mayoría de la gente aprendería a usar este sistema muy rápidamente",
+    "description": "Question 7 of the SUS"
+  },
+  "susQ8": {
+    "message": "Encontré el sistema muy engorroso de usar",
+    "description": "Question 8 of the SUS"
+  },
+  "susQ9": {
+    "message": "Me sentí muy confiado usando el sistema",
+    "description": "Question 9 of the SUS"
+  },
+  "susQ10": {
+    "message": "Necesitaba aprender muchas cosas antes de poder utilizar este sistema",
+    "description": "Question 10 of the SUS"
+  },
+  "susStronglyAgree": {
+    "message": "Estoy muy de acuerdo",
+    "description": "Strongly agree"
+  },
+  "susStronglyDisagree": {
+    "message": "Estoy muy en desacuerdo",
+    "description": "Strongly disagree"
+  },
+  "skipForwardsWarning": {
+    "message": "¿Estás seguro de que quieres saltar hacia adelante? No se publicará nada en el servidor. Cualquier dato recogido para este paso se perderá.",
+    "description": "The user pressed the skipForwards key combination - confirm action"
+  },
+  "skipBackwardsWarning": {
+    "message": "¿Estás seguro de que quieres saltar hacia atrás? No se publicará nada en el servidor. Cualquier dato recogido para este paso se perderá.",
+    "description": "The user pressed the skipBackwards key combination - confirm action"
+  }
+
+
+  
+}

@@ -156,6 +156,8 @@ class TaskInstructionsComponent extends UIComponent {
   }
 
   reloadListeners() {
+    if(this.model.startTime == null)
+      return;
     if (this.isActiveTask()) {
       this.listenersHandler.continueListeners(this.model);
     } else {

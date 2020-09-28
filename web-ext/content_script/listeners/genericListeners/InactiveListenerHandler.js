@@ -2,7 +2,7 @@ let inactiveListenerHandlerSingleton = null;
 
 class InactiveListenerHandler extends Listener {
 	constructor(model) {
-		super("inactiveTime", "captureInactivity");
+		super("inactiveTime", "captureInactivity", "inactiveTime");
 		this.typeEvents = ["mousemove", "mousedown", "keypress", "DOMMouseScroll", "mousewheel", "touchmove", "MSPointerMove"];
 	}
 
@@ -18,7 +18,7 @@ class InactiveListenerHandler extends Listener {
 
 	/*Add a inactive listener and clear the count*/
 	addClearListener() {
-		BrowserStorageLocalHandler.set("inactiveTime", 0);
+		BrowserStorageLocalHandler.set(this.keyLocalStorage(), 0);
 		this.inactiveStartTime = 0;
 		this.addListener();
 	};
@@ -35,9 +35,9 @@ class InactiveListenerHandler extends Listener {
 	goActive = async function () {
 		if (this.inactiveStartTime > 0) {
 			var msInactive = new Date().getTime() - this.inactiveStartTime;
-			var inactiveTimeCounter = await BrowserStorageLocalHandler.get("inactiveTime");
+			var inactiveTimeCounter = await BrowserStorageLocalHandler.get(this.keyLocalStorage());
 			var totalMsInactive = msInactive + inactiveTimeCounter.inactiveTime;
-			BrowserStorageLocalHandler.set("inactiveTime", totalMsInactive);
+			BrowserStorageLocalHandler.set(this.keyLocalStorage(), totalMsInactive);
 			this.inactiveStartTime = 0;
 		}
 		this.startTimer();
@@ -52,8 +52,8 @@ class InactiveListenerHandler extends Listener {
 	async removeListener() {
 		this.typeEvents.forEach(typeEvent => document.removeEventListener(typeEvent, this.resetTimer, false));
 		window.clearTimeout(this.timeoutID);
-		var totalInactiveTime = await BrowserStorageLocalHandler.get("inactiveTime");
-		BrowserStorageLocalHandler.set("inactiveTime", 0);
+		var totalInactiveTime = await BrowserStorageLocalHandler.get(this.keyLocalStorage());
+		BrowserStorageLocalHandler.set(this.keyLocalStorage(), 0);
 		return totalInactiveTime.inactiveTime;
 	};
 
