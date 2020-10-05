@@ -122,6 +122,10 @@
   "skipBackwardsWarning": {
     "message": "¿Estás seguro de que quieres saltar hacia atrás? No se publicará nada en el servidor. Cualquier dato recogido para este paso se perderá.",
     "description": "The user pressed the skipBackwards key combination - confirm action"
+  },
+  "taskInstructionsGuide": {
+    "message":  "</span><p id='buttonsInstructions'> Presione <strong>Comenzar</strong> para comenzar la tarea, y <strong>Finalizar</strong> cuando quiera terimar.</p></div>",
+    "description": "task instructions guide"
   }
 
 

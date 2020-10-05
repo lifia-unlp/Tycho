@@ -19,8 +19,8 @@ class TaskInstructionsComponent extends UIComponent {
     const cssClass = (!this.model.startTime || this.model.paused) ? 'trackerNotStartedOrPaused' : 'trackerRunning';
     let tracker = $(
       '<div id="tracker" class="' + cssClass + '">Basic Task instructions with <span id="trackerInstructions">' +
-      this.model.instructions +
-      "</span><p id='buttonsInstructions'> Click <strong>Start</strong> to begin with the task, and <strong>Finish</strong> when you're done.</p></div>"
+      this.model.instructions + browser.i18n.getMessage("taskInstructionsGuide")
+     
     );
     tracker.css("bottom", "0");
     this.addButton(

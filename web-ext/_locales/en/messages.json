@@ -122,6 +122,10 @@
   "skipBackwardsWarning": {
     "message": "Are you sure you want to skip backwards? Nothing will be posted to the server. Any data collected for this step will be lost.",
     "description": "The user pressed the skipBackwards key combination - confirm action"
+  },
+  "taskInstructionsGuide": {
+    "message":  "</span><p id='buttonsInstructions'> Click <strong>Start</strong> to begin with the task, and <strong>Finish</strong> when you're done.</p></div>",
+    "description": "task instructions guide"
   }
 
 
