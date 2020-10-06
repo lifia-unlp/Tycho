@@ -2,6 +2,10 @@ rendering
 generateBodyTaskFor: aTask of: aProtocol on: html
 	| tasksResults |
 	tasksResults := self store taskResultsForTask: aTask.
+	html
+		tbsRow: [
+			html tbsColumn: [ html tbsAlert beInfo; with:[html text:('Instruction: ', (aTask atProperty: 'instructions') ) ] ]
+			].
 	^ html
 		tbsRow: [ html tbsColumn: [ self renderGenericDataOf: tasksResults on: html ] mediumSize: 3.
 			html
