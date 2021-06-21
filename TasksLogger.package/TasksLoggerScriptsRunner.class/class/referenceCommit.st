@@ -1,3 +1,7 @@
 commits
 referenceCommit
-	^ (IceRepository allInstances detect: [ :each | each name = 'Tycho' ]) loadedCode referenceCommit commitId first: 7
+	| workingCopy |
+	workingCopy := self iceWorkingCopy.
+	^ workingCopy
+		ifNil: [ 'N/A' ]
+		ifNotNil: [ workingCopy referenceCommit id first: 7 ]
