@@ -2,25 +2,31 @@
 Simple Tool for designing remote web experiments, running them, and recording the results.
 
 ## Installation
-Start with a clear Pharo6.0 image and run the following expresion in a playground. The save your image. 
+Start with a clear Pharo8.0 image and run the following expresion in a playground. The save your image. 
 ```smalltalk
 Metacello new
 	baseline: 'TasksLogger';
 	repository: 'github://juliangrigera/Tycho';
+	onConflictUseLoaded;
 	load.
 ```
 
 ## Run the server
+
+Tycho requires mongodb running on the default port in localhost. 
+
 To setup and run the server in __development mode__, evaluate the following expresion in a playground.
 
 ```smalltalk
-TasksLoggerScriptsRunner prepareForDevelopmentOnPort: 8888 . 	
+TasksLoggerScriptsRunner prepareForDevelopmentOnPort: 8888 . 
+TychoStore useVoyage.
 ```
 
 To prepare your server __for deployment__, evaluate the following expresion in a playground.
 
 ```smalltalk
 TasksLoggerScriptsRunner prepareForDeploymentOnPort: 8888 . 	
+TychoStore useVoyage.
 ```
 
 ## Test the server
