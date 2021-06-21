@@ -20,6 +20,8 @@ To setup and run the server in __development mode__, evaluate the following expr
 ```smalltalk
 TasksLoggerScriptsRunner prepareForDevelopmentOnPort: 8888 . 
 TychoStore useVoyage.
+WAAdmin defaultDispatcher defaultName: 'tycho'.
+
 ```
 
 To prepare your server __for deployment__, evaluate the following expresion in a playground.
@@ -27,6 +29,8 @@ To prepare your server __for deployment__, evaluate the following expresion in a
 ```smalltalk
 TasksLoggerScriptsRunner prepareForDeploymentOnPort: 8888 . 	
 TychoStore useVoyage.
+WAAdmin defaultDispatcher defaultName: 'tycho'.
+
 ```
 
 ## Test the server
