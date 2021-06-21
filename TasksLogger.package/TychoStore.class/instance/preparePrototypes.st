@@ -20,9 +20,6 @@ preparePrototypes
 	newTask := self prepareInputVariablePrototype. 
 	self rememberToSave: newTask.
 	prototypes add: newTask.
-	newTask := self prepareCollectDomElementsTaskPrototype. 
-	self rememberToSave: newTask.
-	prototypes add: newTask.
 
 	self savePending.
 	^ prototypes
