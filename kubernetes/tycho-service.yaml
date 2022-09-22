@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:  
+  name: tycho
+spec:
+  ports:    
+    - name: tycho
+      protocol: TCP
+      port: 8080
+      targetPort: 8080    
+  selector:
+    app: tycho
+
+

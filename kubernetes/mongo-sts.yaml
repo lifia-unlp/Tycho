@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mongo-tycho  
+spec:
+  podManagementPolicy: Parallel
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: mongo-tycho
+  serviceName: mongo-tycho
+  template:
+    metadata:      
+      labels:
+        app: mongo-tycho
+    spec:
+      containers:
+        - image: 'mongo:4.4'
+          imagePullPolicy: IfNotPresent          
+          name: mongo-tycho
+          ports:
+            - containerPort: 27017
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /data/db
+              name: mongo-tycho
+  volumeClaimTemplates:
+    - metadata:        
+        name: mongo-tycho
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi

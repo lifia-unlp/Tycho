@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: tycho
+  name: tycho
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+     app: tycho        
+  template:
+    metadata:            
+      labels:
+        app: tycho        
+    spec:
+      containers:
+        - name: tycho
+          image: cientopolis/tycho:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              protocol: TCP     
+          env:
+            - name: DB_HOST
+              value: "mongo-tycho"
+
+

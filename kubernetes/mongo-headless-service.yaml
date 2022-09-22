@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:  
+  name: mongo-tycho
+spec:
+  ports:    
+    - name: mongodb-tycho
+      protocol: TCP
+      port: 27017
+      targetPort: 27017    
+  selector:
+    app: mongo-tycho
+  clusterIP: None  
+  type: ClusterIP
+  sessionAffinity: None
