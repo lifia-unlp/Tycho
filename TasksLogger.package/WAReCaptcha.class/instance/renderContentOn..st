@@ -1,3 +1,3 @@
 rendering
 renderContentOn: html
-	html recaptchaWithCode: self recaptchaCode
+	html recaptchaWithCode: self recaptchaSiteKey 

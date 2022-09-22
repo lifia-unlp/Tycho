@@ -2,7 +2,7 @@ controlling
 isValid
 	| entity answer |
 	(entity := ZnApplicationFormUrlEncodedEntity new)
-		at: 'secret' put: self recaptchaSecretCode;
+		at: 'secret' put: self recaptchaSecretKey ;
 		at: 'response' put: (self requestContext request at: 'g-recaptcha-response');
 		at: 'remoteip' put: '181.170.77.207'.
 	answer := ZnClient new
