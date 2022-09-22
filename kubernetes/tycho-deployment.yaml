@@ -24,5 +24,7 @@ spec:
           env:
             - name: DB_HOST
               value: "mongo-tycho"
-
-
+            - name: RECAPTCHA_SITEKEY
+              value: "your-sitekey"
+            - name: RECAPTCHA_SECRETKEY
+              value: "your-secretkey"

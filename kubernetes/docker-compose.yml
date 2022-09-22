@@ -8,6 +8,8 @@ services:
     read_only: true
     environment: 
       DB_HOST: your-mongo-server-ip
+      RECAPTCHA_SITEKEY: sitekey
+      RECAPTCHA_SECRETKEY: secretkey
     ports:
         - "8080:8080"
 
