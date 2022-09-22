@@ -16,4 +16,4 @@ baseline: spec
 				with: [ spec
 						requires:
 							#('Seaside3' 'Seaside-REST-Core' 'Bootstrap-Core' 'Bootstrap-Widgets' 'NeoJSON' 'NeoCSV' 'Voyage' 'Soup') ].
-			spec postLoadDoIt: #postLoadActions ]
+ ]
