@@ -6,7 +6,7 @@ Start with a clear Pharo8.0 image and run the following expresion in a playgroun
 ```smalltalk
 Metacello new
 	baseline: 'TasksLogger';
-	repository: 'github://juliangrigera/Tycho';
+	repository: 'github://lifia-unlp/Tycho';
 	onConflictUseLoaded;
 	load.
 ```
