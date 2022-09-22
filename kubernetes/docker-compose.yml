@@ -1,0 +1,13 @@
+# run with docker-compose up -d
+
+version: "3.9"  
+services:
+  web:
+    image: cientopolis/tycho:latest
+    restart: unless-stopped
+    read_only: true
+    environment: 
+      DB_HOST: your-mongo-server-ip
+    ports:
+        - "8080:8080"
+
