@@ -4,7 +4,7 @@ newTaskResultsFor: task withParameters: parameters
 	result := ExperimentTaskResult new.
 	result task: task.
 	modelFromClient := parameters at: #model.
-	result startTime: (modelFromClient at: 'startTime') asDateAndTime.
+	result startTime: (self dateAndTimeFromString: (modelFromClient at: 'startTime')).
 	result ellapsedMs: (modelFromClient at: 'ellapsedMs').
 	modelFromClient removeKey: 'ellapsedMs'.
 	modelFromClient removeKey: 'startTime'.
