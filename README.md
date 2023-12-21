@@ -13,7 +13,7 @@ Metacello new
 
 ## Run the server
 
-Tycho requires mongodb running on the default port in localhost. 
+Tycho requires mongodb running on the default port (27017) in localhost. 
 
 To setup and run the server in __development mode__, evaluate the following expresion in a playground.
 
