@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "JuanCipollone 2/6/2024 10:16",
+	"super" : "ExperimentBotTask",
+	"category" : "TasksLogger-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"semaphoreId"
+	],
+	"name" : "SemaphoreWaitingTask",
+	"type" : "normal"
+}
