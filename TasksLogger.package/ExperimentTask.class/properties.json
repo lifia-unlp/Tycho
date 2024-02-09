@@ -4,7 +4,9 @@
 	"category" : "TasksLogger-Model",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"BotTasksMap"
+	],
 	"instvars" : [
 		"id",
 		"name",
