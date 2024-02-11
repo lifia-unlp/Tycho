@@ -3,4 +3,5 @@ initialize
 	super initialize.
 	protocols := OrderedCollection new.
 	semaphores := OrderedCollection new.
-	variables := OrderedCollection new
+	variables := OrderedCollection new.
+	bots:= OrderedCollection new.

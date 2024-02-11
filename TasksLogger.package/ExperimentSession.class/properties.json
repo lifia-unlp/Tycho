@@ -10,7 +10,8 @@
 		"notes",
 		"protocols",
 		"semaphores",
-		"variables"
+		"variables",
+		"bots"
 	],
 	"name" : "ExperimentSession",
 	"type" : "normal"
