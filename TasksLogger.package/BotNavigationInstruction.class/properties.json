@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "JuanCipollone 2/9/2024 10:06",
+	"super" : "ExperimentBotInstruction",
+	"category" : "TasksLogger-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"url"
+	],
+	"name" : "BotNavigationInstruction",
+	"type" : "normal"
+}
