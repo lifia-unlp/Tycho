@@ -1,7 +1,6 @@
 initialization
 initialize
 	super initialize.
-	protocols := OrderedCollection new.
+	participants:= OrderedCollection new.
 	semaphores := OrderedCollection new.
 	variables := OrderedCollection new.
-	bots:= OrderedCollection new.
