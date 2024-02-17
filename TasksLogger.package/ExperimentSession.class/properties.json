@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "JuanCipollone 1/10/2024 10:39",
+	"commentStamp" : "JuanCipollone 2/15/2024 10:09",
 	"super" : "Object",
 	"category" : "TasksLogger-Model",
 	"classinstvars" : [ ],
@@ -7,6 +7,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"id",
+		"experiment",
 		"startTime",
 		"duration",
 		"status",
