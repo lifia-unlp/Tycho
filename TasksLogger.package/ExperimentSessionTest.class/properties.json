@@ -8,6 +8,12 @@
 	"instvars" : [
 		"messageTaskOne",
 		"messageTaskTwo",
+		"messageTask",
+		"messageTaskWithVariable",
+		"instructionsTask",
+		"questionaireTask",
+		"waitSemTask",
+		"signalSemTask",
 		"protocol",
 		"session"
 	],
