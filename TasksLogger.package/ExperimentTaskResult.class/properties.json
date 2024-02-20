@@ -11,7 +11,8 @@
 		"koboldReport",
 		"serverTimestamp",
 		"startTime",
-		"ellapsedMs"
+		"ellapsedMs",
+		"status"
 	],
 	"name" : "ExperimentTaskResult",
 	"type" : "normal"

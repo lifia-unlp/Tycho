@@ -1,3 +1,4 @@
 initialization
 initialize
-	serverTimestamp := DateAndTime now
+	serverTimestamp := DateAndTime now.
+	status:= 'not-started'.
