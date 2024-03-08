@@ -1,0 +1,4 @@
+misc
+getCurrentUrl
+			
+	self subclassResponsibility.

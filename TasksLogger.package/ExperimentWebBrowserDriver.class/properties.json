@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "JuanCipollone 2/22/2024 10:04",
+	"super" : "Object",
+	"category" : "TasksLogger-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ExperimentWebBrowserDriver",
+	"type" : "normal"
+}

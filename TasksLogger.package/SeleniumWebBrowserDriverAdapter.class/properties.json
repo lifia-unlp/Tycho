@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "JuanCipollone 2/23/2024 08:58",
+	"super" : "ExperimentWebBrowserDriver",
+	"category" : "TasksLogger-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"adaptee"
+	],
+	"name" : "SeleniumWebBrowserDriverAdapter",
+	"type" : "normal"
+}
