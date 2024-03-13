@@ -4,4 +4,4 @@ executeBy: anExperimentParticipant
 			
 	| sem |
 	sem:= anExperimentParticipant session semaphoreWithId: self semaphoreId.
-	"sem signal."
+	sem signal.

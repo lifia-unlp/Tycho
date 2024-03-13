@@ -1,12 +1,13 @@
 {
-	"commentStamp" : "Casco 2/15/2019 07:43",
+	"commentStamp" : "JuanCipollone 3/11/2024 09:43",
 	"super" : "ExperimentGlobal",
 	"category" : "TasksLogger-Model",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"status"
+		"status",
+		"sem"
 	],
 	"name" : "ExperimentSemaphore",
 	"type" : "normal"
