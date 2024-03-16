@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "TasksLogger-Model-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"botParticipant",
+		"waitTask",
+		"signalTask",
+		"semaphore"
+	],
+	"name" : "BotSemaphoreTaskTest",
+	"type" : "normal"
+}
