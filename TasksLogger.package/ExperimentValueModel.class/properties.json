@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "JuanCipollone 3/21/2024 16:50",
+	"super" : "Object",
+	"category" : "TasksLogger-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ExperimentValueModel",
+	"type" : "normal"
+}

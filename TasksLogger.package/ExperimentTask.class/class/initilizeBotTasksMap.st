@@ -10,4 +10,5 @@ initilizeBotTasksMap
 		'YoutubeVideoComponent' -> [ :task | BotMockTask task: task ].
 		'SemaphoreWaitComponent' -> [ :task | SemaphoreWaitingTask task: task ].
 		'SemaphoreSignalComponent' -> [ :task | SemaphoreSignalingTask task: task ].
+		'InputVariableComponent' -> [ :task | InputVariableTask task: task ].		
 	 } asDictionary.

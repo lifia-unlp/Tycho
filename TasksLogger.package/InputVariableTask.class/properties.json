@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "JuanCipollone 3/20/2024 15:26",
-	"super" : "ExperimentGlobal",
+	"commentStamp" : "JuanCipollone 3/20/2024 16:15",
+	"super" : "ExperimentBotTask",
 	"category" : "TasksLogger-Model",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
+		"variableId",
 		"value"
 	],
-	"name" : "ExperimentVariable",
+	"name" : "InputVariableTask",
 	"type" : "normal"
 }

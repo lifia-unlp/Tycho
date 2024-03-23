@@ -1,6 +1,6 @@
 {
-	"commentStamp" : "JuanCipollone 3/20/2024 15:26",
-	"super" : "ExperimentGlobal",
+	"commentStamp" : "JuanCipollone 3/21/2024 17:16",
+	"super" : "ExperimentValueModel",
 	"category" : "TasksLogger-Model",
 	"classinstvars" : [ ],
 	"pools" : [ ],
@@ -8,6 +8,6 @@
 	"instvars" : [
 		"value"
 	],
-	"name" : "ExperimentVariable",
+	"name" : "ExperimentValueHolder",
 	"type" : "normal"
 }
