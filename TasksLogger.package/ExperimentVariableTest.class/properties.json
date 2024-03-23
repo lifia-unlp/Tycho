@@ -6,8 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"botParticipant"
+		"session"
 	],
-	"name" : "ExperimentTaskBotTest",
+	"name" : "ExperimentVariableTest",
 	"type" : "normal"
 }

@@ -25,4 +25,5 @@ setUp
 		setValue: 'an example with <tyvar var="one"/> one variable referenced'.
 			
 	protocol := ExperimentProtocol name: 'test' notes: ''.
+	session:= ExperimentSession id: 1 experiment: (Experiment name: 'Testing experiment' notes: '').
 	"session := ExperimentSession name: 'test' notes: ''"
