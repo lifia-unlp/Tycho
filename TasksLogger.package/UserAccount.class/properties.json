@@ -11,7 +11,7 @@
 		"salt",
 		"encryptedPassword",
 		"protocols",
-		"sessions"
+		"experiments"
 	],
 	"name" : "UserAccount",
 	"type" : "normal"
