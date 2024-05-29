@@ -197,9 +197,36 @@ mainCssContent
 		position: absolute;
 		}
 
+	#tasksList ul.nav { 
+		margin: -5px -15px 0px;
+	 }
+		
+	#tasksList .nav li { 
+		margin: 0;
+		width: auto;
+		padding: 0;
+		position: inherit;
+	 }
+	
+	#tasksList .nav li.active a { 
+		border: 0;
+	 }
+	
+	#tasksList .tab-content { 
+		padding: 10px 0px;	
+	 }
+	
+	.bot-actions { 
+		font-size: 0.9em;
+	 }
+
 	.filters { 
 		margin: 20px 0;
 	 }
+	
+	.buttonPanel {
+		margin-top: 40px;	 
+	}
 
 	@media (min-width: 992px){
 		.homeRegister > :first-child{ padding:0 6em; }		
