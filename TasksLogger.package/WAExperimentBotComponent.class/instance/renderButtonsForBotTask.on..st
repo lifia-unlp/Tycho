@@ -7,7 +7,7 @@ renderButtonsForBotTask: aBotTask on: html
 			class: #actions;
 			with: [ 
 				html anchor
-					callback: [ "self showDetailsOfTask: aTask" ];
+					callback: [ self editBotTask: aBotTask ];
 					with: [ 
 						html tbsGlyphIcon iconEdit.
 						html space; text: 'Edit bot actions']]]
