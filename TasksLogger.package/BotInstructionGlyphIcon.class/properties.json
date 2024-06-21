@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "JuanManuelCipollone 6/20/2024 10:31",
+	"super" : "Object",
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"instruction",
+		"iconsTable"
+	],
+	"name" : "BotInstructionGlyphIcon",
+	"type" : "normal"
+}

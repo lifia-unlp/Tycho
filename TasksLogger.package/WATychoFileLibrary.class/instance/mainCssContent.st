@@ -141,7 +141,7 @@ mainCssContent
 	}
 	.footer .col-md-6 p a{color: #fB5D3C}
 
-	#tasksList li{
+	#tasksList li, .cards-list li {
 		display: inline-block;
 		vertical-align:top;
 		margin: 0 13px;
@@ -150,22 +150,24 @@ mainCssContent
   		position: relative;
 		}
 
-	#tasksList li .panel{
+	#tasksList li .panel, .cards-list li .panel {
 		height: 280px;
 		}
-	#tasksList .panel-heading{ cursor: grab }
-	#tasksList .panel-body{ 
+	#tasksList .panel-heading, .cards-list .panel-heading { 
+		cursor: grab 
+	}
+	#tasksList .panel-body, .cards-list .panel-body { 
 		padding-top: 5px;
 		overflow: hidden;
 		}
 	
-	#tasksList .ui-sortable-helper .panel{
+	#tasksList .ui-sortable-helper .panel, .cards-list .ui-sortable-helper .panel {
 		background: rgba(240,240,240,0.5);
 		border: 1px solid #ddd;
 		transform: rotate(1deg);
 	}
 
-	#tasksList li:not(:last-child):before {
+	#tasksList li:not(:last-child):before, 	.cards-list li:not(:last-child):before{
 	  content: '''';
 	  position: absolute;
 	  width: 0;
@@ -178,41 +180,41 @@ mainCssContent
 	  transform: translateY(-10%);
 	}
 
-	#tasksList dl{ 
+	#tasksList dl, .cards-list dl{ 
 		margin-bottom: 10px;
 		font-size: .9em;
 		}
 
-	#tasksList dd{
+	#tasksList dd, .cards-list dd {
 		max-height: 80px;
 		overflow: hidden;
 		}
 
-	#tasksList dt{
+	#tasksList dt, .cards-list dt {
 		margin: 4px 0 0 0;
 		}
 
-	#tasksList li .actions{
+	#tasksList li .actions, .cards-list li .actions {
 		bottom: 34px;
 		position: absolute;
 		}
 
-	#tasksList ul.nav { 
+	#tasksList ul.nav, .cards-list ul.nav { 
 		margin: -5px -15px 0px;
 	 }
 		
-	#tasksList .nav li { 
+	#tasksList .nav li, .cards-list .nav li { 
 		margin: 0;
 		width: auto;
 		padding: 0;
 		position: inherit;
 	 }
 	
-	#tasksList .nav li.active a { 
+	#tasksList .nav li.active a, .cards-list .nav li.active a { 
 		border: 0;
 	 }
 	
-	#tasksList .tab-content { 
+	#tasksList .tab-content, .cards-list .tab-content { 
 		padding: 10px 0px;	
 	 }
 	

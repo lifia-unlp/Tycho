@@ -4,4 +4,4 @@ editBotTask: aBotTask
 	The invoked view can vary for the different kinds of bot tasks."
 			
 	(aBotTask class = BotMockTask) ifTrue: [ self call: (WABotMockTaskComponent on: aBotTask) ].
-	"(aBotTask class = BotProgrammableTask ) ifTrue: [ self call: (WABotProgrammableTaskComponent on: aBotTask) ]."
+	(aBotTask class = BotProgrammableTask ) ifTrue: [ self call: (WABotProgrammableTaskComponent on: aBotTask) ].
