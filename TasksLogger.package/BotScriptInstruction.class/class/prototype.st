@@ -2,4 +2,4 @@ instance creation
 prototype
 	"Creates a script instruction with default values"
 	
-	^ self code: 'alert("Hello world")'.
+	^ self code: (ExperimentValueHolder value: 'alert("Hello world")')

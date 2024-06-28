@@ -1,0 +1,1 @@
+I represent a component to edit the value of a model property. This value could be a constant value or a variable's reference

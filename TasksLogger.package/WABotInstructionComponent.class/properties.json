@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "JuanManuelCipollone 6/24/2024 09:18",
+	"super" : "WAAbstractComponent",
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"instruction",
+		"originalInstruction",
+		"propEditors"
+	],
+	"name" : "WABotInstructionComponent",
+	"type" : "normal"
+}

@@ -1,5 +1,5 @@
 instance creation
-selector: aCssSelector
+selector: anExperimentValueModel
 	"Creates a new instruction that allows a bot to click on a web element."
 			
-	^ (self new) selector: aCssSelector.
+	^ (self new) selector: anExperimentValueModel.

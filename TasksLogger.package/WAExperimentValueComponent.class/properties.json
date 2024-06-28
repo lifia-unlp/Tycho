@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "JuanManuelCipollone 6/26/2024 10:59",
+	"super" : "WAComponent",
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"modelValue",
+		"mode"
+	],
+	"name" : "WAExperimentValueComponent",
+	"type" : "normal"
+}
