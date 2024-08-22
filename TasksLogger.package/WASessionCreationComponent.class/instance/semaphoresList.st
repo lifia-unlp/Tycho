@@ -1,0 +1,3 @@
+accessing
+semaphoresList
+	^ semaphoresList 

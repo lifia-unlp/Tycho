@@ -5,12 +5,5 @@ renderMainContentOn: html
 	self renderExperimentDetailsOn: html.
 	self renderProtocolsOn: html.
 	self renderBotsOn: html.
-	self renderActionButtonsOn: html.
-	
-	"
-	self renderExperimentDetailsOn: html. 
-	self renderProtocolsOn: html.
-	self renderBotsOn: html.
 	self renderSessionsOn: html.
 	self renderActionButtonsOn: html.
-	"

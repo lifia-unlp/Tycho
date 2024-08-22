@@ -1,0 +1,3 @@
+ids
+newParticipantId
+  ^self subclassResponsibility 

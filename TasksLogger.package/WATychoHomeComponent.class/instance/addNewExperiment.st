@@ -6,18 +6,10 @@ addNewExperiment
 	| newExperiment |
 	newExperiment := Experiment name: 'Unnamed' notes: ''.
 	self
-		call: (WAExperimentComponent on: newExperiment)
-	
-	
-	"	
-	| newExperiment |
-	newExperiment := Experiment name: 'Unnamed' notes: ''.
-	self
-		call: (WAExperimentComponent on: newExperiment)
+		call: (WAExperimentComponent on: newExperiment)	
 		onAnswer: [ :answer | 
-			answer	 ifNotNil: [ ""
+			answer	 ifNotNil: [
 				self session account addExperiment: newExperiment.
 				self store save: self session account.
 			] 
 		]
-	"			

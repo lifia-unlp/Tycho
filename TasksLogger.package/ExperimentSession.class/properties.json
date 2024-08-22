@@ -8,6 +8,7 @@
 	"instvars" : [
 		"id",
 		"experiment",
+		"notes",
 		"startTime",
 		"duration",
 		"status",
