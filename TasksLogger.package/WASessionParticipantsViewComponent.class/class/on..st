@@ -1,4 +1,4 @@
 instance creation
 on: experimentParticipants
 			
-	^ (self new) participants: experimentParticipants.
+	^ (self new) initializeOn: experimentParticipants.

@@ -1,0 +1,3 @@
+accessing
+detailedParticipants
+	^ detailedParticipants

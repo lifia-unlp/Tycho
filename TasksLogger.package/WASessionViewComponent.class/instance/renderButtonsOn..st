@@ -4,4 +4,9 @@ renderButtonsOn: html
 	
 	html tbsWell beSmall 
 		class: 'buttonPanel';
-		with: [ self renderOkButtonOn: html	]
+		with: [ 
+			html anchor beButton
+				class: 'btn-success';
+				callback: [ self save ];
+				with: 'Bact to experiment'
+		]

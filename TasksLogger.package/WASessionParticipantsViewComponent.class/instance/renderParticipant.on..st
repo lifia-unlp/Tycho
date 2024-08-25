@@ -10,4 +10,12 @@ renderParticipant: anExperimentParticipant on: html
 			tableData: anExperimentParticipant printStartTime;
 			tableData: anExperimentParticipant printDuration;
 			tableData: [ html tbsLabel beDefault; with: anExperimentParticipant status ];
-			tableData: anExperimentParticipant printNumberOfCompletedTasks ]		
+			tableData: [
+				html span: anExperimentParticipant printNumberOfCompletedTasks.
+				html space.
+				(detailedParticipants includes: anExperimentParticipant) 
+					ifTrue: [ html anchor callback: [self hideTasksResultsOf: anExperimentParticipant ]; with: '(Hide details)'] 
+					ifFalse: [ html anchor callback: [self showTasksResultsOf: anExperimentParticipant ]; with: '(Show details)'] ] ].
+	
+	(detailedParticipants includes: anExperimentParticipant)
+		ifTrue: [ self renderTasksResultsOfParticipant: anExperimentParticipant on: html ].

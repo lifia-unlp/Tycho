@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "JuanManuelCipollone 8/24/2024 10:46",
+	"super" : "WAComponent",
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"tasksResults"
+	],
+	"name" : "WAParticipantTasksResultsComponent",
+	"type" : "normal"
+}
