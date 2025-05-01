@@ -1,10 +1,13 @@
 request handlers
-semaphore: id for: aProtocolId
-	| resp json |
+semaphore: semaphoreId for: sessionId
+	"Returns the semaphore with the given ID for the specified session"
+	| session semaphore |
+	
 	monitor
-		critical: [ json := nil.
-			resp := self store semaphore: id for: aProtocolId.
-			resp
-				ifNotNil: [ json := RestResponseWriter new semaphoreAsJson: resp.
-					json ].
-			^ json ]
+		critical: [
+			session:= self store sessionId: sessionId.
+			session ifNil: [ ^ nil ].
+			semaphore:= session semaphoreWithId: semaphoreId.
+			semaphore ifNil: [ ^ nil ].
+			^ RestResponseWriter new semaphoreAsJson: semaphore.						
+	]		

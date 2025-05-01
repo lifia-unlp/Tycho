@@ -1,9 +1,11 @@
 request handling
-getSemaphore: id for: protocolId
+getSemaphore: semaphoreId for: sessionId
+	"API endpoint that retrieves the given semaphore within the experiment session with the specified ID"
 	<get>
-	<path: '/semaphores/{id}?protocol={protocolId}'>
+	<path: '/sessions/{sessionId}/semaphores/{semaphoreId}'>
+	
 	| semaphoreAsJson |
-	semaphoreAsJson := api semaphore: id for: protocolId.
+	semaphoreAsJson := api semaphore: semaphoreId for: sessionId.
 	semaphoreAsJson
 		ifNil: [ self requestContext
 				respond: [ :response | 
@@ -12,7 +14,7 @@ getSemaphore: id for: protocolId
 						headerAt: 'Access-Control-Allow-Credentials' put: 'true';
 						contentType: WAMimeType applicationJson;
 						status: WAResponse statusNotFound;
-						nextPutAll: 'There are no semaphores with id: ' , id ] ]
+						nextPutAll: 'There is no semaphore with id ' , semaphoreId , ' in session with id ', sessionId ] ]
 		ifNotNil: [ self requestContext
 				respond: [ :response | 
 					response
