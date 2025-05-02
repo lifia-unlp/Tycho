@@ -1,10 +1,13 @@
 request handlers
-variable: id for: aProtocolId
-	| resp json |
+variable: variableId for: sessionId
+	"Returns the variable with the given ID for the specified session"
+	| session variable |
+	
 	monitor
-		critical: [ json := nil.
-			resp := self store variable: id for: aProtocolId.
-			resp
-				ifNotNil: [ json := RestResponseWriter new variableAsJson: resp.
-					json ].
-			^ json ]
+		critical: [
+			session := self store sessionId: sessionId.
+			session ifNil: [ ^ nil ].
+			variable := session variableWithId: variableId.
+			variable ifNil: [ ^ nil ].
+			^ RestResponseWriter new variableAsJson: variable.
+		]

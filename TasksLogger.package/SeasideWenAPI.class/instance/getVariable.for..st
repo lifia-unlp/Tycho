@@ -1,10 +1,12 @@
 request handling
-getVariable: id for: protocolId
+getVariable: variableId for: sessionId
+	"API endpoint that retrieves the given variable within the experiment session with the specified ID"
 	<get>
-	<path: '/variables/{id}?protocol={protocolId}'>
-	| semaphoreAsJson |
-	semaphoreAsJson := api variable: id for: protocolId.
-	semaphoreAsJson
+	<path: '/sessions/{sessionId}/variables/{variableId}'>
+
+	| variableAsJson |
+	variableAsJson := api variable: variableId for: sessionId.
+	variableAsJson
 		ifNil: [ self requestContext
 				respond: [ :response | 
 					response
@@ -12,7 +14,7 @@ getVariable: id for: protocolId
 						headerAt: 'Access-Control-Allow-Credentials' put: 'true';
 						contentType: WAMimeType applicationJson;
 						status: WAResponse statusNotFound;
-						nextPutAll: 'There are no variables with id: ' , id ] ]
+						nextPutAll: 'There is no variable with id ' , variableId , ' in session with id ', sessionId ] ]
 		ifNotNil: [ self requestContext
 				respond: [ :response | 
 					response
@@ -20,4 +22,4 @@ getVariable: id for: protocolId
 						headerAt: 'Access-Control-Allow-Credentials' put: 'true';
 						contentType: WAMimeType applicationJson;
 						status: WAResponse statusOk;
-						nextPutAll: semaphoreAsJson ] ]
+						nextPutAll: variableAsJson ] ]
