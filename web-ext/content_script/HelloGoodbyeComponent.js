@@ -14,7 +14,7 @@ class HelloGoodbyeComponent extends UIComponent {
                 "</h2><p></p>"
         );
         messageDiv.append(
-            '<p><input type="text" size="10" id="experiment"></p>'
+            '<p><input type="text" size="10" id="participant"></p>'
         );
         messageDiv.append(
             '<p><input id="join-button" type="submit" class="tracker-btn" value="' +
@@ -28,9 +28,9 @@ class HelloGoodbyeComponent extends UIComponent {
     }
 
     join() {
-        let experiment = document.getElementById("experiment").value;
-        if (experiment) {
-            BackgroundProxy.getSingleton().joinExperiment(experiment);
+        let participant = document.getElementById("participant").value;
+        if (participant) {
+            BackgroundProxy.getSingleton().joinExperiment(participant);
         }
         this.done();
     }
