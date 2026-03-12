@@ -79,13 +79,13 @@ class BackgroundFacade extends Facade {
 
     /**
      *
-     * @param {id: id of the session to join} args
+     * @param {id: id of the participant to join the experiment} args
      * @returns a Promise that will resolve to the joined session, or reject with the error.
      */
     joinExperiment(args) {
         new Promise((resolve, reject) => {
             this.serverApi
-                .getExperimentDesignFromServer(args.id)
+                .joinExperiment(args.id)
                 .then(response => {
                     if (response) {
                         this.experiment = ExperimentSample.fromJson(

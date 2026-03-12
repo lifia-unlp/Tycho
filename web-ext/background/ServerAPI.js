@@ -44,6 +44,10 @@ class ServerAPI {
         );
     }
 
+    joinExperiment(participantId) {
+        return axios.post(this.apiUrl + "/participants/" + participantId + "/join", {});
+    }
+
     /**
      * @id the id of the session to retrieve
      * @returns a Promise that resolves to the server response
