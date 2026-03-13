@@ -134,14 +134,14 @@ class BackgroundFacade extends Facade {
     /**
      * Ask for the status of a global semaphore (0 should be understood as move on,
      * negative numbers wait for signales, positive numbers indicate already signaled)
-     * @param {args.semaphoreId is the id of the global semaphore whose status we need} args
+     * @param {args.semaphoreId is the id of the session-scoped semaphore whose status we need} args
      * @returns a Promise that will resolve to the status, or reject with the error.
      */
     getSemaphore(args) {
         let me = this;
         return new Promise((resolve, reject) => {
             this.serverApi
-                .getSemaphore(args.semaphoreId, me.experiment.getExperimentId())
+                .getSemaphore(args.semaphoreId, me.experiment.getSessionId())
                 .then(response => {
                     let status = response.data;
                     resolve(status);
@@ -159,9 +159,9 @@ class BackgroundFacade extends Facade {
     autoDoneOnSemaphore(semaphoreId) {
         // Check that the experiment still exists to deal abort during a semaphore.
         if (this.experiment) {
-            let experimentId = this.experiment.getExperimentId();
+            let sessionId = this.experiment.getSessionId();
             this.serverApi
-                .getSemaphore(semaphoreId, experimentId)
+                .getSemaphore(semaphoreId, sessionId)
                 .then(response => {
                     this.handleSemaphoreStatus(response.data);
                 });
