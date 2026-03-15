@@ -13,14 +13,12 @@ class ServerAPI {
         this.submit(report, "/task-results/");
     }
 
-    signalSemaphore(semaphoreId, protocolId) {
+    // Semaphores are session-scoped in the new Tycho API (Tycho with simulated participants), 
+    // so the request must include the ID of the session besides the semaphore ID
+    signalSemaphore(semaphoreId, sessionId) {
         axios
             .patch(
-                this.apiUrl +
-                    "/semaphores/" +
-                    semaphoreId +
-                    "?protocol=" +
-                    protocolId,
+                this.apiUrl +"/sessions/" + sessionId + "/semaphores/" + semaphoreId,
                 { id: semaphoreId, status: 0 }
             )
             .catch(function(error) {

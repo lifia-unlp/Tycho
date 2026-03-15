@@ -190,7 +190,7 @@ class BackgroundFacade extends Facade {
     signalSemaphoreAndProceed(semaphoreId) {
         this.serverApi.signalSemaphore(
             semaphoreId,
-            this.experiment.getExperimentId()
+            this.experiment.getSessionId()
         );
         this.activeComponetIsDone();
     }
