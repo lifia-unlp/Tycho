@@ -103,8 +103,9 @@ class BackgroundFacade extends Facade {
     }
 
     /**
-     * Ask for the value of global variables. Some globals are resolved locally. Others
-     * need to be queries to the server.
+     * Ask for the value of session-scoped variables. Some varibles are 
+     * resolved locally. Others need to be queries to the server.
+     *
      * @param {args.variableId is the id of the variable} args
      * @returns a Promise that will resolve to the value of the variable, or reject with the error.
      */
@@ -118,7 +119,7 @@ class BackgroundFacade extends Facade {
                 this.serverApi
                     .getVariable(
                         args.variableId.toLowerCase(),
-                        this.experiment.getExperimentId()
+                        this.experiment.getSessionId()
                     )
                     .then(response => {
                         let status = response.data;

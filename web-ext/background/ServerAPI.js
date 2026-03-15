@@ -34,9 +34,11 @@ class ServerAPI {
         );
     }
 
-    getVariable(variableId, protocolId) {
+    // Variables are session-scoped in the new Tycho API (Tycho with simulated participants), 
+    // so the request must include the ID of the session besides the variable ID
+    getVariable(variableId, sessionId) {
         return axios.get(
-            this.apiUrl + "/variables/" + variableId + "?protocol=" + protocolId
+            this.apiUrl + "/sessions/" + sessionId + "/variables/" + variableId 
         );
     }
 
