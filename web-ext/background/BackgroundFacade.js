@@ -133,6 +133,25 @@ class BackgroundFacade extends Facade {
     }
 
     /**
+     * Delegates the variable update request to the ServerAPI.
+     *
+     * @param {Object} args - Object containing the variable data.
+     * @param {string} args.variableId - The identifier of the variable.
+     * @param {any} args.variableValue - The new value to assign.
+     *
+     * This method retrieves the current session ID from the experiment
+     * and forwards the update request to the ServerAPI layer.
+     */
+    setVariable(args) {
+        let me = this;
+        this.serverApi.setVariable(
+            args.variableId,
+            args.variableValue,
+            me.experiment.getSessionId()
+        );
+    }
+
+    /**
      * Ask for the status of a global semaphore (0 should be understood as move on,
      * negative numbers wait for signales, positive numbers indicate already signaled)
      * @param {args.semaphoreId is the id of the session-scoped semaphore whose status we need} args

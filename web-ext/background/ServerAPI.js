@@ -42,6 +42,26 @@ class ServerAPI {
         );
     }
 
+    /**
+     * Updates the value of a variable for a specific experiment session.
+     * This method sends a PATCH request to the Tycho API in order to persist
+     * the new value of the variable within the given session.
+     *
+     * @param {string} variableId - The unique identifier of the variable to update.
+     * @param {string} variableValue - The new value to assign to the variable.
+     * @param {string} sessionId - The identifier of the experiment session.
+     */
+    setVariable(variableId, variableValue, sessionId) {
+        axios
+            .patch(
+                this.apiUrl + "/sessions/" + sessionId + "/variables/" + variableId,
+                { id: variableId, value: variableValue }
+            )
+            .catch(function(error){
+                console.log("Error posting: ", error);
+            })
+    }
+
     joinExperiment(participantId) {
         return axios.post(this.apiUrl + "/participants/" + participantId + "/join", {});
     }

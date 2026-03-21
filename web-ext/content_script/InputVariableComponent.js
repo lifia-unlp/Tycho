@@ -8,10 +8,11 @@ class InputVariableComponent extends UIComponent {
         let messageDiv = $(
             '<div id="wen-message-component" class="topNotification"></div>'
         );
-        messageDiv.append("<p>(EXPERIMENTAL) " + this.model.instructions + "</p>");
+        messageDiv.append("<p>" + this.model.instructions + "</p>");
+        messageDiv.append('<input id="variableValue" name="variableValue" />');
         messageDiv.append(
             '<p><input id="close-button" type="submit" class="tracker-btn" value="' +
-                browser.i18n.getMessage("messageComponentAcceptButtonText") +
+                browser.i18n.getMessage("submitButtonText") +
                 '"/></p>'
         );
         messageDiv.on("click", "#close-button", e => {
@@ -20,10 +21,23 @@ class InputVariableComponent extends UIComponent {
         return messageDiv;
     }
 
+    /**
+     * Handles the submission of the variable input by the participant.
+     *
+     * - Reads the value entered by the user.
+     * - Updates the elapsed time for the task.
+     * - Triggers the variable update via BackgroundProxy.
+     * - Submits the task results and finalizes the interaction.
+     */
     submit() {
-        this.model.ellapsedMs = new Date().getTime() - this.model.startTime;
-        this.submitResults();
-        this.done();
+        let variableValue = document.getElementById("variableValue").value;
+        if (variableValue) {
+            this.model.ellapsedMs = new Date().getTime() - this.model.startTime;
+            this.setVariable(this.model.variableName, variableValue);
+            this.submitResults();
+            this.done();            
+        }
+
     }
 
     render() {
@@ -31,4 +45,12 @@ class InputVariableComponent extends UIComponent {
         super.render();
         this.showOverlay();
     }
+
+    setVariable(variableName, variableValue) {
+        BackgroundProxy.getSingleton().setVariable(
+            variableName,
+            variableValue
+        );           
+    }
+
 }
