@@ -4,7 +4,7 @@
   "manifest_version": 2,
   "version": "1.2.1",
   "homepage_url": "https://tycho.lifia.ar/",
-  "content_security_policy" : "connect-src  https://tycho.lifia.ar/tycho-api/protocols/ https://tycho.lifia.ar/tycho-api/task-results/ https://tycho.lifia.ar/tycho-api/semaphores/ https://tycho.lifia.ar/tycho-api/variables/; script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_security_policy" : "connect-src https://tycho.lifia.ar/tycho-api/ http://localhost:8080/tycho-api/; script-src 'self' 'unsafe-eval'; object-src 'self'",
   "default_locale": "en",
   "options_ui": {
     "page": "config/options.html",
