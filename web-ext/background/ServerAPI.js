@@ -3,15 +3,28 @@ class ServerAPI {
         this.apiUrl = url;
     }
 
-    submit(payload, service) {
-        axios.post(this.apiUrl + service, payload).catch(function(error) {
-            console.log("Error posting: ", error);
-        });
+    /**
+     * Sends the result of a task executed by a participant to the Tycho API.
+     *
+     * This method uses the new participant-scoped endpoint:
+     * /participants/{participantId}/tasks/{taskId}/result
+     *
+     * @param {Object} report - JSON object representing the task result
+     * @param {number} participantId - ID of the participant executing the task
+     */
+    submitTaskReport(report, participantId) {
+        let taskId = report.model.id; // Extract taskId from the task model
+
+        axios
+            .post(
+                this.apiUrl + "/participants/" + participantId + "/tasks/" + taskId + "/result",
+                report
+            )
+            .catch(function(error){
+                console.log("Error posting task result: ", error)
+            });
     }
 
-    submitTaskReport(report) {
-        this.submit(report, "/task-results/");
-    }
 
     // Semaphores are session-scoped in the new Tycho API (Tycho with simulated participants), 
     // so the request must include the ID of the session besides the semaphore ID

@@ -32,13 +32,16 @@ class BackgroundFacade extends Facade {
     }
 
     /**
-     * Submit a report to the server. The report includes the
-     * model and the koboldModel of the task.
-     * This method also uptades the model of the local version of the task
-     * with the one received.
-     * @param {args.model is the updated model from the UIComponent} args
+     * Builds and submits the task result report for the current participant.
+     * The report includes the model and the koboldModel of the task.
+     *
+     * Retrieves the participant ID from the current experiment session and
+     * sends the task result using ServerAPI with the new participant-specific endpoint.
+     *
+     * @param {Object} args - Contains the updated model from the UIComponent
      */
     submitResultsOfTask(args) {
+        let participantId = this.experiment.id;
         let report = {
             sampleId: this.experiment.getId(),
             experimentId: this.experiment.getExperimentId()
@@ -47,7 +50,7 @@ class BackgroundFacade extends Facade {
         updatedTask.model = args.model;
         report.model = args.model;
         report.koboldEvents = updatedTask.koboldEvents;
-        this.serverApi.submitTaskReport(report);
+        this.serverApi.submitTaskReport(report, participantId);
     }
 
     getActiveTask() {
