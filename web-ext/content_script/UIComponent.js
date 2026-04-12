@@ -23,8 +23,9 @@ class UIComponent {
     }
 
     setModel(model) {
+        let renderFlag = false;
         this.model = model;
-        BackgroundProxy.getSingleton().setModelOfTask(this.model);
+        BackgroundProxy.getSingleton().setModelOfTask(this.model, renderFlag);
     }
 
     submitResults() {

@@ -15,6 +15,7 @@ class SemaphoreWaitComponent extends UIComponent {
 
     render() {
         this.model.startTime = new Date().getTime();
+        this.setModel(this.model); // To update model in background scripts
         super.render();
         this.showOverlay();
     }
