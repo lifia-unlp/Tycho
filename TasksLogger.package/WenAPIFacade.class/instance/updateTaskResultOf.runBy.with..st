@@ -12,7 +12,12 @@ updateTaskResultOf: taskId runBy: participantId with: jsonBody
 			taskResult ifNil: [ ^ nil ].			
 			"Task result exists"
 			taskResultData := self getTaskResultDataFrom: (NeoJSONReader fromString: jsonBody).
-			taskResult updateWith: taskResultData.			
+			taskResult updateWith: taskResultData.
 			self store save: taskResult.
+			"Mark the participant's execution as completed if it was the last task"
+			(participant taskResults last == taskResult) ifTrue: [ 
+				participant complete.
+				self store save: participant.
+			].
 			^ RestResponseWriter new taskResultAsJson: taskResult.
 		]

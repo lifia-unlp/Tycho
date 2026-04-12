@@ -1,9 +1,16 @@
 store
 dateAndTimeFromString: aString
-	| startTimeStream startDate startTime |
-	startTimeStream := aString readStream.
-	startDate := Date
-		readFrom: (startTimeStream upTo: $ ) readStream
-		pattern: 'd/m/yyyy'.
-	startTime := Time readFrom: startTimeStream.
-	^ DateAndTime date: startDate time: startTime
+  | parts dateParts timeParts |
+  
+  parts := aString findTokens: ', '.
+
+  dateParts := (parts first findTokens: '/') collect: [:e | e asNumber].
+  timeParts := (parts second findTokens: ':') collect: [:e | e asNumber].
+
+  ^ DateAndTime
+    year: dateParts third
+    month: dateParts second
+    day: dateParts first
+    hour: timeParts first
+    minute: timeParts second
+    second: timeParts third.
