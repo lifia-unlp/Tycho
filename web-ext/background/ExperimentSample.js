@@ -1,5 +1,5 @@
 class ExperimentSample {
-    constructor(experimentId, sampleId, notes, sequence) {
+    constructor(participantId, sessionId, experimentId, notes, sequence) {
         this.helloGoodbyeTask = {
             componentClassname: "HelloGoodbyeComponent",
             model: { experiment: this.experimentId },
@@ -10,7 +10,8 @@ class ExperimentSample {
         this.experimentId = experimentId;
         this.notes = notes;
         this.current = -1;
-        this.id = sampleId;
+        this.id = participantId;
+        this.sessionId = sessionId;
     }
 
     getId() {
@@ -19,6 +20,10 @@ class ExperimentSample {
 
     getExperimentId() {
         return this.experimentId;
+    }
+
+    getSessionId() {
+        return this.sessionId;
     }
 
     // reimplement with find()
@@ -74,16 +79,42 @@ class ExperimentSample {
     /**
      * Build a session from the Json description of an experiment design.
      * @param {*} json
+     * 
+     * Example of expected json:
+     * {
+     *   "id": 12345678,
+     *   "sessionId": 7654321,
+     *   "startTime": null,
+     *   "duration": 0,
+     *   "status": "non-started",
+     *   "protocol": {
+     *      "id": 1234,
+     *      "notes": "Protocol A",
+     *      "tasks": [
+     *          "name": "Some Task",
+     *          "notes": "More details about task",
+     *          "isPrototype": false,
+     *          "componentClassname": "ScreenMessage",
+     *          "model": {
+     *              "id": 100,
+     *              "title": "Title of the screen message",
+     *              "message": "Message content",
+     *          }
+     *      ]
+     *   } 
+     * }
+     * 
      */
     static fromJson(experimentJson) {
         let tasks = [];
-        experimentJson.tasks.forEach(element => {
+        experimentJson.protocol.tasks.forEach(element => {
             tasks.push(ExperimentTask.fromJson(element));
         });
         let session = new ExperimentSample(
             experimentJson.id,
-            experimentJson.suggestedSampleId,
-            experimentJson.notes,
+            experimentJson.sessionId,
+            experimentJson.protocol.id,
+            experimentJson.protocol.notes,
             tasks
         );
         return session;

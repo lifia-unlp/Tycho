@@ -65,6 +65,22 @@ class BackgroundProxy {
         return value;
     }
 
+    /**
+     * Sends a request to the background script to update a variable value.
+     *
+     * @param {string} variableId - The identifier of the variable.
+     * @param {string} variableValue - The new value to assign.
+     * @returns {Promise} - A promise resolving when the background process handles the request.
+     *
+     * This method abstracts the communication with the background layer.
+     */
+    async setVariable(variableId, variableValue) {
+        return await this.send({
+            methodName: "setVariable",
+            arguments: { variableId: variableId, variableValue: variableValue }
+        });    
+    }
+
     async getSemaphore(semaphoreId) {
         let status = await this.send({
             methodName: "getSemaphore",

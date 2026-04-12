@@ -32,13 +32,16 @@ class BackgroundFacade extends Facade {
     }
 
     /**
-     * Submit a report to the server. The report includes the
-     * model and the koboldModel of the task.
-     * This method also uptades the model of the local version of the task
-     * with the one received.
-     * @param {args.model is the updated model from the UIComponent} args
+     * Builds and submits the task result report for the current participant.
+     * The report includes the model and the koboldModel of the task.
+     *
+     * Retrieves the participant ID from the current experiment session and
+     * sends the task result using ServerAPI with the new participant-specific endpoint.
+     *
+     * @param {Object} args - Contains the updated model from the UIComponent
      */
     submitResultsOfTask(args) {
+        let participantId = this.experiment.id;
         let report = {
             sampleId: this.experiment.getId(),
             experimentId: this.experiment.getExperimentId()
@@ -47,7 +50,7 @@ class BackgroundFacade extends Facade {
         updatedTask.model = args.model;
         report.model = args.model;
         report.koboldEvents = updatedTask.koboldEvents;
-        this.serverApi.submitTaskReport(report);
+        this.serverApi.submitTaskReport(report, participantId);
     }
 
     getActiveTask() {
@@ -79,13 +82,13 @@ class BackgroundFacade extends Facade {
 
     /**
      *
-     * @param {id: id of the session to join} args
+     * @param {id: id of the participant to join the experiment} args
      * @returns a Promise that will resolve to the joined session, or reject with the error.
      */
     joinExperiment(args) {
         new Promise((resolve, reject) => {
             this.serverApi
-                .getExperimentDesignFromServer(args.id)
+                .joinExperiment(args.id)
                 .then(response => {
                     if (response) {
                         this.experiment = ExperimentSample.fromJson(
@@ -103,8 +106,9 @@ class BackgroundFacade extends Facade {
     }
 
     /**
-     * Ask for the value of global variables. Some globals are resolved locally. Others
-     * need to be queries to the server.
+     * Ask for the value of session-scoped variables. Some varibles are 
+     * resolved locally. Others need to be queries to the server.
+     *
      * @param {args.variableId is the id of the variable} args
      * @returns a Promise that will resolve to the value of the variable, or reject with the error.
      */
@@ -118,7 +122,7 @@ class BackgroundFacade extends Facade {
                 this.serverApi
                     .getVariable(
                         args.variableId.toLowerCase(),
-                        this.experiment.getExperimentId()
+                        this.experiment.getSessionId()
                     )
                     .then(response => {
                         let status = response.data;
@@ -132,16 +136,35 @@ class BackgroundFacade extends Facade {
     }
 
     /**
+     * Delegates the variable update request to the ServerAPI.
+     *
+     * @param {Object} args - Object containing the variable data.
+     * @param {string} args.variableId - The identifier of the variable.
+     * @param {any} args.variableValue - The new value to assign.
+     *
+     * This method retrieves the current session ID from the experiment
+     * and forwards the update request to the ServerAPI layer.
+     */
+    setVariable(args) {
+        let me = this;
+        this.serverApi.setVariable(
+            args.variableId,
+            args.variableValue,
+            me.experiment.getSessionId()
+        );
+    }
+
+    /**
      * Ask for the status of a global semaphore (0 should be understood as move on,
      * negative numbers wait for signales, positive numbers indicate already signaled)
-     * @param {args.semaphoreId is the id of the global semaphore whose status we need} args
+     * @param {args.semaphoreId is the id of the session-scoped semaphore whose status we need} args
      * @returns a Promise that will resolve to the status, or reject with the error.
      */
     getSemaphore(args) {
         let me = this;
         return new Promise((resolve, reject) => {
             this.serverApi
-                .getSemaphore(args.semaphoreId, me.experiment.getExperimentId())
+                .getSemaphore(args.semaphoreId, me.experiment.getSessionId())
                 .then(response => {
                     let status = response.data;
                     resolve(status);
@@ -159,9 +182,9 @@ class BackgroundFacade extends Facade {
     autoDoneOnSemaphore(semaphoreId) {
         // Check that the experiment still exists to deal abort during a semaphore.
         if (this.experiment) {
-            let experimentId = this.experiment.getExperimentId();
+            let sessionId = this.experiment.getSessionId();
             this.serverApi
-                .getSemaphore(semaphoreId, experimentId)
+                .getSemaphore(semaphoreId, sessionId)
                 .then(response => {
                     this.handleSemaphoreStatus(response.data);
                 });
@@ -190,7 +213,7 @@ class BackgroundFacade extends Facade {
     signalSemaphoreAndProceed(semaphoreId) {
         this.serverApi.signalSemaphore(
             semaphoreId,
-            this.experiment.getExperimentId()
+            this.experiment.getSessionId()
         );
         this.activeComponetIsDone();
     }
