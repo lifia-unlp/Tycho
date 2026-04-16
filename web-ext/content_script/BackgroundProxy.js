@@ -21,12 +21,13 @@ class BackgroundProxy {
         });
     }
 
-    async setModelOfTask(model) {
+    async setModelOfTask(model, renderFlag = true) {
         return await this.send({
             methodName: "setModelOfTask",
-            arguments: { model: model }
+            arguments: { model: model, renderFlag }
         });
     }
+
 
     async activeComponetIsDone() {
         return await this.send({

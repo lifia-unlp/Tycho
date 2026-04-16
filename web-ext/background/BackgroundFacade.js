@@ -77,7 +77,10 @@ class BackgroundFacade extends Facade {
 
     setModelOfTask(args) {
         this.experiment.getTask(args.model.id).setModel(args.model);
-        ContentProxy.getSingleton().render(this.visible);
+        console.log(args);
+        if(args.renderFlag) {
+            ContentProxy.getSingleton().render(this.visible);
+        }
     }
 
     /**
@@ -191,6 +194,19 @@ class BackgroundFacade extends Facade {
         }
     }
 
+    /**
+     * Handles updates on semaphore status received from the Tycho API.
+     *
+     * When the semaphore becomes available (status == 0), this method detects
+     * the completion of the active SemaphoreWait task. It then:
+     * - Calculates the elapsed waiting time
+     * - Updates the task status to "completed"
+     * - Formats the start time 
+     * - Submits the task results to the backend via the Tycho API
+     * - Marks the UI component as finished
+     *
+     * If the semaphore is still not available, it retries after a short delay.
+     */
     handleSemaphoreStatus(semaphore) {
         if (
             //Check that the WaitComponent is still the active one.
@@ -201,6 +217,12 @@ class BackgroundFacade extends Facade {
         ) {
             let me = this;
             if (semaphore.status == 0) {
+                // Detection of the end of the waiting task at the semaphore
+                let activeTask = this.getActiveTask();
+                activeTask.model.ellapsedMs = new Date().getTime() - activeTask.model.startTime;
+                activeTask.model.status = "completed";
+                activeTask.model.startTime = new Date(activeTask.model.startTime).toLocaleString();
+                this.submitResultsOfTask({model: activeTask.model})
                 this.activeComponetIsDone();
             } else {
                 setTimeout(() => {
