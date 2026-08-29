@@ -22,8 +22,8 @@ class UIComponent {
         this.updateVariables();
     }
 
-    setModel(model) {
-        let renderFlag = false;
+    setModel(model, renderFlag = true) {
+        // let renderFlag = false;
         this.model = model;
         BackgroundProxy.getSingleton().setModelOfTask(this.model, renderFlag);
     }
