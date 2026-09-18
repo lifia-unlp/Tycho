@@ -1,3 +1,3 @@
 controlling
 makeSemaphoreGo: anExperimentSemaphore
-	anExperimentSemaphore go
+	anExperimentSemaphore signal 
