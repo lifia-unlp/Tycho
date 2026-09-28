@@ -141,25 +141,67 @@ mainCssContent
 	}
 	.footer .col-md-6 p a{color: #fB5D3C}
 
-	#tasksList li, .cards-list li {
+	#tasksList li.task-card, .cards-list li.task-card {
 		display: inline-block;
 		vertical-align:top;
 		margin: 0 13px;
 		width: 250px;
 	  	padding: 3px;
   		position: relative;
-		}
+	}
 
 	#tasksList li .panel, .cards-list li .panel {
-		height: 280px;
-		}
+	   height: 280px;
+ 	   display: flex;
+		flex-direction: column;
+		overflow: hidden;
+	}
+	
 	#tasksList .panel-heading, .cards-list .panel-heading { 
 		cursor: grab 
 	}
-	#tasksList .panel-body, .cards-list .panel-body { 
-		padding-top: 5px;
+	
+	#tasksList .panel-body, .cards-list .panel-body {
+		padding-top: 5px; 
+		padding-bottom: 10px;
+		flex: 1;
+		min-height: 0;
+		display: flex;
+		flex-direction: column;
 		overflow: hidden;
-		}
+	}
+	
+	/* tabs keep its heights  */
+	#tasksList ul.nav, .cards-list ul.nav {
+		margin: -5px -15px 0;
+		flex: 0 0 auto;
+	}
+	
+	/*  Card content area fill remaining space */
+	#tasksList .tab-content, .cards-list .tab-content { 
+		padding: 5px 0 0;
+		flex: 1;
+		min-height: 0;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;	
+	}
+	
+	/* tab content can be scroll */
+	#tasksList .tab-pane.active, .cards-list .tab-pane.active {
+	   flex: 1;
+		min-height: 0;
+		overflow-y: auto;
+	}
+	
+	/* The actions always at the bottom of the card */
+	#tasksList li .actions, .cards-list li .actions {
+    	position: static;
+		flex: 0 0 auto;
+		margin-top: auto;
+		padding-top: 8px;
+		background: white;
+	}
 	
 	#tasksList .ui-sortable-helper .panel, .cards-list .ui-sortable-helper .panel {
 		background: rgba(240,240,240,0.5);
@@ -186,23 +228,14 @@ mainCssContent
 		}
 
 	#tasksList dd, .cards-list dd {
-		max-height: 80px;
-		overflow: hidden;
-		}
+		max-height: none;
+		overflow: visible;
+	}
 
 	#tasksList dt, .cards-list dt {
 		margin: 4px 0 0 0;
 		}
 
-	#tasksList li .actions, .cards-list li .actions {
-		bottom: 34px;
-		position: absolute;
-		}
-
-	#tasksList ul.nav, .cards-list ul.nav { 
-		margin: -5px -15px 0px;
-	 }
-		
 	#tasksList .nav li, .cards-list .nav li { 
 		margin: 0;
 		width: auto;
@@ -214,10 +247,63 @@ mainCssContent
 		border: 0;
 	 }
 	
-	#tasksList .tab-content, .cards-list .tab-content { 
-		padding: 10px 0px;	
-	 }
+	#tasksList .tab-pane ol, 	#tasksList .tab-pane ul { 
+		padding-left: 25px;
+	}
 	
+	/* Protocol sequence cards */
+#tasksList > li:not(.task-card) {
+    display: inline-block;
+    vertical-align: top;
+    width: 250px;
+    margin: 0 13px;
+    padding: 3px;
+    position: relative;
+}
+
+/* Fixed-height card */
+#tasksList > li:not(.task-card) .panel {
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Panel heading */
+#tasksList > li:not(.task-card) .panel-heading {
+    flex: 0 0 auto;
+}
+
+/* Panel body */
+#tasksList > li:not(.task-card) .panel-body {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: 5px;
+}
+
+/* Scrollable task content */
+#tasksList > li:not(.task-card) .panel-body > dl {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    margin-bottom: 0;
+}
+
+/* Task actions */
+#tasksList > li:not(.task-card) .actions {
+    position: static;
+    flex: 0 0 auto;
+    margin-top: 8px;
+    padding-top: 8px;
+    background: white;
+    border-top: 1px solid #eee;
+}
+
+
+		
 	.bot-actions { 
 		font-size: 0.9em;
 	 }
@@ -235,5 +321,6 @@ mainCssContent
 		.features{ padding: 6em; font-size: 1.1em; }
 		.homeRegister{ padding: 7em 0; }
 		.navbar-default .navbar-text{ margin-top: 25px; }	
-	}
+	}	
+	
 '

@@ -5,7 +5,7 @@ renderWorkflowOn: html
 		with: 'Bot instructions'.
 	html unorderedList
 		class: 'list-unstyled cards-list';
-		id: #instructionsList;
+		id: #tasksList;
 		script:
 			(html jQuery new sortable
 				containment: 'parent';

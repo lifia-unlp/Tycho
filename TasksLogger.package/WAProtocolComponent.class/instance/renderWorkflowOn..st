@@ -4,7 +4,7 @@ renderWorkflowOn: html
 		level: 3;
 		with: 'Sequence of tasks'.
 	html unorderedList
-		class: 'list-unstyled';
+		class: 'list-unstyled card-list';
 		id: #tasksList;
 		script:
 			(html jQuery new sortable
