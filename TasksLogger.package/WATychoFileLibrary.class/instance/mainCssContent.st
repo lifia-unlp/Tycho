@@ -315,12 +315,23 @@ mainCssContent
 	.buttonPanel {
 		margin-top: 40px;	 
 	}
+	
+	.code-editor {
+    	font-family: Consolas, Monaco, "Courier New", monospace;
+	    font-size: 13px;
+	    line-height: 1.5;
+	    background-color: #f5f6f7;
+	    resize: vertical;
+ 	   tab-size: 4;
+    }
 
 	@media (min-width: 992px){
 		.homeRegister > :first-child{ padding:0 6em; }		
 		.features{ padding: 6em; font-size: 1.1em; }
 		.homeRegister{ padding: 7em 0; }
 		.navbar-default .navbar-text{ margin-top: 25px; }	
-	}	
+	}
+	
+		
 	
 '

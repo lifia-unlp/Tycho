@@ -1,0 +1,3 @@
+I am the visual component that allows the user to configure a bot instruction for executing a JavaScript code block.
+
+I am responsible for displaying the specific properties of a script instruction, providing a dedicated text area for editing JavaScript code. I reuse the common editing functionality provided by WABotInstructionComponent, including description editing, instruction type display, and save/cancel operations. I know the script instruction under configuration and provide an appropriate visual representation for its JavaScript code.

@@ -2,4 +2,7 @@ callbacks
 editInstruction: aBotInstruction
 	"Call the component that allows the bot designer to configure the given bot instruction"
 			
-	self call: (WABotInstructionComponent on: aBotInstruction)
+	(aBotInstruction class = BotScriptInstruction)
+		ifFalse: [ self call: (WABotInstructionComponent on: aBotInstruction) ] 
+		ifTrue: [ self call: (WABotScriptInstructionComponent on: aBotInstruction)  ]
+	

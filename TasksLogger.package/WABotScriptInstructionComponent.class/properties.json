@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "JuanManuelCipollone 11/14/2026 10:50",
+	"super" : "WABotInstructionComponent",
+	"category" : "TasksLogger-Seaside",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "WABotScriptInstructionComponent",
+	"type" : "normal"
+}
